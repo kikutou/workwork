@@ -1,0 +1,126 @@
+body {
+    ＃background-color: #f0f3f5;
+    background-color: #eff3f6;
+    font-family: Helvetica, Arial,'Hiragino Kaku Gothic ProN', 'ヒラギノ>角ゴ ProN W3',Meiryo, メイリオ, sans-serif;
+}
+
+.box {
+    background-color: #fff;
+    padding: 25px 40px;
+    margin-top: 30px; /*Remove, its example*/
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.input-group {
+    margin: 5px 0px;
+}
+
+.addon-facebook {
+    background-color: #345387;
+    border: none;
+    border-radius: 2px 0px 0px 2px;
+    color: #fff;
+}
+
+.btn-facebook,
+.btn-facebook:hover {
+    background-color: #4b6ea9;
+    color: #fff;
+    border-radius: 0px 2px 2px 0px;
+    font-size: 15px;
+}
+
+.addon-twitter {
+    background-color: #00c6e9;
+    border: none;
+    border-radius: 2px 0px 0px 2px;
+    color: #fff;
+}
+
+.btn-twitter,
+.btn-twitter:hover {
+    background-color: #00d7fa;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 15px;
+}
+
+.addon-wechat {
+    background-color: #2ca03d;
+    border: none;
+    border-radius: 2px 0px 0px 2px;
+    color: #fff;
+}
+
+.btn-wechat,
+.btn-wechat:hover {
+    background-color: #34bf49;
+    color: #fff;
+    border-radius: 0px;
+    font-size: 15px;
+}
+
+.btn-primary {
+    border-radius: 2px;
+    background-color: #23a9f6;
+    border-color: #23a9f6;
+    margin: 10px 0px;
+}
+
+p {
+    color: #aebbcb;
+}
+
+a {
+    color: #23a9f6;
+}
+
+.divider-form {
+    border: 1px solid #EBEFF1;
+    margin: 15px -40px 10px;
+}
+
+label {
+    text-transform: uppercase;
+    color: #bdc7d4;
+}
+
+strong {
+    color: #95a5bb;
+}
+
+.form-control {
+    background: none;
+    height: 40px;
+    border: none;
+    border-radius: 0px;
+    box-shadow: none;
+    color: #8b9eb6;
+    padding: 0px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+.alert {
+    padding: 4px 5px;
+    font-size: 12px;
+    border: 0;
+}
+
+
+.form-tag {
+    background-color: #3c3c3c;
+    font-size: 18px;
+    color: #fff;
+    font-weight: bold;
+}
+
+#check_id {
+    border: 0;
+    background-color: #34bf49;
+    padding: .2em .6em .3em;
+    color: #fff;
+    font-size: 12px;
+}
