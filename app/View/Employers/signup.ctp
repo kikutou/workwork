@@ -34,6 +34,7 @@
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <div class="box">
+
             <div class="input-group">
 					<span class="input-group-addon addon-facebook">
 						<i class="fa fa-fw fa-2x fa-facebook fa-fw"></i>
@@ -55,6 +56,7 @@
                 <a class="btn btn-lg btn-block btn-wechat" href="#"> Wechatで新規登録</a>
             </div>
 
+
             <!--
             <form role="form">
 
@@ -75,11 +77,11 @@
 
                 <div class="divider-form"></div>
 
-                <p class="text-center">※お読みください <strong><?php echo $this->html->link('利用規約/個人情報保護方針', 'http://kiyaku.jp/', array('escape' => false));?></strong>.</p>
+                <p class="text-center">※お読みください <strong><?php //echo $this->html->link('利用規約/個人情報保護方針', 'http://kiyaku.jp/', array('escape' => false));?></strong>.</p>
 
                 <button type="submit" class="btn-block btn btn-lg btn-primary">以上の規約に同意して新規登録</button>
 
-                <p class="text-center">既にアカウントをお持ちしています <?php echo $this->html->link('ログイン', '/employers/login', array('escape' => false));?> </p>
+                <p class="text-center">既にアカウントをお持ちしています <?php //echo $this->html->link('ログイン', '/employers/login', array('escape' => false));?> </p>
 
             </form>
             -->
