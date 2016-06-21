@@ -54,35 +54,7 @@
 					</span>
                 <a class="btn btn-lg btn-block btn-wechat" href="#"> Wechatで新規登録</a>
             </div>
-
-            <!--
-            <form role="form">
-
-                <div class="divider-form"></div>
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1">ログインID<span class="label label-warning">必須</span></label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ログインID/メール">
-                </div>
-
-                <div class="divider-form"></div>
-
-                <div class="form-group">
-                    <label for="exampleInputPassword1">パスワード </label>
-                    <div class="alert alert-danger">パスワード形式は間違っています</div>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="パスワード">
-                </div>
-
-                <div class="divider-form"></div>
-
-                <p class="text-center">※お読みください <strong><?php echo $this->html->link('利用規約/個人情報保護方針', 'http://kiyaku.jp/', array('escape' => false));?></strong>.</p>
-
-                <button type="submit" class="btn-block btn btn-lg btn-primary">以上の規約に同意して新規登録</button>
-
-                <p class="text-center">既にアカウントをお持ちしています <?php echo $this->html->link('ログイン', '/employers/login', array('escape' => false));?> </p>
-
-            </form>
-            -->
+            
 
                 <?php
                 if($errorMsg)
