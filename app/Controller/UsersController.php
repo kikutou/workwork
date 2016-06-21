@@ -24,4 +24,8 @@ class UsersController extends AppController {
         $this->layout = false;
     }
 
+    public function profile(){
+        $this->layout = false;
+    }
+
 }
