@@ -55,7 +55,14 @@
                 <a class="btn btn-lg btn-block btn-wechat" href="#"> Wechatで新規登録</a>
             </div>
 
-            <form role="form">
+            <?php
+            if($errorMsg)
+            {
+                echo $this->Html->para('errorMsg', $errorMsg);
+            }
+
+            echo $this->Form->create(false, array('type' => 'post','id'=>'signupForm'));
+            ?>
 
                 <div class="divider-form"></div>
 
@@ -70,17 +77,29 @@
                     <label for="exampleInputPassword1">パスワード</label>
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="パスワード">
                 </div>-->
-
+                <script>
+                    $(
+                        function () {
+                            $("#signupForm").validationEngine();
+                        }
+                    )
+                </script>
 
                 <?php
-                if($errorMsg)
-                {
-                    echo $this->Html->para('errorMsg', $errorMsg);
-                }
 
-                echo $this->Form->create(false, array('type' => 'post','id'=>'signupForm'));
 
                 echo $this->Form->input('User.delete_flag',array('type' => 'hidden', 'value' => '0'));
+
+
+                //会社名チェック
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.family_name', '姓');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.family_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.family_name', array("class" => "form-control", "placeholder" => "山田"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
+
 
                 echo $this->Form->label('User.family_name', 'Family Name');
                 echo $this->Form->text('User.family_name', array('class' => 'validate[required]'));
@@ -154,9 +173,9 @@
                 echo $this->Html->para('', 'Yes');
 
                 echo '<br/><br/>';
-                echo $this->Form->submit('signup');
+                //echo $this->Form->submit('signup');
 
-                echo $this->Form->end();
+
 
                 ?>
 
@@ -176,107 +195,12 @@
                 <button type="submit" class="btn-block btn btn-lg btn-primary">以上の規約に同意して新規登録</button>
 
                 <p class="text-center">既にアカウントをお持ちしています <?php echo $this->html->link('ログイン', '/users/login', array('escape' => false));?> </p>
-            </form>
+            <?php echo $this->Form->end(); ?>
         </div>
     </div>
 </div>
 </body>
 <html>
-
-<script>
-    $(
-        function () {
-            $("#signupForm").validationEngine();
-        }
-    )
-</script>
-
-<?php
-if($errorMsg)
-{
-    echo $this->Html->para('errorMsg', $errorMsg);
-}
-
-echo $this->Form->create(false, array('type' => 'post','id'=>'signupForm'));
-
-echo $this->Form->input('User.delete_flag',array('type' => 'hidden', 'value' => '0'));
-
-echo $this->Form->label('User.family_name', 'Family Name');
-echo $this->Form->text('User.family_name', array('class' => 'validate[required]'));
-echo $this->Form->error('User.family_name');
-
-echo $this->Form->label('User.first_name', 'First Name');
-echo $this->Form->text('User.first_name', array('class' => 'validate[required]'));
-echo $this->Form->error('User.first_name');
-
-echo $this->Form->label('User.furigana', 'Japanese');
-echo $this->Form->text('User.furigana', array('class' => 'validate[required]'));
-echo $this->Form->error('User.furigana');
-
-/*echo $this->Form->label('User.birthday', 'Birthday');
-echo $this->Form->year('User.birthday', '1946', '2016', array(), array());
-echo $this->Form->month('User.birthday');
-echo $this->Form->day('User.birthday');
-echo $this->Form->error('User.birthday');*/
-
-echo $this->Form->label('User.birthday', 'Birthday');
-echo $this->Form->text('User.birthday', array('id' => "datepicker",'class' => 'validate[required]'));
-?>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
-<!--<link rel="stylesheet" href="/js/jquery-ui-1.11.4.custom">-->
-<script>
-    $(function() {
-        var dateFormat = 'yy-mm-dd';
-        $('#datepicker').datepicker({
-            dateFormat: dateFormat,
-            changeYear: true,
-            changeMonth: true,
-            yearRange: '1946:'
-
-        });
-    });
-</script>
-
-
-<label for="UserGender">Gender</label>
-<br/>
-<input type="radio" name="data[User][gender]" id="UserGenderMale" value="male" required="required" checked/>
-<label for="UserGenderMale">Male</label>
-<input type="radio" name="data[User][gender]" id="UserGenderFemale" value="female" required="required"/>
-<label for="UserGenderFemale">Female</label>
-<br/>
-
-
-<?php
-echo $this->Form->error('User.gender');
-
-echo $this->Form->label('User.login_id', 'Login ID');
-echo $this->Form->text('User.login_id', array('class' => 'validate[required]'));
-echo $this->Form->error('User.login_id');
-
-echo $this->Form->checkbox('check', array('id' => 'use_email_check', 'onclick'=>'use_email();','class' => 'validate[required]'));
-echo $this->Html->para('', 'Using Email as ID');
-echo $this->Form->button('ID check', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button'));
-
-echo $this->Form->label('User.password', 'Password');
-echo $this->Form->password('User.password', array('class' => 'validate[required]'));
-echo $this->Form->error('User.password');
-
-echo $this->Form->label('User.password_confirm', 'PasswordConfirm');
-echo $this->Form->password('User.password_confirm', array('class' => 'validate[required]'));
-echo $this->Form->error('User.password_confirm');
-
-echo $this->Form->label('ReceiveMail?');
-echo $this->Form->checkbox('check', array('class' => 'validate[required]'));
-echo $this->Html->para('', 'Yes');
-
-echo '<br/><br/>';
-echo $this->Form->submit('signup');
-
-echo $this->Form->end();
-
-?>
 
 <script>
     function use_email(){
@@ -341,3 +265,5 @@ echo $this->Js->writeBuffer();
 
 
 </script>
+
+
