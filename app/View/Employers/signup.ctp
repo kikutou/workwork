@@ -15,6 +15,15 @@
     echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
     //Latest compiled and minified JavaScript
     echo $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('integrity' => 'sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', 'crossorigin' => 'anonymous'));
+
+
+    //validationEngineのjsを追加する。
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
+    //validationEngineのcssを追加する。
+    echo $this->Html->css('validationEngine.jquery.css');
+
+
     //font-awesome
     echo $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array('integrity' => 'sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1', 'crossorigin' => 'anonymous'));
 
@@ -22,9 +31,22 @@
     echo $this->fetch('meta');
     echo $this->fetch('css');
     echo $this->fetch('script');
+
+
+
     ?>
+
+    <script>
+        $(
+            function(){
+                $("#employerSignUpForm").validationEngine();
+            }
+        );
+    </script>
+
 </head>
 <body class="container-fluid">
+
 <div class="row">
     <div class="col-md-2 col-md-offset-5 col-xs-6 col-xs-offset-3" style="margin-top: 20px;">
         <?php echo $this->Html->link($this->Html->image('logo.png', array('alt'=>'logo', 'class'=>'img-responsive logo')), "/", array('escape' => false) ); ?>
@@ -100,7 +122,8 @@
                 echo $this->Form->create(false, array(
                     'type' => 'post',
                     'role' => 'form',
-                    'class' => "form-group"
+                    'class' => "form-group",
+                    'id' => 'employerSignUpForm'
                     ));
 
                 echo $this->Form->input('Employer.delete_flag', array('type' => 'hidden', 'value' => '0'));
@@ -160,7 +183,7 @@
                 echo $this->Form->label('Employer.staff_family_name', '姓');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_family_name', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_family_name', array("class" => "form-control", "placeholder" => "山田"));
+                echo $this->Form->text('Employer.staff_family_name', array("class" => "form-control validate[required]", "placeholder" => "山田"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -235,7 +258,7 @@
 
                 <?php
 
-                    echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array('inline' => false));
+                    //echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js', array('inline' => false));
 
                     $script = <<<EOL
                     function check_id_func(result){
