@@ -134,7 +134,7 @@
                 echo $this->Form->label('Employer.name', '会社名');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.name', array("class" => "form-control", "placeholder" => "株式会社○○○"));
+                echo $this->Form->text('Employer.name', array("class" => "form-control validate[required]", "placeholder" => "株式会社○○○"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -143,7 +143,7 @@
                 echo $this->Form->label('Employer.url', '会社URL');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.url', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.url', array("class" => "form-control", "placeholder" => "www.html.com"));
+                echo $this->Form->text('Employer.url', array("class" => "form-control validate[required]", "placeholder" => "www.html.com"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -152,7 +152,7 @@
                 echo $this->Form->label('Employer.login_id', 'ログインID');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.login_id', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.login_id', array("class" => "form-control", "placeholder" => "英数字のみ"));
+                echo $this->Form->text('Employer.login_id', array("class" => "form-control validate[required]", "placeholder" => "英数字のみ"));
                 echo $this->Form->button('登録可能かをチェック', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button', 'class' => 'btn btn-default'));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
@@ -162,7 +162,7 @@
                 echo $this->Form->label('Employer.password', 'パスワード');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.password', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->password('Employer.password', array("class" => "form-control", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+                echo $this->Form->password('Employer.password', array("class" => "form-control validate[required]", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -171,7 +171,7 @@
                 echo $this->Form->label('Employer.password_confirm', 'パスワード確認');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.password_confirm', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->password('Employer.password_confirm', array("class" => "form-control", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+                echo $this->Form->password('Employer.password_confirm', array("class" => "form-control validate[required]", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -192,7 +192,7 @@
                 echo $this->Form->label('Employer.staff_first_name', '名');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_first_name', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_first_name', array("class" => "form-control", "placeholder" => "太郎"));
+                echo $this->Form->text('Employer.staff_first_name', array("class" => "form-control validate[required]", "placeholder" => "太郎"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -201,7 +201,7 @@
                 echo $this->Form->label('Employer.staff_furigana', 'カタカナ');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_furigana', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_furigana', array("class" => "form-control", "placeholder" => "ヤマダタロウ"));
+                echo $this->Form->text('Employer.staff_furigana', array("class" => "form-control validate[required]", "placeholder" => "ヤマダタロウ"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -210,7 +210,7 @@
                 echo $this->Form->label('Employer.staff_department', '部署');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_department', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_department', array("class" => "form-control", "placeholder" => "営業部"));
+                echo $this->Form->text('Employer.staff_department', array("class" => "form-control validate[required]", "placeholder" => "営業部"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -219,7 +219,7 @@
                 echo $this->Form->label('Employer.staff_position', '役職');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_position', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_position', array("class" => "form-control", "placeholder" => "課長"));
+                echo $this->Form->text('Employer.staff_position', array("class" => "form-control validate[required]", "placeholder" => "課長"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -228,7 +228,7 @@
                 echo $this->Form->label('Employer.staff_mobile', '電話');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_mobile', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_mobile', array("class" => "form-control", "placeholder" => "08012345678"));
+                echo $this->Form->text('Employer.staff_mobile', array("class" => "form-control validate[required]", "placeholder" => "08012345678"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -237,7 +237,7 @@
                 echo $this->Form->label('Employer.staff_email', 'メール');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.staff_email', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('Employer.staff_email', array("class" => "form-control", "placeholder" => "xxx＠workwork.com"));
+                echo $this->Form->text('Employer.staff_email', array("class" => "form-control validate[required]", "placeholder" => "xxx＠workwork.com"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
