@@ -135,6 +135,7 @@ class UsersController extends AppController {
     public function passchange() {
 
         $errorMsg = null;
+        $user = null;
 
         if($this->request->isPost()) {
 
@@ -147,8 +148,8 @@ class UsersController extends AppController {
                 $errorMsg = 'データベースに保存できませんでした。';
             }
 
+            $user = $this->data;
 
-            $this->set('user',$user);
 
         }else {
             $id = $this->request->query['id'];
@@ -159,6 +160,8 @@ class UsersController extends AppController {
             }
 
             $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' =>'0')));
+
+
             /*
             print '<pre>';
             print_r($user);
@@ -166,10 +169,12 @@ class UsersController extends AppController {
             exit();
             */
 
-            $this->set('user',$user);
+
         }
 
-        $this->set('data',$this->data);
+        $this->set('user',$user);
+
+        //$this->set('data',$this->data);
         $this->set('errorMsg',$errorMsg);
     }
 }

@@ -39,7 +39,7 @@ class EmAdvertisesController extends AppController {
             $employer = $this->Employer->find('first', array('conditions' => array('id'=> $id, 'delete_flag' => 0)));
 
             if(!$employer){
-                
+
             }
 
 
