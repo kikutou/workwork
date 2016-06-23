@@ -123,7 +123,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             </div>
             <!-- /.col-xs-12 main -->
         </div>
-        <!--/.row-->
+        <!--/.row-->+
     </div>
     <!--/.container--> <i class="icon-cog"></i>
 

@@ -122,6 +122,9 @@ class UsersController extends AppController {
                 $this->redirect('index');
             }
 
+            $postcode = $user['User']['postcode'];
+            $user['User']['postcode1'] = substr($postcode, 0, 3);
+            $user['User']['postcode2'] = substr($postcode,3);
         }
 
         //viewに送り出す

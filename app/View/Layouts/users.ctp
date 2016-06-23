@@ -90,16 +90,16 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
             <!-- main area -->
             <div class="col-xs-12 col-sm-9">
-                <h1>Shrink Width to Collapse Sidebar</h1>
+                <div id="content">
+                    <?php echo $this->Flash->render(); ?>
+                    <?php echo $this->fetch('content'); ?>
+                </div>
             </div><!-- /.col-xs-12 main -->
         </div><!--/.row-->
     </div><!--/.container-->
 </div><!--/.page-container-->
 
-<div id="content">
-    <?php echo $this->Flash->render(); ?>
-    <?php echo $this->fetch('content'); ?>
-</div>
+
 
 <!-- Footer -->
 <div id="footer">

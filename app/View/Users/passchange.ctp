@@ -1,66 +1,92 @@
-<html>
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php echo $this->Html->charset(); ?>
-    <title>
-        <?php //echo $cakeDescription ?>
-        <?php //echo $this->fetch('title'); ?>
-    </title>
+<div class="row header">
+    <div class="col-xs-6 page-title">
+        パスワード変更
+    </div>
+    <div class="col-xs-6 page-breadcrumb text-right">
+        <ol class="breadcrumb">
+            <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
+            <li class="active"><a href="/work/users/profileEdit">パスワード変更</a></li>
+        </ol>
+    </div>
+</div>
+<!--
+<div class="row detail">
+    <div class="panel panel-danger panel-authentication">
+        <div class="panel-heading">アカウント認証されていません&nbsp<i data-toggle="tooltip" data-placement="bottom" title="企業用機能を利用するためには、会社情報の認証が必要です。下のリンクをクリックして、情報を補足してください。審査が通過次第、企業用機能が開放されます。通常の認証期間は５営業日となります。" class="fa fa fa-question-circle danger-tooltip"></i></div>
+        <div class="panel-body"><a href="/work/users/profileEdit?id=01">こちら</a>でアカウント認証を行いましょう</div>
+    </div>
+</div>
+-->
+<div class="row detail">
     <?php
-    echo $this->Html->meta('icon');
-    // Latest compiled and minified CSS
-    echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array('integrity' => 'sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', 'crossorigin' => 'anonymous'));
-    // Latest compiled and minified CSS
-    //echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', array('integrity' => 'sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', 'crossorigin' => 'anonymous'));
-    echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
+    //フォームエラー
+    if($errorMsg){
+        echo $this->Html->para('alert alert-danger error-top', $errorMsg);
+    }
+    //createform
+    echo  $this->Form->create(false, array(
+        'type' => 'post',
+        'id' => 'passchange',
+        'class' => "form-group"
+    ));
+    //hiddenuserid
+    echo $this->Form->input('User.id', array('type' =>'hidden', 'value' => $user['User']['id'] ));
 
-    //validationEngineのjsを追加する。
-    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
-    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
-    //validationEngineのcssを追加する。
-    echo $this->Html->css('validationEngine.jquery.css');
+    //submit button
+    echo '
+    <div class="row" style="width:100%">
+        <div class="text-right" style="margin-bottom:10px;">
+            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+    echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+        "class" => "btn",
+        'type' => 'submit',
+        'escape' => false
+    ));
+    echo '</div>
+    </div>';
 
-    //Latest compiled and minified JavaScript
-    echo $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('integrity' => 'sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', 'crossorigin' => 'anonymous'));
-    //font-awesome
-    echo $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array('integrity' => 'sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1', 'crossorigin' => 'anonymous'));
+    echo '<div class="col-xs-12">';
 
-    echo $this->Html->css('user-login');
-    echo $this->fetch('meta');
-    echo $this->fetch('css');
-    echo $this->fetch('script');
+    echo "<hr>";
+
+    echo '<div class="form-group">';
+    echo $this->Form->label('User.old_password', '旧パスワード');
+    echo '&nbsp<span class="label label-warning">必須</span>';
+    echo $this->Form->error('User.old_password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->password('User.old_password', array("class" => "form-control", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+    echo '</div>';
+
+    echo '<div class="form-group">';
+    echo $this->Form->label('User.old_password', '新パスワード');
+    echo '&nbsp<span class="label label-warning">必須</span>';
+    echo $this->Form->error('User.password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->password('User.password', array("class" => "form-control", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+    echo '</div>';
+
+    echo '<div class="form-group">';
+    echo $this->Form->label('User.password_confirm', '新パスワード確認');
+    echo '&nbsp<span class="label label-warning">必須</span>';
+    echo $this->Form->error('User.password_confirm',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->password('User.password_confirm', array("class" => "form-control", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+    echo '</div>';
+
+    echo "<hr>";
+    echo '</div>';
+    //submit button
+    echo '
+    <div class="row" style="width:100%">
+        <div class="text-right" style="margin-bottom:10px;">
+            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+    echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+        "class" => "btn",
+        'type' => 'submit',
+        'escape' => false
+    ));
+    echo '</div>
+    </div>';
+
+    echo $this->Form->end();
+
     ?>
-</head>
-<body class="container-fluid">
 
-
-
-
-<?php
-if($errorMsg){
-    echo $this->Html->para('', $errorMsg);
-}
-
-echo $this->Form->create(false, array('type' => 'post'));
-
-echo $this->Form->input('User.id', array('type' => 'hidden', 'value' => $user['User']['id']));
-
-echo $this->Form->label('User.old_password', '旧パスワード');
-echo $this->Form->password('User.old_password');
-echo $this->Form->error('User.old_password');
-
-echo $this->Form->label('User.password', '新パスワード');
-echo $this->Form->password('User.password');
-echo $this->Form->error('User.password');
-
-echo $this->Form->label('User.password_confirm', '新パスワード確認');
-echo $this->Form->password('User.password_confirm');
-echo $this->Form->error('User.password_confirm');
-
-echo $this->Form->submit('change');
-
-echo $this->Form->end();
-
-?>
-</body>
-<html>
+</div>
