@@ -13,6 +13,13 @@
     // Latest compiled and minified CSS
     //echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', array('integrity' => 'sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', 'crossorigin' => 'anonymous'));
     echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
+
+    //validationEngineのjsを追加する。
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
+    //validationEngineのcssを追加する。
+    echo $this->Html->css('validationEngine.jquery.css');
+
     //Latest compiled and minified JavaScript
     echo $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('integrity' => 'sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', 'crossorigin' => 'anonymous'));
     //font-awesome
@@ -90,37 +97,37 @@
 
                 echo $this->Form->input('User.delete_flag',array('type' => 'hidden', 'value' => '0'));
 
-
-                //会社名チェック
                 echo '<div class="form-group">';
                 echo $this->Form->label('User.family_name', '姓');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.family_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.family_name', array("class" => "form-control", "placeholder" => "山田"));
+                echo $this->Form->text('User.family_name', array("class" => "form-control validate[required]", "placeholder" => "山田"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.first_name', '名');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.first_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.first_name', array("class" => "form-control validate[required]", "placeholder" => "太郎"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
 
-                echo $this->Form->label('User.family_name', 'Family Name');
-                echo $this->Form->text('User.family_name', array('class' => 'validate[required]'));
-                echo $this->Form->error('User.family_name');
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.furigana', 'カタカナ');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.furigana',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.furigana', array("class" => "form-control validate[required]", "placeholder" => "ヤマダタロウ"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
 
-                echo $this->Form->label('User.first_name', 'First Name');
-                echo $this->Form->text('User.first_name', array('class' => 'validate[required]'));
-                echo $this->Form->error('User.first_name');
-
-                echo $this->Form->label('User.furigana', 'Japanese');
-                echo $this->Form->text('User.furigana', array('class' => 'validate[required]'));
-                echo $this->Form->error('User.furigana');
-
-                /*echo $this->Form->label('User.birthday', 'Birthday');
-                echo $this->Form->year('User.birthday', '1946', '2016', array(), array());
-                echo $this->Form->month('User.birthday');
-                echo $this->Form->day('User.birthday');
-                echo $this->Form->error('User.birthday');*/
-
-                echo $this->Form->label('User.birthday', 'Birthday');
-                echo $this->Form->text('User.birthday', array('id' => "datepicker",'class' => 'validate[required]'));
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.birthday', '誕生日');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.birthday',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.birthday', array('id' => "datepicker", "class" => "form-control validate[required]", "placeholder" => "1900-01-01"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
                 ?>
 
                 <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
@@ -140,51 +147,66 @@
                 </script>
 
 
-                <label for="UserGender">Gender</label>
-                <br/>
+                <div class="form-group">
+                <label for="UserGender">性別</label>
+                    &nbsp<span class="label label-warning">必須</span>
                 <input type="radio" name="data[User][gender]" id="UserGenderMale" value="male" required="required" checked/>
-                <label for="UserGenderMale">Male</label>
+                <label for="UserGenderMale">男性</label>
                 <input type="radio" name="data[User][gender]" id="UserGenderFemale" value="female" required="required"/>
-                <label for="UserGenderFemale">Female</label>
-                <br/>
-
+                <label for="UserGenderFemale">女性</label>
+                    <div class="divider-form"></div>
 
                 <?php
                 echo $this->Form->error('User.gender');
 
-                echo $this->Form->label('User.login_id', 'Login ID');
-                echo $this->Form->text('User.login_id', array('class' => 'validate[required]'));
-                echo $this->Form->error('User.login_id');
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.email', 'メール');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.email',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.email', array("class" => "form-control validate[required]", "placeholder" => "xxx＠workwork.com"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
 
-                echo $this->Form->checkbox('check', array('id' => 'use_email_check', 'onclick'=>'use_email();','class' => 'validate[required]'));
-                echo $this->Html->para('', 'Using Email as ID');
-                echo $this->Form->button('ID check', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button'));
-
-                echo $this->Form->label('User.password', 'Password');
-                echo $this->Form->password('User.password', array('class' => 'validate[required]'));
-                echo $this->Form->error('User.password');
-
-                echo $this->Form->label('User.password_confirm', 'PasswordConfirm');
-                echo $this->Form->password('User.password_confirm', array('class' => 'validate[required]'));
-                echo $this->Form->error('User.password_confirm');
-
-                echo $this->Form->label('ReceiveMail?');
-                echo $this->Form->checkbox('check', array('class' => 'validate[required]'));
-                echo $this->Html->para('', 'Yes');
-
-                echo '<br/><br/>';
-                //echo $this->Form->submit('signup');
-
-
-
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.login_id', 'ログインID');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.login_id',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.login_id', array("class" => "form-control validate[required]", "placeholder" => "ログインID/メール"));
                 ?>
 
 
+                    <p><input type="checkbox" id="use_email_check" name="data[check]" onclick="use_email();" value="1" class="validate[required]"/> メールをログインIDとして登録する</p>
+
+                <?php
+                //echo $this->Form->checkbox('check', array('id' => 'use_email_check', 'onclick'=>'use_email();','class' => 'validate[required]'));
+                echo $this->Form->button('IDチェック', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button'));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
+
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.password', 'パスワード');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->password('User.password', array("class" => "form-control validate[required]", "placeholder" => "パスワード"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
+
+
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.password_confirm', 'パスワード確認');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.password_confirm',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->password('User.password_confirm', array("class" => "form-control validate[required]", "placeholder" => "もう一度パスワードを入力してください"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
 
 
 
+                echo $this->Form->label('電子メールを受信する');
+                echo '<br/>';
+                ?>
 
-
+                <p><input type="checkbox" name="data[check]" value="1" class="validate[required]"/> はい</p>
 
 
 
