@@ -1,4 +1,26 @@
+<html>
+<head>
+    <?php
+    echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
+    //validationEngineのjsを追加する。
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
+    //validationEngineのcssを追加する。
+    echo $this->Html->css('validationEngine.jquery.css');
+    ?>
 
+    <script>
+        $(
+            function(){
+                $("#emAdvertisesCreateForm").validationEngine();
+            }
+        );
+
+    </script>
+
+</head>
+
+<body>
 <div class="row">
     <div class="">
         <div class="box">
@@ -158,5 +180,6 @@ EOL;
         </div>
     </div>
 </div>
-
+</body>
+</HTML>
 
