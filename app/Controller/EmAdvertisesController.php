@@ -3,7 +3,7 @@
 class EmAdvertisesController extends AppController {
 
     public $name = 'EmAdvertises';
-    public $users = array('EmAdvertises','Employers');
+    public $uses = array('EmAdvertise','Employer');
     //public $autoLayout = true;
     public $layout = "employers";
     public $autoRender = true;
@@ -22,6 +22,11 @@ class EmAdvertisesController extends AppController {
 
         if ($this->request->isPost()){
 
+ /*           print'<pre>';
+            print($data);
+            print'</pre>';
+            exit();*/
+
             $result = $this->EmAdvertise->save($this->data);
 
 
@@ -34,16 +39,15 @@ class EmAdvertisesController extends AppController {
             $data = $this->data;
 
         }else{
+
             $id = $this->request->query['employer_id'];
 
             $employer = $this->Employer->find('first', array('conditions' => array('id'=> $id, 'delete_flag' => 0)));
 
             if(!$employer){
-
+                $this->Session->setFlash('idが存在しません');
+                $this->redirect('index');
             }
-
-
-
         }
 
         $this->set('employer', $employer);
@@ -89,7 +93,7 @@ class EmAdvertisesController extends AppController {
 
         }
 
-        $this->set('data',$data);
+        $this->set('data', $data);
         $this->set('errorMsg', $errorMsg);
 
     }
