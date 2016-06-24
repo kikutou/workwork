@@ -68,35 +68,25 @@
         echo $this->Form->text('User.family_name', array('class' => array('form-control','validate[required]'),'value' => $user['User']['family_name']));
         echo '</div>';
 
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.first_name', '名');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.first_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.first_name', array('class' => array('form-control','validate[required]'),'value' => $user['User']['first_name']));
+        echo '</div>';
 
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.furigana', 'カタカナ');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.furigana',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.furigana', array('class' => array('form-control','validate[required]'),'value' => $user['User']['furigana']));
+        echo '</div>';
 
-
-
-
-
-
-
-
-        echo $this->Form->label('User.family_name', 'Family Name');
-        echo $this->Form->text('User.family_name', array('value' => $user['User']['family_name'], 'class' => 'validate[required]'));
-        echo $this->Form->error('User.family_name');
-        
-        echo $this->Form->label('User.first_name', 'First Name');
-        echo $this->Form->text('User.first_name', array('value' => $user['User']['first_name'], 'class' => 'validate[required]'));
-        echo $this->Form->error('User.first_name');
-        
-        echo $this->Form->label('User.furigana', 'Japanese');
-        echo $this->Form->text('User.furigana', array('value' => $user['User']['furigana'], 'class' => 'validate[required]'));
-        echo $this->Form->error('User.furigana');
-        
-        /*echo $this->Form->label('User.birthday', 'Birthday');
-        echo $this->Form->year('User.birthday', '1946', '2016', array('value' => $user['User']['birthday']));
-        echo $this->Form->month('User.birthday',array('value' => $user['User']['birthday']));
-        echo $this->Form->day('User.birthday',array('value' => $user['User']['birthday']));
-        echo $this->Form->error('User.birthday');*/
-        
-        echo $this->Form->label('User.birthday', 'Birthday');
-        echo $this->Form->text('User.birthday',array('value' => $user['User']['birthday'],'id' => "datepicker", 'class' => 'validate[required]'));
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.birthday', '誕生日');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.birthday',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.birthday', array('class' => array('form-control','validate[required]'),'id' => "datepicker",'value' => $user['User']['birthday']));
         ?>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -113,53 +103,66 @@
                 });
             });
         </script>
-        
-        
+    
         <?php
-        echo '<br/>';
-        echo $this->Form->label('User.gender', 'Gender');
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.gender', '性別');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.gender',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo '<br />';
         ?>
-        <input type="radio" name="data[User][gender]" value="0" <?php if($user['User']['gender'] == 0) {echo "checked"; } ?>>Male
-        <br/><br/>
-        <input type="radio" name="data[User][gender]" value="1" <?php if($user['User']['gender'] == 1) {echo "checked"; } ?>>Female
-        
+
+        <input type="radio" name="data[User][gender]" class="validate[required]" value="0" <?php if($user['User']['gender'] == 0) {echo "checked"; } ?>>男性
+        <input type="radio" name="data[User][gender]" class="validate[required]" value="1" <?php if($user['User']['gender'] == 1) {echo "checked"; } ?>>女性
+
         <?php
-        //echo $this->Form->radio('User.gender', array('male' => 'Male', 'female' => 'Female'), array('legend' => ''), array('value' => $user['User']['gender']));
-        echo $this->Form->error('User.gender');
-        
-        echo '<br/>';
-        echo $this->Form->label('User.email', 'Mail');
-        echo $this->Form->text('User.email', array('value' => $user['User']['email'], 'class' => 'validate[required]'));
-        echo $this->Form->error('User.email');
-        
-        echo $this->Form->label('User.login_id', 'Login ID');
-        echo $this->Form->text('User.login_id', array('value' => $user['User']['login_id'], 'class' => 'validate[required]'));
-        echo $this->Form->error('User.login_id');
-        
-        /*echo '<br/>';
-        echo $this->Form->button('Change password button');*/
-        
-        echo $this->Form->label('User.mobile1', 'Mobile1');
-        echo $this->Form->text('User.mobile1', array('value' => $user['User']['mobile1']));
-        echo $this->Form->error('User.mobile1');
-        
-        echo $this->Form->label('User.mobile2', 'Mobile2');
-        echo $this->Form->text('User.mobile2', array('value' => $user['User']['mobile2']));
-        echo $this->Form->error('User.mobile2');
-        
-        //TODO ポストコード結合
-        echo $this->Form->label('User.postcode1', 'Postcode');
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.email', 'メール');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.email',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.email', array('class' => array('form-control','validate[required]'),'value' => $user['User']['email']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.login_id', 'ログインID');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.login_id',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.login_id', array('class' => array('form-control','validate[required]'),'value' => $user['User']['login_id']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.mobile1', '電話番号1');
+        echo $this->Form->error('User.mobile1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.mobile1', array('class' => 'form-control','value' => $user['User']['mobile1']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.mobile2', '電話番号2');
+        echo $this->Form->error('User.mobile2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.mobile2', array('class' => 'form-control','value' => $user['User']['mobile2']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.postcode1', '郵便番号');
+        echo '<br />';
+        echo $this->Form->error('User.postcode1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
         echo $this->Form->text('User.postcode1', array('value' => $user['User']['postcode1']));
-        echo $this->Form->error('User.postcode1');
         echo $this->Html->tag('span', '-');
+        echo $this->Form->error('User.postcode2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
         echo $this->Form->text('User.postcode2', array('value' => $user['User']['postcode2']));
-        echo $this->Form->error('User.postcode2');
-        
+        echo '</div>';
         echo $this->Html->link('get postcode from address', 'http://www.baidu.com/', array('target' => '_blank'), 'move');
         echo $this->Form->button('Click: Input address automatically according to postcode');
-        
-        echo $this->Form->label('User.province', 'Province');
-        
+        echo '<br /><br />';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.province', '都道府県');
+        echo $this->Form->error('User.mobile2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+
         $provinces = array(
             '0' => '北海道',
             '1' => '青森県',
@@ -227,22 +230,24 @@
         </select>
         
         <?php
-        
-        echo $this->Form->error('User.province');
-        
-        echo $this->Form->label('User.address1', 'Address1');
-        echo $this->Form->text('User.address1', array('value' => $user['User']['address1']));
-        //echo $this->Form->text('User.address1', array('value' => $user['User']['address1']));
-        echo $this->Form->error('User.address1');
-        
-        echo $this->Form->label('User.address2', 'Address2');
-        echo $this->Form->text('User.address2', array('value' => $user['User']['address2']));
-        //echo $this->Form->text('User.address2', array('value' => $user['User']['address2']));
-        echo $this->Form->error('User.address2');
-        
-        echo $this->Form->label('User.spareday', 'spare time to recieve call');
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.address1', '住所1');
+        echo $this->Form->error('User.address1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.address1', array('class' => 'form-control','value' => $user['User']['address1']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.address2', '住所2');
+        echo $this->Form->error('User.address2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.address2', array('class' => 'form-control','value' => $user['User']['address2']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.spareday', '連絡可能の日');
         ?>
-        <?php $name = array('All', 'Mon', 'Tue', 'wed' , 'Thu', 'Fri', 'Sat', 'Sun'); ?>
+        <?php $name = array('すべて', '月曜日', '火曜日', '水曜日' , '木曜日', '金曜日', '土曜日', '日曜日'); ?>
         <?php for($i = 0; $i < 8; $i++){ ?>
             <div>
                 <label><?php echo $name[$i]; ?></label>
@@ -350,17 +355,20 @@
             }
             ?>
         </select>
-        
+
         <?php
-        echo $this->Form->label('User.degree', 'Degree');
-        
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.degree', '学位');
+        echo $this->Form->error('User.degree',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo '<br />';
+
         $degree = array(
-        
-            '0' => 'Diploma',
-            '1' => 'Associate degree',
-            '2' => 'Bachelor',
-            '3' => 'Master',
-            '4' => 'Doctor'
+
+            '0' => '学士',
+            '1' => '修士',
+            '2' => '博士'
         
         );
         ?>
@@ -379,40 +387,53 @@
         </select>
         
         <?php
-        echo $this->Form->error('User.degree');
-        
-        echo $this->Form->label('User.college', 'College');
-        echo $this->Form->text('User.college', array('value' => $user['User']['college']));
-        echo $this->Form->error('User.college');
-        
-        echo $this->Form->label('User.primary_major', 'Major');
-        echo $this->Form->text('User.primary_major', array('value' => $user['User']['primary_major']));
-        echo $this->Form->error('User.primary_major');
-        
-        echo $this->Form->label('User.secondary_major', 'Major2');
-        echo $this->Form->text('User.secondary_major', array('value' => $user['User']['secondary_major']));
-        echo $this->Form->error('User.secondary_major');
-        
-        echo $this->Form->label('User.certification', 'Certification');
-        echo $this->Form->textarea('User.certification', array('value' => $user['User']['certification']));
-        echo $this->Form->error('User.certification');
-        
-        echo $this->Form->label('User.skill', 'Skill');
-        echo $this->Form->textarea('User.skill', array('value' => $user['User']['skill']));
-        echo $this->Form->error('User.skill');
-        
-        echo $this->Form->label('User.work_situation', 'Work Situation');
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.college', '学校名');
+        echo $this->Form->error('User.college',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.college', array('class' => 'form-control','value' => $user['User']['college']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.primary_major', '学部・学科名');
+        echo $this->Form->error('User.primary_major',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.primary_major', array('class' => 'form-control','value' => $user['User']['primary_major']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.secondary_major', '学科系統');
+        echo $this->Form->error('User.secondary_major',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.secondary_major', array('class' => 'form-control','value' => $user['User']['secondary_major']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.certification', '資格証明書');
+        echo $this->Form->error('User.certification',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.certification', array('class' => 'form-control','value' => $user['User']['certification']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.skill', 'スキル');
+        echo $this->Form->error('User.skill',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->text('User.skill', array('class' => 'form-control','value' => $user['User']['skill']));
+        echo '</div>';
+
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.work_situation', '勤務状況');
+        echo $this->Form->error('User.work_situation',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo '<br />';
         ?>
-        <input type="radio" name="data[User][work_situation]" value="0" <?php if($user['User']['work_situation'] == 0) {echo "checked"; } ?>>in employment
+
+        <input type="radio" name="data[User][work_situation]" value="0" <?php if($user['User']['work_situation'] == 0) {echo "checked"; } ?>>就職している
         <br/><br/>
-        <input type="radio" name="data[User][work_situation]" value="1" <?php if($user['User']['work_situation'] == 1) {echo "checked"; } ?>>out of employment
+        <input type="radio" name="data[User][work_situation]" value="1" <?php if($user['User']['work_situation'] == 1) {echo "checked"; } ?>>失職中
         <br/><br/>
-        <input type="radio" name="data[User][work_situation]" value="2" <?php if($user['User']['work_situation'] == 2) {echo "checked"; } ?>>new graduate
+        <input type="radio" name="data[User][work_situation]" value="2" <?php if($user['User']['work_situation'] == 2) {echo "checked"; } ?>>新卒
         
         <?php
-        //echo $this->Form->radio('User.work_situation', array('situation1' => 'in employment', 'situation2' => 'out of employment','situation3'=>'new graduate'), array('legend' => ''));
-        echo $this->Form->error('User.work_situation');
-        
+        echo '</div>';
+
         echo $this->Form->submit('submit');
         
         echo $this->Form->end();

@@ -109,7 +109,6 @@
             <div class="divider-form"></div>
 
             <?php
-            //echo $this->Form->button('Change password button',array('passchange?id=' . $user['User']['id']));
             echo '<div class="form-group">';
             echo $this->Html->para('User.mobile1', '電話番号1');
             echo $this->Html->para('', $user['User']['mobile1']);

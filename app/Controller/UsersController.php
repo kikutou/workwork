@@ -162,14 +162,16 @@ class UsersController extends AppController {
 
             $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' =>'0')));
 
+            if(!$user) {
 
+                $this->redirect('index');
+            }
             /*
             print '<pre>';
             print_r($user);
             print '</pre>';
             exit();
             */
-
 
         }
 
