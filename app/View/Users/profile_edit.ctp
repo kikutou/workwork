@@ -50,14 +50,6 @@
     echo "<hr>";
 
 ?>
-
-        <script>
-            $(
-                function () {
-                    $("#edit_id").validationEngine();
-                }
-            )
-        </script>
         
         <?php
         /*if($errorMsg){
@@ -73,7 +65,7 @@
         echo $this->Form->label('User.family_name', '姓');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.family_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.family_name', array('class' => "'form-control' 'validate[required]'",'value' => $user['User']['family_name']));
+        echo $this->Form->text('User.family_name', array('class' => array('form-control','validate[required]'),'value' => $user['User']['family_name']));
         echo '</div>';
 
 

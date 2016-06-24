@@ -40,6 +40,11 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
     
     echo $this->Html->css('user-dashboard');
 
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
+    //validationEngineのcssを追加する。
+    echo $this->Html->css('validationEngine.jquery.css');
+
     echo $this->fetch('meta');
     echo $this->fetch('css');
     echo $this->fetch('script');
@@ -51,6 +56,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 $('.row-offcanvas').toggleClass('active');
             });
         });
+
+        $(
+            function () {
+                $("#edit_id").validationEngine();
+            }
+        );
+        
     </script>
 
 </head>
