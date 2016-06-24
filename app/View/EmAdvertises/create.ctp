@@ -1,5 +1,4 @@
 
-
 <div class="row">
     <div class="">
         <div class="box">
@@ -11,9 +10,17 @@
             }
 
             echo '<div class="divider-form"></div>';
-            
             echo '<div class="label label-default form-tag right"><i class="fa fa-user"></i> 担当者情報登録</div>';
             echo '<div class="divider-form"></div>';
+
+            echo $this->Form->create(false, array(
+                'type' => 'post',
+                'role' => 'form',
+                'class' => "form-group",
+                'id' => 'emAdvertisesCreateForm'
+            ));
+
+            echo $this->Form->input('EmAdvertise.employer_id', array('type' => 'hidden', 'value' => $employer['Employer']['id']));
 
             //職業
             echo '<div class="form-group">';
