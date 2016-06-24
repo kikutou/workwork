@@ -81,7 +81,8 @@ class UsersController extends AppController {
 
     }
 
-    public function profileEdit(){
+    public function profile_edit(){
+        
         $errorMsg = null;
         $user = null;
 
