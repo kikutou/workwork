@@ -40,12 +40,25 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     echo $this->Html->css('employer-dashboard');
 
+    //validationEngineのjsを追加する。
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
+    echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
+    //validationEngineのcssを追加する。
+    echo $this->Html->css('validationEngine.jquery.css');
+
     echo $this->fetch('meta');
     echo $this->fetch('css');
     echo $this->fetch('script');
     ?>
 
     <script>
+
+        $(
+            function(){
+                $("#emadvertisesCreateForm").validationEngine();
+            }
+        );
+        
         //offcanvas leftmenu
         $(document).ready(function() {
             $('[data-toggle=offcanvas]').click(function() {
@@ -62,6 +75,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
         $(function () {
             $('[data-toggle="popover"]').popover()
                 });
+        
+        
+        
     </script>
 
 </head>

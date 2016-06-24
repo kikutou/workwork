@@ -3,7 +3,7 @@
 class EmAdvertisesController extends AppController {
 
     public $name = 'EmAdvertises';
-    public $users = null;
+    public $users = array('EmAdvertises','Employers');
     //public $autoLayout = true;
     public $layout = "employers";
     public $autoRender = true;
@@ -16,9 +16,9 @@ class EmAdvertisesController extends AppController {
     public function create()
     {
 
-
         $errorMsg = null;
         $data = null;
+        $employer = null;
 
         if ($this->request->isPost()){
 
@@ -33,8 +33,20 @@ class EmAdvertisesController extends AppController {
 
             $data = $this->data;
 
+        }else{
+            $id = $this->request->query['employer_id'];
+
+            $employer = $this->Employer->find('first', array('conditions' => array('id'=> $id, 'delete_flag' => 0)));
+
+            if(!$employer){
+
+            }
+
+
+
         }
 
+        $this->set('employer', $employer);
         $this->set('data',$data);
         $this->set('errorMsg', $errorMsg);
 
