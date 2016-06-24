@@ -98,7 +98,7 @@ class UsersController extends AppController {
             exit();*/
 
             if($result) {
-                $this->redirect('profileDone');
+                $this->redirect('profile_done');
             }else {
                 $errorMsg = '編集失敗しました.もう一度入力してください';
             }
@@ -179,5 +179,9 @@ class UsersController extends AppController {
 
         //$this->set('data',$this->data);
         $this->set('errorMsg',$errorMsg);
+    }
+
+    public function profile_done() {
+
     }
 }
