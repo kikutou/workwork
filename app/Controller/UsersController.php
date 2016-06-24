@@ -50,9 +50,9 @@ class UsersController extends AppController {
         $user = $this->User->find('first',array('conditions' => array('login_id' => $id, 'delete_flag' => 0)));
 
         if($user) {
-            echo "this user has been signedup already";
+            echo "このLoginIDは既に使われています、変更してください。";
         }else {
-            echo "this user has not been signedup";
+            echo "このLoginIDは登録可能です。";
         }
     }
 
