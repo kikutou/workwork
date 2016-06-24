@@ -52,14 +52,14 @@
 ?>
         
         <?php
-        /*if($errorMsg){
+        if($errorMsg){
             echo $this->Html->para('',$errorMsg);
         }
         
         
         echo $this->Form->create(false, array('type' => 'post', 'id' => 'edit_id'));
         
-        echo $this->Form->input('User.id', array('type' => 'hidden', 'value' => $user['User']['id']));*/
+        echo $this->Form->input('User.id', array('type' => 'hidden', 'value' => $user['User']['id']));
 
         echo '<div class="form-group">';
         echo $this->Form->label('User.family_name', '姓');
@@ -434,7 +434,20 @@
         <?php
         echo '</div>';
 
-        echo $this->Form->submit('submit');
+        echo "<hr>";
+        echo '</div>';
+        //submit button
+        echo '
+    <div class="row" style="width:100%">
+        <div class="text-right" style="margin-bottom:10px;">
+            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+            "class" => "btn",
+            'type' => 'submit',
+            'escape' => false
+        ));
+        echo '</div>
+    </div>';
         
         echo $this->Form->end();
         
