@@ -230,7 +230,7 @@ class User extends AppModel
   public function checkPassword($data)
   {
 
-    #exit(var_dump($data));
+    //exit(var_dump($data));
 
     $data = $data['password'];
 

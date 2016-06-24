@@ -62,7 +62,12 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
                 $("#edit_id").validationEngine();
             }
         );
-        
+
+        $(
+            function () {
+                $("#passchange").validationEngine();
+            }
+        );
     </script>
 
 </head>
@@ -118,7 +123,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 
     <!-- Footer END --></div>
 
-<?php echo $this->element('sql_dump'); ?>
+<!--<?php //echo $this->element('sql_dump'); ?>-->
 
 </body>
 </html>
