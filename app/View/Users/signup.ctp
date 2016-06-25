@@ -122,7 +122,7 @@
                 echo '<div class="divider-form"></div>';
 
                 echo '<div class="form-group">';
-                echo $this->Form->label('User.birthday', '誕生日');
+                echo $this->Form->label('User.birthday', '生年月日');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.birthday',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
                 echo $this->Form->text('User.birthday', array('id' => "datepicker", "class" => array('form-control','validate[required]'), "placeholder" => "1900-01-01"));

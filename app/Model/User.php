@@ -76,10 +76,10 @@ class User extends AppModel
               'rule' => array('between',8,16),
               'message' => '8−16文字以内で入力してください。'
           ),
-          array(
+          /*array(
               'rule' => array('checkPassword'),
               'message' => '半角英数字と_のみ記入できます。英数字それぞれ1種類以上含んでください。',
-          ),
+          ),*/
           array(
               'rule' =>array('oldPasswordCheck'),
               'message' => '旧パスワードが間違いました。'

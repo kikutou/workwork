@@ -50,9 +50,9 @@ class UsersController extends AppController {
         $user = $this->User->find('first',array('conditions' => array('login_id' => $id, 'delete_flag' => 0)));
 
         if($user) {
-            echo "このLoginIDは既に使われています、変更してください。";
+            echo "このログインIDは既に使われています、変更してください。";
         }else {
-            echo "このLoginIDは登録可能です。";
+            echo "このログインIDは登録可能です。";
         }
     }
 
@@ -140,8 +140,7 @@ class UsersController extends AppController {
 
         if($this->request->isPost()) {
 
-
-            $result = $this->User->save($this->data);
+            $result = $this->User->save($this->request->data);
 
             if($result) {
                 $this->redirect('index');
@@ -162,10 +161,6 @@ class UsersController extends AppController {
 
             $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' =>'0')));
 
-            if(!$user) {
-
-                $this->redirect('index');
-            }
             /*
             print '<pre>';
             print_r($user);
@@ -173,6 +168,10 @@ class UsersController extends AppController {
             exit();
             */
 
+            if(!$user) {
+
+                $this->redirect('index');
+            }
         }
 
         $this->set('user',$user);

@@ -73,7 +73,7 @@
         echo '<div class="divider-form"></div>';
 
         echo '<div class="form-group">';
-        echo $this->Html->para('User.birthday', '誕生日');
+        echo $this->Html->para('User.birthday', '生年月日');
         echo $this->Html->para('',$user['User']['birthday']);
         echo '</div>';
         echo '<div class="divider-form"></div>';
