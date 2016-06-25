@@ -1,40 +1,14 @@
 <html>
-<!--<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php /*echo $this->Html->charset(); */?>
-    <title>
-        <?php /*//echo $cakeDescription */?>
-        <?php /*//echo $this->fetch('title'); */?>
-    </title>
+<head>
     <?php
-/*    echo $this->Html->meta('icon');
-    // Latest compiled and minified CSS
-    echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css', array('integrity' => 'sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7', 'crossorigin' => 'anonymous'));
-    // Latest compiled and minified CSS
-    //echo $this->Html->css('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css', array('integrity' => 'sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r', 'crossorigin' => 'anonymous'));
     echo $this->Html->script('http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js');
-    //Latest compiled and minified JavaScript
-    echo $this->Html->script('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js', array('integrity' => 'sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS', 'crossorigin' => 'anonymous'));
-
-
     //validationEngineのjsを追加する。
     echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine.js');
     echo $this->Html->script('jQuery-Validation-Engine-master/js/jquery.validationEngine-ja.js');
     //validationEngineのcssを追加する。
     echo $this->Html->css('validationEngine.jquery.css');
+    ?>
 
-
-    //font-awesome
-    echo $this->Html->css('https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css', array('integrity' => 'sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1', 'crossorigin' => 'anonymous'));
-
-    echo $this->Html->css('employer-login');
-    echo $this->fetch('meta');
-    echo $this->fetch('css');
-    echo $this->fetch('script');
-
-
-
-    */?>
 
     <script>
         $(
@@ -45,14 +19,8 @@
 
     </script>
 
-</head>-->
+</head>
 <body class="container-fluid">
-
-<!--<div class="row">
-    <div class="col-md-2 col-md-offset-5 col-xs-6 col-xs-offset-3" style="margin-top: 20px;">
-        <?php /*echo $this->Html->link($this->Html->image('logo.png', array('alt'=>'logo', 'class'=>'img-responsive logo')), "/", array('escape' => false) ); */?>
-    </div>
-</div>-->
 
 <div class="row">
     <div class="">
