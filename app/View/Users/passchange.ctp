@@ -53,21 +53,21 @@
     echo $this->Form->label('User.old_password', '旧パスワード');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('User.old_password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->password('User.old_password', array("class" => array('form-control','validate[required]'), "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+    echo $this->Form->password('User.old_password', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('User.password', '新パスワード');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('User.password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->password('User.password', array("class" => array('form-control','validate[required]'), "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+    echo $this->Form->password('User.password', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('User.password_confirm', '新パスワード確認');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('User.password_confirm',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->password('User.password_confirm', array("class" => array('form-control','validate[required]'), "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+    echo $this->Form->password('User.password_confirm', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
     echo '</div>';
 
     echo "<hr>";

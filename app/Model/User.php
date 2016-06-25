@@ -100,7 +100,7 @@ class User extends AppModel
               'rule' => array('sameCheck'),
               'message' =>  'パスワードとパスワード確認の入力が一致していません。'
             ),
-/*          array(
+          /*array(
               'rule' => array('passchange'),
               'message' => 'パスワードが間違いました。'
           )*/
@@ -192,7 +192,7 @@ class User extends AppModel
       )
   );
 
-  public function checkMail($data)
+    public function checkMail($data)
   {
     $user = $this->find('first', array('conditions' => array('email' => $data)));
     if($user){
@@ -202,7 +202,7 @@ class User extends AppModel
     }
   }
 
-  public function checkId($data)
+    public function checkId($data)
   {
     $user = $this->find('first', array('conditions' => array('login_id' => $data)));
     if($user){
@@ -212,26 +212,48 @@ class User extends AppModel
     }
   }
 
-  //パスワードの同一性チェックをする。
-  public function sameCheck($data)
-  {
 
-    $password1 = $this->data['User']['password_confirm'];
-    $password2 = $this->data['User']['password'];
+    public function oldPasswordCheck($data)
+    {
+        $user = $this->find('first', array('conditions' => array('User.id' => $this->data['User']['id'], 'delete_flag' => 0)));
 
-    if ($password1 == $password2){
-    //  $this->data['User']['password'] = md5($this->data['User']['password']);
-      return true;
-    }else{
-      return false;
+        if(!$user){
+            return false;
+        }
+        $passwordInDb = $user['User']['password'];
+
+        $oldPassword = $this->data['User']['old_password'];
+        //$this->data['User']['old_password'] = md5($this->data['User']['old_password']);
+
+        //２つのパスワードを比較する
+        if ($passwordInDb == $oldPassword){
+            return true;
+        }else{
+            return false;
+        }
     }
-  }
 
-  public function checkPassword($data)
+    //パスワードの同一性チェックをする。
+    public function sameCheck($data)
+      {
+
+        $password1 = $this->data['User']['password_confirm'];
+        $password2 = $this->data['User']['password'];
+
+        if ($password1 == $password2){
+        //  $this->data['User']['password'] = md5($this->data['User']['password']);
+          return true;
+        }else{
+          return false;
+        }
+      }
+
+    public function checkPassword($data)
   {
 
     //exit(var_dump($data));
 
+    //controllerから送ったarranyの中でpasswordを取る。
     $data = $data['password'];
 
     $strlen = strlen($data);
@@ -268,7 +290,7 @@ class User extends AppModel
     return true;
   }
 
-  public function updateCheck($data,$field_name){
+    public function updateCheck($data,$field_name){
 
       $user = $this->find('first',array('conditions' => array("id" => $this->data['User']['id'])));
       if (!$user){
@@ -293,29 +315,6 @@ class User extends AppModel
       }
 
   }
-
-    public function oldPasswordCheck($data)
-    {
-
-        //$password1 = $this->data['User']['password'];
-        //まず,DBから加密されたパスワードを取得
-        $user = $this->find('first', array('conditions' => array('User.id' => $this->data['User']['id'], 'delete_flag' => 0)));
-        if(!$user){
-            return false;
-        }
-        $passwordInDb = $user['User']['password'];
-
-        //入力された旧パスワードを加密する
-        $oldPassword = $this->data['User']['old_password'];
-        //$this->data['User']['old_password'] = md5($this->data['User']['old_password']);
-
-        //２つのパスワードを比較する
-        if ($passwordInDb == $oldPassword){
-            return true;
-        }else{
-            return false;
-        }
-    }
     
     public function profileEditSave($data){
         
@@ -340,12 +339,6 @@ class User extends AppModel
         return $result;
 
     }
-
-
-
-
-
-
 
 }
 ?>

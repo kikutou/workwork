@@ -5,7 +5,7 @@
     <div class="col-xs-6 page-breadcrumb text-right">
         <ol class="breadcrumb">
             <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
-            <li class="active"><a href="/work/users/profileEdit">個人履歴書</a></li>
+            <li class="active"><a href="/work/users/profile_edit">個人履歴書</a></li>
         </ol>
     </div>
 </div>
@@ -25,7 +25,7 @@
         <div class="text-right" style="margin-bottom:10px;">';
     ?>
 
-    <button type="button" class="btn" onClick="location.href='/work/users/profileEdit?id=<?php echo $user['User']['id']?>'">個人情報編集へ</button>
+    <button type="button" class="btn" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>'">個人情報編集へ</button>
 
     <?php
     echo '</div>
@@ -174,7 +174,7 @@
     echo $this->Html->para('User.address2', '住所2');
     echo $this->Html->para('', $user['User']['address2']);
     echo '</div>';
-    
+
     echo '<div class="form-group">';
     echo $this->Html->para('receive_mail', '連絡可能の日');
 

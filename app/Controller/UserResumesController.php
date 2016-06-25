@@ -3,7 +3,6 @@
 class UserResumesController extends AppController {
 
     public $name = 'UserResumes';
-    public $users = null;
     public $uses = array('User', 'UserResume');
     //public $autoLayout = true;
     public $layout = "users";

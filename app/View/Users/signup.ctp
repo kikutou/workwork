@@ -101,7 +101,7 @@
                 echo $this->Form->label('User.family_name', '姓');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.family_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.family_name', array("class" => array('form-control','validate[required]'), "placeholder" => "山田"));
+                echo $this->Form->text('User.family_name', array("class" => 'form-control validate[required]', "placeholder" => "山田"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -109,7 +109,7 @@
                 echo $this->Form->label('User.first_name', '名');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.first_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.first_name', array("class" => array('form-control','validate[required]'), "placeholder" => "太郎"));
+                echo $this->Form->text('User.first_name', array("class" => 'form-control validate[required]', "placeholder" => "太郎"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -117,7 +117,7 @@
                 echo $this->Form->label('User.furigana', 'カタカナ');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.furigana',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.furigana', array("class" => array('form-control','validate[required]'), "placeholder" => "ヤマダタロウ"));
+                echo $this->Form->text('User.furigana', array("class" => 'form-control validate[required]', "placeholder" => "ヤマダタロウ"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -125,7 +125,7 @@
                 echo $this->Form->label('User.birthday', '生年月日');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.birthday',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.birthday', array('id' => "datepicker", "class" => array('form-control','validate[required]'), "placeholder" => "1900-01-01"));
+                echo $this->Form->text('User.birthday', array('id' => "datepicker", "class" => 'form-control validate[required]', "placeholder" => "1900-01-01"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
                 ?>
@@ -187,7 +187,7 @@
                 echo $this->Form->label('User.password', 'パスワード');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->password('User.password', array("class" => array('form-control','validate[required]'), "placeholder" => "パスワード"));
+                echo $this->Form->password('User.password', array("class" => 'form-control validate[required]', "placeholder" => "パスワード"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -196,7 +196,7 @@
                 echo $this->Form->label('User.password_confirm', 'パスワード確認');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.password_confirm',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->password('User.password_confirm', array("class" => array('form-control','validate[required]'), "placeholder" => "もう一度パスワードを入力してください"));
+                echo $this->Form->password('User.password_confirm', array("class" => 'form-control validate[required]', "placeholder" => "もう一度パスワードを入力してください"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -206,7 +206,7 @@
                 echo '<br/>';
                 ?>
 
-                <p><input type="checkbox" name="data[check]" value="1" class="validate[required]"/> はい</p>
+                <p><input type="checkbox" name="data[check]" value="1"/> はい</p>
 
 
 
@@ -266,7 +266,7 @@ echo $this->Js->writeBuffer();
                 function (event) {
 
                     if($("#UserLoginId").val().replace(/^\s+|\s+$/g, "") == ''){
-                        alert('this area can not be blank');
+                        alert('ログインIDを入力ください。');
                     }else{
                         $.ajax(
                             {

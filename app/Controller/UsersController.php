@@ -3,7 +3,7 @@
 class UsersController extends AppController {
 
     public $name = "Users";
-    //public $users = null;
+    //public $uses = null;
     //public $autoLayout = true;
     public $layout = "users";
     public $autoRender = true;

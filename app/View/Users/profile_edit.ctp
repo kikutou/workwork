@@ -65,28 +65,28 @@
         echo $this->Form->label('User.family_name', '姓');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.family_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.family_name', array('class' => array('form-control','validate[required]'),'value' => $user['User']['family_name']));
+        echo $this->Form->text('User.family_name', array('class' => 'form-control validate[required]','value' => $user['User']['family_name']));
         echo '</div>';
 
         echo '<div class="form-group">';
         echo $this->Form->label('User.first_name', '名');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.first_name',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.first_name', array('class' => array('form-control','validate[required]'),'value' => $user['User']['first_name']));
+        echo $this->Form->text('User.first_name', array('class' => 'form-control validate[required]','value' => $user['User']['first_name']));
         echo '</div>';
 
         echo '<div class="form-group">';
         echo $this->Form->label('User.furigana', 'カタカナ');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.furigana',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.furigana', array('class' => array('form-control','validate[required]'),'value' => $user['User']['furigana']));
+        echo $this->Form->text('User.furigana', array('class' => 'form-control validate[required]','value' => $user['User']['furigana']));
         echo '</div>';
 
         echo '<div class="form-group">';
         echo $this->Form->label('User.birthday', '生年月日');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.birthday',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.birthday', array('class' => array('form-control','validate[required]'),'id' => "datepicker",'value' => $user['User']['birthday']));
+        echo $this->Form->text('User.birthday', array('class' => 'form-control validate[required]','id' => "datepicker",'value' => $user['User']['birthday']));
         ?>
         <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
@@ -124,14 +124,14 @@
         echo $this->Form->label('User.email', 'メール');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.email',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.email', array('class' => array('form-control','validate[required]'),'value' => $user['User']['email']));
+        echo $this->Form->text('User.email', array('class' => 'form-control validate[required]','value' => $user['User']['email']));
         echo '</div>';
 
         echo '<div class="form-group">';
         echo $this->Form->label('User.login_id', 'ログインID');
         echo '&nbsp<span class="label label-warning">必須</span>';
         echo $this->Form->error('User.login_id',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-        echo $this->Form->text('User.login_id', array('class' => array('form-control','validate[required]'),'value' => $user['User']['login_id']));
+        echo $this->Form->text('User.login_id', array('class' => 'form-control validate[required]','value' => $user['User']['login_id']));
         echo '</div>';
 
         echo '<div class="form-group">';
