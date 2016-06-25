@@ -187,15 +187,17 @@
         echo $this->Html->para('', "月曜日', '火曜日', '水曜日' , '木曜日', '金曜日', '土曜日', '日曜日'");
     }else {
 
+        $weekdays = '';
+
         for($i = 1; $i < 8 ; $i++){
-            $weekdays = '';
+
             if(substr ($name , $i, 1) == '1'){
-                echo $this->Html->para('', $allNames[$i]);
-                //$weekdays += $allNames[$i].' ';
-                //$weekdays .= $allNames[$i].' ';
+                //echo $this->Html->para('', $allNames[$i]);
+                $weekdays .= $allNames[$i].' ';
             }
-            //echo $this->Html->para('', $weekdays);
         }
+
+        echo $this->Html->para('', $weekdays);
     }
 
     $spare_from = array(
