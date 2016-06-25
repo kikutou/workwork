@@ -163,7 +163,7 @@
                 echo $this->Form->label('User.email', 'メール');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.email',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.email', array("class" => array('form-control','validate[required]'), "placeholder" => "xxx＠workwork.com"));
+                echo $this->Form->text('User.email', array("class" => 'form-control validate[required]', "placeholder" => "xxx＠workwork.com"));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
@@ -171,11 +171,11 @@
                 echo $this->Form->label('User.login_id', 'ログインID');
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('User.login_id',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-                echo $this->Form->text('User.login_id', array("class" => array('form-control','validate[required]'), "placeholder" => "ログインID/メール"));
+                echo $this->Form->text('User.login_id', array("class" => 'form-control validate[required]', "placeholder" => "ログインID/メール"));
                 ?>
 
 
-                    <p><input type="checkbox" id="use_email_check" name="data[check]" onclick="use_email();" value="1" class="validate[required]"/> メールをログインIDとして登録する</p>
+                    <p><input type="checkbox" id="use_email_check" name="data[check]" onclick="use_email();" value="1"/> メールをログインIDとして登録する</p>
 
                 <?php
                 //echo $this->Form->checkbox('check', array('id' => 'use_email_check', 'onclick'=>'use_email();','class' => 'validate[required]'));

@@ -100,10 +100,10 @@ class User extends AppModel
               'rule' => array('sameCheck'),
               'message' =>  'パスワードとパスワード確認の入力が一致していません。'
             ),
-          array(
+/*          array(
               'rule' => array('passchange'),
               'message' => 'パスワードが間違いました。'
-          )
+          )*/
       ),
 
       'password_confirm' => array(
@@ -235,9 +235,9 @@ class User extends AppModel
     $data = $data['password'];
 
     $strlen = strlen($data);
-    $standard = '0123456789abcdefghijklmnopqrstuvwxyz_';
+    $standard = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ_';
     $numbers = '0123456789';
-    $characters = 'abcdefghijklmnopqrstuvwxyz';
+    $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
     $numberNum = 0;
     $characterNum = 0;
