@@ -132,7 +132,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
             <div class="col-xs-12 col-sm-9" style="padding-right: 0;padding-left: 0;">
                 <div id="content" >
 
-                    <?php echo $this->Flash->render(); ?>
+                    <?php echo $this->Session->flash(); ?>
                     <?php echo $this->fetch('content'); ?>
 
                 </div>
