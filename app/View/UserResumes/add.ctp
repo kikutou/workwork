@@ -102,7 +102,7 @@
     echo '<br />';
 ?>
 
-    <select id="year1" class="validate[required]"><option value="0">----</option></select>年
+    <select id="year1" class="validate[required]"><option value="">----</option></select>年
     <select id="month1" class="validate[required]"><option value="0">--</option></select>月
     <select id="day1" style="display:none"><option value="0" >--</option></select>
 

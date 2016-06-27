@@ -129,5 +129,5 @@
 
 <div class="row" style="width:100%">
     <a href="/work/employers/profileEdit?id=01" class="btn pull-right"><i class="fa fa-pencil"></i>&nbsp情報編集</a>
-    <a href="/work/employers/passchange?id=01" class="btn pull-right"><i class="fa fa-key"></i>&nbspパスワード変更</a>
+    <a href="/work/employers/passchange?id=<?php echo $employer['Employer']['id']; ?>" class="btn pull-right"><i class="fa fa-key"></i>&nbspパスワード変更</a>
 </div>
