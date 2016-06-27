@@ -12,6 +12,10 @@ class UserResumesController extends AppController {
 
     }
 
+    public function add() {
+
+    }
+
     public function edit() {
 
     }
@@ -20,6 +24,7 @@ class UserResumesController extends AppController {
 
         $user = null;
         $errorMsg = null;
+        $resumes = null;
 
         $id = $this->request->query['id'];
 

@@ -207,7 +207,7 @@
             echo '<div class="divider-form"></div>';
 
             echo '<div class="form-group">';
-            echo $this->Html->para('receive_mail', '連絡可能の日');
+            echo $this->Html->para('receive_mail', '連絡可能な時間帯');
 
             $allNames = array('すべて', '月曜日', '火曜日', '水曜日' , '木曜日', '金曜日', '土曜日', '日曜日');
 
@@ -361,7 +361,7 @@
             echo '<div class="divider-form"></div>';
 
             echo '<div class="form-group">';
-            echo $this->Html->para('User.certification', '資格証明書');
+            echo $this->Html->para('User.certification', '資格');
             echo $this->Html->para('', $user['User']['certification']);
             echo '</div>';
             echo '<div class="divider-form"></div>';

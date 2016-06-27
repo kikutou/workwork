@@ -176,7 +176,7 @@
     echo '</div>';
 
     echo '<div class="form-group">';
-    echo $this->Html->para('receive_mail', '連絡可能の日');
+    echo $this->Html->para('receive_mail', '連絡可能な時間帯');
 
     $allNames = array('すべて', '月曜日', '火曜日', '水曜日' , '木曜日', '金曜日', '土曜日', '日曜日');
 
@@ -285,15 +285,13 @@
 
 
 
-    echo $this->Html->para('User.degree', 'Degree');
+    echo $this->Html->para('User.degree', '学位');
 
     $degree = array(
 
-        '0' => 'Diploma',
-        '1' => 'Associate degree',
-        '2' => 'Bachelor',
-        '3' => 'Master',
-        '4' => 'Doctor'
+        '0' => '学士',
+        '1' => '修士',
+        '2' => '博士'
 
     );
 
@@ -307,28 +305,28 @@
         }
     }
 
-    echo $this->Html->para('User.college', 'College');
+    echo $this->Html->para('User.college', '学校名');
     echo $this->Html->para('', $user['User']['college']);
 
-    echo $this->Html->para('User.primary_major', 'Major');
+    echo $this->Html->para('User.primary_major', '学部・学科名');
     echo $this->Html->para('', $user['User']['primary_major']);
 
-    echo $this->Html->para('User.secondary_major', 'Major2');
+    echo $this->Html->para('User.secondary_major', '学科系統');
     echo $this->Html->para('', $user['User']['secondary_major']);
 
-    echo $this->Html->para('User.certification', 'Certification');
+    echo $this->Html->para('User.certification', '資格');
     echo $this->Html->para('', $user['User']['certification']);
 
-    echo $this->Html->para('User.skill', 'Skill');
+    echo $this->Html->para('User.skill', 'スキル');
     echo $this->Html->para('', $user['User']['skill']);
 
-    echo $this->Html->para('User.work_situation', 'Work Situation');
+    echo $this->Html->para('User.work_situation', '勤務状況');
 
     $work_situation = array(
 
-        '0' => 'in employment',
-        '1' => 'out of employment',
-        '2' => 'new graduate',
+        '0' => '就職している',
+        '1' => '失職中',
+        '2' => '新卒'
     );
 
     foreach ($work_situation as $key => $value){

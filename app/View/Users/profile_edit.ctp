@@ -21,8 +21,11 @@
     <?php
     //フォームエラー
     if($errorMsg){
-        echo $this->Html->para('alert alert-danger error-top', $errorMsg);
+        echo $this->Html->para('',$errorMsg);
     }
+    /*if($errorMsg){
+        echo $this->Html->para('alert alert-danger error-top', $errorMsg);
+    }*/
     //createform
     echo  $this->Form->create(false, array(
         'type' => 'post',
@@ -52,12 +55,8 @@
 ?>
         
         <?php
-        if($errorMsg){
-            echo $this->Html->para('',$errorMsg);
-        }
         
-        
-        echo $this->Form->create(false, array('type' => 'post', 'id' => 'edit_id'));
+        //echo $this->Form->create(false, array('type' => 'post', 'id' => 'edit_id'));
         
         echo $this->Form->input('User.id', array('type' => 'hidden', 'value' => $user['User']['id']));
 
@@ -245,7 +244,7 @@
         echo '</div>';
 
         echo '<div class="form-group">';
-        echo $this->Form->label('User.spareday', '連絡可能の日');
+        echo $this->Form->label('User.spareday', '連絡可能な時間帯');
         ?>
         <?php $name = array('すべて', '月曜日', '火曜日', '水曜日' , '木曜日', '金曜日', '土曜日', '日曜日'); ?>
         <?php for($i = 0; $i < 8; $i++){ ?>
@@ -408,7 +407,7 @@
         echo '</div>';
 
         echo '<div class="form-group">';
-        echo $this->Form->label('User.certification', '資格証明書');
+        echo $this->Form->label('User.certification', '資格');
         echo $this->Form->error('User.certification',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
         echo $this->Form->text('User.certification', array('class' => 'form-control','value' => $user['User']['certification']));
         echo '</div>';
