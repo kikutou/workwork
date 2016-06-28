@@ -22,19 +22,19 @@ class UserResumesController extends AppController {
         $errorMsg = null;
         $resumes = null;
 
-        $id = $this->request->query['id'];
+        $id = $this->request->query['resume_id'];
 
         if(!$id) {
-
+            //TODO add error message
             $this->redirect('index');
         }
 
-        $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' => '0')));
+        //$user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' => '0')));
 
-        if(!$user) {
-
-            $this->redirect('index');
-        }
+        //if(!$user) {
+            //TODO add error message
+            //$this->redirect('index');
+        //}
 
         $resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'delete_flag' => 0)));
 

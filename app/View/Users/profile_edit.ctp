@@ -5,7 +5,6 @@
     <div class="col-xs-6 page-breadcrumb text-right">
         <ol class="breadcrumb">
             <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
-            <li class="active"><a href="/work/users/profileEdit">登録情報編集</a></li>
         </ol>
     </div>
 </div>
