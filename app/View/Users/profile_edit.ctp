@@ -36,25 +36,23 @@
     echo $this->Form->input('User.id', array('type' =>'hidden', 'value' => $user['User']['id'] ));
 
     //submit button
-    echo '
+    ?>
     <div class="row" style="width:100%">
         <div class="text-right" style="margin-bottom:10px;">
-            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+            <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>'
+    <?php
     echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
         "class" => "btn",
         'type' => 'submit',
         'escape' => false
     ));
-    echo '</div>
+    echo '</div>'
+    ?>
     </div>';
-
+  <?php
     echo '<div class="col-xs-12">';
 
     echo "<hr>";
-
-?>
-        
-        <?php
         
         //echo $this->Form->create(false, array('type' => 'post', 'id' => 'edit_id'));
         
@@ -154,13 +152,14 @@
         echo $this->Form->error('User.postcode2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
         echo $this->Form->text('User.postcode2', array('value' => $user['User']['postcode2']));
         echo '</div>';
-        echo $this->Html->link('get postcode from address', 'http://www.baidu.com/', array('target' => '_blank'), 'move');
-        echo $this->Form->button('Click: Input address automatically according to postcode');
+        echo $this->Html->link('郵便番号から住所を取得する', 'http://www.baidu.com/', array('target' => '_blank'), 'move');
+        echo $this->Form->button('郵便番号から住所自動表示する');
         echo '<br /><br />';
 
         echo '<div class="form-group">';
         echo $this->Form->label('User.province', '都道府県');
-        echo $this->Form->error('User.mobile2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo '<br />';
+        echo $this->Form->error('User.province',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
 
         $provinces = array(
             '0' => '北海道',
@@ -213,7 +212,7 @@
         );
         ?>
         
-        <select name="data[User][province]" id="UserProvince">
+        <select name="data[User][province]" id="UserProvince" class="form-control">
             <option value="">都道府県を選んでください</option>
             <?php
             foreach ($provinces as $key => $value){
@@ -372,7 +371,7 @@
         );
         ?>
         
-        <select name="data[User][degree]" id="UserDegree">
+        <select name="data[User][degree]" id="UserDegree" class="form-control">
             <option value="">選んでください</option>
             <?php
             foreach ($degree as $key => $value){
@@ -436,18 +435,19 @@
         echo "<hr>";
         echo '</div>';
         //submit button
-        echo '
+       ?>
     <div class="row" style="width:100%">
         <div class="text-right" style="margin-bottom:10px;">
-            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
-        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+            <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+        <?php echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
             "class" => "btn",
             'type' => 'submit',
             'escape' => false
-        ));
-        echo '</div>
+        ));?>
+        </div>
     </div>';
-        
+
+    <?php
         echo $this->Form->end();
         
         

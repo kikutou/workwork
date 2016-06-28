@@ -66,6 +66,7 @@ class UsersController extends AppController {
 
         if(!$id) {
 
+            $this->Session->setFlash('idが存在しません。');
             $this->redirect('index');
         }
 
@@ -73,6 +74,7 @@ class UsersController extends AppController {
 
         if(!$user) {
 
+            $this->Session->setFlash('ユーザーが存在しません。');
             $this->redirect('index');
         }
 
@@ -100,7 +102,7 @@ class UsersController extends AppController {
             if($result) {
                 $this->redirect('profile_done');
             }else {
-                $errorMsg = '編集失敗しました.もう一度入力してください';
+                $errorMsg = '編集失敗しました.もう一度入力してください。';
             }
 
             $user = $this->data;
@@ -112,6 +114,7 @@ class UsersController extends AppController {
             //idを取らないなら
             if(!$id) {
                 //編集のペ−じにかえします
+                $this->Session->setFlash('idが存在しません。');
                 $this -> redirect('index');
             }
 
@@ -119,7 +122,7 @@ class UsersController extends AppController {
             $user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' => 0 )));
             if(!$user)
             {
-                $this->Session->setFlash('this id is wrong');
+                $this->Session->setFlash('ユーザーが存在しません。');
                 $this->redirect('index');
             }
 
@@ -155,7 +158,7 @@ class UsersController extends AppController {
             $id = $this->request->query['id'];
 
             if(!$id) {
-
+                $this->Session->setFlash('idが存在しません。');
                 $this->redirect('index');
             }
 
@@ -169,7 +172,7 @@ class UsersController extends AppController {
             */
 
             if(!$user) {
-
+                $this->Session->setFlash('ユーザーが存在しません。');
                 $this->redirect('index');
             }
         }
