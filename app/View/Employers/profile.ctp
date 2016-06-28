@@ -13,15 +13,15 @@
 <div class="row detail">
     <div class="panel panel-danger panel-authentication">
         <div class="panel-heading">アカウント認証されていません&nbsp<i data-toggle="tooltip" data-placement="bottom" title="企業用機能を利用するためには、会社情報の認証が必要です。下のリンクをクリックして、情報を補足してください。審査が通過次第、企業用機能が開放されます。通常の認証期間は５営業日となります。" class="fa fa fa-question-circle danger-tooltip"></i></div>
-        <div class="panel-body"><a href="/work/employers/profileEdit?id=01">こちら</a>でアカウント認証を行いましょう</div>
+        <div class="panel-body"><a href="/work/employers/profileEdit?id=<?php echo $employer['Employer']['id']; ?>">こちら</a>でアカウント認証を行いましょう</div>
     </div>
 </div>
 
 <div class="row detail">
 
     <div class="row" style="width:100%">
-        <a href="/work/employers/profileEdit?id=01" class="btn pull-right"><i class="fa fa-pencil"></i>&nbsp情報編集</a>
-        <a href="/work/employers/passchange?id=01" class="btn pull-right"><i class="fa fa-key"></i>&nbspパスワード変更</a>
+        <a href="/work/employers/profileEdit?id=<?php echo $employer['Employer']['id']; ?>" class="btn pull-right"><i class="fa fa-pencil"></i>&nbsp情報編集</a>
+        <a href="/work/employers/passchange?id=<?php echo $employer['Employer']['id']; ?>" class="btn pull-right"><i class="fa fa-key"></i>&nbspパスワード変更</a>
     </div>
     <div class="clear-fix">
     </div>
@@ -128,6 +128,6 @@
 <hr>
 
 <div class="row" style="width:100%">
-    <a href="/work/employers/profileEdit?id=01" class="btn pull-right"><i class="fa fa-pencil"></i>&nbsp情報編集</a>
+    <a href="/work/employers/profileEdit?id=<?php echo $employer['Employer']['id']; ?>" class="btn pull-right"><i class="fa fa-pencil"></i>&nbsp情報編集</a>
     <a href="/work/employers/passchange?id=<?php echo $employer['Employer']['id']; ?>" class="btn pull-right"><i class="fa fa-key"></i>&nbspパスワード変更</a>
 </div>
