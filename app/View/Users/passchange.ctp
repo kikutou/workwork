@@ -19,74 +19,70 @@
 -->
 <div class="row detail">
     <?php
-    //フォームエラー
-    if($errorMsg){
-        echo $this->Html->para('alert alert-danger error-top', $errorMsg);
-    }
-    //createform
-    echo  $this->Form->create(false, array(
-        'type' => 'post',
-        'id' => 'passchange',
-        'class' => "form-group"
-    ));
-    //hiddenuserid
-    echo $this->Form->input('User.id', array('type' =>'hidden', 'value' => $user['User']['id'] ));
+        //フォームエラー
+        if($errorMsg){
+            echo $this->Html->para('alert alert-danger error-top', $errorMsg);
+        }
+        //createform
+        echo  $this->Form->create(false, array(
+            'type' => 'post',
+            'id' => 'passchange',
+            'class' => "form-group"
+        ));
+        //hiddenuserid
+        echo $this->Form->input('User.id', array('type' =>'hidden', 'value' => $user['User']['id'] ));
+        //submit button
+        echo '
+        <div class="row" style="width:100%">
+            <div class="text-right" style="margin-bottom:10px;">
+                <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+            "class" => "btn",
+            'type' => 'submit',
+            'escape' => false
+        ));
+        echo '</div>
+        </div>';
 
-    //submit button
-    echo '
-    <div class="row" style="width:100%">
-        <div class="text-right" style="margin-bottom:10px;">
-            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
-    echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
-        "class" => "btn",
-        'type' => 'submit',
-        'escape' => false
-    ));
-    echo '</div>
-    </div>';
+        echo '<div class="col-xs-12">';
+        echo "<hr>";
 
-    echo '<div class="col-xs-12">';
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.old_password', '旧パスワード');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.old_password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->password('User.old_password', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+        echo '</div>';
 
-    echo "<hr>";
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.password', '新パスワード');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->password('User.password', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+        echo '</div>';
 
-    echo '<div class="form-group">';
-    echo $this->Form->label('User.old_password', '旧パスワード');
-    echo '&nbsp<span class="label label-warning">必須</span>';
-    echo $this->Form->error('User.old_password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->password('User.old_password', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
-    echo '</div>';
+        echo '<div class="form-group">';
+        echo $this->Form->label('User.password_confirm', '新パスワード確認');
+        echo '&nbsp<span class="label label-warning">必須</span>';
+        echo $this->Form->error('User.password_confirm',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+        echo $this->Form->password('User.password_confirm', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+        echo '</div>';
 
-    echo '<div class="form-group">';
-    echo $this->Form->label('User.password', '新パスワード');
-    echo '&nbsp<span class="label label-warning">必須</span>';
-    echo $this->Form->error('User.password',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->password('User.password', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
-    echo '</div>';
+        echo "<hr>";
+        echo '</div>';
+        //submit button
+        echo '
+        <div class="row" style="width:100%">
+            <div class="text-right" style="margin-bottom:10px;">
+                <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+            "class" => "btn",
+            'type' => 'submit',
+            'escape' => false
+        ));
+        echo '</div>
+        </div>';
 
-    echo '<div class="form-group">';
-    echo $this->Form->label('User.password_confirm', '新パスワード確認');
-    echo '&nbsp<span class="label label-warning">必須</span>';
-    echo $this->Form->error('User.password_confirm',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->password('User.password_confirm', array("class" => 'form-control validate[required]', "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
-    echo '</div>';
-
-    echo "<hr>";
-    echo '</div>';
-    //submit button
-    echo '
-    <div class="row" style="width:100%">
-        <div class="text-right" style="margin-bottom:10px;">
-            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
-    echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
-        "class" => "btn",
-        'type' => 'submit',
-        'escape' => false
-    ));
-    echo '</div>
-    </div>';
-
-    echo $this->Form->end();
-
+        echo $this->Form->end();
     ?>
-
 </div>
