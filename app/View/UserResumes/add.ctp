@@ -23,7 +23,7 @@
         'class' => "form-group"
     ));
     //hiddenuserid
-    echo $this->Form->input('UserResume.id', array('type' =>'hidden',  'value' => $user['UserResume']['user_id'] ));
+    echo $this->Form->input('UserResume.id', array('type' =>'hidden',  'value' => $resume['UserResume']['id'] ));
 
     //submit button
     echo '
@@ -127,6 +127,7 @@
     <select id="day2" style="display:none"><option value="0" >--</option></select>
 
     <?php
+    echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
     echo $this->Form->error('UserResume.end_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
 

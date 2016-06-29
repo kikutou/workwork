@@ -23,7 +23,7 @@
         'class' => "form-group"
     ));
     //hiddenuserid
-    echo $this->Form->input('UserResume.id', array('type' =>'hidden',  'value' => $resumes['UserResume']['user_id'] ));
+    echo $this->Form->input('UserResume.id', array('type' =>'hidden',  'value' => $resumes['UserResume']['id'] ));
 
     //submit button
     echo '
@@ -55,46 +55,104 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.company', '企業名');
     echo $this->Form->error('UserResume.company', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.company', array('class' => 'form-control','value' => $resumes['UserResume']['company']));
+    echo $this->Form->text('UserResume.company', array('class' => 'form-control', 'value' => $resumes['UserResume']['company']));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.employment_type', '雇用形態');
     echo '&nbsp<span class="label label-warning">必須</span>';
-    echo $this->Form->error('User.employment_type',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->select(
-        'UserResume.employment_type',
-        array(
-            '0' => 'アルバイト',
-            '1' => '派遣社員',
-            '2' => '契約社員',
-            '3' => '正社員'
-        ),
-        array('empty' => '選んでください','class' => 'form-control validate[required]')
+    echo $this->Form->error('UserResume.employment_type',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+
+    $employment_type =  array(
+        '0' => 'アルバイト',
+        '1' => '派遣社員',
+        '2' => '契約社員',
+        '3' => '正社員'
     );
+    ?>
+
+    <select name="data[UserResume][employment_type]" id="UserResumeEmploymentType" class="form-control">
+        <option value="">選んでください</option>
+        <?php
+        foreach ($employment_type as $key => $value){
+
+            if ($resumes['UserResume']['employment_type'] == $key && $resumes['UserResume']['employment_type'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+    <?php
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.position', '役職');
     echo $this->Form->error('UserResume.position',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.position', array('class' => 'form-control','value' => $resumes['UserResume']['position']));
+
+    $position=array(
+        '0' => '代表取締役会長',
+        '1' => '代表取締役社長',
+        '2' => '部長',
+        '3' => '次長',
+        '4' => '課長',
+        '5' => '係長',
+        '6' => '主任',
+        '7' => '一般社員'
+    );
+    ?>
+
+    <select name="data[UserResume][position]" id="UserResumeEmploymentType" class="form-control">
+        <option value="">選んでください</option>
+        <?php
+        foreach ($position as $key => $value){
+
+            if ($resumes['UserResume']['position'] == $key && $resumes['UserResume']['position'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+    <?php
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.employee_amount', '従業員数');
     echo $this->Form->error('UserResume.employee_amount',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->select(
-        'UserResume.employee_amount',
-        array(
+
+    $employee_amount=array(
             '0' => '10人未満',
             '1' => '10人～50人未満',
             '2' => '50人～100人未満',
             '3' => '100人～500人未満',
             '4' => '500人～1000人未満',
             '5' => '1000以上'
-        ),
-        array('empty' => '選んでください', 'class' => 'form-control')
-    );
+        );
+    ?>
+
+    <select name="data[UserResume][employee_amount]" id="UserResumeEmploymentType" class="form-control">
+        <option value="">選んでください</option>
+        <?php
+        foreach ($employee_amount as $key => $value){
+
+            if ($resumes['UserResume']['employee_amount'] == $key && $resumes['UserResume']['employee_amount'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+    <?php
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -105,6 +163,21 @@
     <select id="year1" class="validate[required]"><option value="">----</option></select>年
     <select id="month1" class="validate[required]"><option value="0">--</option></select>月
     <select id="day1" style="display:none"><option value="0" >--</option></select>
+
+    <select name="data[UserResume][start_date]" id="UserResumeEmploymentType" class="form-control">
+        <option value="">----</option>
+        <?php
+        foreach ($employee_amount as $key => $value){
+
+            if ($resumes['UserResume']['employee_amount'] == $key && $resumes['UserResume']['employee_amount'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
 
     <?php
     /*echo $this->Form->year('UserResume.start_date', '1960', '2016', array(), array('class' => 'form-control validate[required]'));
@@ -127,6 +200,7 @@
     <select id="day2" style="display:none"><option value="0" >--</option></select>
 
     <?php
+    echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
     echo $this->Form->error('UserResume.end_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
 
