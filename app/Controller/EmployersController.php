@@ -16,6 +16,22 @@ class EmployersController extends AppController {
 
     public function login() {
         $this->layout = false;
+
+        $errorMsg = null;
+
+        if($this->request->isPost()){
+            $result = $this->Employer->login($this->request->data);
+
+            if($result){
+                $this->redirect('index');
+            }else{
+                $errorMsg = 'ログインが失敗しました。';
+            }
+        }
+
+        $this->set('errorMsg', $errorMsg);
+
+
     }
 
     public function signup()

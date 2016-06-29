@@ -35,34 +35,65 @@
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
         <div class="box">
-            <form role="form">
 
-                <div>
-                    <h2>企業ユーザログイン</h2>
-                </div>
+            <?php
+                echo $this->Form->create(false, array(
+                    'type' => 'post',
+                    'role' => 'form',
+                    'id' => 'employerLoginForm'
+                ));
 
-                <div class="divider-form"></div>
+            ?>
+            <div>
+                <h2>企業ユーザログイン</h2>
+            </div>
 
-                <div class="form-group">
-                    <label for="exampleInputEmail1">ログインID</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ログインID/メール">
-                </div>
 
-                <div class="divider-form"></div>
+            <?php
 
-                <div class="form-group">
-                    <label for="exampleInputPassword1">パスワード</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="パスワード">
-                </div>
+            if($errorMsg){
+                echo $this->Html->para('',$errorMsg);
+            }
 
-                <div class="divider-form"></div>
+            ?>
 
-                <p class="text-center">パスワードをお忘れの方は <strong><?php echo $this->html->link('こちら', '/emloyers/passloss', array('escape' => false));?></strong>.</p>
+            <div class="divider-form"></div>
 
-                <button type="submit" class="btn-block btn btn-lg btn-primary">ログイン</button>
 
-                <p class="text-center">アカウントをお持ちしていない方は <strong><?php echo $this->html->link('こちら', '/employers/signup', array('escape' => false));?></strong></p>
-            </form>
+
+            <?php
+
+            //ログインIDチェック
+            echo '<div class="form-group">';
+            echo $this->Form->label('Employer.login_id', 'ログインID');
+            echo '&nbsp<span class="label label-warning">必須</span>';
+            echo $this->Form->error('Employer.login_id', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+            echo $this->Form->text('Employer.login_id', array("class" => "form-control validate[required]", "placeholder" => "英数字のみ"));
+            echo '</div>';
+            echo '<div class="divider-form"></div>';
+
+
+            //パスワードチェック
+            echo '<div class="form-group">';
+            echo $this->Form->label('Employer.password', 'パスワード');
+            echo '&nbsp<span class="label label-warning">必須</span>';
+            echo $this->Form->error('Employer.password', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+            echo $this->Form->password('Employer.password', array("class" => "form-control validate[required]", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+            echo '</div>';
+            echo '<div class="divider-form"></div>';
+
+
+            ?>
+
+            <p class="text-center">パスワードをお忘れの方は <strong><?php echo $this->html->link('こちら', '/emloyers/passloss', array('escape' => false));?></strong>.</p>
+
+            <button type="submit" class="btn-block btn btn-lg btn-primary">ログイン</button>
+
+            <p class="text-center">アカウントをお持ちしていない方は <strong><?php echo $this->html->link('こちら', '/employers/signup', array('escape' => false));?></strong></p>
+
+            <?php
+            echo $this->Form->end();
+            ?>
         </div>
     </div>
 </div>
