@@ -47,7 +47,7 @@ class UsersController extends AppController {
 
         $id = $this->request->data('id');
 
-        $user = $this->User->find('first',array('conditions' => array('login_id' => $id, 'delete_flag' => 0)));
+        $user = $this->User->find('first', array('conditions' => array('login_id' => $id, 'delete_flag' => 0)));
 
         if($user) {
             echo "このログインIDは既に使われています、変更してください。";

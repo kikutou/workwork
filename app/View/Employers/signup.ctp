@@ -153,9 +153,18 @@
                 echo '&nbsp<span class="label label-warning">必須</span>';
                 echo $this->Form->error('Employer.login_id', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
                 echo $this->Form->text('Employer.login_id', array("class" => "form-control validate[required]", "placeholder" => "英数字のみ"));
-                echo $this->Form->button('登録可能かをチェック', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button', 'class' => 'btn btn-default'));
+                echo $this->Form->button('IDが登録可否チェック', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button'));
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
+
+                    /*echo '<div class="form-group">';
+                echo $this->Form->label('User.login_id', 'ログインID');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.login_id', array('attributes' => array('wrap' => 'div', 'class' => 'alert alert-danger')));
+                echo $this->Form->text('User.login_id', array("class" => 'form-control validate[required]', "placeholder" => "ログインID/メール"));
+                echo $this->Form->button('IDチェック', array('id' => 'check_id', 'onclick' => 'check_id_js();', 'type' => 'button'));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';*/
 
                 //パスワードチェック
                 echo '<div class="form-group">';
@@ -175,7 +184,7 @@
                 echo '</div>';
                 echo '<div class="divider-form"></div>';
 
-                echo '<div class="label label-default form-tag right"><i class="fa fa-user"></i> 担当者情報登録</div>';
+                echo '<div class="label label-default form-tag right"><i class="fa fa-user"></i>担当者情報登録</div>';
                 echo '<div class="divider-form"></div>';
 
                 //苗字
@@ -278,7 +287,7 @@ EOL;
                             method:'post',
                             complete:function (XMLHttpRequest, textStatus) {check_id_func(XMLHttpRequest)},
                             data:"id=" + document.getElementById('EmployerLoginId').value,
-                            url:"\/cakephp2\/employers\/checkid"
+                            url:"\/work\/employers\/checkid"
                         });
                     return false;});});
                 </script>
