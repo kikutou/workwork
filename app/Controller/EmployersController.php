@@ -83,7 +83,7 @@ class EmployersController extends AppController {
                 $errorMsg = '旧パスワードは間違っています';
             }
 
-            $this->set('user',$user);
+            $this->set('user', $user);
         }else{
             $id = $this->request->query['id'];
 
@@ -93,18 +93,17 @@ class EmployersController extends AppController {
             }
 
             $user = $this->Employer->find('first', array('conditions' => array('Employer.id' => $id, 'Employer.delete_flag' =>'0')));
-            /*
-            print '<pre>';
-            print_r($user);
-            print '</pre>';
-            exit();
-            */
 
-            $this->set('user',$user);
+            if(!$user){
+                $this->Session->setFlash('DBに該当するIDが見つかりません。');
+                $this->redirect('index');
+            }
+            //$this->set('user', $user);
         }
 
-        $this->set('data',$this->data);
-        $this->set('errorMsg',$errorMsg);
+        $this->set('user', $user);
+        $this->set('data', $this->data);
+        $this->set('errorMsg', $errorMsg);
 
     }
     
@@ -113,6 +112,8 @@ class EmployersController extends AppController {
     }
 
     public function checkid() {
+
+        $this->layout = false;
         $this->autoRender = false;
         $this->uses = null;
 
@@ -120,10 +121,10 @@ class EmployersController extends AppController {
 
         $employer = $this->Employer->find('first', array('conditions' => array('login_id' => $id, 'delete_flag' => 0)));
 
-        if($employer){
-            echo "このLoginIDは既に使われています、変更してください。";
-        }else{
-            echo "このLoginIDは登録可能です。";
+        if($employer) {
+            echo "このログインIDは既に使われています、変更してください。";
+        }else {
+            echo "このログインIDは登録可能です。";
         }
     }
 
@@ -137,9 +138,14 @@ class EmployersController extends AppController {
         } else {
             $id = $this->request->query['id'];
             $employer = $this->Employer->find('first',array('conditions' => array(array('Employer.id' => $id, 'Employer.delete_flag' => 0))));
+
+            if(!$employer){
+                $this->Session->setFlash('DBに該当するIDが見つかりません。');
+                $this->redirect('index');
+            }
         }
 
-        //viewに送り出す
+        //viewにセット
         $this->set('employer',$employer);
         $this->set('errorMsg',$errorMsg);
 
@@ -157,11 +163,6 @@ class EmployersController extends AppController {
             $this->request->data['Employer']['postcode'] = $this->data['Employer']['postcode1'] + $this->data['Employer']['postcode2'];
 
             $result = $this->Employer->save($this->request->data);
-
-            /*print '<pre>';
-            print_r($result);
-            print '</pre>';
-            exit();*/
 
             if($result)
             {
@@ -196,7 +197,7 @@ class EmployersController extends AppController {
 
         }
 
-        //viewに送り出す
+        //viewにセット
         $this->set('user',$user);
         $this->set('errorMsg',$errorMsg);
 

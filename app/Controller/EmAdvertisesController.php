@@ -28,8 +28,7 @@ class EmAdvertisesController extends AppController {
             exit();*/
 
             $result = $this->EmAdvertise->save($this->data);
-
-
+            
             if($result){
                 $this->redirect('done');
             }else{
