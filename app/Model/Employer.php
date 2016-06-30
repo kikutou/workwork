@@ -280,11 +280,21 @@ class Employer extends AppModel {
         $loginId = $data['Employer']['login_id'];
         $password = md5($data['Employer']['password']);
         
-        $employer = $this->find('first',array('conditions'=> array('Employer.login_id' => $loginId, 'Employer.password' => $password, 'Employer.delete_flag' => 0)));
+        $employer = $this->find('first', array('conditions'=> array('Employer.login_id' => $loginId, 'Employer.password' => $password, 'Employer.delete_flag' => 0)));
         
         return $employer? true: false;
         
     }
 
+    public function index($data){
+
+        $employerId = $data['Employer']['id'];
+
+        $id = $this->find('first', array('conditions' => array('Employer.id' => $employerId, 'Employer.delete_flag' => 0)));
+
+        return $id? true: false;
+        
+
+    }
 }
 ?>

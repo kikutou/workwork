@@ -56,11 +56,7 @@
             }
 
             ?>
-
             <div class="divider-form"></div>
-
-
-
             <?php
 
             //ログインIDチェック

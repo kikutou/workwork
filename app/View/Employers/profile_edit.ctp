@@ -236,7 +236,7 @@
 
     //アドレス１
     echo '<div class="form-group">';
-    echo $this->Form->label('Employer.address1', 'アドレス１');
+    echo $this->Form->label('Employer.address1', '市町村');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('Employer.address1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo $this->Form->text('Employer.address1', array('value' => $user['Employer']['address1'], "class" => "form-control", "placeholder" => "○○市○○町xx-xx-xx"));
@@ -244,7 +244,7 @@
 
     //アドレス２
     echo '<div class="form-group">';
-    echo $this->Form->label('Employer.address2', 'アドレス２');
+    echo $this->Form->label('Employer.address2', '建物名、マンション名、部屋番号');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('Employer.address2',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo $this->Form->text('Employer.address2', array('value' => $user['Employer']['address2'], "class" => "form-control", "placeholder" => "○○ビル○○室"));

@@ -11,7 +11,21 @@ class EmployersController extends AppController {
     public $autoRender = true;
 
     public function index() {
+        $this->layout = false;
+        $errorMsg = null;
+        
+        if($this->request->isPost()){
+            $result = $this->Employer->index($this->request->data);
 
+            if($result){
+                $this->redirect('index');
+            }else {
+                $errorMsg = 'ログインが失敗しました。';
+            }
+        }
+
+        $this->set('errorMsg', $errorMsg);
+        
     }
 
     public function login() {
@@ -182,7 +196,7 @@ class EmployersController extends AppController {
 
             if($result)
             {
-                $this->redirect('profileDone');
+                $this->redirect('index');
             }
             else
             {
