@@ -1,11 +1,11 @@
 <div class="row header">
     <div class="col-xs-6 page-title">
-        会社情報追加
+        会社情報編集
     </div>
     <div class="col-xs-6 page-breadcrumb text-right">
         <ol class="breadcrumb">
             <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
-            <li class="active"><a href="/work/user_reusmes/edit">会社情報追加</a></li>
+            <li class="active"><a href="/work/user_reusmes/edit">会社情報編集</a></li>
         </ol>
     </div>
 </div>
@@ -164,21 +164,6 @@
     <select id="month1" class="validate[required]"><option value="0">--</option></select>月
     <select id="day1" style="display:none"><option value="0" >--</option></select>
 
-    <select name="data[UserResume][start_date]" id="UserResumeEmploymentType" class="form-control">
-        <option value="">----</option>
-        <?php
-        foreach ($employee_amount as $key => $value){
-
-            if ($resumes['UserResume']['employee_amount'] == $key && $resumes['UserResume']['employee_amount'] !== null){
-                echo "<option value=".$key." selected>".$value."</option>";
-
-            }else{
-                echo "<option value=".$key.">".$value."</option>";
-            }
-        }
-        ?>
-    </select>
-
     <?php
     /*echo $this->Form->year('UserResume.start_date', '1960', '2016', array(), array('class' => 'form-control validate[required]'));
     echo $this->Html->para('', '年');
@@ -207,40 +192,70 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.salary', '年収');
     echo $this->Form->error('UserResume.salary',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->select(
-        'UserResume.salary',
-        array(
-            '0' => '300万未満',
-            '1' => '300万-500万',
-            '2' => '500万-700万',
-            '3' => '700万-1000万',
-            '4' => '1000万以上'
-        ),
-        array('empty' => '選んでください', 'class' => 'form-control')
+
+    $salary=array(
+        '0' => '300万未満',
+        '1' => '300万-500万',
+        '2' => '500万-700万',
+        '3' => '700万-1000万',
+        '4' => '1000万以上'
     );
+    ?>
+
+    <select name="data[UserResume][salary]" id="UserResumeEmploymentType" class="form-control">
+        <option value="">選んでください</option>
+        <?php
+        foreach ($salary as $key => $value){
+
+            if ($resumes['UserResume']['salary'] == $key && $resumes['UserResume']['salary'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+    <?php
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.industry', '業種');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('UserResume.industry',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->select(
-        'UserResume.industry',
-        array(
-            '0' => '製造業',
-            '1' => '農林水産業',
-            '2' => '建設土木業',
-            '3' => '情報通信業',
-            '4' => '電気・ガス・水道業',
-            '5' => '公務',
-            '6' => '教育・学習支援',
-            '7' => '専門技術サービス業',
-            '8' => '一般サービス業',
-            '9' => '商業・小売業など',
-            '10' => '運輸運送業'
-        ),
-        array('empty' => '選んでください', 'class' => 'form-control validate[required]')
+
+    $industry=array(
+        '0' => '製造業',
+        '1' => '農林水産業',
+        '2' => '建設土木業',
+        '3' => '情報通信業',
+        '4' => '電気・ガス・水道業',
+        '5' => '公務',
+        '6' => '教育・学習支援',
+        '7' => '専門技術サービス業',
+        '8' => '一般サービス業',
+        '9' => '商業・小売業など',
+        '10' => '運輸運送業'
     );
+    ?>
+
+    <select name="data[UserResume][industry]" id="UserResumeEmploymentType" class="form-control">
+        <option value="">選んでください</option>
+        <?php
+        foreach ($industry as $key => $value){
+
+            if ($resumes['UserResume']['industry'] == $key && $resumes['UserResume']['industry'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+    <?php
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -291,7 +306,11 @@
         var year1 = time.getFullYear();
 
         for (var i = year1; i >= 1900; i--) {
-            $('#year1').append('<option value="' + i + '">' + i + '</option>');
+            if ($resumes['UserResume']['start_date1'] == i && $resumes['UserResume']['start_date1'] !== null) {
+                $('#year1').append('<option value="' + i + '"' + selected'>' + i + '</option>');
+                } else {
+                $('#year1').append('<option value="' + i + '">' + i + '</option>');
+                }
         }
         for (var i = 1; i <= 12; i++) {
             $('#month1').append('<option value="' + i + '">' + i + '</option>');
@@ -317,4 +336,9 @@
 
     </script>
 
+    if ($resumes['UserResume']['industry'] == $key && $resumes['UserResume']['industry'] !== null){
+    echo "<option value=".$key." selected>".$value."</option>";
 
+    }else{
+    echo "<option value=".$key.">".$value."</option>";
+    }

@@ -43,6 +43,17 @@
 
                 <div class="divider-form"></div>
 
+                <?php
+                
+                ?>
+
+
+
+
+
+
+
+
                 <div class="form-group">
                     <label for="exampleInputEmail1">ログインID</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ログインID/メール">
@@ -56,6 +67,14 @@
                 </div>
 
                 <div class="divider-form"></div>
+
+
+
+
+
+
+
+
 
                 <p class="text-center">パスワードをお忘れの方は <strong><?php echo $this->html->link('こちら', '/users/passloss', array('escape' => false));?></strong>.</p>
 

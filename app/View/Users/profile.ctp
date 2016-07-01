@@ -46,8 +46,8 @@
                 <i class="fa fa-building"></i>ユーザ情報登録
             </div>
             <br /><br />
-            <button type="button" onClick="location.href='/work/users/profileEdit?id=<?php echo $user['User']['id']?>';">編集</button>
-            <button type="button" onClick="location.href='/work/users/profileEdit?id=<?php echo $user['User']['id']?>';">settings</button>
+            <button type="button" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>';">編集</button>
+            <button type="button" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>';">settings</button>
             <div class="divider-form"></div>
 
 

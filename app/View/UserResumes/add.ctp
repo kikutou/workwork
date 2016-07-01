@@ -55,7 +55,7 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.company', '企業名');
     echo $this->Form->error('UserResume.company', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.company', array('class' => 'form-control'));
+    echo $this->Form->text('UserResume.company', array('class' => 'form-control', 'placeholder' => '株式会社○○○ / ○○○株式会社'));
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -77,7 +77,7 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.position', '役職');
     echo $this->Form->error('UserResume.position',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.position', array('class' => 'form-control'));
+    echo $this->Form->text('UserResume.position', array('class' => 'form-control', 'placeholder' => '課長'));
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -174,19 +174,19 @@
     echo $this->Form->label('UserResume.occupation', '職種');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('UserResume.occupation',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.occupation', array('class' => 'form-control validate[required]'));
+    echo $this->Form->textarea('UserResume.occupation', array('class' => 'form-control validate[required]', 'placeholder' => '営業系'));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.job_description', '職務内容');
     echo $this->Form->error('UserResume.job_description',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.job_description', array('class' => 'form-control'));
+    echo $this->Form->textarea('UserResume.job_description', array('class' => 'form-control', 'placeholder' => '売掛管理、サンプル出し、工程管理'));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.appeal_point', 'アピールポイント');
     echo $this->Form->error('UserResume.appeal_point',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.appeal_point', array('class' => 'form-control'));
+    echo $this->Form->textarea('UserResume.appeal_point', array('class' => 'form-control', 'placeholder' => '関連会社の中国工場での生産体制、物流などを担当しました。'));
     echo '</div>';
     ?>
 

@@ -345,15 +345,15 @@
     echo $this->Html->para('', '勤務歴');
     echo '<hr />';
 ?>
-    <button type="button" onClick="location.href='/cakephp-2.8.4/user_resumes/edit?id=<?php echo $user['User']['id']?>'">追加する</button>
-
+    <button type="button" onClick="location.href='/work/user_resumes/add?resume_id=<?php echo $resumes["UserResume"]["id"]?>'">追加</button>
+    <button type="button" onClick="location.href='/work/user_resumes/edit?resume_id=<?php echo $resumes['UserResume']['id']?>'">編集</button>
     <hr>
 
 
 <?php foreach($resumes as $resume){
     echo $this->Html->para('',$resume['UserResume']['user_id']);
     echo $this->Html->para('',$resume['UserResume']['company']);
-    echo '<a href="/cakephp-2.8.4/user_resumes/edit?resume_id='.$resume['UserResume']['id'].'">edit</a>';
+    echo '<a href="/work/user_resumes/edit?resume_id='.$resume['UserResume']['id'].'">edit</a>';
     echo '<hr>';
 }?>
 

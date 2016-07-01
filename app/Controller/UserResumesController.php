@@ -32,7 +32,7 @@ class UserResumesController extends AppController {
             $id = $this->request->query['resume_id'];
 
             if(!$id) {
-                //$this->Session->setFlash('idが存在しません。');
+                $this->Session->setFlash('idが存在しません。');
                 $this->redirect('index');
             }
 
@@ -58,7 +58,7 @@ class UserResumesController extends AppController {
         $id = $this->request->query['resume_id'];
 
         if(!$id) {
-            //TODO add error message
+            $this->Session->setFlash('idが存在しません。');
             $this->redirect('index');
         }
 
@@ -71,11 +71,21 @@ class UserResumesController extends AppController {
         //$resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'delete_flag' => 0)));
         $resumes = $this->UserResume->find('first', array('conditions' => array('UserResume.id' => $id, 'delete_flag' => 0)));
 
+        if(!$resumes)
+        {
+            $this->Session->setFlash('ユーザーが存在しません。');
+            $this->redirect('index');
+        }
+
         /*
         print '<pre>';
         print_r($resumes);
         print '</pre>';
         exit();*/
+
+        $start_date = $resumes['UserResume']['start_date'];
+        $resumes['UserResume']['start_date1'] = substr($start_date, 0, 4);
+        $resumes['UserResume']['start_date2'] = substr($start_date,5,2);
 
         //viewに送り出す
         $this->set('user',$user);

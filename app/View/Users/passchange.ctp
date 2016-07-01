@@ -5,7 +5,7 @@
     <div class="col-xs-6 page-breadcrumb text-right">
         <ol class="breadcrumb">
             <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
-            <li class="active"><a href="/work/users/profileEdit">パスワード変更</a></li>
+            <li class="active">パスワード変更</a></li>
         </ol>
     </div>
 </div>
@@ -32,18 +32,21 @@
         //hiddenuserid
         echo $this->Form->input('User.id', array('type' =>'hidden', 'value' => $user['User']['id'] ));
         //submit button
-        echo '
+    ?>
         <div class="row" style="width:100%">
             <div class="text-right" style="margin-bottom:10px;">
-                <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
-        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
-            "class" => "btn",
-            'type' => 'submit',
-            'escape' => false
-        ));
-        echo '</div>
-        </div>';
+                <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>'
+                <?php
+                echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+                    "class" => "btn",
+                    'type' => 'submit',
+                    'escape' => false
+                ));
+                ?>
+            </div>
+        </div>
 
+        <?php
         echo '<div class="col-xs-12">';
         echo "<hr>";
 
@@ -71,18 +74,20 @@
         echo "<hr>";
         echo '</div>';
         //submit button
-        echo '
+        ?>
         <div class="row" style="width:100%">
             <div class="text-right" style="margin-bottom:10px;">
-                <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+                <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>'
+        <?php
         echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
             "class" => "btn",
             'type' => 'submit',
             'escape' => false
         ));
-        echo '</div>
-        </div>';
-
+        ?>
+            </div>
+        </div>
+        <?php
         echo $this->Form->end();
     ?>
 </div>

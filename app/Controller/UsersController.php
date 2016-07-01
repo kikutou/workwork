@@ -17,6 +17,19 @@ class UsersController extends AppController {
     public function login() {
         $this->layout = false;
 
+        $errorMsg = null;
+
+        if($this->request->isPost()){
+            $result = $this->User->login($this->request->data);
+
+            if($result){
+                $this->redirect('index');
+            }else{
+                $errorMsg = 'ログインが失敗しました。';
+            }
+        }
+
+        $this->set('errorMsg', $errorMsg);
 
     }
 
@@ -100,7 +113,8 @@ class UsersController extends AppController {
             exit();*/
 
             if($result) {
-                $this->redirect('profile_done');
+                $this->Session->setFlash('編集しました。');
+                $this->redirect('index');
             }else {
                 $errorMsg = '編集失敗しました.もう一度入力してください。';
             }
@@ -182,8 +196,5 @@ class UsersController extends AppController {
         //$this->set('data',$this->data);
         $this->set('errorMsg',$errorMsg);
     }
-
-    public function profile_done() {
-
-    }
+    
 }

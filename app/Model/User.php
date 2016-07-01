@@ -340,6 +340,17 @@ class User extends AppModel
 
     }
 
+    public function login($data){
+
+        $loginId = $data['Employer']['login_id'];
+        $password = md5($data['Employer']['password']);
+
+        $employer = $this->find('first',array('conditions'=> array('Employer.login_id' => $loginId, 'Employer.password' => $password, 'Employer.delete_flag' => 0)));
+
+        return $employer? true: false;
+
+    }
+
 }
 ?>
 
