@@ -306,11 +306,11 @@
         var year1 = time.getFullYear();
 
         for (var i = year1; i >= 1900; i--) {
-            if ($resumes['UserResume']['start_date1'] == i && $resumes['UserResume']['start_date1'] !== null) {
-                $('#year1').append('<option value="' + i + '"' + selected'>' + i + '</option>');
-                } else {
+            if (i == <?php echo $resumes['UserResume']['start_date1']?>) {
+                $('#year1').append('<option value="' + i + '"' + 'selected >' + i + '</option>');
+            } else {
                 $('#year1').append('<option value="' + i + '">' + i + '</option>');
-                }
+            }
         }
         for (var i = 1; i <= 12; i++) {
             $('#month1').append('<option value="' + i + '">' + i + '</option>');

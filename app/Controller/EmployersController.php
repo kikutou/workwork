@@ -1,37 +1,13 @@
 <?php
 
-class EmployersController extends AppController {
+class EmployersController extends EmployerAuthController {
 
     //public $helpers = array('Js' => array('Jquery'));
 
     public $name = "Employers";
     public $layout = "employers";
     public $autoRender = true;
-    
-    //認証コンポーネントを利用する
-    public $components = array(
-        'Auth' => array(
-            'authenticate' => array(
-                'Form' => array(
-                    'userModel' => 'Employer',
-                    'fields' => array(
-                        'username' => 'login_id',
-                        'password' => 'password',
-                    ),
-                    'scope' => array('Employer.delete_flag' => 0),
-                )
-            ),
-            'loginAction' => array(
-                'controller' => 'employers',
-                'action' => 'login',
-            ),
-        )
-    );
 
-    public function beforeFilter(){
-        parent::beforeFilter();
-        $this->Auth->allow(array('signup','logout'));
-    }
 
     public function index() {
         $this->layout = false;
@@ -61,17 +37,7 @@ class EmployersController extends AppController {
             }else{
                 $this->Session->setFlash('ユーザー名かパスワードが違います。','default',array(),'auth');
             }
-
-/*            $result = $this->Employer->login($this->request->data);
-
-            if($result){
-                $this->redirect('index');
-            }else{
-                $errorMsg = 'ログインが失敗しました。';
-            }*/
         }
-
-
 
     }
     
