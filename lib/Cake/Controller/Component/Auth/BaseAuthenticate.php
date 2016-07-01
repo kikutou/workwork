@@ -135,13 +135,16 @@ abstract class BaseAuthenticate implements CakeEventListener {
 
 		$user = $result[$model];
 		if ($password !== null) {
+			
 			if (!$this->passwordHasher()->check($password, $user[$fields['password']])) {
+
 				return false;
 			}
 			unset($user[$fields['password']]);
 		}
 
 		unset($result[$model]);
+
 		return array_merge($user, $result);
 	}
 

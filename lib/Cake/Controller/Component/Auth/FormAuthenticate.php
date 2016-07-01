@@ -73,6 +73,7 @@ class FormAuthenticate extends BaseAuthenticate {
 		if (!$this->_checkFields($request, $model, $fields)) {
 			return false;
 		}
+
 		return $this->_findUser(
 			$request->data[$model][$fields['username']],
 			$request->data[$model][$fields['password']]

@@ -37,6 +37,11 @@
         <div class="box">
 
             <?php
+            
+                if($this->Session->check('Message.auth')){
+                    echo $this->Session->flash('auth');
+                }
+            
                 echo $this->Form->create(false, array(
                     'type' => 'post',
                     'role' => 'form',
@@ -47,15 +52,7 @@
             <div>
                 <h2>企業ユーザログイン</h2>
             </div>
-
-
-            <?php
-
-            if($errorMsg){
-                echo $this->Html->para('',$errorMsg);
-            }
-
-            ?>
+            
             <div class="divider-form"></div>
             <?php
 

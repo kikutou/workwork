@@ -98,52 +98,42 @@ class Employer extends AppModel {
 
         'foundation_date' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'employee_amount' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'capital' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'indusrty' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'category' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'postcode' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'province' => array(
             'rule' => 'notBlank',
-            'required' => true,
             'message' => '必ず選択してください'
         ),
         'address1' => array(
             'rule' => array('between', 1, 255),
-            'required' => true,
             'message' => 'error もう一度確認してください'
         ),
         'address2' => array(
             'rule' => array('between', 1, 255),
-            'required' => true,
             'message' => 'error もう一度確認してください'
         ),
         'fax' => array(
             'rule' => array('between', 10, 11),
-            'required' => true,
             'message' => 'error もう一度確認してください'
         ),
         'tel' => array(
@@ -152,13 +142,11 @@ class Employer extends AppModel {
                 'numeric',
                 array('between', 10, 11)
             ),
-            'required' => true,
             'message' => '数字だけ入力してください'
         ),
         'email' => array(
             array(
                 'rule' => array('between', 1, 255),
-                'required' => true,
                 'message' => 'error もう一度確認してください'
             ),
             array(
@@ -210,7 +198,7 @@ class Employer extends AppModel {
 
 
         if ($confirm == $password){
-            $this->data['Employer']['password'] = md5($this->data['Employer']['password']);
+            //$this->data['Employer']['password'] = md5($this->data['Employer']['password']);
             return true;
         }else{
             return false;
@@ -275,7 +263,7 @@ class Employer extends AppModel {
       }
     }*/
 
-    public function login($data){
+    /*public function login($data){
 
         $loginId = $data['Employer']['login_id'];
         $password = md5($data['Employer']['password']);
@@ -284,6 +272,11 @@ class Employer extends AppModel {
         
         return $employer? true: false;
         
+    }*/
+    
+    public function beforeSave($options = array()){
+        $this->data['Employer']['password'] = Security::hash($this->data['Employer']['password'], null, true);
+        return true;
     }
 
     public function index($data){
