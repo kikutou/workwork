@@ -1,6 +1,6 @@
 <?php
 
-class EmAdvertisesController extends AppController {
+class EmAdvertisesController extends EmployerAuthController {
 
     public $name = 'EmAdvertises';
     public $uses = array('EmAdvertise','Employer');

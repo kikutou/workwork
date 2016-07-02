@@ -37,6 +37,20 @@
         <div class="box">
             <form role="form">
 
+                <?php
+
+                if($this->Session->check('Message.auth')){
+                    echo $this->Session->flash('auth');
+                }
+
+                echo $this->Form->create(false, array(
+                    'type' => 'post',
+                    'role' => 'form',
+                    'id' => 'userLoginForm'
+                ));
+
+                ?>
+
                 <div>
                     <h1>ログイン</h1>
                 </div>

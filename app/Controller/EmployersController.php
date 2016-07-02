@@ -1,14 +1,13 @@
 <?php
 
-class EmployersController extends AppController {
+class EmployersController extends EmployerAuthController {
 
     //public $helpers = array('Js' => array('Jquery'));
 
     public $name = "Employers";
-    public $users = null;
-    //public $autoLayout = true;
     public $layout = "employers";
     public $autoRender = true;
+
 
     public function index() {
         $this->layout = false;
@@ -29,23 +28,21 @@ class EmployersController extends AppController {
     }
 
     public function login() {
+
         $this->layout = false;
 
-        $errorMsg = null;
-
         if($this->request->isPost()){
-            $result = $this->Employer->login($this->request->data);
-
-            if($result){
-                $this->redirect('index');
+            if($this->Auth->login()){
+                $this->redirect($this->Auth->redirect());
             }else{
-                $errorMsg = 'ログインが失敗しました。';
+                $this->Session->setFlash('ユーザー名かパスワードが違います。','default',array(),'auth');
             }
         }
 
-        $this->set('errorMsg', $errorMsg);
-
-
+    }
+    
+    public function logout(){
+        $this->Auth->logout();
     }
 
     public function signup()
@@ -63,10 +60,14 @@ class EmployersController extends AppController {
 
 
             }else{
-                $errorMsg = '下の入力エラーをご確認ください';
+
+                $errorMsg = 'エラーが発生しました。';
             }
 
         }
+
+
+
         $this->set('errorMsg', $errorMsg);
     }
 
@@ -166,7 +167,11 @@ class EmployersController extends AppController {
         if($this->request->isPost()) {
 
         } else {
-            $id = $this->request->query['id'];
+            //$id = $this->request->query['id'];
+            $employerInfo = $this->Auth->user();
+            $id = $employerInfo['id'];
+
+
             $employer = $this->Employer->find('first',array('conditions' => array(array('Employer.id' => $id, 'Employer.delete_flag' => 0))));
 
             if(!$employer){

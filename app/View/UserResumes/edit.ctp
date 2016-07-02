@@ -308,9 +308,9 @@
         for (var i = year1; i >= 1900; i--) {
             if (i == <?php echo $resumes['UserResume']['start_date1']?>) {
                 $('#year1').append('<option value="' + i + '"' + 'selected >' + i + '</option>');
-                } else {
+            } else {
                 $('#year1').append('<option value="' + i + '">' + i + '</option>');
-                }
+            }
         }
         for (var i = 1; i <= 12; i++) {
             if(i == <?php echo $resumes['UserResume']['start_date2']?>){

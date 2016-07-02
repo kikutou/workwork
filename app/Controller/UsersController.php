@@ -1,6 +1,6 @@
 <?php
 
-class UsersController extends AppController {
+class UsersController extends UserAuthController {
 
     public $name = "Users";
     //public $uses = null;
@@ -10,27 +10,37 @@ class UsersController extends AppController {
     public $helpers = array('Js' => array('Jquery'));
 
     public function index() {
-
-
-    }
-
-    public function login() {
         $this->layout = false;
-
         $errorMsg = null;
 
         if($this->request->isPost()){
-            $result = $this->User->login($this->request->data);
+            $result = $this->User->index($this->request->data);
 
             if($result){
                 $this->redirect('index');
-            }else{
+            }else {
                 $errorMsg = 'ログインが失敗しました。';
             }
         }
 
         $this->set('errorMsg', $errorMsg);
+    }
 
+    public function login() {
+        $this->layout = false;
+
+        if($this->request->isPost()){
+            if($this->Auth->login()){
+                $this->redirect($this->Auth->redirect());
+            }else{
+                $this->Session->setFlash('ユーザー名かパスワードが違います。','default',array(),'auth');
+            }
+        }
+
+    }
+
+    public function logout(){
+        $this->Auth->logout();
     }
 
     public function signup() {

@@ -340,17 +340,21 @@ class User extends AppModel
 
     }
 
-    public function login($data){
-
-        $loginId = $data['User']['login_id'];
-        $password = md5($data['User']['password']);
-
-        $user = $this->find('first',array('conditions'=> array('User.login_id' => $loginId, 'User.password' => $password, 'User.delete_flag' => 0)));
-
-        return $user? true: false;
-
+    public function beforeSave($options = array()){
+        $this->data['User']['password'] = Security::hash($this->data['User']['password'], null, true);
+        return true;
     }
 
+    public function index($data){
+
+        $userId = $data['User']['id'];
+
+        $id = $this->find('first', array('conditions' => array('User.id' => $userId, 'User.delete_flag' => 0)));
+
+        return $id? true: false;
+
+
+    }
 }
 ?>
 
