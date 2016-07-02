@@ -342,12 +342,12 @@ class User extends AppModel
 
     public function login($data){
 
-        $loginId = $data['Employer']['login_id'];
-        $password = md5($data['Employer']['password']);
+        $loginId = $data['User']['login_id'];
+        $password = md5($data['User']['password']);
 
-        $employer = $this->find('first',array('conditions'=> array('Employer.login_id' => $loginId, 'Employer.password' => $password, 'Employer.delete_flag' => 0)));
+        $user = $this->find('first',array('conditions'=> array('User.login_id' => $loginId, 'User.password' => $password, 'User.delete_flag' => 0)));
 
-        return $employer? true: false;
+        return $user? true: false;
 
     }
 

@@ -353,7 +353,7 @@
 <?php foreach($resumes as $resume){
     echo $this->Html->para('',$resume['UserResume']['user_id']);
     echo $this->Html->para('',$resume['UserResume']['company']);
-    echo '<a href="/work/user_resumes/edit?resume_id='.$resume['UserResume']['id'].'">edit</a>';
+    echo '<a href="/work/user_resumes/edit?resume_id='.$resume['UserResume']['id'].'">編集</a>';
     echo '<hr>';
 }?>
 

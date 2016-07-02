@@ -5,7 +5,7 @@
     <div class="col-xs-6 page-breadcrumb text-right">
         <ol class="breadcrumb">
             <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
-            <li class="active"><a href="/work/user_reusmes/edit">会社情報追加</a></li>
+            <li class="active">会社情報追加</a></li>
         </ol>
     </div>
 </div>

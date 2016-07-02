@@ -35,7 +35,7 @@
     ?>
         <div class="row" style="width:100%">
             <div class="text-right" style="margin-bottom:10px;">
-                <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>'
+                <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>
                 <?php
                 echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
                     "class" => "btn",
@@ -77,7 +77,7 @@
         ?>
         <div class="row" style="width:100%">
             <div class="text-right" style="margin-bottom:10px;">
-                <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>'
+                <a href="/work/users/profile?id=<?php echo $user['User']['id']; ?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>
         <?php
         echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
             "class" => "btn",

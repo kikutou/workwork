@@ -44,37 +44,24 @@
                 <div class="divider-form"></div>
 
                 <?php
-                
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.login_id', 'ログインID');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.login_id', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->text('User.login_id', array("class" => "form-control validate[required]", "placeholder" => "英数字のみ"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
+
+
+                //パスワードチェック
+                echo '<div class="form-group">';
+                echo $this->Form->label('User.password', 'パスワード');
+                echo '&nbsp<span class="label label-warning">必須</span>';
+                echo $this->Form->error('User.password', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+                echo $this->Form->password('User.password', array("class" => "form-control validate[required]", "placeholder" => "8~16桁・英数字それぞれ1種類以上"));
+                echo '</div>';
+                echo '<div class="divider-form"></div>';
                 ?>
-
-
-
-
-
-
-
-
-                <div class="form-group">
-                    <label for="exampleInputEmail1">ログインID</label>
-                    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="ログインID/メール">
-                </div>
-
-                <div class="divider-form"></div>
-
-                <div class="form-group">
-                    <label for="exampleInputPassword1">パスワード</label>
-                    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="パスワード">
-                </div>
-
-                <div class="divider-form"></div>
-
-
-
-
-
-
-
-
 
                 <p class="text-center">パスワードをお忘れの方は <strong><?php echo $this->html->link('こちら', '/users/passloss', array('escape' => false));?></strong>.</p>
 

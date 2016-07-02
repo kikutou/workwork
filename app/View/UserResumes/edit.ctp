@@ -5,7 +5,7 @@
     <div class="col-xs-6 page-breadcrumb text-right">
         <ol class="breadcrumb">
             <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
-            <li class="active"><a href="/work/user_reusmes/edit">会社情報編集</a></li>
+            <li class="active">会社情報編集</a></li>
         </ol>
     </div>
 </div>
@@ -306,14 +306,18 @@
         var year1 = time.getFullYear();
 
         for (var i = year1; i >= 1900; i--) {
-            if ($resumes['UserResume']['start_date1'] == i && $resumes['UserResume']['start_date1'] !== null) {
-                $('#year1').append('<option value="' + i + '"' + selected'>' + i + '</option>');
+            if (i == <?php echo $resumes['UserResume']['start_date1']?>) {
+                $('#year1').append('<option value="' + i + '"' + 'selected >' + i + '</option>');
                 } else {
                 $('#year1').append('<option value="' + i + '">' + i + '</option>');
                 }
         }
         for (var i = 1; i <= 12; i++) {
-            $('#month1').append('<option value="' + i + '">' + i + '</option>');
+            if(i == <?php echo $resumes['UserResume']['start_date2']?>){
+                $('#month1').append('<option value="' + i + '"' + 'selected >' + i + '</option>');
+            } else {
+                $('#month1').append('<option value="' + i + '">' + i + '</option>');
+            }
         }
         for (var i = 1; i <= 31; i++) {
             $('#day1').append('<option value="' + i + '">' + i + '</option>');
@@ -323,10 +327,18 @@
         var year2 = time.getFullYear();
 
         for (var j = year2; j >= 1900; j--) {
-            $('#year2').append('<option value="' + j + '">' + j + '</option>');
+            if (j == <?php echo $resumes['UserResume']['end_date1']?>) {
+                $('#year2').append('<option value="' + j + '"' + 'selected >' + j + '</option>');
+            } else {
+                $('#year2').append('<option value="' + j + '">' + j + '</option>');
+            }
         }
         for (var j = 1; j <= 12; j++) {
-            $('#month2').append('<option value="' + j + '">' + j + '</option>');
+            if(j == <?php echo $resumes['UserResume']['end_date2']?>){
+                $('#month2').append('<option value="' + j + '"' + 'selected >' + j + '</option>');
+            } else {
+                $('#month2').append('<option value="' + j + '">' + j + '</option>');
+            }
         }
         for (var j = 1; j <= 31; j++) {
             $('#day2').append('<option value="' + j + '">' + j + '</option>');
@@ -335,10 +347,3 @@
 
 
     </script>
-
-    if ($resumes['UserResume']['industry'] == $key && $resumes['UserResume']['industry'] !== null){
-    echo "<option value=".$key." selected>".$value."</option>";
-
-    }else{
-    echo "<option value=".$key.">".$value."</option>";
-    }

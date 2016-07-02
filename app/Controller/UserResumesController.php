@@ -87,6 +87,10 @@ class UserResumesController extends AppController {
         $resumes['UserResume']['start_date1'] = substr($start_date, 0, 4);
         $resumes['UserResume']['start_date2'] = substr($start_date,5,2);
 
+        $end_date = $resumes['UserResume']['end_date'];
+        $resumes['UserResume']['end_date1'] = substr($end_date, 0, 4);
+        $resumes['UserResume']['end_date2'] = substr($end_date,5,2);
+        
         //viewに送り出す
         $this->set('user',$user);
         $this->set('resumes',$resumes);
