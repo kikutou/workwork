@@ -1,12 +1,12 @@
 <?php
 
+App::uses('Controller', 'Controller');
+
 class UserAuthController extends AppController {
 
     //public $helpers = array('Js' => array('Jquery'));
 
-    public $name = "Users";
-    public $layout = "users";
-    public $autoRender = true;
+    public $name = "UserAuth";
 
     //認証コンポーネントを利用する
     public $components = array(
