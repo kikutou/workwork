@@ -55,7 +55,7 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.company', '企業名');
     echo $this->Form->error('UserResume.company', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.company', array('class' => 'form-control', 'placeholder' => '株式会社○○○ / ○○○株式会社'));
+    echo $this->Form->text('UserResume.company', array('class' => 'form-control', 'placeholder' => '株式会社○○○ / ○○○株式会社','required'=>''));
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -77,7 +77,20 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.position', '役職');
     echo $this->Form->error('UserResume.position',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.position', array('class' => 'form-control', 'placeholder' => '課長'));
+    echo $this->Form->select(
+        'UserResume.position',
+        array(
+            '0' => '代表取締役会長',
+            '1' => '代表取締役社長',
+            '2' => '部長',
+            '3' => '次長',
+            '4' => '課長',
+            '5' => '係長',
+            '6' => '主任',
+            '7' => '一般社員'
+        ),
+        array('empty' => '選んでください','class' => 'form-control','required'=>'')
+    );
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -93,7 +106,7 @@
             '4' => '500人～1000人未満',
             '5' => '1000以上'
         ),
-        array('empty' => '選んでください', 'class' => 'form-control')
+        array('empty' => '選んでください', 'class' => 'form-control','required'=>'')
     );
     echo '</div>';
 
@@ -103,7 +116,7 @@
 ?>
 
     <select id="year1" class="validate[required]"><option value="">----</option></select>年
-    <select id="month1" class="validate[required]"><option value="0">--</option></select>月
+    <select id="month1" class="validate[required]"><option value="">--</option></select>月
     <select id="day1" style="display:none"><option value="0" >--</option></select>
 
     <?php
@@ -122,8 +135,8 @@
     echo $this->Html->tag('span', '-----');
     ?>
 
-    <select id="year2" ><option value="0">----</option></select>年
-    <select id="month2"><option value="0">--</option></select>月
+    <select id="year2" ><option value="0" required="">----</option></select>年
+    <select id="month2"><option value="0" required="">--</option></select>月
     <select id="day2" style="display:none"><option value="0" >--</option></select>
 
     <?php
@@ -143,7 +156,7 @@
             '3' => '700万-1000万',
             '4' => '1000万以上'
         ),
-        array('empty' => '選んでください', 'class' => 'form-control')
+        array('empty' => '選んでください', 'class' => 'form-control','required'=>'')
     );
     echo '</div>';
 
@@ -180,13 +193,13 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.job_description', '職務内容');
     echo $this->Form->error('UserResume.job_description',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.job_description', array('class' => 'form-control', 'placeholder' => '売掛管理、サンプル出し、工程管理'));
+    echo $this->Form->textarea('UserResume.job_description', array('class' => 'form-control', 'placeholder' => '売掛管理、サンプル出し、工程管理','required'=>'block'));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.appeal_point', 'アピールポイント');
     echo $this->Form->error('UserResume.appeal_point',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.appeal_point', array('class' => 'form-control', 'placeholder' => '関連会社の中国工場での生産体制、物流などを担当しました。'));
+    echo $this->Form->textarea('UserResume.appeal_point', array('class' => 'form-control', 'placeholder' => '関連会社の中国工場での生産体制、物流などを担当しました。','required'=>'block'));
     echo '</div>';
     ?>
 

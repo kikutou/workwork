@@ -136,7 +136,7 @@
                     });
                 });
             </script>
-            <div class="divider-form"></div>';
+            <div class="divider-form"></div>
 
             <div class="form-group">
             <label for="UserGender">性別</label>
