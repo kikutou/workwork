@@ -1,6 +1,6 @@
 <?php
 
-class EmployersController extends EmployerAuthController {
+class EmployersController extends AppController {
 
     //public $helpers = array('Js' => array('Jquery'));
 
@@ -167,12 +167,17 @@ class EmployersController extends EmployerAuthController {
         if($this->request->isPost()) {
 
         } else {
-            //$id = $this->request->query['id'];
-            $employerInfo = $this->Auth->user();
-            $id = $employerInfo['id'];
+            $id = $this->request->query['id'];
+            /*$employerInfo = $this->Auth->user();
+            $id = $employerInfo['id'];*/
 
 
             $employer = $this->Employer->find('first',array('conditions' => array(array('Employer.id' => $id, 'Employer.delete_flag' => 0))));
+
+            print="<pre>";
+            print_r($employer);
+            print'</pre>';
+            exit();
 
             if(!$employer){
                 $this->Session->setFlash('DBに該当するIDが見つかりません。');
@@ -218,7 +223,7 @@ class EmployersController extends EmployerAuthController {
             //idを取らないなら
             if(!$id)
             {
-                //編集のペ−じにかえします
+                //編集のページに返します
                 $this -> redirect('index');
             }
 
