@@ -28,7 +28,7 @@ class UserResumesController extends AppController {
 
             $resume = $this->data;
 
-        }else {
+        }/*else {
             $id = $this->request->query['resume_id'];
 
             if(!$id) {
@@ -42,7 +42,7 @@ class UserResumesController extends AppController {
                 $this->Session->setFlash('ユーザーが存在しません。');
                 $this->redirect('index');
             }
-        }
+        }*/
 
         $this->set('resume',$resume);
         $this->set('errorMsg',$errorMsg);
@@ -55,41 +55,56 @@ class UserResumesController extends AppController {
         $errorMsg = null;
         $resumes = null;
 
-        $id = $this->request->query['resume_id'];
+        if($this->request->isPost()){
 
-        if(!$id) {
-            $this->Session->setFlash('idが存在しません。');
-            $this->redirect('index');
+
+            $result = $this->UserResume->save($this->request->data);
+
+            if($result) {
+                $this->redirect('index');
+            }else {
+                $errorMsg = 'データベースに保存できませんでした。';
+            }
+
+            $resumes = $this->data;
+        } else {
+
+            $id = $this->request->query['resume_id'];
+
+            if(!$id) {
+                $this->Session->setFlash('idが存在しません。');
+                $this->redirect('index');
+            }
+
+            //$user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' => '0')));
+
+            //if(!$user) {
+                //$this->redirect('index');
+            //}
+
+            //$resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'delete_flag' => 0)));
+            $resumes = $this->UserResume->find('first', array('conditions' => array('UserResume.id' => $id, 'delete_flag' => 0)));
+
+            if(!$resumes)
+            {
+                $this->Session->setFlash('ユーザーが存在しません。');
+                $this->redirect('index');
+            }
+
+            /*
+            print '<pre>';
+            print_r($resumes);
+            print '</pre>';
+            exit();*/
+
+            $start_date = $resumes['UserResume']['start_date'];
+            $resumes['UserResume']['start_date1'] = substr($start_date, 0, 4);
+            $resumes['UserResume']['start_date2'] = substr($start_date,5,2);
+
+            $end_date = $resumes['UserResume']['end_date'];
+            $resumes['UserResume']['end_date1'] = substr($end_date, 0, 4);
+            $resumes['UserResume']['end_date2'] = substr($end_date,5,2);
         }
-
-        //$user = $this->User->find('first', array('conditions' => array('User.id' => $id, 'User.delete_flag' => '0')));
-
-        //if(!$user) {
-            //$this->redirect('index');
-        //}
-
-        //$resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'delete_flag' => 0)));
-        $resumes = $this->UserResume->find('first', array('conditions' => array('UserResume.id' => $id, 'delete_flag' => 0)));
-
-        if(!$resumes)
-        {
-            $this->Session->setFlash('ユーザーが存在しません。');
-            $this->redirect('index');
-        }
-
-        /*
-        print '<pre>';
-        print_r($resumes);
-        print '</pre>';
-        exit();*/
-
-        $start_date = $resumes['UserResume']['start_date'];
-        $resumes['UserResume']['start_date1'] = substr($start_date, 0, 4);
-        $resumes['UserResume']['start_date2'] = substr($start_date,5,2);
-
-        $end_date = $resumes['UserResume']['end_date'];
-        $resumes['UserResume']['end_date1'] = substr($end_date, 0, 4);
-        $resumes['UserResume']['end_date2'] = substr($end_date,5,2);
         
         //viewに送り出す
         $this->set('user',$user);

@@ -114,6 +114,7 @@ class User extends AppModel
       'mobile1' => array(
           array(
               'rule' => array('between', 10, 11),
+              'allowEmpty' => true,
               'message' => '電話番号の桁が正しくありません。'
           ),
           array(
@@ -126,6 +127,7 @@ class User extends AppModel
       'mobile2' => array(
           array(
               'rule' => array('between', 10, 11),
+              'allowEmpty' => true,
               'message' => '電話番号の桁が正しくありません。'
           ),
           array(
@@ -137,6 +139,7 @@ class User extends AppModel
       'postcode1' => array(
           array(
               'rule' => array('between', 3, 3),
+              'allowEmpty' => true,
               'message' => '3文字で入力してください。'
           ),
           array(
@@ -148,6 +151,7 @@ class User extends AppModel
       'postcode2' => array(
           array(
               'rule' => array('between', 4, 4),
+              'allowEmpty' => true,
               'message' => '4文字で入力してください。'
           ),
           array(
@@ -158,36 +162,43 @@ class User extends AppModel
       
       'address1' => array(
           'rule' => array('between',1,255),
+          'allowEmpty' => true,
           'message' => '１−255文字以内で入力してください。'
       ),
       
       'address2' => array(
           'rule' => array('between',1,255),
+          'allowEmpty' => true,
           'message' => '１−255文字以内で入力してください。'
       ),
       
       'college' => array(
           'rule' => array('between',1,50),
+          'allowEmpty' => true,
           'message' => '１−50文字以内で入力してください。'
       ),
 
       'primary_major' => array(
           'rule' => array('between',1,50),
+          'allowEmpty' => true,
           'message' => '１−50文字以内で入力してください。'
       ),
 
       'secondary_major' => array(
           'rule' => array('between',1,50),
+          'allowEmpty' => true,
           'message' => '１−50文字以内で入力してください。'
       ),
 
       'certification' => array(
           'rule' => array('between',1,255),
+          'allowEmpty' => true,
           'message' => '１−50文字以内で入力してください。'
       ),
 
       'skill' => array(
           'rule' => array('between',1,255),
+          'allowEmpty' => true,
           'message' => '１−50文字以内で入力してください。'
       )
   );
@@ -340,7 +351,7 @@ class User extends AppModel
 
     }
 
-    public function beforeSave($options = array()){
+/*    public function beforeSave($options = array()){
         $this->data['User']['password'] = Security::hash($this->data['User']['password'], null, true);
         return true;
     }
@@ -354,7 +365,7 @@ class User extends AppModel
         return $id? true: false;
 
 
-    }
+    }*/
 }
 ?>
 

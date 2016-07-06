@@ -55,7 +55,7 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.company', '企業名');
     echo $this->Form->error('UserResume.company', array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->text('UserResume.company', array('class' => 'form-control', 'value' => $resumes['UserResume']['company']));
+    echo $this->Form->text('UserResume.company', array('class' => 'form-control', 'value' => $resumes['UserResume']['company'],'required'=>''));
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -105,7 +105,7 @@
     );
     ?>
 
-    <select name="data[UserResume][position]" id="UserResumeEmploymentType" class="form-control">
+    <select name="data[UserResume][position]" id="UserResumeEmploymentType" class="form-control" required="">
         <option value="">選んでください</option>
         <?php
         foreach ($position as $key => $value){
@@ -137,7 +137,7 @@
         );
     ?>
 
-    <select name="data[UserResume][employee_amount]" id="UserResumeEmploymentType" class="form-control">
+    <select name="data[UserResume][employee_amount]" id="UserResumeEmploymentType" class="form-control" required="">
         <option value="">選んでください</option>
         <?php
         foreach ($employee_amount as $key => $value){
@@ -202,7 +202,7 @@
     );
     ?>
 
-    <select name="data[UserResume][salary]" id="UserResumeEmploymentType" class="form-control">
+    <select name="data[UserResume][salary]" id="UserResumeEmploymentType" class="form-control" required="">
         <option value="">選んでください</option>
         <?php
         foreach ($salary as $key => $value){
@@ -268,13 +268,13 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.job_description', '職務内容');
     echo $this->Form->error('UserResume.job_description',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.job_description', array('class' => 'form-control','value' => $resumes['UserResume']['job_description']));
+    echo $this->Form->textarea('UserResume.job_description', array('class' => 'form-control','value' => $resumes['UserResume']['job_description'],'required'=>'block'));
     echo '</div>';
 
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.appeal_point', 'アピールポイント');
     echo $this->Form->error('UserResume.appeal_point',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.appeal_point', array('class' => 'form-control', 'value' => $resumes['UserResume']['appeal_point']));
+    echo $this->Form->textarea('UserResume.appeal_point', array('class' => 'form-control', 'value' => $resumes['UserResume']['appeal_point'],'required'=>'block'));
     echo '</div>';
     ?>
 
