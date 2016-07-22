@@ -25,9 +25,10 @@
         <div class="text-right" style="margin-bottom:10px;">';
     ?>
 
-    <button type="button" class="btn" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>'">個人情報編集へ</button>
+    <button type="button" class="btn" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id'] ?>'">個人情報編集へ</button>
 
     <?php
+
     echo '</div>
     </div>';
 
@@ -35,18 +36,10 @@
 
     echo "<hr>";
 
-    ?>
-
-
-<?php
 
     if($errorMsg){
         echo $this->Html->para('',$errorMsg);
     }
-
-    ?>
-
-    <?php
 
     echo '<div class="form-group">';
     echo $this->Html->para('User.name', '名前');
@@ -280,11 +273,6 @@
     echo '</div>';
 
 
-
-
-
-
-
     echo $this->Html->para('User.degree', '学位');
 
     $degree = array(
@@ -339,46 +327,41 @@
         }
     }
 
-
-
-
     echo $this->Html->para('', '勤務歴');
     echo '<hr />';
-?>
-    <button type="button" onClick="location.href='/work/user_resumes/add?resume_id=<?php echo $resumes["UserResume"]["id"]?>'">追加</button>
-    <button type="button" onClick="location.href='/work/user_resumes/edit?resume_id=<?php echo $resumes['UserResume']['id']?>'">編集</button>
-    <hr>
+
+    echo '<a href="/work/user_resumes/add?resume_id='.$resumes['UserResume']['id'].'">追加</a>';
+    echo '<a href="/work/user_resumes/edit?resume_id='.$resumes['UserResume']['id'].'">編集</a>';
 
 
-<?php foreach($resumes as $resume){
-    echo $this->Html->para('',$resume['UserResume']['user_id']);
-    echo $this->Html->para('',$resume['UserResume']['company']);
-    echo '<a href="/work/user_resumes/edit?resume_id='.$resume['UserResume']['id'].'">編集</a>';
-    echo '<hr>';
-}?>
+    foreach($resumes as $resume) {
+        echo $this->Html->para('', $resume['UserResume']['user_id']);
+        echo $this->Html->para('', $resume['UserResume']['company']);
+        echo '<a href="/work/user_resumes/edit?resume_id=' . $resume['UserResume']['id'] . '">編集</a>';
+        echo '<hr>';
+    }
+
+        echo '</div>';
+
+        echo '<hr>';
+        echo '</div>';
 
 
-
-
-    <?php
-    echo '</div>';
-
-    echo "<hr>";
-    echo '</div>';
-    //submit button
-    echo '
+        //submit button
+        echo '
     <div class="row" style="width:100%">
         <div class="text-right" style="margin-bottom:10px;">
             <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
-    echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
-        "class" => "btn",
-        'type' => 'submit',
-        'escape' => false
-    ));
-    echo '</div>
+
+
+        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+            'class' => 'btn',
+            'type' => 'submit',
+            'escape' => false
+        ));
+        echo '</div>
     </div>';
 
-    echo $this->Form->end();
+        echo $this->Form->end();
 
-
-    ?>
+?>

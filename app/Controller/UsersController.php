@@ -105,7 +105,7 @@ class UsersController extends AppController {
     }
 
     public function profile(){
-        $this->layout = false;
+        //$this->layout = false;
 
 
         $user = null;

@@ -42,7 +42,7 @@
 
     echo "<hr>";
     ?>
-
+    
 <?php
    /* if($errorMsg){
         echo $this->Html->para('', $errorMsg);
@@ -113,19 +113,17 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.start_date', '在籍期間');
     echo '<br />';
+    echo $this->Form->year('UserResume.start_date',1900, date('Y'),array('empty' => '----','required'=>''));
+    echo $this->Form->month('UserResume.start_date', array('monthNames' => false, 'empty' => '----','required'=>''));
+    echo $this->Form->day('UserResume.start_date', array('style' =>'display:none','value'=>"1" ));
+
 ?>
 
-    <select id="year1" class="validate[required]"><option value="">----</option></select>年
-    <select id="month1" class="validate[required]"><option value="">--</option></select>月
-    <select id="day1" style="display:none"><option value="0" >--</option></select>
+<!--<select id="year1" class="validate[required]"  name="data[UserResume][start_date]"><option value="">----</option></select>年
+    <select id="month1" class="validate[required]" name="data[UserResume][start_date]"><option value="">--</option></select>月
+    <select id="day1" style="display:none"><option value="0" >--</option></select>-->
 
     <?php
-    /*echo $this->Form->year('UserResume.start_date', '1960', '2016', array(), array('class' => 'form-control validate[required]'));
-    echo $this->Html->para('', '年');
-    echo $this->Form->month('UserResume.start_date',array('class' => 'form-control validate[required]'));
-    echo $this->Html->para('', '月');
-    echo $this->Form->day('UserResume.start_date', array('style' => 'display:none', 'value' => '01'));
-    //echo $this->Html->para('', '日');*/
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('UserResume.start_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
@@ -133,12 +131,16 @@
     echo '<div class="form-group">';
     echo '<br />';
     echo $this->Html->tag('span', '-----');
+    echo $this->Form->year('UserResume.end_date',1900, date('Y'),array('empty' => '----','required'=>''));
+    echo $this->Form->month('UserResume.end_date', array('monthNames' => false, 'empty' => '----','required'=>''));
+    echo $this->Form->day('UserResume.end_date', array('style' =>'display:none','value'=>"1" ));
+
     ?>
 
-    <select id="year2" ><option value="0" required="">----</option></select>年
+<!--    <select id="year2" ><option value="0" required="">----</option></select>年
     <select id="month2"><option value="0" required="">--</option></select>月
     <select id="day2" style="display:none"><option value="0" >--</option></select>
-
+-->
     <?php
     echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
     echo $this->Form->error('UserResume.end_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
@@ -225,36 +227,5 @@
     echo $this->Form->end();
 
 ?>
-<script>
-
-    var time = new Date();
-    var year1 = time.getFullYear();
-
-    for (var i = year1; i >= 1900; i--) {
-        $('#year1').append('<option value="' + i + '">' + i + '</option>');
-    }
-    for (var i = 1; i <= 12; i++) {
-        $('#month1').append('<option value="' + i + '">' + i + '</option>');
-    }
-    for (var i = 1; i <= 31; i++) {
-        $('#day1').append('<option value="' + i + '">' + i + '</option>');
-    }
-
-    var time = new Date();
-    var year2 = time.getFullYear();
-
-    for (var j = year2; j >= 1900; j--) {
-        $('#year2').append('<option value="' + j + '">' + j + '</option>');
-    }
-    for (var j = 1; j <= 12; j++) {
-        $('#month2').append('<option value="' + j + '">' + j + '</option>');
-    }
-    for (var j = 1; j <= 31; j++) {
-        $('#day2').append('<option value="' + j + '">' + j + '</option>');
-    }
-
-
-
-</script>
 
 

@@ -21,19 +21,18 @@ class UserResume extends AppModel
         'appeal_point' => array(
             'rule' => array('between',0,1000),
             'message' => '１−50文字以内で入力してください。'
-        )
+        ),
         
-       /* 'end_date' => array(
+       'end_date' => array(
             'rule' => array('dateCheck'),
             'message' =>  'パスワードとパスワード確認の入力が一致していません。'
-        )*/
+        )
     );
 
-   // public function dateCheck($data){}
-    
-    
-    
-    
+   public function dateCheck($data){
+       
+       
+   }
     
     
 }

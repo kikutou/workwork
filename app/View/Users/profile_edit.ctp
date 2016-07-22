@@ -422,11 +422,14 @@
         echo '<br />';
         ?>
 
-        <input type="radio" name="data[User][work_situation1]" value="1" id="UserWork1" onclick="setSelectUserNo(this);"   <?php if($user['User']['work_situation'] == 1) {echo "checked"; } ?>>就職している
+        <input type="radio" name="data[User][work_situation]" value="0"   <?php if($user['User']['work_situation'] == 0) {echo "checked"; } ?>>就職している
         <br/><br/>
-        <input type="radio" name="data[User][work_situation2]" value="2" id="UserWork2" onclick="setSelectUserNo(this);"  <?php if($user['User']['work_situation'] == 2) {echo "checked"; } ?>>失職中
+        <input type="radio" name="data[User][work_situation]" value="1"  <?php if($user['User']['work_situation'] == 1) {echo "checked"; } ?>>失職中
         <br/><br/>
-        <input type="radio" name="data[User][work_situation3]" value="3" id="UserWork3" onclick="setSelectUserNo(this);"  <?php if($user['User']['work_situation'] == 3) {echo "checked"; } ?>>新卒
+        <input type="radio" name="data[User][work_situation]" value="2"  <?php if($user['User']['work_situation'] == 2) {echo "checked"; } ?>>新卒
+        <br/><br/>
+        <input type="radio" name="data[User][work_situation]" value="3"  <?php if($user['User']['work_situation'] == 3) {echo "checked"; } ?>>その他
+
 
         <?php
         echo '</div>';
@@ -496,18 +499,5 @@
         
                 }
             )
-
-            function setSelectUserNo(radioObj){
-
-                var radioCheck= $(radioObj).val();
-                if("1"==radioCheck){
-                    $(radioObj).attr("checked",false);
-                    $(radioObj).val("0");
-
-                }else{
-                    $(radioObj).val("1");
-
-                }
-            }
 
         </script>

@@ -1,4 +1,4 @@
-<html>
+<!--<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -46,12 +46,26 @@
                 <i class="fa fa-building"></i>ユーザ情報登録
             </div>
             <br /><br />
-            <button type="button" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>';">編集</button>
-            <button type="button" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>';">settings</button>
-            <div class="divider-form"></div>
+            <button type="button" onClick="location.href='/work/users/profile_edit?id=<?php /*echo $user['User']['id']*/?>';">編集</button>
+            <button type="button" onClick="location.href='/work/users/profile_edit?id=<?php /*echo $user['User']['id']*/?>';">settings</button>
+            <div class="divider-form"></div>-->
 
-
-
+        <div class="row header">
+            <div class="col-xs-6 page-title">
+                登録情報確認
+            </div>
+            <div class="col-xs-6 page-breadcrumb text-right">
+                <ol class="breadcrumb">
+                    <li><a href="/work"><i class="fa fa-home"></i>&nbsp;ホーム</a></li>
+                    <li class="active">登録情報確認</a></li>
+                </ol>
+            </div>
+        </div>
+<!--        <div class="row detail">
+            <div class="row" style="width:100%">
+                <div class="text-right" style="margin-bottom:10px;">
+                    <a href="/work/users/index?id=<?php /*echo $user['User']['id']; */?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>
+                    </div>-->
         <?php
 
         echo '<div class="form-group">';
@@ -379,7 +393,8 @@
 
                 '0' => '就職している',
                 '1' => '失職中',
-                '2' => '新卒'
+                '2' => '新卒',
+                '3' => 'その他'
             );
 
             foreach ($work_situation as $key => $value){

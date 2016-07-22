@@ -160,9 +160,9 @@
     echo '<br />';
     ?>
 
-    <select id="year1" class="validate[required]"><option value="">----</option></select>年
-    <select id="month1" class="validate[required]"><option value="0">--</option></select>月
-    <select id="day1" style="display:none"><option value="0" >--</option></select>
+    <select id="year1" class="validate[required]" name="data[UserResume][start_date]" ><option value="">----</option></select>年
+    <select id="month1" class="validate[required]" name="data[UserResume][start_date]"><option value="">--</option></select>月
+    <select id="day1" style="display:none"  name="data[UserResume][start_date]"><option value="0">--</option></select>
 
     <?php
     /*echo $this->Form->year('UserResume.start_date', '1960', '2016', array(), array('class' => 'form-control validate[required]'));
@@ -180,9 +180,9 @@
     echo $this->Html->tag('span', '-----');
     ?>
 
-    <select id="year2" ><option value="0">----</option></select>年
-    <select id="month2"><option value="0">--</option></select>月
-    <select id="day2" style="display:none"><option value="0" >--</option></select>
+    <select id="year2" ><option value="0" name="data[UserResume][end_date]">----</option></select>年
+    <select id="month2"><option value="0" name="data[UserResume][end_date]">--</option></select>月
+    <select id="day2" style="display:none" name="data[UserResume][end_date]"><option value="0" >--</option></select>
 
     <?php
     echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
@@ -300,7 +300,7 @@
     echo $this->Form->end();
 
     ?>
-    <script>
+  <script>
 
         var time = new Date();
         var year1 = time.getFullYear();

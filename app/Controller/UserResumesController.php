@@ -28,7 +28,7 @@ class UserResumesController extends AppController {
 
             $resume = $this->data;
 
-        }/*else {
+        }else {
             $id = $this->request->query['resume_id'];
 
             if(!$id) {
@@ -42,7 +42,7 @@ class UserResumesController extends AppController {
                 $this->Session->setFlash('ユーザーが存在しません。');
                 $this->redirect('index');
             }
-        }*/
+        }
 
         $this->set('resume',$resume);
         $this->set('errorMsg',$errorMsg);
@@ -107,7 +107,7 @@ class UserResumesController extends AppController {
         }
         
         //viewに送り出す
-        $this->set('user',$user);
+        //$this->set('user',$user);
         $this->set('resumes',$resumes);
         $this->set('errorMsg',$errorMsg);
 
@@ -133,8 +133,8 @@ class UserResumesController extends AppController {
             $this->redirect('index');
         }
 
-        $resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'delete_flag' => 0)));
-        
+        $resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'UserResume.delete_flag' => 0)));
+
         //viewに送り出す
         $this->set('user',$user);
         $this->set('resumes',$resumes);
