@@ -1,6 +1,6 @@
 <?php
 
-class EmAdvertisesController extends EmployerAuthController {
+class EmAdvertisesController extends AppController {
 
     public $name = 'EmAdvertises';
     public $uses = array('EmAdvertise','Employer');
@@ -22,7 +22,7 @@ class EmAdvertisesController extends EmployerAuthController {
 
         if ($this->request->isPost()){
 
- /*           print'<pre>';
+            /*print'<pre>';
             print($data);
             print'</pre>';
             exit();*/

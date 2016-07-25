@@ -8,12 +8,12 @@ class EmFixedmessage extends AppModel
        'id' => array(
            'rule' => array('between', 1, 11),
             'required' => true,
-            'message' => 'aaaaaaaaaaaaa'
+            'message' => '11字以内をご入力ください'
         ),
        'employer_id' => array(
            'rule' => array('between', 1, 11),
            'required' => true,
-           'message' => '企業様のID入力してください'
+           'message' => '11字以内をご入力ください'
        ),
         'name' => array(
             'rule' => array('between', 1, 50),
