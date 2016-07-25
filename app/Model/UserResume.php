@@ -29,6 +29,33 @@ class UserResume extends AppModel
         )
     );
 
+    /**
+     * @param $data
+     * @return bool
+     *
+     * ①開始年月日は入力された？
+     * YESの場合：
+     *  終了年月日が入呂っくされたか？
+     *  YESの場合：
+     *
+     *      ②開始年は終了年より小さいか？
+     *          YESの場合：
+     *             trueをリターンする。
+     *          NOの場合：
+     *              ③開始年と終了年が相等？
+     *                  YESの場合：
+     *                      ④開始月を終了月より小さい？
+     *                          YESの場合：
+     *                              trueをリターンする。
+     *                          NO：
+     *                              falseをリターンする。
+     *                  NOの場合：
+     *                      falseをリターンする。
+     *  NOの場合：
+     *      trueをリターンする。
+     * NOの場合：
+     *  falseをリターンする。
+     */
    public function dateCheck($data){
 
        $date = $this->data['UserResume']['end_date'];
@@ -44,6 +71,7 @@ class UserResume extends AppModel
            $end_date2 = substr($end_date,5,2);
 
            if ($start_date1 < $end_date1){
+
                return true;
            }else{
                if($start_date1 = $end_date1&&$start_date2 < $end_date2){

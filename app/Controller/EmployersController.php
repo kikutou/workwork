@@ -174,7 +174,7 @@ class EmployersController extends AppController {
 
             $employer = $this->Employer->find('first',array('conditions' => array(array('Employer.id' => $id, 'Employer.delete_flag' => 0))));
 
-            print="<pre>";
+            print "<pre>";
             print_r($employer);
             print'</pre>';
             exit();

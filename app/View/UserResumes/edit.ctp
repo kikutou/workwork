@@ -160,8 +160,10 @@
     echo '<br />';
     ?>
 
-    <select id="year1" class="validate[required]" name="data[UserResume][start_date]" ><option value="">----</option></select>年
-    <select id="month1" class="validate[required]" name="data[UserResume][start_date]"><option value="">--</option></select>月
+    <select id="year1" class="validate[required]" name="data[UserResume][start_date_year]" >
+        <option value="">----</option>
+    </select>年
+    <select id="month1" class="validate[required]" name="data[UserResume][start_date_month]"><option value="">--</option></select>月
     <select id="day1" style="display:none"  name="data[UserResume][start_date]"><option value="0">--</option></select>
 
     <?php
