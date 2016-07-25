@@ -71,8 +71,8 @@
     );
     ?>
 
-    <select name="data[UserResume][employment_type]" id="UserResumeEmploymentType" class="form-control">
-        <option value="">選んでください</option>
+    <select name="data[UserResume][employment_type]" id="UserResumeEmploymentType" class="form-control validate[required]">
+        <option value="" >選んでください</option>
         <?php
         foreach ($employment_type as $key => $value){
 
@@ -105,7 +105,7 @@
     );
     ?>
 
-    <select name="data[UserResume][position]" id="UserResumeEmploymentType" class="form-control" required="">
+    <select name="data[UserResume][position]" id="UserResumeEmploymentType" class="form-control">
         <option value="">選んでください</option>
         <?php
         foreach ($position as $key => $value){
@@ -137,7 +137,7 @@
         );
     ?>
 
-    <select name="data[UserResume][employee_amount]" id="UserResumeEmploymentType" class="form-control" required="">
+    <select name="data[UserResume][employee_amount]" id="UserResumeEmploymentType" class="form-control">
         <option value="">選んでください</option>
         <?php
         foreach ($employee_amount as $key => $value){

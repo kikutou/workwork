@@ -131,8 +131,8 @@
     echo '<div class="form-group">';
     echo '<br />';
     echo $this->Html->tag('span', '-----');
-    echo $this->Form->year('UserResume.end_date',1900, date('Y'),array('empty' => '----','required'=>''));
-    echo $this->Form->month('UserResume.end_date', array('monthNames' => false, 'empty' => '----','required'=>''));
+    echo $this->Form->year('UserResume.end_date1',1900, date('Y'),array('empty' => '----','required'=>''));
+    echo $this->Form->month('UserResume.end_date2', array('monthNames' => false, 'empty' => '----','required'=>''));
     echo $this->Form->day('UserResume.end_date', array('style' =>'display:none','value'=>"1" ));
 
     ?>
@@ -189,7 +189,7 @@
     echo $this->Form->label('UserResume.occupation', '職種');
     echo '&nbsp<span class="label label-warning">必須</span>';
     echo $this->Form->error('UserResume.occupation',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
-    echo $this->Form->textarea('UserResume.occupation', array('class' => 'form-control validate[required]', 'placeholder' => '営業系'));
+    echo $this->Form->textarea('UserResume.occupation', array('class' => 'form-control validate[required]', 'placeholder' => '営業系','required'=>'block'));
     echo '</div>';
 
     echo '<div class="form-group">';

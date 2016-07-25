@@ -330,8 +330,7 @@
     echo $this->Html->para('', '勤務歴');
     echo '<hr />';
 
-    echo '<a href="/work/user_resumes/add?resume_id='.$resumes['UserResume']['id'].'">追加</a>';
-    echo '<a href="/work/user_resumes/edit?resume_id='.$resumes['UserResume']['id'].'">編集</a>';
+    echo '<a href="/work/user_resumes/add?resume_id='.$user['User']['id'].'">追加</a>';
 
 
     foreach($resumes as $resume) {

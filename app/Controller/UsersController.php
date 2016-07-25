@@ -139,7 +139,6 @@ class UsersController extends AppController {
         //当前のリクエストを検索
         if($this->request->isPost()) {
 
-
             $result = $this->User->profileEditSave($this->request->data);
 
             /*print '<pre>';
