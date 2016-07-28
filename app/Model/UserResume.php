@@ -24,17 +24,20 @@ class UserResume extends AppModel
         ),
         
        'end_date1' => array(
-            'rule' => array('dateCheck'),
-            'allowEmpty' => true,
-            'message' =>  '終了時刻が開始時刻より早い場合、入力できない。'
-        ),
+           array(
+                'rule' => array('monthCheck'),
+                'allowEmpty' => true,
+                'message' =>  '月を入力してください。'
+           ),
+           array(
+               'rule' => array('dateCheck'),
+               'allowEmpty' => true,
+               'message' =>  '終了時刻が開始時刻より早い場合、入力できない。'
+           ),
+       )
 
 
-        'end_date2' => array(
-            'rule' => array('monthCheck'),
-            'allowEmpty' => true,
-            'message' =>  '月を入力してください。'
-        )
+
 
     );
 
@@ -66,19 +69,27 @@ class UserResume extends AppModel
      *  falseをリターンする。
      */
    public function dateCheck($data){
-       //exit(var_dump($data['UserResume']['start_date1']));
 
-       $this->data['UserResume']['start_date'] = $this->data['UserResume']['start_date1']['year'].'-'.$this->data['UserResume']['start_date2']['month'].'-01';
+       //①開始年月日は入力された？
+       if($this->data['UserResume']['start_date1']['year'] && $this->data['UserResume']['start_date2']['month']){
 
-       $this->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1']['year'].'-'.$this->data['UserResume']['end_date2']['month'].'-01';
+           $this->data['UserResume']['start_date'] = $this->data['UserResume']['start_date1']['year'].'-'.$this->data['UserResume']['start_date2']['month'].'-01';
 
-       if($this->data['UserResume']['start_date']){
-           if($this->data['UserResume']['end_date']){
-               if($this->data['UserResume']['start_date1']<$this->data['UserResume']['end_date1']){
+           //終了年月日が入呂っくされたか？
+           if($this->data['UserResume']['end_date1']['year'] && $this->data['UserResume']['end_date2']['month'] ){
+
+               $this->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1']['year'].'-'.$this->data['UserResume']['end_date2']['month'].'-01';
+
+               //開始年は終了年より小さいか？
+               if($this->data['UserResume']['start_date1'] < $this->data['UserResume']['end_date1']){
                    return true;
                }else {
-                   if($this->data['UserResume']['start_date1']==$this->data['UserResume']['end_date1']){
-                       if($this->data['UserResume']['start_date2']<$this->data['UserResume']['end_date2']){
+
+                   //開始年と終了年が相等？
+                   if($this->data['UserResume']['start_date1'] == $this->data['UserResume']['end_date1']){
+
+                       //開始月を終了月より小さい？
+                       if($this->data['UserResume']['start_date2'] < $this->data['UserResume']['end_date2']){
                            return true;
                        }else {
                            return false;
@@ -96,7 +107,8 @@ class UserResume extends AppModel
    }
 
     public function monthCheck($data){
-        if($this->date['UserResume']['end_date1']!==null&&$data['UserResume']['end_date2']==null){
+
+        if($this->data['UserResume']['end_date1']['year'] !== null && $this->data['UserResume']['end_date2']['month'] == null){
             return false;
         }else{
             return true;

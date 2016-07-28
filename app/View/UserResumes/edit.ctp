@@ -170,42 +170,35 @@
 
     <?php
     $month=array(
-    '01' => '01',
-    '02' => '02',
-    '03' => '03',
-    '04' => '04',
-    '05' => '05',
-    '06' => '06',
-    '07' => '07',
-    '08' => '08',
-    '09' => '09',
-    '10' => '10',
-    '11' => '11',
-    '12' => '12'
+    '01',
+    '02',
+    '03',
+    '04',
+    '05',
+    '06',
+    '07',
+    '08',
+    '09',
+    '10',
+    '11',
+    '12'
     );
     ?>
     <select name="data[UserResume][start_date2][month]" class="validate[required]" id="UserResumeStartDate2Month">
 
         <option value="">----</option>
         <?php
-        foreach ($month as $key => $value){
+        foreach ($month as $value){
 
-            if ($resumes['UserResume']['start_date2'] == $key && $resumes['UserResume']['start_date2'] !== null){
-                echo "<option value=".$key." selected>".$value."</option>";
+            if ($resumes['UserResume']['start_date2'] == $value && $resumes['UserResume']['start_date2'] !== null){
+                echo "<option value=".$value." selected>".$value."</option>";
 
             }else{
-                echo "<option value=".$key.">".$value."</option>";
+                echo "<option value=".$value.">".$value."</option>";
             }
         }
         ?>
     </select>
-
-
-
-
-
-
-
 
 
 
