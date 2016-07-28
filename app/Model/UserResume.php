@@ -29,7 +29,7 @@ class UserResume extends AppModel
             'message' =>  '終了時刻が開始時刻より早い場合、入力できない。'
         ),
 
-        
+
     );
 
     /**
