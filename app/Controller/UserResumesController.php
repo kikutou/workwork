@@ -61,12 +61,6 @@ class UserResumesController extends AppController {
 
         if($this->request->isPost()){
 
-/*            print '<pre>';
-            print_r($this->data['UserResume']['start_date1']);
-            print '</pre>';
-            exit();*/
-
-
             $result = $this->UserResume->save($this->request->data);
 
             if($result) {
