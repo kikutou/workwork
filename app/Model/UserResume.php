@@ -23,11 +23,13 @@ class UserResume extends AppModel
             'message' => '１−50文字以内で入力してください。'
         ),
         
-       'end_date' => array(
+       'end_date1' => array(
             'rule' => array('dateCheck'),
             'allowEmpty' => true,
             'message' =>  '終了時刻が開始時刻より早い場合、入力できない。'
-        )
+        ),
+
+        
     );
 
     /**
@@ -71,6 +73,9 @@ class UserResume extends AppModel
                }else {
                    if($this->data['UserResume']['start_date1']==$this->data['UserResume']['end_date1']){
                        if($this->data['UserResume']['start_date2']<$this->data['UserResume']['end_date2']){
+
+
+
                            return true;
                        }else {
                            return false;

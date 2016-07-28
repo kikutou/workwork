@@ -154,7 +154,7 @@
 
     <?php
     echo '<div class="form-group">';
-    echo $this->Form->label('UserResume.start_date', '在籍期間');
+    echo $this->Form->label('UserResume.start_date1', '在籍期間');
     echo '<br />';
     echo $this->Form->year('UserResume.start_date1',1900, date('Y'),array('empty' => '----','required'=>''));
     echo $this->Form->month('UserResume.start_date2', array('monthNames' => false, 'empty' => '----','required'=>''));
