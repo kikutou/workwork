@@ -156,11 +156,63 @@
     echo '<div class="form-group">';
     echo $this->Form->label('UserResume.start_date1', '在籍期間');
     echo '<br />';
-    echo $this->Form->year('UserResume.start_date1',1900, date('Y'),array('empty' => '----','required'=>''));
-    echo $this->Form->month('UserResume.start_date2', array('monthNames' => false, 'empty' => '----','required'=>''));
+   ?>
 
+    <select name="data[UserResume][start_date1][year]" class="validate[required]" id="UserResumeStartDate1Year">
+        <?php
+
+        echo '<option value='.' '.'>'.'----'.'</option>';
+        for($i=date('Y');$i>=1900;$i--){
+            echo '<option value='.$i.'>'.$i.'</option>';
+        }
+        ?>
+    </select>
+
+    <?php
+    $month=array(
+    '01' => '01',
+    '02' => '02',
+    '03' => '03',
+    '04' => '04',
+    '05' => '05',
+    '06' => '06',
+    '07' => '07',
+    '08' => '08',
+    '09' => '09',
+    '10' => '10',
+    '11' => '11',
+    '12' => '12'
+    );
+    ?>
+    <select name="data[UserResume][start_date2][month]" class="validate[required]" id="UserResumeStartDate2Month">
+
+        <option value="">----</option>
+        <?php
+        foreach ($month as $key => $value){
+
+            if ($resumes['UserResume']['start_date2'] == $key && $resumes['UserResume']['start_date2'] !== null){
+                echo "<option value=".$key." selected>".$value."</option>";
+
+            }else{
+                echo "<option value=".$key.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+
+
+
+
+
+
+
+
+
+
+    <?php
     echo '&nbsp<span class="label label-warning">必須</span>';
-    echo $this->Form->error('UserResume.start_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->error('UserResume.start_date1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -170,7 +222,7 @@
     echo $this->Form->month('UserResume.end_date2', array('monthNames' => false, 'empty' => '----','required'=>''));
 
     echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
-    echo $this->Form->error('UserResume.end_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->error('UserResume.end_date1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
 
     echo '<div class="form-group">';
