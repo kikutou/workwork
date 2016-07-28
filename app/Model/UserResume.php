@@ -29,7 +29,13 @@ class UserResume extends AppModel
             'message' =>  '終了時刻が開始時刻より早い場合、入力できない。'
         ),
 
-        
+        'end_date2' => array(
+            'rule' => array('monthCheck'),
+            'allowEmpty' => true,
+            'message' =>  '月を入力してください。'
+        )
+
+
     );
 
     /**
@@ -68,14 +74,11 @@ class UserResume extends AppModel
 
        if($this->data['UserResume']['start_date']){
            if($this->data['UserResume']['end_date']){
-               if($this->data['UserResume']['start_date1']<$this->data['UserResume']['end_date1']&&$this->data['UserResume']['end_date2']!==null){
+               if($this->data['UserResume']['start_date1']<$this->data['UserResume']['end_date1']){
                    return true;
                }else {
                    if($this->data['UserResume']['start_date1']==$this->data['UserResume']['end_date1']){
                        if($this->data['UserResume']['start_date2']<$this->data['UserResume']['end_date2']){
-
-
-
                            return true;
                        }else {
                            return false;
@@ -90,34 +93,15 @@ class UserResume extends AppModel
        }else{
            return false;
        }
-
-
-/*       if(!$date){
-
-           $start_date = $this->data['UserResume']['start_date'];
-           $start_date1= substr($start_date, 0, 4);
-           $start_date2 = substr($start_date,5,2);
-
-           $end_date = $this->data['UserResume']['end_date'];
-           $end_date1 = substr($end_date, 0, 4);
-           $end_date2 = substr($end_date,5,2);
-
-           if ($start_date1 < $end_date1){
-
-               return true;
-           }else{
-               if($start_date1 = $end_date1&&$start_date2 < $end_date2){
-                   return true;
-               }else {
-                   return false;
-               }
-           }
-       }else{
-           return true;
-       }*/
-
-
    }
+
+    public function monthCheck($data){
+        if($this->date['UserResume']['end_date1']!==null&&$data['UserResume']['end_date2']==null){
+            return false;
+        }else{
+            return true;
+        }
+    }
     
     
 }
