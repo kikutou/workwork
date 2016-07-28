@@ -19,7 +19,7 @@ class UserResumesController extends AppController {
         if($this->request->isPost()) {
 
 
-            $this->request->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1'].$this->data['UserResume']['end_date2'];
+            $this->request->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1'].'-'.$this->data['UserResume']['end_date2'];
 
 
             $result = $this->UserResume->save($this->request->data);
@@ -61,6 +61,11 @@ class UserResumesController extends AppController {
 
         if($this->request->isPost()){
 
+            print '<pre>';
+            print_r($this->data['UserResume']['start_date1']);
+            print '</pre>';
+            exit();
+
 
             $result = $this->UserResume->save($this->request->data);
 
@@ -101,13 +106,13 @@ class UserResumesController extends AppController {
             print '</pre>';
             exit();*/
 
-            $start_date = $resumes['UserResume']['start_date'];
+/*            $start_date = $resumes['UserResume']['start_date'];
             $resumes['UserResume']['start_date1'] = substr($start_date, 0, 4);
             $resumes['UserResume']['start_date2'] = substr($start_date,5,2);
 
             $end_date = $resumes['UserResume']['end_date'];
             $resumes['UserResume']['end_date1'] = substr($end_date, 0, 4);
-            $resumes['UserResume']['end_date2'] = substr($end_date,5,2);
+            $resumes['UserResume']['end_date2'] = substr($end_date,5,2);*/
             
         }
         

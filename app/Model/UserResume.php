@@ -57,10 +57,35 @@ class UserResume extends AppModel
      *  falseをリターンする。
      */
    public function dateCheck($data){
+       //exit(var_dump($data['UserResume']['start_date1']));
 
-       $date = $this->data['UserResume']['end_date'];
+       $this->data['UserResume']['start_date'] = $data['UserResume']['start_date1'].'-'.$data['UserResume']['start_date2'];
+       $this->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1'].'-'.$this->data['UserResume']['end_date2'];
 
-       if(!$date){
+       if($this->data['UserResume']['start_date']){
+           if($this->data['UserResume']['end_date']){
+               if($this->data['UserResume']['start_date1']<$this->data['UserResume']['end_date1']&&$this->data['UserResume']['end_date2']!==null){
+                   return true;
+               }else {
+                   if($this->data['UserResume']['start_date1']==$this->data['UserResume']['end_date1']){
+                       if($this->data['UserResume']['start_date2']<$this->data['UserResume']['end_date2']){
+                           return true;
+                       }else {
+                           return false;
+                       }
+                   }else {
+                       return false;
+                   }
+               }
+           }else {
+              return true;
+           }
+       }else{
+           return false;
+       }
+
+
+/*       if(!$date){
 
            $start_date = $this->data['UserResume']['start_date'];
            $start_date1= substr($start_date, 0, 4);
@@ -82,7 +107,7 @@ class UserResume extends AppModel
            }
        }else{
            return true;
-       }
+       }*/
 
 
    }
