@@ -25,6 +25,7 @@ class UserResume extends AppModel
         
        'end_date' => array(
             'rule' => array('dateCheck'),
+            'allowEmpty' => true,
             'message' =>  '終了時刻が開始時刻より早い場合、入力できない。'
         )
     );
@@ -59,8 +60,8 @@ class UserResume extends AppModel
    public function dateCheck($data){
        //exit(var_dump($data['UserResume']['start_date1']));
 
-       $this->data['UserResume']['start_date'] = $data['UserResume']['start_date1'].'-'.$data['UserResume']['start_date2'];
-       $this->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1'].'-'.$this->data['UserResume']['end_date2'];
+       $this->data['UserResume']['start_date'] = $this->data['UserResume']['start_date1']['year'].'-'.$this->data['UserResume']['start_date2']['month'].'-01';
+       $this->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1']['year'].'-'.$this->data['UserResume']['end_date2']['month'].'-01';
 
        if($this->data['UserResume']['start_date']){
            if($this->data['UserResume']['end_date']){
