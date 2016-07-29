@@ -163,7 +163,7 @@
 
         echo '<option value='.' '.'>'.'----'.'</option>';
         for($i=date('Y');$i>=1900;$i--){
-            if($resumes['UserResume']['start_date1'] && $resumes['UserResume']['start_date1'] == $i){
+            if($resumes['UserResume']['start_date1']['year'] && $resumes['UserResume']['start_date1']['year'] == $i){
                 echo "<option value=".$i." selected>".$i."</option>";
             }else{
                 echo '<option value='.$i.'>'.$i.'</option>';
@@ -195,7 +195,7 @@
         foreach ($month1 as $value){
 
             //$resumes['UserResume']['start_date2']開始月がある,かつ、$resumes['UserResume']['start_date2']月は該当月に相等している場合、該当月をselectedにする。
-            if($resumes['UserResume']['start_date2'] && $resumes['UserResume']['start_date2'] == $value){
+            if($resumes['UserResume']['start_date2']['month'] && $resumes['UserResume']['start_date2']['month'] == $value){
                 echo "<option value=".$value." selected>".$value."</option>";
             }else{
                 echo "<option value=".$value.">".$value."</option>";
@@ -222,7 +222,7 @@
 
         echo '<option value='.' '.'>'.'----'.'</option>';
         for($i=date('Y');$i>=1900;$i--){
-            if($resumes['UserResume']['end_date1'] && $resumes['UserResume']['end_date1'] == $i){
+            if($resumes['UserResume']['end_date1']['year'] && $resumes['UserResume']['end_date1']['year'] == $i){
                 echo "<option value=".$i." selected>".$i."</option>";
             }else{
                 echo '<option value='.$i.'>'.$i.'</option>';
@@ -254,7 +254,7 @@
         foreach ($month2 as $value){
 
             //$resumes['UserResume']['end_date2']開始月がある,かつ、$resumes['UserResume']['end_date2']月は該当月に相等している場合、該当月をselectedにする。
-            if($resumes['UserResume']['end_date2'] && $resumes['UserResume']['end_date2'] == $value){
+            if($resumes['UserResume']['end_date2']['month'] && $resumes['UserResume']['end_date2']['month'] == $value){
                 echo "<option value=".$value." selected>".$value."</option>";
             }else{
                 echo "<option value=".$value.">".$value."</option>";

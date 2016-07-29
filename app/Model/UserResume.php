@@ -114,8 +114,11 @@ class UserResume extends AppModel
         if( $this->data['UserResume']['end_date1']['year'] && !$this->data['UserResume']['end_date2']['month']){
             return false;
         }else{
+            
             return true;
         }
+        
+        
     }
     
     

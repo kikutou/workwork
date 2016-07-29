@@ -66,6 +66,8 @@ class UserResumesController extends AppController {
             }
 
             $resumes = $this->data;
+
+
         } else {
 
             $id = $this->request->query['resume_id'];
@@ -97,12 +99,12 @@ class UserResumesController extends AppController {
             exit();*/
 
             $start_date = $resumes['UserResume']['start_date'];
-            $resumes['UserResume']['start_date1'] = substr($start_date, 0, 4);
-            $resumes['UserResume']['start_date2'] = substr($start_date,5,2);
+            $resumes['UserResume']['start_date1']['year'] = substr($start_date, 0, 4);
+            $resumes['UserResume']['start_date2']['month'] = substr($start_date,5,2);
 
             $end_date = $resumes['UserResume']['end_date'];
-            $resumes['UserResume']['end_date1'] = substr($end_date, 0, 4);
-            $resumes['UserResume']['end_date2'] = substr($end_date,5,2);
+            $resumes['UserResume']['end_date1']['year'] = substr($end_date, 0, 4);
+            $resumes['UserResume']['end_date2']['month'] = substr($end_date,5,2);
 
         }
         
@@ -135,8 +137,11 @@ class UserResumesController extends AppController {
 
         $resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'UserResume.delete_flag' => 0)));
 
+        $resume_num = count($resumes);
+
         //viewに送り出す
         $this->set('user',$user);
+        $this->set('resume_num', $resume_num);
         $this->set('resumes',$resumes);
         $this->set('errorMsg',$errorMsg);
 
