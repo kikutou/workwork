@@ -108,7 +108,8 @@ class UserResume extends AppModel
 
     public function monthCheck($data){
 
-        if($this->data['UserResume']['end_date1']['year'] !== null && $this->data['UserResume']['end_date2']['month'] == null){
+        //年が空ではない、かつ、月が空の場合、falseを返す。
+        if( $this->data['UserResume']['end_date1']['year'] && !$this->data['UserResume']['end_date2']['month']){
             return false;
         }else{
             return true;

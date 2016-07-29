@@ -190,9 +190,9 @@
         <?php
         foreach ($month as $value){
 
-            if ($resumes['UserResume']['start_date2'] == $value && $resumes['UserResume']['start_date2'] !== null){
+            //$resumes['UserResume']['start_date2']開始月がある,かつ、$resumes['UserResume']['start_date2']月は該当月に相等している場合、該当月をselectedにする。
+            if($resumes['UserResume']['start_date2'] && $resumes['UserResume']['start_date2'] == $value){
                 echo "<option value=".$value." selected>".$value."</option>";
-
             }else{
                 echo "<option value=".$value.">".$value."</option>";
             }
