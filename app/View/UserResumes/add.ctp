@@ -111,11 +111,10 @@
     echo '</div>';
 
     echo '<div class="form-group">';
-    echo $this->Form->label('UserResume.start_date', '在籍期間');
+    echo $this->Form->label('UserResume.start_date1', '在籍期間');
     echo '<br />';
-    echo $this->Form->year('UserResume.start_date',1900, date('Y'),array('empty' => '----','required'=>''));
-    echo $this->Form->month('UserResume.start_date', array('monthNames' => false, 'empty' => '----','required'=>''));
-    echo $this->Form->day('UserResume.start_date', array('style' =>'display:none','value'=>"1" ));
+    echo $this->Form->year('UserResume.start_date1',1900, date('Y'),array('empty' => '----','required'=>'','class'=>'validate[required]'));
+    echo $this->Form->month('UserResume.start_date2', array('monthNames' => false, 'empty' => '----','required'=>'','class'=>'validate[required]'));
 
 ?>
 
@@ -125,7 +124,7 @@
 
     <?php
     echo '&nbsp<span class="label label-warning">必須</span>';
-    echo $this->Form->error('UserResume.start_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->error('UserResume.start_date1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
 
     echo '<div class="form-group">';
@@ -133,7 +132,6 @@
     echo $this->Html->tag('span', '-----');
     echo $this->Form->year('UserResume.end_date1',1900, date('Y'),array('empty' => '----','required'=>''));
     echo $this->Form->month('UserResume.end_date2', array('monthNames' => false, 'empty' => '----','required'=>''));
-    echo $this->Form->day('UserResume.end_date', array('style' =>'display:none','value'=>"1" ));
 
     ?>
 
@@ -143,7 +141,7 @@
 -->
     <?php
     echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
-    echo $this->Form->error('UserResume.end_date',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
+    echo $this->Form->error('UserResume.end_date1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';
 
     echo '<div class="form-group">';

@@ -331,6 +331,7 @@
     echo '<hr />';
 
     echo '<a href="/work/user_resumes/add?resume_id='.$user['User']['id'].'">追加</a>';
+    //echo '<input type="button" onclick="location.href='add'" value="追加">';
 
 
     foreach($resumes as $resume) {

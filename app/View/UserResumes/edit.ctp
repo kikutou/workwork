@@ -163,13 +163,17 @@
 
         echo '<option value='.' '.'>'.'----'.'</option>';
         for($i=date('Y');$i>=1900;$i--){
-            echo '<option value='.$i.'>'.$i.'</option>';
+            if($resumes['UserResume']['start_date1'] && $resumes['UserResume']['start_date1'] == $i){
+                echo "<option value=".$i." selected>".$i."</option>";
+            }else{
+                echo '<option value='.$i.'>'.$i.'</option>';
+            }
         }
         ?>
     </select>
 
     <?php
-    $month=array(
+    $month1=array(
     '01',
     '02',
     '03',
@@ -188,7 +192,7 @@
 
         <option value="">----</option>
         <?php
-        foreach ($month as $value){
+        foreach ($month1 as $value){
 
             //$resumes['UserResume']['start_date2']開始月がある,かつ、$resumes['UserResume']['start_date2']月は該当月に相等している場合、該当月をselectedにする。
             if($resumes['UserResume']['start_date2'] && $resumes['UserResume']['start_date2'] == $value){
@@ -211,9 +215,55 @@
     echo '<div class="form-group">';
     echo '<br />';
     echo $this->Html->tag('span', '-----');
-    echo $this->Form->year('UserResume.end_date1',1900, date('Y'),array('empty' => '----','required'=>''));
-    echo $this->Form->month('UserResume.end_date2', array('monthNames' => false, 'empty' => '----','required'=>''));
+    ?>
 
+    <select name="data[UserResume][end_date1][year]" id="UserResumeEndDate1Year">
+        <?php
+
+        echo '<option value='.' '.'>'.'----'.'</option>';
+        for($i=date('Y');$i>=1900;$i--){
+            if($resumes['UserResume']['end_date1'] && $resumes['UserResume']['end_date1'] == $i){
+                echo "<option value=".$i." selected>".$i."</option>";
+            }else{
+                echo '<option value='.$i.'>'.$i.'</option>';
+            }
+        }
+        ?>
+    </select>
+
+    <?php
+    $month2=array(
+        '01',
+        '02',
+        '03',
+        '04',
+        '05',
+        '06',
+        '07',
+        '08',
+        '09',
+        '10',
+        '11',
+        '12'
+    );
+    ?>
+    <select name="data[UserResume][end_date2][month]" id="UserResumeEndDate2Month">
+
+        <option value="">----</option>
+        <?php
+        foreach ($month2 as $value){
+
+            //$resumes['UserResume']['end_date2']開始月がある,かつ、$resumes['UserResume']['end_date2']月は該当月に相等している場合、該当月をselectedにする。
+            if($resumes['UserResume']['end_date2'] && $resumes['UserResume']['end_date2'] == $value){
+                echo "<option value=".$value." selected>".$value."</option>";
+            }else{
+                echo "<option value=".$value.">".$value."</option>";
+            }
+        }
+        ?>
+    </select>
+
+    <?php
     echo '&nbsp<span class="label label-warning">*現在在籍の場合は、終了年月日を入力しないでください。</span>';
     echo $this->Form->error('UserResume.end_date1',  array('attributes' => array('wrap' => 'div','class' => 'alert alert-danger')));
     echo '</div>';

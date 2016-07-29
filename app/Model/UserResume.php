@@ -99,6 +99,8 @@ class UserResume extends AppModel
                    }
                }
            }else {
+
+               $this->data['UserResume']['end_date'] = '';
               return true;
            }
        }else{
