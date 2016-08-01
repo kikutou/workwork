@@ -334,9 +334,7 @@
     $i=5-$resume_num;
     echo $this->Html->para('','あと'.$i.'個入力できます。');
 
-    if($i=='0'){
-
-    }else{
+    if($i != '0'){
 
         echo '<a href="/work/user_resumes/add?resume_id='.$user['User']['id'].'"><input type="button" value="追加"></input></a>';
         echo '<input type="button" onclick="location.href=\'/work/user_resumes/add?resume_id=\''.$user['User']['id'].'" value="追加">';
