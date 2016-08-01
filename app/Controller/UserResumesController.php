@@ -136,9 +136,9 @@ class UserResumesController extends AppController {
         }
 
         $resumes = $this->UserResume->find('all', array('conditions' => array('UserResume.user_id' => $id, 'UserResume.delete_flag' => 0)));
-
+        
         $resume_num = count($resumes);
-
+        
         //viewに送り出す
         $this->set('user',$user);
         $this->set('resume_num', $resume_num);

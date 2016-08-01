@@ -314,7 +314,8 @@
 
         '0' => '就職している',
         '1' => '失職中',
-        '2' => '新卒'
+        '2' => '新卒',
+        '3' => 'その他'
     );
 
     foreach ($work_situation as $key => $value){
@@ -327,17 +328,154 @@
         }
     }
 
-    echo $this->Html->para('', '勤務歴');
+
     echo '<hr />';
+    echo $this->Html->para('', '勤務歴');
+    $i=5-$resume_num;
+    echo $this->Html->para('','あと'.$i.'個入力できます。');
 
-    echo '<a href="/work/user_resumes/add?resume_id='.$user['User']['id'].'">追加</a>';
-    //echo '<input type="button" onclick="location.href='add'" value="追加">';
+    if($i=='0'){
 
+    }else{
+
+        echo '<a href="/work/user_resumes/add?resume_id='.$user['User']['id'].'"><input type="button" value="追加"></input></a>';
+        echo '<input type="button" onclick="location.href=\'/work/user_resumes/add?resume_id=\''.$user['User']['id'].'" value="追加">';
+
+    }
 
     foreach($resumes as $resume) {
-        echo $this->Html->para('', $resume['UserResume']['user_id']);
+/*            for($i=1;$i<6;$i++) {
+                echo $this->Html->para('', $i . '.');
+            }*/
+        echo $this->Html->para('UserResume.company', '企業名');
         echo $this->Html->para('', $resume['UserResume']['company']);
+
+        echo $this->Html->para('UserResume.employment_type', '雇用形態');
+        $employment_type = array(
+
+            '0' => 'アルバイト',
+            '1' => '派遣社員',
+            '2' => '契約社員',
+            '3' => '正社員'
+        );
+        foreach ($employment_type as $key => $value){
+
+            if ($resume['UserResume']['employment_type'] == $key && $resume['UserResume']['employment_type'] !== null){
+                echo $this->Html->para('', $value);
+
+            }else{
+                echo $this->Html->para('', ' ');
+            }
+        }
+
+        echo $this->Html->para('UserResume.position', '役職');
+        $position = array(
+
+            '0' => '代表取締役会長',
+            '1' => '代表取締役社長',
+            '2' => '部長',
+            '3' => '次長',
+            '4' => '課長',
+            '5' => '係長',
+            '6' => '主任',
+            '7' => '一般社員'
+        );
+        foreach ($position as $key => $value){
+
+            if ($resume['UserResume']['position'] == $key && $resume['UserResume']['position'] !== null){
+                echo $this->Html->para('', $value);
+
+            }else{
+                echo $this->Html->para('', ' ');
+            }
+        }
+
+        echo $this->Html->para('UserResume.employee_amount', '従業員数');
+        $employee_amount = array(
+
+            '0' => '10人未満',
+            '1' => '10人～50人未満',
+            '2' => '50人～100人未満',
+            '3' => '100人～500人未満',
+            '4' => '500人～1000人未満',
+            '5' => '1000以上'
+        );
+        foreach ($employee_amount as $key => $value){
+
+            if ($resume['UserResume']['employee_amount'] == $key && $resume['UserResume']['employee_amount'] !== null){
+                echo $this->Html->para('', $value);
+
+            }else{
+                echo $this->Html->para('', ' ');
+            }
+        }
+
+        echo $this->Html->para('UserResume.start_date1', '在籍期間');
+
+        echo $this->Html->para('', substr($resume['UserResume']['start_date'],0,4).'-'.substr($resume['UserResume']['start_date'],5,2));
+        echo $this->Html->para('', '~');
+        if(!$resume['UserResume']['end_date']){
+            echo $this->Html->para('','現在');
+        }else{
+            echo $this->Html->para('', substr($resume['UserResume']['end_date'],0,4).'-'. substr($resume['UserResume']['end_date'],5,2));
+        }
+
+        echo $this->Html->para('UserResume.salary', '年収');
+        $salary = array(
+
+            '0' => '300万未満',
+            '1' => '300万-500万未満',
+            '2' => '500万-700万未満',
+            '3' => '700万-1000万未満',
+            '4' => '1000万以上'
+        );
+        foreach ($salary as $key => $value){
+
+            if ($resume['UserResume']['salary'] == $key && $resume['UserResume']['salary'] !== null){
+                echo $this->Html->para('', $value);
+
+            }else{
+                echo $this->Html->para('', ' ');
+            }
+        }
+
+        echo $this->Html->para('UserResume.industry', '業種');
+        $industry = array(
+
+            '0' => '製造業',
+            '1' => '農林水産業',
+            '2' => '建設土木業',
+            '3' => '情報通信業',
+            '4' => '電気・ガス・水道業',
+            '5' => '公務',
+            '6' => '教育・学習支援',
+            '7' => '専門技術サービス業',
+            '8' => '一般サービス業',
+            '9' => '商業・小売業など',
+            '10' => '運輸運送業'
+        );
+        foreach ($industry as $key => $value){
+
+            if ($resume['UserResume']['industry'] == $key && $resume['UserResume']['industry'] !== null){
+                echo $this->Html->para('', $value);
+
+            }else{
+                echo $this->Html->para('', ' ');
+            }
+        }
+
+        echo $this->Html->para('UserResume.occupation', '職種');
+        echo $this->Html->para('', $resume['UserResume']['occupation']);
+
+        echo $this->Html->para('UserResume.job_description', '職務内容');
+        echo $this->Html->para('', $resume['UserResume']['job_description']);
+
+        echo $this->Html->para('UserResume.appeal_point', 'アピールポイント');
+        echo $this->Html->para('', $resume['UserResume']['appeal_point']);
+
         echo '<a href="/work/user_resumes/edit?resume_id=' . $resume['UserResume']['id'] . '">編集</a>';
+        echo '&nbsp&nbsp&nbsp&nbsp';
+        echo '<a href="/work/user_resumes/edit?resume_id=' . $resume['UserResume']['id'] . '">削除</a>';
         echo '<hr>';
     }
 

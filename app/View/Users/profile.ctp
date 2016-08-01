@@ -122,7 +122,7 @@
             <button type="button" onClick="location.href='/work/users/passchange?id=<?php echo $user['User']['id']?>';">パスワード変更</button>
             <div class="divider-form"></div>
 
-            <?php
+            <?php 
             echo '<div class="form-group">';
             echo $this->Html->para('User.mobile1', '電話番号1');
             echo $this->Html->para('', $user['User']['mobile1']);

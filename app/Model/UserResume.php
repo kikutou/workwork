@@ -81,15 +81,15 @@ class UserResume extends AppModel
                $this->data['UserResume']['end_date'] = $this->data['UserResume']['end_date1']['year'].'-'.$this->data['UserResume']['end_date2']['month'].'-01';
 
                //開始年は終了年より小さいか？
-               if($this->data['UserResume']['start_date1'] < $this->data['UserResume']['end_date1']){
+               if($this->data['UserResume']['start_date1'] ['year']< $this->data['UserResume']['end_date1']['year']){
                    return true;
                }else {
 
                    //開始年と終了年が相等？
-                   if($this->data['UserResume']['start_date1'] == $this->data['UserResume']['end_date1']){
+                   if($this->data['UserResume']['start_date1']['year'] == $this->data['UserResume']['end_date1']['year']){
 
                        //開始月を終了月より小さい？
-                       if($this->data['UserResume']['start_date2'] < $this->data['UserResume']['end_date2']){
+                       if($this->data['UserResume']['start_date2']['month']  < $this->data['UserResume']['end_date2']['month'] ){
                            return true;
                        }else {
                            return false;
