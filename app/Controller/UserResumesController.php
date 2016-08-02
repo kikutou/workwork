@@ -29,6 +29,7 @@ class UserResumesController extends AppController {
             }
 
             $resume = $this->data;
+            $this->set('id',$user_id);
 
         }else {
             $id = $this->request->query['id'];
