@@ -15,13 +15,15 @@ class UserResumesController extends AppController {
     public function add() {
         $errorMsg = null;
         $resume = null;
+        $id= null;
 
         if($this->request->isPost()) {
 
+            $user_id=$this->request->data['UserResume']['user_id'];
             $result = $this->UserResume->save($this->request->data);
             
             if($result) {
-                $this->redirect('index');
+                $this->redirect('example?id='.$user_id);
             }else {
                 $errorMsg = 'データベースに保存できませんでした。';
             }
@@ -29,19 +31,13 @@ class UserResumesController extends AppController {
             $resume = $this->data;
 
         }else {
-            $id = $this->request->query['resume_id'];
-
+            $id = $this->request->query['id'];
+            
             if(!$id) {
                 $this->Session->setFlash('idが存在しません。');
                 $this->redirect('index');
             }
-
-            $resume = $this->UserResume->find('first', array('conditions' => array('UserResume.id' => $id, 'UserResume.delete_flag' =>'0')));
-
-            if(!$resume) {
-                $this->Session->setFlash('ユーザーが存在しません。');
-                $this->redirect('index');
-            }
+            $this->set('id',$id);
         }
 
         $this->set('resume',$resume);
@@ -56,11 +52,12 @@ class UserResumesController extends AppController {
         $resumes = null;
 
         if($this->request->isPost()){
-            
+
+            $user_id=$this->request->data['UserResume']['user_id'];
             $result = $this->UserResume->save($this->request->data);
 
             if($result) {
-                $this->redirect('index');
+                $this->redirect('example?id='.$user_id);
             }else {
                 $errorMsg = 'データベースに保存できませんでした。';
             }
@@ -147,4 +144,47 @@ class UserResumesController extends AppController {
 
     }
 
+    public function delete(){
+
+        $errorMsg = null;
+        $resumes = null;
+
+        if($this->request->isPost()){
+
+            $this->UserResume->id=$this->request->data['UserResume']['id'];
+            $user_id=$this->request->data['UserResume']['user_id'];
+
+            $result = $this->UserResume->saveField('delete_flag','1');
+
+            if($result) {
+                $this->redirect('example?id='.$user_id);
+            }else {
+                $errorMsg = 'データベースに保存できませんでした。';
+            }
+
+            $resumes = $this->data;
+
+
+        } else {
+
+            $id = $this->request->query['resume_id'];
+
+            if(!$id) {
+                $this->Session->setFlash('idが存在しません。');
+                $this->redirect('index');
+            }
+
+            $resumes = $this->UserResume->find('first', array('conditions' => array('UserResume.id' => $id, 'delete_flag' => 0)));
+
+            if(!$resumes)
+            {
+                $this->Session->setFlash('ユーザーが存在しません。');
+                $this->redirect('index');
+            }
+            
+        }
+        $this->set('resumes',$resumes);
+        $this->set('errorMsg',$errorMsg);
+
+    }
 }

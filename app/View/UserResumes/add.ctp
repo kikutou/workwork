@@ -23,13 +23,15 @@
         'class' => "form-group"
     ));
     //hiddenuserid
-    echo $this->Form->input('UserResume.id', array('type' =>'hidden',  'value' => $resume['UserResume']['id'] ));
+    echo $this->Form->input('UserResume.user_id', array('type' =>'hidden',  'value' => $id ));
 
     //submit button
     echo '
     <div class="row" style="width:100%">
-        <div class="text-right" style="margin-bottom:10px;">
-            <a href="/work/user_reusmes/edit?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
+        <div class="text-right" style="margin-bottom:10px;">';
+    ?>
+        <a href="/work/user_resumes/example?id=<?php echo $id;?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>
+    <?php
     echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
         "class" => "btn",
         'type' => 'submit',
@@ -211,16 +213,15 @@
         //submit button
         echo '
     <div class="row" style="width:100%">
-        <div class="text-right" style="margin-bottom:10px;">
-            <a href="/work/users/profile?id=01" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>';
-        echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
-            "class" => "btn",
-            'type' => 'submit',
-            'escape' => false
-        ));
-        echo '</div>
-    </div>';
-
+        <div class="text-right" style="margin-bottom:10px;">';
+    ?>
+        <a href="/work/user_resumes/example?id=<?php echo $id;?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>
+    <?php
+    echo $this->Form->button('<i class="fa fa-pencil"></i>&nbsp&nbsp保&nbsp存', array(
+        "class" => "btn",
+        'type' => 'submit',
+        'escape' => false
+    ));
     
     echo $this->Form->end();
 

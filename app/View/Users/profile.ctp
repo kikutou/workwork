@@ -66,6 +66,7 @@
                 <div class="text-right" style="margin-bottom:10px;">
                     <a href="/work/users/index?id=<?php /*echo $user['User']['id']; */?>" class="btn"><i class="fa fa-pencil"></i>&nbspキャンセル</a>
                     </div>-->
+<button type="button" onClick="location.href='/work/users/profile_edit?id=<?php echo $user['User']['id']?>';">編集</button>
         <?php
 
         echo '<div class="form-group">';

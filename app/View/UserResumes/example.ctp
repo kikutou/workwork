@@ -332,19 +332,19 @@
     echo '<hr />';
     echo $this->Html->para('', '勤務歴');
     $i=5-$resume_num;
-    echo $this->Html->para('','あと'.$i.'個入力できます。');
+    echo $this->Html->para('','あと'.$i.'件登録できます。');
 
-    if($i != '0'){
+    if(0<$i&&$i<=5){
 
-        echo '<a href="/work/user_resumes/add?resume_id='.$user['User']['id'].'"><input type="button" value="追加"></input></a>';
-        echo '<input type="button" onclick="location.href=\'/work/user_resumes/add?resume_id=\''.$user['User']['id'].'" value="追加">';
-
+        echo '<a href="/work/user_resumes/add?id='.$user['User']['id'].'"><input type="button" value="追加"></input></a>';
     }
 
+
+    $a=1;
+    echo '<br />';
     foreach($resumes as $resume) {
-/*            for($i=1;$i<6;$i++) {
-                echo $this->Html->para('', $i . '.');
-            }*/
+
+        echo $a++.'.';
         echo $this->Html->para('UserResume.company', '企業名');
         echo $this->Html->para('', $resume['UserResume']['company']);
 
@@ -473,7 +473,7 @@
 
         echo '<a href="/work/user_resumes/edit?resume_id=' . $resume['UserResume']['id'] . '">編集</a>';
         echo '&nbsp&nbsp&nbsp&nbsp';
-        echo '<a href="/work/user_resumes/edit?resume_id=' . $resume['UserResume']['id'] . '">削除</a>';
+        echo '<a href="/work/user_resumes/delete?resume_id=' . $resume['UserResume']['id'] . '">削除</a>';
         echo '<hr>';
     }
 
