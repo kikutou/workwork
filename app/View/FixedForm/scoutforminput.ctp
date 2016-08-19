@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:te="http://www.seasar.org/teeda/extension"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>定型文管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/fixedForm/index.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/fixedForm/index.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/fixedForm/index.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/textresizedetector.js" baseViewId="/fixedForm/index.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/index.html" xml:space="preserve">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>定型文管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/fixedForm/index" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/fixedForm/index" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/fixedForm/index" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/textresizedetector.js" baseViewId="/fixedForm/index" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/index" xml:space="preserve">
 $(function(){
     $('#all').click(function(){
     if(this.checked){
@@ -21,7 +21,7 @@ $(function(){
 
 <div id="globalNav">
 <ul><li id="gnav07"><a shape="rect" href="../help/">ヘルプ</a></li><li id="gnav06"><a shape="rect" href="../accessLog/">レポート</a></li><li id="gnav05"><a shape="rect" href="../fixedForm/">定型文管理</a></li><span id="isNotEmpScout">
-<li id="gnav03"><a shape="rect" href="../scoutManagement/indexbj.html">スカウト管理</a></li>
+<li id="gnav03"><a shape="rect" href="../scoutManagement/indexbj">スカウト管理</a></li>
 </span><li id="gnav02"><a shape="rect" href="../oboManagement/">応募管理</a></li><li id="gnav01"><a shape="rect" href="../top/">TOP</a></li></ul>
 <!-- /#globalNav --></div>
 <!-- /#header --></div>
@@ -35,7 +35,7 @@ $(function(){
 <span id="isInputSponsor">
 <li><a href="dataImport/">データのインポート</a></li>
 </span>
- --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout.html'); return false;" href="../login/logout.html">ログアウト</a></li></ul>
+ --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout'); return false;" href="../login/logout">ログアウト</a></li></ul>
 <!-- /.loginNav --></div>
 <!-- /#login --></div></div>
 
@@ -52,7 +52,7 @@ $(function(){
 <div class="prt-articleUnitA typeC">
 <div class="head">
 <h3 class="title"><img src="/sponsor/images/parts/articleUnitA_typeC_tit_01.gif" height="28" alt="応募者返信メール" width="130" /></h3>
-<p class="nav"><a shape="rect" href="scoutFormList.html"><img src="/sponsor/images/parts/articleUnitA_typeC_btn_02.png" class="js-hoverSwap" height="22" alt="スカウトメール" width="130" /></a></p>
+<p class="nav"><a shape="rect" href="scoutformlist"><img src="/sponsor/images/parts/articleUnitA_typeC_btn_02.png" class="js-hoverSwap" height="22" alt="スカウトメール" width="130" /></a></p>
 </div>
 
 <div class="body">
@@ -68,7 +68,7 @@ $(function(){
 
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" xmlns:te="http://www.seasar.org/teeda/extension" lang="ja"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css; charset=utf-8"><meta http-equiv="content-script-type" content="text/javascript"><title>応募管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseviewid="/fixedForm/oboFormInput.html"><link rel="stylesheet" href="/sponsor/css/notice.css?data=150907" media="all" type="text/css" baseviewid="/fixedForm/oboFormInput.html"><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js?data=150908" charset="utf-8" baseviewid="/fixedForm/oboFormInput.html" xml:space="preserve"></script><script src="http://www.d-dj.com/sponsor/javascript/jquery.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"><meta http-equiv="content-style-type" content="text/css; charset=utf-8"><meta http-equiv="content-script-type" content="text/javascript"><title>応募管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseviewid="/fixedForm/oboforminput"><link rel="stylesheet" href="/sponsor/css/notice.css?data=150907" media="all" type="text/css" baseviewid="/fixedForm/oboforminput"><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js?data=150908" charset="utf-8" baseviewid="/fixedForm/oboforminput" xml:space="preserve"></script><script src="http://www.d-dj.com/sponsor/javascript/jquery.js"></script>
 <script src="http://www.d-dj.com/sponsor/javascript/jquery.effects.core.js"></script>
 <script src="http://www.d-dj.com/sponsor/javascript/jquery.regex.js"></script>
 <script src="http://www.d-dj.com/sponsor/javascript/flatHeights.paddingbugfix-ver.js"></script>
@@ -77,9 +77,9 @@ $(function(){
 <script src="http://www.d-dj.com/sponsor/javascript/jquery.support.fixedPosition.js"></script>
 <script src="http://www.d-dj.com/sponsor/javascript/main.js?data=150828"></script>
 <script src="http://www.d-dj.com/sponsor/javascript/alert.js?data=150626"></script>
-<script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseviewid="/fixedForm/oboFormInput.html" xml:space="preserve"></script></head>
+<script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseviewid="/fixedForm/oboforminput" xml:space="preserve"></script></head>
 <body style="" class="fixedForm">
-<form id="InputOboForm" name="InputOboForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/fixedForm/scoutFormListConfirm.html">
+<form id="InputOboForm" name="InputOboForm" method="post" enctype="application/x-www-form-urlencoded" action="/fixedForm/scoutformlistconfirm">
 <input id="templateId" name="InputOboForm:templateId" value="" type="hidden">
 
 
@@ -112,7 +112,7 @@ $(function(){
 
 									<textarea id="replyMessage__c" name="InputOboForm:replyMessage__c" class="textareaA" fu="2000" rows="12" style="ime-mode: active;"></textarea>
 									<p class="notes">上限：全角<span id="replyMessage__cCount" class="inputCount">0</span>/2000文字</p><p id="replyMessage__cError" class="red"></p>
-									<p class="popuphint"><a shape="rect" onclick="javascript:window.open('../oboManagement/oboPopup.html','press','width=710,height=750,scrollbars=yes');return false" href="#.html">メッセージ記入例</a></p>
+									<p class="popuphint"><a shape="rect" onclick="javascript:window.open('../oboManagement/obopopup','press','width=710,height=750,scrollbars=yes');return false" href="#">メッセージ記入例</a></p>
                                     </td></tr><tr><th colspan="1" rowspan="1">署名</th><td colspan="1" rowspan="1">
 									<textarea id="replySignature__c" name="InputOboForm:replySignature__c" class="textareaA" fu="500" rows="3" style="ime-mode: active;"></textarea>
 									<p class="notes">上限：全角<span id="replySignature__cCount" class="inputCount">0</span>/500文字</p><p id="replySignature__cError" class="red"></p>
@@ -142,12 +142,12 @@ $(function(){
 
 				<div class="section">
 					<div class="prt-buttonUnitA">
-						<ul><li><a shape="rect" href="oboFormListinner.html"><img src="/sponsor/images/parts/buttonUnit_btn_01.png" class="js-hoverSwap" alt="一覧へ戻る" height="32" width="190"></a></li><li><input id="doConfirm" name="InputOboForm:doConfirm" src="/sponsor/images/parts/buttonUnit_btn_02.png" class="js-hoverSwap" alt="確認する" height="32" type="image" width="190"></li></ul>
+						<ul><li><a shape="rect" href="oboformlistinner"><img src="/sponsor/images/parts/buttonUnit_btn_01.png" alt="一覧へ戻る" height="32" width="190"></a></li><li><input id="doConfirm" name="InputOboForm:doConfirm" src="/sponsor/images/parts/buttonUnit_btn_02.png" alt="確認する" height="32" type="image" width="190"></li></ul>
 					</div><!-- /.prt-buttonUnitA -->
 				</div><!-- /.section -->
 
 
-<input name="InputOboForm/fixedForm/oboFormInput.html" value="InputOboForm" type="hidden"><span style="display: none; position: absolute;"><input name="te-conditions" value="rO0ABXNyABdqYXZhLnV0aWwuTGlua2VkSGFzaE1hcDTATlwQbMD7AgABWgALYWNjZXNzT3JkZXJ4cgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAABgdwgAAACAAAAAAXQAF0lucHV0T2JvRm9ybTppc1RlbXBsYXRlc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAHgA" type="hidden"></span></form>
+<input name="InputOboForm/fixedForm/oboforminput" value="InputOboForm" type="hidden"><span style="display: none; position: absolute;"><input name="te-conditions" value="rO0ABXNyABdqYXZhLnV0aWwuTGlua2VkSGFzaE1hcDTATlwQbMD7AgABWgALYWNjZXNzT3JkZXJ4cgARamF2YS51dGlsLkhhc2hNYXAFB9rBwxZg0QMAAkYACmxvYWRGYWN0b3JJAAl0aHJlc2hvbGR4cD9AAAAAAABgdwgAAACAAAAAAXQAF0lucHV0T2JvRm9ybTppc1RlbXBsYXRlc3IAEWphdmEubGFuZy5Cb29sZWFuzSBygNWc+u4CAAFaAAV2YWx1ZXhwAHgA" type="hidden"></span></form>
 
 <script language="JavaScript" type="text/javascript">
 <!--

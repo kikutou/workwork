@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:te="http://www.seasar.org/teeda/extension"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>スカウト管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/scoutManagement/fixedscout.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/scoutManagement/fixedscout.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/scoutManagement/fixedscout.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/textresizedetector.js" baseViewId="/scoutManagement/fixedscout.html" xml:space="preserve"></script></head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>スカウト管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/scoutManagement/fixedscout" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/scoutManagement/fixedscout" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/scoutManagement/fixedscout" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/textresizedetector.js" baseViewId="/scoutManagement/fixedscout" xml:space="preserve"></script></head>
 <body class="scoutManagement">
 <div id="document">
 
@@ -11,7 +11,7 @@
 
 <div id="globalNav">
 <ul><li id="gnav07"><a shape="rect" href="../help/">ヘルプ</a></li><li id="gnav06"><a shape="rect" href="../accessLog/">レポート</a></li><li id="gnav05"><a shape="rect" href="../fixedForm/">定型文管理</a></li><span id="isNotEmpScout">
-<li id="gnav03"><a shape="rect" href="../scoutManagement/indexbj.html">スカウト管理</a></li>
+<li id="gnav03"><a shape="rect" href="../scoutManagement/indexbj">スカウト管理</a></li>
 </span><li id="gnav02"><a shape="rect" href="../oboManagement/">応募管理</a></li><li id="gnav01"><a shape="rect" href="../top/">TOP</a></li></ul>
 <!-- /#globalNav --></div>
 <!-- /#header --></div>
@@ -25,7 +25,7 @@
 <span id="isInputSponsor">
 <li><a href="dataImport/">データのインポート</a></li>
 </span>
- --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout.html'); return false;" href="../login/logout.html">ログアウト</a></li></ul>
+ --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout'); return false;" href="../login/logout">ログアウト</a></li></ul>
 <!-- /.loginNav --></div>
 <!-- /#login --></div></div>
 
@@ -46,11 +46,11 @@
 </div>
 
 <div class="scout-nav fix">
-<ul><li><a shape="rect" href="index.html?mode=e"><img src="/sponsor/images/parts/nav_jbt.png" class="js-hoverSwap" height="46" alt="ジョブターミナル" width="170" /></a></li><li><a shape="rect" href="indexbj.html?mode=a"><img src="/sponsor/images/parts/nav_bj.png" class="js-hoverSwap" height="46" alt="バイトジャングル" width="170" /></a></li><li><a shape="rect" href="scoutSituation.html"><img src="/sponsor/images/parts/nav_scout.png" class="js-hoverSwap" height="46" alt="スカウト履歴" width="170" /></a></li><li><img src="/sponsor/images/parts/nav_fix_on.png" height="46" alt="定型文管理" width="170" /></li></ul>
+<ul><li><a shape="rect" href="index?mode=e"><img src="/sponsor/images/parts/nav_jbt.png" class="js-hoverSwap" height="46" alt="ジョブターミナル" width="170" /></a></li><li><a shape="rect" href="indexbj?mode=a"><img src="/sponsor/images/parts/nav_bj.png" class="js-hoverSwap" height="46" alt="バイトジャングル" width="170" /></a></li><li><a shape="rect" href="scoutsituation"><img src="/sponsor/images/parts/nav_scout.png" class="js-hoverSwap" height="46" alt="スカウト履歴" width="170" /></a></li><li><img src="/sponsor/images/parts/nav_fix_on.png" height="46" alt="定型文管理" width="170" /></li></ul>
 </div>
 
 
-<form id="fixedscoutForm" name="fixedscoutForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/scoutManagement/fixedscout.html">
+<form id="fixedscoutForm" name="fixedscoutForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/scoutManagement/fixedscout">
 
 <div class="prt-articleUnitA fixhead">
 <div class="head">
@@ -71,7 +71,7 @@
 <span id="isBefore">
 	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 	<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:te="http://www.seasar.org/teeda/extension"><head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>スカウト管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/fixedForm/scoutFormListinner.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/fixedForm/scoutFormListinner.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/fixedForm/scoutFormListinner.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/scoutFormListinner.html" xml:space="preserve">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>スカウト管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/fixedForm/scoutformlistinner" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/fixedForm/scoutformlistinner" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/fixedForm/scoutformlistinner" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/scoutformlistinner" xml:space="preserve">
 	<!--
 	$(function(){
 		$('.all').click(function(){
@@ -109,7 +109,7 @@
 	-->
 	</script></head>
 	<body class="fixedForm">
-	<form id="inputForm" name="inputForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/fixedForm/scoutFormListinner.html?wid=6286534137169184003">
+	<form id="inputForm" name="inputForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/fixedForm/scoutformlistinner?wid=6286534137169184003">
 
 
 
@@ -120,7 +120,7 @@
 	<div class="section">
 	<span id="isRegist">
 	<div class="prt-buttonUnitB">
-	<p class="button"><a shape="rect" href="scoutFormInput.html?mode=new"><img src="/sponsor/images/parts/buttonUnitB_btn_01.png?wid=6286534137169184003" class="js-hoverSwap" height="22" alt="新規定型文作成" width="130" /></a></p>
+	<p class="button"><a shape="rect" href="scoutforminput?mode=new"><img src="/sponsor/images/parts/buttonUnitB_btn_01.png?wid=6286534137169184003" class="js-hoverSwap" height="22" alt="新規定型文作成" width="130" /></a></p>
 	<p class="comment">あと<span class="num"><span id="registCnt">49</span>件</span>登録できます</p>
 	<!-- /.prt-buttonUnitB --></div>
 	</span>
@@ -141,7 +141,7 @@
 	<div class="actionUnit">
 	<ul class="buttonUnit"><li class="checkbox"><a shape="rect" href="#"><input type="checkbox" class="all" />▼</a></li><li><input type="image" id="doDelete" name="inputForm:doDelete" src="/sponsor/images/common/btn_delete_01.png" class="js-hoverSwap" height="21" onclick="return checkDelete();" alt="削除する" width="97" /></li><!--
 	<li><a onclick="dele(); return false;" href="#"><img src="../images/common/btn_delete_01.png" alt="一括削除" width="87" height="21" class="js-hoverSwap" /></a></li>
-	<li><a href="./oboMailInput.html"><img src="../images/common/btn_reply_01.png" alt="一括返信" width="87" height="21" class="js-hoverSwap" /></a></li>
+	<li><a href="./obomailinput"><img src="../images/common/btn_reply_01.png" alt="一括返信" width="87" height="21" class="js-hoverSwap" /></a></li>
 	 --></ul>
 	<!-- /.actionUnit --></div>
 
@@ -170,7 +170,7 @@
 	<!-- /.prt-actionBar --></div>
 
 	<div class="prt-tableC">
-	<table><col width="16" span="1" /><col width="781" span="1" /><tr><th colspan="1" rowspan="1" class="titleA">&nbsp;</th><th colspan="1" rowspan="1" class="titleA">定型文一覧</th></tr><tbody id="templateItems"><tr><td colspan="1" rowspan="1" class="checkbox"><label class="checkbox"><span id="deleteCheck"><input type="checkbox" id="deleteCheckId" name="deleteCheckId" value="a0R1000000MgafVEAR" class="chktitle"/></span></label></td><td colspan="1" rowspan="1"><p class="cmn-iconLinkA"><a id="goInput" href="/sponsor/fixedForm/scoutFormInput.html" shape="rect"><img src="/sponsor/images/common/icon_arrow_02.png?wid=6286534137169184003" class="iconA" height="17" width="17" /><span id="templateTitle__c">34343</span></a></p></td></tr></tbody></table>
+	<table><col width="16" span="1" /><col width="781" span="1" /><tr><th colspan="1" rowspan="1" class="titleA">&nbsp;</th><th colspan="1" rowspan="1" class="titleA">定型文一覧</th></tr><tbody id="templateItems"><tr><td colspan="1" rowspan="1" class="checkbox"><label class="checkbox"><span id="deleteCheck"><input type="checkbox" id="deleteCheckId" name="deleteCheckId" value="a0R1000000MgafVEAR" class="chktitle"/></span></label></td><td colspan="1" rowspan="1"><p class="cmn-iconLinkA"><a id="goInput" href="/sponsor/fixedForm/scoutforminput" shape="rect"><img src="/sponsor/images/common/icon_arrow_02.png?wid=6286534137169184003" class="iconA" height="17" width="17" /><span id="templateTitle__c">34343</span></a></p></td></tr></tbody></table>
 	<!-- /.prt-tableC --></div>
 
 	<div class="prt-actionBar bottom">
@@ -178,7 +178,7 @@
 	<div class="actionUnit">
 	<ul class="buttonUnit"><li class="checkbox"><a shape="rect" href="#"><input type="checkbox" class="all" />▲</a></li><li><input type="image" id="doDelete-2" name="inputForm:doDelete-2" src="/sponsor/images/common/btn_delete_01.png" class="js-hoverSwap" height="21" onclick="return checkDelete();" alt="削除する" width="97" /></li><!--
 	<li><a onclick="dele(); return false;" href="#"><img src="../images/common/btn_delete_01.png" alt="一括削除" width="87" height="21" class="js-hoverSwap" /></a></li>
-	<li><a href="./oboMailInput.html"><img src="../images/common/btn_reply_01.png" alt="一括返信" width="87" height="21" class="js-hoverSwap" /></a></li>
+	<li><a href="./obomailinput"><img src="../images/common/btn_reply_01.png" alt="一括返信" width="87" height="21" class="js-hoverSwap" /></a></li>
 	 --></ul>
 	<!-- /.actionUnit --></div>
 
@@ -217,7 +217,7 @@
 
 	</div>
 	<!-- /#document --></div>
-	<input type="hidden" name="inputForm/fixedForm/scoutFormListinner.html" value="inputForm" /></form>
+	<input type="hidden" name="inputForm/fixedForm/scoutformlistinner" value="inputForm" /></form>
 
 	<script language="JavaScript" type="text/javascript">
 	<!--
@@ -237,7 +237,7 @@
 
 
 
-<input type="hidden" name="fixedscoutForm/scoutManagement/fixedscout.html" value="fixedscoutForm" /></form>
+<input type="hidden" name="fixedscoutForm/scoutManagement/fixedscout" value="fixedscoutForm" /></form>
 <!-- /#contents --></div>
 <!-- /#main --></div>
 
@@ -262,7 +262,7 @@
 
 
 <!-- /#document --></div>
-<script type="text/javascript" language="JavaScript" baseViewId="/scoutManagement/fixedscout.html" xml:space="preserve">
+<script type="text/javascript" language="JavaScript" baseViewId="/scoutManagement/fixedscout" xml:space="preserve">
 <!--
 	function init()  {
 	   var iBase = TextResizeDetector.addEventListener(onFontResize,null);

@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:te="http://www.seasar.org/teeda/extension"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>ご利用について｜【管理システム】クリエイトネットで仕事発見</title><meta name="format-detection" content="telephone=no,address=no,email=no" /><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/help/index.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/help/index.html" xml:space="preserve"></script></head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>ご利用について｜【管理システム】クリエイトネットで仕事発見</title><meta name="format-detection" content="telephone=no,address=no,email=no" /><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/help/index" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/help/index" xml:space="preserve"></script></head>
 <body class="help">
 <div id="document">
 
@@ -25,7 +25,7 @@
 <span id="isInputSponsor">
 <li><a href="dataImport/">データのインポート</a></li>
 </span>
- --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout.html'); return false;" href="../login/logout.html">ログアウト</a></li></ul>
+ --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout'); return false;" href="../login/logout">ログアウト</a></li></ul>
 <!-- /.loginNav --></div>
 <!-- /#login --></div></div>
 

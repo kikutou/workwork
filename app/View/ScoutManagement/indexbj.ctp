@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:te="http://www.seasar.org/teeda/extension"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>スカウト管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/scoutManagement/indexbj.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/scoutManagement/indexbj.html" xml:space="preserve"></script><link rel="stylesheet" href="/sponsor/css/thickbox.css" media="all" type="text/css" baseViewId="/scoutManagement/indexbj.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/thickbox.js" charset="utf-8" baseViewId="/scoutManagement/indexbj.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/scoutManagement/indexbj.html" xml:space="preserve">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>スカウト管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/scoutManagement/indexbj" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/scoutManagement/indexbj" xml:space="preserve"></script><link rel="stylesheet" href="/sponsor/css/thickbox.css" media="all" type="text/css" baseViewId="/scoutManagement/indexbj" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/thickbox.js" charset="utf-8" baseViewId="/scoutManagement/indexbj" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/scoutManagement/indexbj" xml:space="preserve">
 <!--
 $(function(){
 	$('.all').click(function(){
@@ -47,7 +47,7 @@ function checkScout() {
 
 <div id="globalNav">
 <ul><li id="gnav07"><a shape="rect" href="../help/">ヘルプ</a></li><li id="gnav06"><a shape="rect" href="../accessLog/">レポート</a></li><li id="gnav05"><a shape="rect" href="../fixedForm/">定型文管理</a></li><span id="isNotEmpScout">
-<li id="gnav03"><a shape="rect" href="../scoutManagement/indexbj.html">スカウト管理</a></li>
+<li id="gnav03"><a shape="rect" href="../scoutManagement/indexbj">スカウト管理</a></li>
 </span><li id="gnav02"><a shape="rect" href="../oboManagement/">応募管理</a></li><li id="gnav01"><a shape="rect" href="../top/">TOP</a></li></ul>
 <!-- /#globalNav --></div>
 <!-- /#header --></div>
@@ -61,7 +61,7 @@ function checkScout() {
 <span id="isInputSponsor">
 <li><a href="dataImport/">データのインポート</a></li>
 </span>
- --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout.html'); return false;" href="../login/logout.html">ログアウト</a></li></ul>
+ --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout'); return false;" href="../login/logout">ログアウト</a></li></ul>
 <!-- /.loginNav --></div>
 <!-- /#login --></div></div>
 
@@ -83,11 +83,11 @@ function checkScout() {
 </div>
 
 <div class="scout-nav bj">
-<ul><li><a shape="rect" href="index.html?mode=e"><img src="/sponsor/images/parts/nav_jbt.png" class="js-hoverSwap" height="46" alt="ジョブターミナル" width="170" /></a></li><li><img src="/sponsor/images/parts/nav_bj_on.png" height="46" alt="バイトジャングル" width="170" /></li><li><a shape="rect" href="scoutSituation.html"><img src="/sponsor/images/parts/nav_scout.png" class="js-hoverSwap" height="46" alt="スカウト履歴" width="170" /></a></li><li><a shape="rect" href="fixedscout.html"><img src="/sponsor/images/parts/nav_fix.png" class="js-hoverSwap" height="46" alt="定型文管理" width="170" /></a></li></ul>
+<ul><li><a shape="rect" href="index?mode=e"><img src="/sponsor/images/parts/nav_jbt.png" class="js-hoverSwap" height="46" alt="ジョブターミナル" width="170" /></a></li><li><img src="/sponsor/images/parts/nav_bj_on.png" height="46" alt="バイトジャングル" width="170" /></li><li><a shape="rect" href="scoutsituation"><img src="/sponsor/images/parts/nav_scout.png" class="js-hoverSwap" height="46" alt="スカウト履歴" width="170" /></a></li><li><a shape="rect" href="fixedscout"><img src="/sponsor/images/parts/nav_fix.png" class="js-hoverSwap" height="46" alt="定型文管理" width="170" /></a></li></ul>
 </div>
 
 
-<form id="selectForm" name="selectForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/scoutManagement/searchResult.html">
+<form id="selectForm" name="selectForm" method="post" enctype="application/x-www-form-urlencoded" action="/sponsor/scoutManagement/searchresult">
 <input name="mode" type="hidden" value="a" />
 <input name="searchBtn" type="hidden" value="true" />
 <div class="prt-articleUnitA bjhead">
@@ -251,7 +251,7 @@ function checkScout() {
 </div><!-- /.errorMessage02 -->
 
 
-<input type="hidden" name="selectForm/scoutManagement/indexbj.html" value="selectForm" /></form>
+<input type="hidden" name="selectForm/scoutManagement/indexbj" value="selectForm" /></form>
 <!-- /#contents --></div>
 <!-- /#main --></div>
 

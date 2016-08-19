@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja" xmlns:te="http://www.seasar.org/teeda/extension"><head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>定型文管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/fixedForm/index.html" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/fixedForm/index.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/fixedForm/index.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/textresizedetector.js" baseViewId="/fixedForm/index.html" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/index.html" xml:space="preserve">
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="content-style-type" content="text/css; charset=utf-8" /><meta http-equiv="content-script-type" content="text/javascript" /><title>定型文管理｜【企業用管理画面】クリエイトネットで仕事発見</title><link rel="stylesheet" href="/sponsor/css/import.css" media="all" type="text/css" baseViewId="/fixedForm/index" /><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/loader.js" charset="utf-8" baseViewId="/fixedForm/index" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/formUI.js" charset="utf-8" baseViewId="/fixedForm/index" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" src="/sponsor/javascript/textresizedetector.js" baseViewId="/fixedForm/index" xml:space="preserve"></script><script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/index" xml:space="preserve">
 $(function(){
     $('#all').click(function(){
     if(this.checked){
@@ -35,7 +35,7 @@ $(function(){
 <span id="isInputSponsor">
 <li><a href="dataImport/">データのインポート</a></li>
 </span>
- --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout.html'); return false;" href="../login/logout.html">ログアウト</a></li></ul>
+ --><li><a shape="rect" href="../account/">パスワードの変更</a></li><!-- <li><a href="../help/">ご利用について</a></li> --><li><a shape="rect" onclick="logout('../login/logout'); return false;" href="../login/logout">ログアウト</a></li></ul>
 <!-- /.loginNav --></div>
 <!-- /#login --></div></div>
 
@@ -52,7 +52,7 @@ $(function(){
 <div class="prt-articleUnitA typeC">
 <div class="head">
 <h3 class="title"><img src="/sponsor/images/parts/articleUnitA_typeC_tit_01.gif" height="28" alt="応募者返信メール" width="130" /></h3>
-<p class="nav"><a shape="rect" href="scoutFormList.html"><img src="/sponsor/images/parts/articleUnitA_typeC_btn_02.png" class="js-hoverSwap" height="22" alt="スカウトメール" width="130" /></a></p>
+<p class="nav"><a shape="rect" href="scoutformlist"><img src="/sponsor/images/parts/articleUnitA_typeC_btn_02.png" class="js-hoverSwap" height="22" alt="スカウトメール" width="130" /></a></p>
 </div>
 
 <div class="body">
@@ -66,14 +66,14 @@ $(function(){
 
 <div class="section">
 <div class="prt-buttonUnitB">
-<p class="button"><a href="scoutFormInput.html"><img src="../images/parts/buttonUnitB_btn_01.png" alt="新規定型文作成" width="130" height="22" class="js-hoverSwap" /></a></p>
+<p class="button"><a href="scoutforminput"><img src="/sponsor/images/parts/buttonUnitB_btn_01.png?wid=3840238130196645341" alt="新規定型文作成" width="130" height="22" class="js-hoverSwap" /></a></p>
 <p class="comment">あと<span class="num">5件</span>登録できます</p>
 </div>
 
 
 <!--
 <li><a onclick="dele(); return false;" href="#"><img src="../images/common/btn_delete_01.png" alt="一括削除" width="87" height="21" class="js-hoverSwap" /></a></li>
-<li><a href="./oboMailInput.html"><img src="../images/common/btn_reply_01.png" alt="一括返信" width="87" height="21" class="js-hoverSwap" /></a></li>
+<li><a href="./obomailinput"><img src="../images/common/btn_reply_01.png" alt="一括返信" width="87" height="21" class="js-hoverSwap" /></a></li>
  -->
 <!--
 </ul>
@@ -89,20 +89,20 @@ $(function(){
 </span>
 
 <span id="isNotCurrentPage">
-<dd><a id="goIndexPage" href="index.html?page=page&fixed_searchCondition=searchInfo"><span id="page-2">2</span></a></dd>
+<dd><a id="goIndexPage" href="index?page=page&fixed_searchCondition=searchInfo"><span id="page-2">2</span></a></dd>
 </span>
 </div>
 
 
 <span id="isPrevPage">
-<dd class="prev"><a id="goPrevPage" href="index.html?page=page&fixed_searchCondition=searchInfo"><img src="../images/parts/pagenation_btn_prev_01.png" alt="" width="26" height="25" class="js-hoverBlink" /></a></dd>
+<dd class="prev"><a id="goPrevPage" href="index?page=page&fixed_searchCondition=searchInfo"><img src="../images/parts/pagenation_btn_prev_01.png" alt="" width="26" height="25" class="js-hoverBlink" /></a></dd>
 </span>
 <span id="isNotPrevPage">
 <dd class="prev"><img src="../images/parts/pagenation_btn_prev_02.png" alt="" width="26" height="25"  /></dd>
 </span>
 
 <span id="isNextPage">
-<dd class="next"><a id="goNextPage" href="index.html?page=page&fixed_searchCondition=searchInfo"><img src="../images/parts/pagenation_btn_next_01.png" alt="" width="25" height="25" class="js-hoverBlink" /></a></dd>
+<dd class="next"><a id="goNextPage" href="index?page=page&fixed_searchCondition=searchInfo"><img src="../images/parts/pagenation_btn_next_01.png" alt="" width="25" height="25" class="js-hoverBlink" /></a></dd>
 </span>
 <span id="isNotNextPage">
 <dd class="next"><img src="../images/parts/pagenation_btn_next_02.png" alt="" width="25" height="25" /></dd>
@@ -122,19 +122,19 @@ $(function(){
 </tr>
 <tr>
 <td class="checkbox"><label class="checkbox"><input type="checkbox" name="" value="" /></label></td>
-<td><p class="cmn-iconLinkA"><a href="scoutFormInput.html"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
+<td><p class="cmn-iconLinkA"><a href="scoutforminput"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
 </tr>
 <tr>
 <td class="checkbox"><label class="checkbox"><input type="checkbox" name="" value="" /></label></td>
-<td><p class="cmn-iconLinkA"><a href="scoutFormInput.html"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
+<td><p class="cmn-iconLinkA"><a href="scoutforminput"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
 </tr>
 <tr>
 <td class="checkbox"><label class="checkbox"><input type="checkbox" name="" value="" /></label></td>
-<td><p class="cmn-iconLinkA"><a href="scoutFormInput.html"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
+<td><p class="cmn-iconLinkA"><a href="scoutforminput"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
 </tr>
 <tr>
 <td class="checkbox"><label class="checkbox"><input type="checkbox" name="" value="" /></label></td>
-<td><p class="cmn-iconLinkA"><a href="scoutFormInput.html"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
+<td><p class="cmn-iconLinkA"><a href="scoutforminput"><img src="../images/common/icon_arrow_02.png" alt="" width="17" height="17" class="iconA" />定型文の保存用タイトルです</a></p></td>
 </tr>
 </table>
 </div>
@@ -175,7 +175,7 @@ $(function(){
 
 
 <!-- /#document --></div>
-<script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/index.html" xml:space="preserve">
+<script type="text/javascript" language="JavaScript" baseViewId="/fixedForm/index" xml:space="preserve">
 <!--
 	function init()  {
 		var iBase = TextResizeDetector.addEventListener(onFontResize,null);
