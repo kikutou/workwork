@@ -82,7 +82,7 @@
 		</p>
 	</td><td colspan="1" rowspan="1"><span id="display_enddate">あと25日</span></td><td colspan="1" rowspan="1"><p class="cmn-iconLinkA">
 	<span id="isIcon_display_arbeit-02">
-	<a id="goPreview" href="../preview/bj/index" class="preview" shape="rect"><img src="/sponsor/images/common/icon_detail_01.png" class="iconA" height="17" alt="原稿" width="17" />原稿</a>
+	<a id="goPreview" href="../preview/index" class="preview" shape="rect"><img src="/sponsor/images/common/icon_detail_01.png" class="iconA" height="17" alt="原稿" width="17" />原稿</a>
 	</span>
 	
 	</p>
@@ -103,7 +103,7 @@
 		</p>
 	</td><td colspan="1" rowspan="1"><span id="display_enddate">あと25日</span></td><td colspan="1" rowspan="1"><p class="cmn-iconLinkA">
 	<span id="isIcon_display_arbeit-02">
-	<a id="goPreview" href="../preview/bj/index2013a" class="preview" shape="rect"><img src="/sponsor/images/common/icon_detail_01.png" class="iconA" height="17" alt="原稿" width="17" />原稿</a>
+	<a id="goPreview" href="../preview/index2013a" class="preview" shape="rect"><img src="/sponsor/images/common/icon_detail_01.png" class="iconA" height="17" alt="原稿" width="17" />原稿</a>
 	</span>
 	
 	</p>
