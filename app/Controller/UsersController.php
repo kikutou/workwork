@@ -73,11 +73,15 @@ class UsersController extends AppController {
         $errorMsg = null;
 
         if($this->request->ispost()) {
+
             $result = $this->User->save($this->data);
-
             if($result) {
+//                print '<pre>';
+//                print_r('ok');
+//                print '</pre>';
+//                exit();
 
-                $this->redirect('index');
+                $this->redirect('profile');
             }else {
 
                 $errorMsg = 'データベースに保存できませんでした。';

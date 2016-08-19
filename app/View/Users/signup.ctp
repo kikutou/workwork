@@ -31,10 +31,6 @@
         echo $this->fetch('script');
     ?>
 
-    //
-    //
-
-
 </head>
 <body class="container-fluid">
     <div class="row">
