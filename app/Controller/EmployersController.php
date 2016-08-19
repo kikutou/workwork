@@ -27,6 +27,11 @@ class EmployersController extends AppController {
         
     }
 
+    public function top() {
+
+        $this->layout = false;
+    }
+
     public function login() {
 
         $this->layout = false;

@@ -1,0 +1,1752 @@
+@charset "utf-8";
+.barfixed {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index:1;
+}
+
+/*!
+ * Parts Styles
+ *
+ * Prefix rule "prt-"
+ * prt-系は入れ子にしない。
+ * prt-の中や、prt-を囲む形にしたい場合はcmn-にする。
+ */
+
+
+/**
+ * prt-headingA
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+.red {
+	color: red;
+}
+
+.green{
+	color:#099;
+}
+
+#contents p.red{
+	color: red;
+	margin:0;
+}
+
+.ddjtitle {
+	margin:20px auto 20px;
+	width: 455px;
+	height: 53px;
+}
+
+#contents .prt-buttonUnit_type01 {
+    margin: 25px 0 25px;
+    overflow: hidden;
+    position: relative;
+}
+
+#contents .prt-buttonUnit_type01_login{
+	margin:25px auto;
+	width:190px;
+}
+
+#contents .prt-buttonUnit_type01 ul {
+    float: left;
+    left: 50%;
+    margin: 0;
+    position: relative;
+}
+
+#contents .prt-buttonUnit_type01 ul li {
+    float: left;
+    left: -50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#contents div.prt-headingA {
+	margin: 0 0 20px;
+	padding: 4px 10px 5px;
+	border-left: 5px solid #1D2082;
+	zoom: 1;
+}
+#contents div.prt-headingA:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+#contents .listback a{
+	float:right;
+	padding:8px 20px;
+	margin-right:-10px;
+	background:#128468;
+	color:#fff;
+	font-size:12px;
+	border: 1px solid #CCCCCC;
+    border-radius: 5px 5px 5px 5px;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+#contents .listback a:hover{
+	background:#97c993;
+	color:#fff;
+}
+
+	/**
+	 * title
+	 */
+	#contents div.prt-headingA .title {
+		float: left;
+		display: inline;
+		margin: 0;
+		font-size: 180%;
+		line-height: 1.374;
+		clear: none;
+	}
+
+	/**
+	 * download
+	 */
+
+	#contents div.prt-headingA p.download {
+		position: relative;
+		float: right;
+		display: inline;
+		margin: -3px 0 0;
+		padding: 5px 0 0;
+		font-weight: bold;
+		line-height: 1.335;
+	}
+
+	#contents div.prt-headingA p.download a {
+		display: block;
+		padding: 0 0 0 26px;
+		min-height: 17px;
+		background: url(../images/common/icon_arrow_01.png) no-repeat 0 49%;
+		color: #126FB1;
+		text-decoration: none;
+		zoom: 1;
+	}
+	/* IE6 Only */
+	* html #contents div.prt-headingA p.download a {
+		display: inline;
+		height: 17px;
+		zoom: 1;
+	}
+
+	#contents div.prt-headingA p.download a:hover {
+		text-decoration: underline;
+	}
+
+	#contents div.prt-headingA p.download a:visited {
+		color: #126FB1;
+	}
+
+
+
+/**
+ * prt-headingB
+ *
+ * @create: 2011-09-28 [sekiguchi@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents .prt-headingB {
+	margin: 0 0 10px;
+	height: 30px;
+	overflow: hidden;
+}
+
+
+
+/**
+ * prt-headingC
+ *
+ * @create: 2011-09-28 [sekiguchi@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents .prt-headingC {
+	margin: 0 0 20px;
+	padding: 5px 0 7px;
+	background: url(../images/parts/headingC_bg_01.gif) no-repeat 0 100%;
+	font-size: 130%;
+	line-height: 1.534;
+}
+
+
+
+/**
+ * prt-headingD
+ *
+ * @create: 2011-09-28 [sekiguchi@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents .prt-headingD {
+	margin: 0 0 10px;
+	padding: 0 0 7px;
+	background: url(../images/parts/headingD_bg_01.gif) no-repeat 0 100%;
+	font-size: 140%;
+	line-height: 1.429;
+}
+
+
+
+/**
+ * prt-headingE
+ *
+ * @create: 2011-09-28 [sekiguchi@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents .prt-headingE {
+	margin: 0;
+	border-bottom: 3px solid #0071C0;
+	background: url(../images/parts/headingE_bg_01.gif) no-repeat;
+	color: #FFF;
+	font-size: 120%;
+	line-height: 1.167;
+	zoom: 1;
+}
+
+
+#contents .prt-headingE span.inner {
+	display: inline-block;
+	padding: 4px 14px 2px;
+	background: #0071C0;
+}
+
+#contents div.prt-headingF {
+	margin: 40px 0 10px;
+	padding: 0 0 5px;
+	border-bottom: 1px solid #1D2082;
+	zoom: 1;
+	color: #1D2082;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+#contents div  p.save a {
+	margin: 0 0 10px;
+	padding: 4px 0 5px 27px;
+	zoom: 1;
+	color: #126FB1;
+	background:  url("../images/parts/ico_arrow_red.gif") no-repeat scroll 0 3px transparent;
+	font-size: 100%;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#contents div  p.save a:hover{
+	text-decoration: underline;
+}
+
+#contents div  p.non-save a {
+	margin: 0 0 10px;
+	padding: 4px 0 5px 27px;
+	zoom: 1;
+	color: #126FB1;
+	background:  url("../images/parts/ico_arrow_blue.gif") no-repeat scroll 0 3px transparent;
+	font-size: 100%;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+#contents div  p.non-save a:hover{
+	text-decoration: underline;
+}
+
+
+/**
+ * prt-flowChart
+ *
+ * @create: 2011-09-28 [sekiguchi@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents p.prt-flowChart {
+	margin: 20px 0;
+}
+
+
+
+/**
+ * prt-unitA
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-unitA {
+	position: relative;
+	margin: 0 -6px 10px;
+	background: url(../images/parts/unitA_bg_02.png) repeat-y;
+}
+
+#contents div.prt-unitA div.inner {
+	padding: 0 0 10px;
+	background: url(../images/parts/unitA_bg_03.png) no-repeat 0 100%;
+}
+
+#contents div.prt-unitA div.inner div.inner {
+	padding: 16px 16px 0;
+	min-height: 150px;
+	background: url(../images/parts/unitA_bg_01.png) no-repeat;
+}
+/* IE6 Only */
+* html #contents div.prt-unitA div.inner div.inner {
+	height: 150px;
+}
+
+/* Reset */
+#contents div.prt-unitA div.inner div.inner div.section,
+#contents div.prt-unitA div.inner div.inner div.prt-tableC {
+	margin: 0 0 5px;
+}
+
+
+/**
+ * prt-tableA
+ *
+ * @create: 2011-09-28 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-tableA {
+	margin: 0 0 20px;
+}
+
+#contents div.prt-tableA table {
+	margin: 0;
+	width: 100%;
+	border: solid #8D8E8E;
+	border-width: 1px 0 0 1px;
+	table-layout: fixed;
+}
+
+#contents div.prt-tableA.typeA table {
+	border-top: 3px solid #2F2D2C;
+}
+
+#contents div.prt-tableA table tr {
+}
+
+#contents div.prt-tableA table tr th,
+#contents div.prt-tableA table tr td {
+	padding: 7px 17px 6px;
+	border: solid #8D8E8E;
+	border-width: 0 1px 1px 0;
+}
+
+#contents div.prt-tableA table tr th {
+	background: #F1F1F1;
+	font-weight: bold;
+}
+
+#contents div.prt-tableA table tr td {
+	background: #FFF;
+}
+
+/* reset */
+#contents div.prt-tableA table tr td table {
+	border: none;
+}
+
+#contents div.prt-tableA table tr td th,
+#contents div.prt-tableA table tr td td {
+	padding: 0;
+	border: none;
+}
+
+#contents div.prt-tableA table tr th {
+	padding-right: 15px;
+	font-weight: normal;
+	font-weight:bold;
+}
+
+#contents div.prt-tableA table tr td {
+	background: #FFF;
+}
+
+#contents div.prt-tableA table tr td p,
+#contents div.prt-tableA table tr td ul,
+#contents div.prt-tableA table tr td ol,
+#contents div.prt-tableA table tr td dl {
+	margin: 0;
+}
+
+#contents div.prt-tableA table tr td ul.tabele{
+	float:left;
+}
+
+/* notes */
+#contents div.prt-tableA table tr td p.notes {
+	margin: 5px 0 0;
+	font-size: 91.7%;
+	line-height: 1.09;
+}
+
+/* Input */
+table tr td input {
+	line-height: 1.5;
+	margin:5px;
+}
+
+/* Textarea */
+#contents div.prt-tableA table tr td textarea {
+	line-height: 1.5;
+}
+
+#contents div.prt-tableA table tr ul li{
+background: #fefefe; /* Old browsers */
+background: -moz-linear-gradient(top, #fefefe 0%, #e2e2e2 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fefefe), color-stop(100%,#e2e2e2)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #fefefe 0%,#e2e2e2 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #fefefe 0%,#e2e2e2 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #fefefe 0%,#e2e2e2 100%); /* IE10+ */
+background: linear-gradient(to bottom, #fefefe 0%,#e2e2e2 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#e2e2e2',GradientType=0 ); /* IE6-9 */
+    border: 1px solid #CCCCCC;
+    border-radius: 3px 3px 3px 3px;
+    cursor: pointer;
+    display: block;
+	color:#555;
+    float: left;
+    margin: 0 5px 8px 0;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+#contents div.prt-tableA table tr ul li:hover{
+background: #c6c6c6; /* Old browsers */
+background: -moz-linear-gradient(top, #c6c6c6 1%, #e8e8e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,#c6c6c6), color-stop(100%,#e8e8e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #c6c6c6 1%,#e8e8e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #c6c6c6 1%,#e8e8e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #c6c6c6 1%,#e8e8e8 100%); /* IE10+ */
+background: linear-gradient(to bottom, #c6c6c6 1%,#e8e8e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c6c6c6', endColorstr='#e8e8e8',GradientType=0 ); /* IE6-9 */}
+
+/**
+ * prt-tableB
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-tableB {
+}
+
+#contents div.prt-tableB table {
+	width: 100%;
+}
+
+#contents div.prt-tableB table tr {
+}
+
+#contents div.prt-tableB table tr th,
+#contents div.prt-tableB table tr td {
+	padding: 10px 0;
+	border-bottom:1px dotted #444;
+	/*background: url(../images/common/line_dotted_01.gif) repeat-x;*/
+}
+#contents div.prt-tableB table tr:first-child th,
+#contents div.prt-tableB table tr:first-child td {
+	padding-top: 0;
+	background: none;
+}
+
+#contents div.prt-tableB table tr:last-child th,
+#contents div.prt-tableB table tr:last-child td {
+	border-bottom:none;
+}
+
+
+#contents div.prt-tableB table tr th {
+	padding-right: 10px;
+	color: #0079C4;
+	width: 8em;
+}
+
+#contents div.prt-tableB table tr td {
+	word-break: break-all;
+}
+
+#contents div.prt-tableB table tr td p {
+	margin: 0;
+	padding: 0 0 0 10px;
+	border-left: 2px solid #00ACFF;
+}
+
+
+
+/**
+ * prt-tableC
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-tableC {
+	margin: 0 0 20px;
+}
+
+#contents div.prt-tableC table {
+	width: 100%;
+	border: solid #8D8D8E;
+	border-width: 1px 0 0 1px;
+}
+#contents div.prt-tableC table.banner{
+	width: 420px;
+	border: solid #8D8D8E;
+	border-width: 1px 0 0 1px;
+}
+
+
+#contents div.prt-tableC table tr {
+}
+
+#contents div.prt-tableC table tr th,
+#contents div.prt-tableC table tr td {
+	padding: 9px 10px 8px;
+	border: solid #8D8D8E;
+	border-width: 0 1px 1px 0;
+	word-break: break-all;
+	vertical-align: middle;
+}
+
+#contents div.prt-tableC table tr.even th,
+#contents div.prt-tableC table tr.even td {
+	background: #E8E8E8;
+}
+
+#contents div.prt-tableC table tr.odd th,
+#contents div.prt-tableC table tr.odd td {
+	background: #FFF;
+}
+
+#contents div.prt-tableC table tr td.last,
+#contents div.prt-tableC table tr td.last {
+	background: #1D2082;
+	color: #fff;
+}
+
+
+#contents div.prt-tableC table tr th {
+	font-weight: bold;
+}
+
+#contents div.prt-tableC table tr td {
+}
+
+#contents div.prt-tableC table tr th.titleA {
+	padding: 4px 10px;
+	background: #2F2D2C;
+	color: #FFF;
+}
+
+#contents div.prt-tableC table tr th.titleB {
+	padding: 6px 10px;
+	background: #605752;
+	color: #FFF;
+}
+
+#contents div.prt-tableC table tr td.checkbox {
+	background: #D2D2D2;
+	text-align: center;
+	vertical-align: middle;
+}
+
+/* Input */
+#contents div.prt-tableC table tr th input,
+#contents div.prt-tableC table tr td input {
+	font-size: 120%;
+	line-height: 1.5em
+}
+
+
+
+/**
+ * prt-tableD
+ *
+ * @create: 2011-10-03 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-tableD {
+	margin: 0 0 10px;
+}
+
+#contents div.prt-tableD table {
+	width: 100%;
+	border: solid #8D8D8E;
+	border-width: 1px 0 1px 1px;
+}
+
+#contents div.prt-tableD table tr {
+}
+
+#contents div.prt-tableD table tr th,
+#contents div.prt-tableD table tr td {
+	border: solid #8D8D8E;
+	word-break: break-all;
+	vertical-align: middle;
+}
+
+#contents div.prt-tableD table tr th {
+	padding: 9px 10px 8px;
+	border-width: 1px 1px 0 1px;
+	font-weight: bold;
+}
+
+#contents div.prt-tableD table tr td {
+	border-width: 1px 0 0 1px;
+}
+
+#contents div.prt-tableD table tr th.titleA {
+	padding: 6px 10px;
+	background: #DAD3C3;
+	font-weight: normal;
+	font-size: 110%;
+	line-height: 1.455;
+}
+
+#contents div.prt-tableD table tr td.checkbox {
+	background: #D2D2D2;
+	text-align: center;
+	vertical-align: middle;
+}
+
+#contents div.prt-tableD table tr th p {
+	margin: 0;
+}
+
+/* Info */
+#contents div.prt-tableD table tr th p.info {
+	float: left;
+	width: 650px;
+}
+
+#contents div.prt-tableD table tr th p.info span {
+	vertical-align: middle;
+}
+
+/* IE6 Only */
+* html #contents div.prt-tableD table tr th p.info span {
+	display: inline;
+	zoom: 1;
+}
+/* IE7 Only */
+*:first-child + html #contents div.prt-tableD table tr th p.info {
+	display: inline;
+	zoom: 1;
+}
+
+#contents div.prt-tableD table tr th p.info span.icon {
+	padding: 0 5px 0 0;
+	width: 100px;
+}
+
+#contents div.prt-tableD table tr th p.info span.lead {
+	width: 530px;
+}
+
+/* Button */
+#contents div.prt-tableD table tr th p.button {
+	float: right;
+}
+
+/* Input */
+#contents div.prt-tableD table tr th input,
+#contents div.prt-tableD table tr td input {
+	font-size: 120%;
+	line-height: 1.5em
+}
+
+
+
+	/* table */
+	#contents div.prt-tableD table tr td table {
+		border: none;
+	}
+
+	#contents div.prt-tableD table tr td table tr {
+	}
+
+	#contents div.prt-tableD table tr td table tr th,
+	#contents div.prt-tableD table tr td table tr td {
+	}
+
+	#contents div.prt-tableD table tr td table tr th {
+		padding: 6px 10px;
+		border-width: 0 1px 0 0;
+		background: #605752;
+		color: #FFF;
+	}
+	#contents div.prt-tableD table tr td table tr td {
+		padding: 6px 10px;
+		border-width: 0 1px 0 0;
+	}
+
+	#contents div.prt-tableD table tr td table tr td.text {
+		vertical-align: top;
+	}
+
+
+
+/**
+ * prt-buttonUnitA
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-buttonUnitA {
+  position: relative;
+	margin: 0 0 20px;
+  overflow: hidden;
+	zoom: 1;
+}
+#contents div.prt-buttonUnitA:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+#contents div.prt-buttonUnitA ul {
+  position: relative;
+  left: 50%;
+  float: left;
+	margin: 0;
+}
+
+#contents div.prt-buttonUnitA ul li {
+  position: relative;
+  left: -50%;
+	float: left;
+	margin: 0 9px;
+}
+
+
+
+/**
+ * prt-buttonUnitB
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-buttonUnitB {
+	margin: 0 0 18px;
+	padding: 9px 10px 9px 20px;
+	background: #DDDEED;
+	zoom: 1;
+}
+#contents div.prt-buttonUnitB:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+#contents div.prt-buttonUnitB p {
+	float: left;
+	display: inline;
+	margin: 0 10px 0 0;
+}
+
+#contents div.prt-buttonUnitB p.button {
+	width: 130px;
+}
+
+#contents div.prt-buttonUnitB p.comment {
+	padding: 3px 0 0;
+	font-weight: bold;
+	width: 660px;
+}
+
+#contents div.prt-buttonUnitB p.comment span.num {
+	padding: 0 2px;
+	color: #D71E00;
+}
+
+
+
+/**
+ * prt-indexListA
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-indexListA {
+	margin: 0 0 20px;
+}
+
+#contents div.prt-indexListA dl {
+	margin: 0;
+}
+
+#contents div.prt-indexListA dl dt {
+	margin: 0 0 10px;
+}
+
+#contents div.prt-indexListA dl dd {
+	margin: 0 0 5px;
+	padding: 0 0 0 30px;
+	min-height: 16px;
+	background: url(../images/common/icon_arrow_03.png) no-repeat 6px 3px;
+	font-weight: bold;
+	font-size: 130%;
+	line-height: 1.534;
+}
+/* IE6 Only */
+* html #contents div.prt-indexListA dl dd {
+	height: 16px;
+}
+
+#contents div.prt-indexListA dl dd a {
+	color: #002DA9;
+}
+#contents div.prt-indexListA dl dd a:visited {
+	color: #002DA9;
+}
+
+
+
+/**
+ * prt-faqUnit
+ *
+ * @create: 2011-09-27 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-faqUnit {
+}
+
+#contents div.prt-faqUnit dl {
+}
+
+#contents div.prt-faqUnit dl dt.question {
+	margin: 0 0 15px;
+	padding: 0 0 0 30px;
+	min-height: 18px;
+	background: url(../images/parts/faqUnit_icon_q.png) no-repeat;
+	font-weight: bold;
+	color: #002DB9;
+	font-size: 130%;
+	line-height: 1.384;
+}
+/* IE6 Only */
+* html #contents div.prt-faqUnit dl dt.question {
+	height: 18px;
+}
+
+#contents div.prt-faqUnit dl dd.answer {
+	margin: 0 0 10px;
+	padding: 0 0 15px;
+	border-bottom: 1px solid #BBBBBB;
+	font-size: 130%;
+	line-height: 1.384;
+}
+
+#contents div.prt-faqUnit dl dd.answer p,
+#contents div.prt-faqUnit dl dd.answer ul,
+#contents div.prt-faqUnit dl dd.answer ol,
+#contents div.prt-faqUnit dl dd.answer dl,
+#contents div.prt-faqUnit dl dd.answer table {
+	margin: 0 0 10px;
+}
+
+
+
+/**
+ * prt-articleUnitA
+ *
+ * @create: 2011-09-28 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents div.prt-articleUnitA {
+	margin: 0 0 20px;
+}
+
+#contents div.prt-articleUnitA div.head {
+	padding: 6px 22px 0;
+	min-height: 28px;
+	background: #67348F url(../images/parts/articleUnitA_typeA_bg_01.png) no-repeat;
+	zoom: 1;
+}
+/* IE6 Only */
+* html #contents div.prt-articleUnitA div.head {
+	height: 28px;
+}
+#contents div.prt-articleUnitA div.head:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+/* Other Type */
+#contents div.prt-articleUnitA.typeB div.head {
+	background: #085C75 url(../images/parts/articleUnitA_typeB_bg_01.png) no-repeat;
+}
+#contents div.prt-articleUnitA.typeC div.head {
+	background: #7E5E28 url(../images/parts/articleUnitA_typeC_bg_01.png) no-repeat;
+}
+#contents div.prt-articleUnitA.typeD div.head {
+	background: #0058C1 url(../images/parts/articleUnitA_typeD_bg_01.png) no-repeat;
+}
+
+#contents div.prt-articleUnitA.typeE div.head {
+	background: #0058C1 url(../images/parts/articleUnitA_typeE_bg_01.png) no-repeat;
+}
+
+
+
+/*--scout head--*/
+
+#contents div.prt-articleUnitA.jbthead div.head {
+	background: #0066E0;
+}
+
+#contents div.prt-articleUnitA.bjhead div.head {
+	background: #009983;
+}
+
+
+#contents div.prt-articleUnitA.sco-historyhead div.head {
+	background: #C83183;
+}
+
+#contents div.prt-articleUnitA.fixhead div.head {
+	background: #B47B1A;
+}
+
+
+
+#contents div.prt-articleUnitA div.head .title {
+	margin: 0 5px 0 0;
+	float: left;
+	display: inline;
+	clear: none;
+}
+
+#contents div.prt-articleUnitA div.head p.nav {
+	margin: 0 5px 0 0;
+	float: left;
+	display: inline;
+}
+
+#contents div.prt-articleUnitA div.body {
+	border: solid #6E3C93;
+	border-width: 0 1px 1px;
+}
+
+#contents div.prt-articleUnitA div.body strong {
+	color: #D71E00;
+}
+
+/* Other Type */
+#contents div.prt-articleUnitA.typeB div.body {
+	border-color: #088080;
+}
+#contents div.prt-articleUnitA.typeC div.body {
+	border-color: #6F5326;
+}
+#contents div.prt-articleUnitA.typeD div.body {
+	border-color: #0051C1;
+}
+
+/* Other Type */
+#contents div.prt-articleUnitA.typeB ul.cmn-commentList01 li {
+	background-image: url(../images/common/icon_disc_01.gif);
+}
+#contents div.prt-articleUnitA.typeB ul.cmn-commentList02 li {
+	background-image: url(../images/common/icon_disc_02.gif);
+}
+#contents div.prt-articleUnitA.typeC ul.cmn-commentList03 li {
+	background-image: url(../images/common/icon_disc_03.gif);
+}
+
+	/**
+	 * articleTable
+	 */
+
+	#contents div.prt-articleUnitA div.articleTable {
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table {
+		margin: 0;
+		width: 100%;
+		border: none;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr {
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td,
+	#contents div.prt-articleUnitA div.articleTable table tr th {
+		word-break: break-all;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr.odd td,
+	#contents div.prt-articleUnitA div.articleTable table tr.odd th {
+		background: #E8E8E8;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr th {
+		padding: 4px 0 4px 20px;
+		font-weight: bold;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td {
+		padding: 4px 20px;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td p.button {
+		margin: 0;
+		text-align: center;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td ul,
+	#contents div.prt-articleUnitA div.articleTable table tr td ol,
+	#contents div.prt-articleUnitA div.articleTable table tr td dl {
+		margin: 0;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit {
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit dt {
+		display: table-cell;
+		padding: 0 5px 0 0;
+		width: 80px;
+		vertical-align: top;
+	}
+	/* IE6 Only */
+	* html #contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit dt {
+		display: inline;
+		zoom: 1;
+	}
+	/* IE7 Only */
+	*:first-child + html #contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit dt {
+		display: inline;
+		zoom: 1;
+	}
+
+	#contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit dd {
+		display: table-cell;
+		width: 580px;
+		vertical-align: top;
+	}
+	/* IE6 Only */
+	* html #contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit dd {
+		display: inline;
+		zoom: 1;
+	}
+	/* IE7 Only */
+	*:first-child + html #contents div.prt-articleUnitA div.articleTable table tr td dl.editUnit dd {
+		display: inline;
+		zoom: 1;
+	}
+
+
+
+
+/**
+ * prt-select
+ *
+ * @create: 2011-09-29 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+#contents p.prt-select {
+	margin: 0 0 10px;
+}
+
+#contents p.prt-select select {
+	width: 400px;
+}
+
+
+
+/**
+ * prt-navA
+ *
+ * @create: 2011-09-29 [hosono@skillprtners.co.jp]
+ * @modify: 2011-10-05 [hosono@skillprtners.co.jp]
+ */
+
+#contents div.prt-navUnitA {
+	position: relative;
+	margin: -30px 0 -13px 385px;
+	width: 455px;
+	zoom: 1;
+}
+
+#contents div.prt-navUnitA:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+#contents div.prt-navUnitA ul {
+	float: right;
+	margin: 0;
+	padding: 6px 6px 1px 1px;
+	background: #000126 url(../images/parts/navA_bg_01.png) repeat-x;
+	zoom: 1;
+}
+#contents div.prt-navUnitA ul:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+#contents div.prt-navUnitA ul li {
+	padding: 0 0 5px 5px;
+	float: left;
+	display: inline;
+	height: 31px;
+	overflow: hidden;
+}
+
+
+
+/**
+ * .actionUnit
+ *
+ * @create: 2011-10-03 [hosono@skillprtners.co.jp]
+ * @modify: not yet
+ */
+
+
+#contents div.prt-actionBar {
+	margin: 0 0 10px;
+}
+
+#contents div.prt-actionBar.bottom {
+	position: relative;
+	margin-top: -10px;
+	zoom: 1;
+}
+
+#contents div.prt-actionBar div.inner {
+	zoom: 1;
+}
+#contents div.prt-actionBar div.inner:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+
+/* result */
+#contents div.prt-actionBar p.result {
+	margin: 0;
+	line-height: 1.834;
+}
+
+#contents div.prt-actionBar p.result strong {
+	color: #D71E00;
+}
+
+	/**
+	 * actionUnit
+	 */
+	#contents div.prt-actionBar div.actionUnit {
+		float: left;
+		display: inline;
+		padding: 3px 0 1px;
+	}
+
+	#contents div.prt-actionBar div.actionUnit-right {
+		float: right;
+		display: inline;
+		padding: 3px 0 1px;
+	}
+
+
+		/* result */
+		#contents div.prt-actionBar div.actionUnit p.result {
+			float: left;
+		}
+
+		/* buttonUnit */
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit {
+			float: left;
+			margin: 0 5px 0 0;
+		}
+
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit li {
+			float: left;
+			display: inline;
+			margin: 0 3px 0 0;
+		}
+
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit li.checkbox {
+			margin-right: 5px;
+			font-size: 100%;
+			line-height: 1.801em;
+			min-height: 1.8em;
+		}
+
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit li.checkbox a {
+			display: block;
+			width: 38px;
+			padding: 1px 0 0;
+			height: 20px;
+			background: url(../images/parts/actionBar_check_bg.png) no-repeat 0 50%;
+			color: #000;
+			text-decoration: none;
+			zoom: 1;
+		}
+
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit li.checkbox a:visited {
+			color: #000;
+		}
+
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit li.checkbox a:hover {
+			color: #000;
+		}
+
+		#contents div.prt-actionBar div.actionUnit ul.buttonUnit li.checkbox input {
+		}
+
+	/**
+	 * pagenation
+	 */
+	#contents div.prt-actionBar div.pagenation {
+		float: right;
+	}
+
+	#contents div.prt-actionBar div.pagenation dl {
+		margin: 0;
+	}
+
+	#contents div.prt-actionBar div.pagenation dt {
+		float: left;
+		display: inline;
+		margin: 3px 0 0;
+		padding: 1px 4px 1px;
+		font-weight: normal;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd {
+		float: left;
+		margin: 3px 0 0 3px;
+		font-weight: bold;
+		line-height: 1.335;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd.prev {
+		margin: 0 0 0 5px;
+	}
+	#contents div.prt-actionBar div.pagenation dd.next {
+		margin: 0;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd a {
+		display: block;
+		padding: 1px 4px 1px;
+		color: #000;
+		text-decoration: none;
+		background: #FFF;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd a :hover{
+		text-decoration: underline;
+	}
+
+	/* IE6 Only */
+	* html #contents div.prt-actionBar div.pagenation dd a {
+		display: inline;
+		zoom: 1;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd.prev a {
+		padding: 0;
+	}
+	#contents div.prt-actionBar div.pagenation dd.next a {
+		padding: 0;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd a:visited {
+		color: #000;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd.current,
+	#contents div.prt-actionBar div.pagenation dd.current:visited {
+		background: #2F2C2B;
+		color: #FFF;
+		padding: 1px 4px;
+	}
+
+	#contents div.prt-actionBar div.pagenation dd{}
+
+	#contents div.prt-actionBar div.pagenation dd.prev a:hover,
+	#contents div.prt-actionBar div.pagenation dd.next a:hover {
+		background: none;
+	}
+
+
+.title_attention_01 {
+    background: none repeat scroll 0 0 #D90040;
+    color: #FFFFFF;
+    font-size: 130%;
+    font-weight: bold;
+    padding: 5px 0 5px 10px;
+	margin: 20px 0 7px;
+}
+
+
+/*-----------------------
+スカウトに使うparts
+-------------------------*/
+.scout-nav{
+	margin:30px 0 2px;
+	height:46px
+}
+
+.jbt{
+	border-bottom:4px solid #1D2082;
+}
+
+.bj{
+	border-bottom:4px solid #08506E;
+}
+
+.sco-history{
+	border-bottom:4px solid #831F58;
+}
+
+.fix{
+	border-bottom:4px solid #B47B1A;
+}
+
+.scout-nav ul{
+	float:left;
+}
+
+.scout-nav ul li{
+	float:left;
+	margin-right:4px;
+}
+
+.scout-nav ul li a{
+	float:left;
+}
+
+#contents .scout-count{
+	margin-bottom:40px;
+}
+
+#contents .scout-count p{
+	text-align:center;
+	font-size:160%;
+	margin:0;
+	padding:0;
+	color:#333;
+}
+
+#contents p.scout-number{
+	text-align:right;
+	color:#F00;
+	font-size:140%;
+}
+
+.pupupbox{
+	border-top: none;
+	border-left: 3px #0071C0 solid;
+	border-right: 3px #0071C0 solid;
+	border-bottom: 3px #0071C0 solid;
+	padding:20px;
+}
+
+/*トップヘッダー
+===============================*/
+.tophead{
+	width:100%;
+	background:#0071BC;
+}
+
+.footerBtns{
+}
+
+.tophead ul.footerBtns{
+	float: right;
+	margin: 10px 0px;
+}
+
+.tophead ul.footerBtns li{
+	margin-left: 10px;
+	float: left;
+}
+
+.tophead ul.footerNav{
+	background:#0071BC;
+	padding: 0 20px;
+}
+
+/*プレビュー
+---------------------------------*/
+.prev .tophead ul.footerNav{
+	background:#444;
+	padding: 0 20px;
+}
+
+.prev .tophead ul p{
+	display:inline;
+	font-size:18px;
+	color:#FFFFFF;
+	float:left;
+	margin:17px 0;
+	letter-spacing:0.15em;
+}
+
+/*-------------------------------*/
+
+.tophead ul.footerNav li{
+	float: left;
+}
+
+.tophead ul.footerNav li.right{
+	float: right;
+}
+
+.tophead ul.footerNav li a{
+	float: left;
+	margin: 10px 5px 10px 0px;
+	padding: 5px;
+	background: #fff;
+	font-weight: bold;
+	color: #3F352D;
+	text-decoration: none;
+	border: 2px #CCCCCC solid;
+	border-radius: 5px;		/* CSS3草案 */
+	-webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;	/* Firefox用 */
+}
+
+.tophead ul.footerNav li a:hover{
+	background: #fffeaf;
+}
+
+.tophead ul.footerNav li.backpage a{
+	float: left;
+	margin: 10px 0px 0px 15px;
+	padding: 3px 15px;
+	background: #a0dcab;
+	font-weight: bold;
+	color: #3F352D;
+	text-decoration: none;
+}
+
+.tophead ul.footerNav li.backpage a:hover{
+	float: left;
+	margin: 10px 0px 0px 15px;
+	padding: 3px 15px;
+	background: #fffdc9;
+	font-weight: bold;
+	color: #3F352D;
+	text-decoration: none;
+}
+
+.tablemail{
+	margin: 20px auto;
+}
+.tablemail tr{
+	border: 1px #888 solid;
+}
+.tablemail th{
+	background: #D3D1C0;
+	padding: 10px;
+	font-weight: bold;
+	border: 1px #888 solid ;
+	text-align : left;
+	color: #444;
+}
+.tablemail td{
+	border: 1px #888 solid ;
+	background: #fff;
+	text-align : left;
+	padding: 10px;
+}
+
+/*================================
+ フッター
+===============================*/
+
+.footer{
+	width:100%;
+	background:#0071BC;
+	float: left;
+	margin-top: 20px;
+}
+
+.footer ul.footerBtns{
+	float: right;
+	margin: 10px 20px;
+}
+
+.footer ul.footerBtns li{
+	margin-left: 10px;
+	float: left;
+}
+
+
+ul.footerBtns li input.btn{
+	padding:5px;
+	font-size:14px;
+	cursor:pointer;
+	color:#FFFFFF;
+	letter-spacing:0.1em;
+	border-radius: 5px;		/* CSS3草案 */
+	-webkit-border-radius: 5px;	/* Safari,Google Chrome用 */
+	-moz-border-radius: 5px;	/* Firefox用 */
+	background: #4c4c4c; /* Old browsers */
+background: -moz-linear-gradient(top, #4c4c4c 44%, #2c2c2c 50%, #131313 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(44%,#4c4c4c), color-stop(50%,#2c2c2c), color-stop(100%,#131313)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #4c4c4c 44%,#2c2c2c 50%,#131313 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #4c4c4c 44%,#2c2c2c 50%,#131313 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #4c4c4c 44%,#2c2c2c 50%,#131313 100%); /* IE10+ */
+background: linear-gradient(to bottom, #4c4c4c 44%,#2c2c2c 50%,#131313 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 ); /* IE6-9 */
+}
+
+ul.footerBtns li input.btn:hover{
+	background: #7c7c7c; /* Old browsers */
+background: -moz-linear-gradient(top, #7c7c7c 0%, #4c4c4c 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7c7c7c), color-stop(100%,#4c4c4c)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #7c7c7c 0%,#4c4c4c 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #7c7c7c 0%,#4c4c4c 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #7c7c7c 0%,#4c4c4c 100%); /* IE10+ */
+background: linear-gradient(to bottom, #7c7c7c 0%,#4c4c4c 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7c7c', endColorstr='#4c4c4c',GradientType=0 ); /* IE6-9 */
+}
+
+.footer ul.footerNav{
+	background:#3F352D;
+	float: left;
+	width: 100%;
+}
+
+.footer ul.footerNav li{
+	float: left;
+}
+
+.footer ul.footerNav li a{
+	float: left;
+	margin: 10px 0px 0px 15px;
+	padding: 3px 15px;
+	background: #fff;
+	font-weight: bold;
+	color: #3F352D;
+	text-decoration: none;
+}
+
+.footer ul.footerNav li a:hover{
+	background: #D59758;
+	color: #ffffff;
+}
+.erorr {
+    background: #dedede;
+    min-height: 50px;
+    margin: 50px 0;
+	padding:20px 10px;
+    width: 780px;
+    border-radius: 10px;        /* CSS3草案 */
+    -webkit-border-radius: 10px;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 10px;   /* Firefox用 */
+}
+.erorrtext table{
+	margin:10px 25px;
+}
+
+.erorrtext td{
+	vertical-align:middle;
+	padding:20px 25px;
+}
+
+.erorrtext td p{
+	font-weight:bold;
+}
+#contents .erorrtext p {
+    color: #555555;
+	margin:10;
+	letter-spacing:0.3em;
+    font-size: 18px;
+    font-weight: ;
+}
+
+/*--------------------------------------------------
+    カスタム設問
+----------------------------------------------------*/
+.icon-question {
+	background:url(../images/oboManagement/icon-question.png) no-repeat 0 center;
+	background-size:16px;
+	padding-left:18px;
+	line-height:1.4em;
+}
+
+.icon-answer {
+	background:url(../images/oboManagement/icon-answer.png) no-repeat 0 2px;
+	background-size:16px;
+	padding-left:18px;
+	line-height:1.4em;
+}
+
+/*--------------------------------------------------
+    不正承認防止対応
+----------------------------------------------------*/
+#contents .cmn-iconLinkA input[type=submit] {
+	-webkit-appearance:none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+	background-color: #43aa65;
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #43aa65), color-stop(100%, #009432));
+	background: -webkit-linear-gradient(top, #43aa65, #009432);
+	background: -moz-linear-gradient(top, #43aa65, #009432);
+	background: -o-linear-gradient(top, #43aa65, #009432);
+	background: linear-gradient(top, #43aa65, #009432);
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*vertical-align: auto;
+	zoom: 1;
+	*display: inline;
+	border: 1px solid #009432;
+	font-size:11px;
+	color:#fff;
+	font-weight:normal;
+	border-radius: 3px;        /* CSS3草案 */
+  -webkit-border-radius: 3px;    /* Safari,Google Chrome用 */
+  -moz-border-radius: 3px;   /* Firefox用 */
+  margin:0 2px 0;
+  padding:1px 4px 1px;
+}
+
+#contents .cmn-iconLinkA input[type=submit]:hover {
+	opacity:0.8;
+	filter: alpha(opacity=80);        /* ie lt 8 */
+	-ms-filter: "alpha(opacity=80)";  /* ie 8 */
+	-moz-opacity:0.8;                 /* FF lt 1.5, Netscape */
+	-khtml-opacity: 0.8;              /* Safari 1.x */
+	zoom:1;
+}
+
+/*--------------------------------------------------
+    応募返信促進対応
+----------------------------------------------------*/
+
+/* oboManagement/index.html */
+
+  .status-info {
+    font-size:120%;
+    font-weight:bold;
+    color:#d71e00;
+    line-height:1.5;
+    padding:10px 10px 10px 36px;
+    margin-bottom:10px;
+    background-color:#ffdcd6;
+    background-image :url(../images/common/icon-notice.png);
+    background-repeat:no-repeat;
+    background-position:10px center;
+  }
+
+/* oboManagement/oboDetail.html */
+
+#contents div.prt-tableA table.address-tbl-inner th,
+#contents div.prt-tableA table.address-tbl-inner td,
+#contents div.prt-tableA table.tel-tbl-inner th,
+#contents div.prt-tableA table.tel-tbl-inner td,
+#contents div.prt-tableA table.school-tbl-inner th,
+#contents div.prt-tableA table.school-tbl-inner td,
+#contents div.prt-tableA table.licence-tbl-inner th,
+#contents div.prt-tableA table.licence-tbl-inner td {
+	padding: 4px;
+}
+
+#contents div.prt-tableA table.tel-tbl-inner td,
+#contents div.prt-tableA table td.mail-tbl
+ {
+	vertical-align:middle;
+}
+
+.toggleTel,
+.toggleMail {
+	-webkit-appearance:none;
+    -moz-appearance: none;
+    appearance: none;
+	border:1px solid #006AA3;
+	background-color:#0086cd;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	color:#fff;
+	width:50%;
+	font-size:12px;
+	padding:6px 0 6px;
+	height:32px;
+}
+
+.toggleTel img,
+.toggleMail img {
+	margin-right:4px;
+	margin-top:3px;
+}
+
+.toggleTel:hover,
+.toggleMail:hover {
+	filter: alpha(opacity=80);
+ 	-moz-opacity:0.80;
+	opacity:0.80;
+}
+
+.scroll-status-info {
+	position: absolute;
+  top: 42px;
+  right: 0;
+  width: 335px;
+  box-sizing: border-box;
+  padding: 0 8px 8px 32px;
+  font-size: 10px;
+  color:#fff;
+  background-color: #000126;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background-image :url(../images/common/icon-notice.png);
+  background-repeat:no-repeat;
+  background-position:10px 0;
+  line-height:1.5;
+}
+
+#contents .scroll-status-info p {
+	margin: 0;
+}
+/**************************************
+*  駅登録機能：検索距離関連
+**************************************/
+#stationSearchDistance,#stationSearchDistanceCustom{
+	height: 30px;
+	width: 60px;
+	font-size:1.3em;
+}
+.station-auto{
+	margin-top: 7px;
+}
+.station-auto-distance-range{
+	background : #D0D0D0;
+	padding : 11px 4px 3px 9px;
+}
+/**************************************
+*  駅登録機能：プログレス
+***************************************/
+.progress-wrap{
+	display : inline-flex;
+	margin : 12px;
+	width : 80%;
+	height : 10px;
+	background : grey;
+}
+.progress-bar{
+	width : 0%;
+	height : 100%;
+	background : #9DBD1A;
+}

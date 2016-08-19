@@ -1,0 +1,178 @@
+@charset "utf-8";
+
+/*!
+ * Common Styles
+ * 
+ * Prefix rule "cmn-"
+ * 
+ */
+
+
+
+/**
+ * cmn-iconLinkA
+ *
+ * @create: 2011-09-27 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents .cmn-iconLinkA span.noLink {
+	font-weight: normal;
+	font: #000000;
+}
+
+#contents p.cmn-iconLinkA {
+	position: relative;
+	margin: 0;
+	padding: 0 0 0 20px;
+	min-height: 17px;
+	font-weight: bold;
+	zoom: 1;
+}
+/* IE6 Only */
+* html #contents p.cmn-iconLinkA {
+	height: 17px;
+}
+
+#contents p.cmn-iconLinkA a {
+}
+
+#contents p.cmn-iconLinkA img.iconA {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 17px;
+	zoom: 1;
+}
+
+#contents .cmn-iconLinkA span.iconB {
+}
+/* IE6 Only */
+* html #contents .cmn-iconLinkA span.iconB {
+	display: inline;
+	zoom: 1;
+}
+
+
+
+/**
+ * cmn-iconLinkB
+ *
+ * @create: 2011-09-27 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents .cmn-iconLinkB {
+	margin: 0;
+	text-align: center;
+	font-weight: bold;
+}
+
+#contents .cmn-iconLinkB .iconA {
+	display: block;
+	width: 17px;
+	margin: 0 auto;
+}
+
+
+
+/**
+ * cmn-assistList
+ *
+ * @create: 2011-09-27 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents ul.cmn-assistList {
+	position: relative;
+	margin: -10px -10px 20px 0;
+	zoom: 1;
+}
+#contents ul.cmn-assistList:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+#contents ul.cmn-assistList li {
+	float: left;
+	display: inline;
+	margin: 5px 10px 0 0;
+	white-space: nowrap;
+}
+
+#contents ul.cmn-assistList li dfn {
+	margin: 0 3px 0 0;
+}
+/* IE6 Only */
+* html ##contents ul.cmn-assistList li dfn {
+	display: inline;
+	zoom: 1;
+}
+
+
+/**
+ * cmn-commentList
+ *
+ * @create: 2011-09-28 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents ul.cmn-commentList {
+	margin: 0;
+}
+
+#contents ul.cmn-commentList li {
+	padding: 0 0 0 12px;
+	min-height: 13px;
+	background: url(../images/common/icon_disc_01.gif) no-repeat 0 4px;
+}
+
+#contents ul.cmn-commentList2 li {
+	padding: 0 0 0 12px;
+	min-height: 13px;
+	background: url(../images/common/icon_disc_02.gif) no-repeat 0 4px;
+}
+
+#contents ul.cmn-commentList3 li {
+	padding: 0 0 0 12px;
+	min-height: 13px;
+	background: url(../images/common/icon_disc_03.gif) no-repeat 0 4px;
+}
+/**
+ * cmn-icon
+ *
+ * @create: 2011-00-00 [NAME@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents span.cmn-icon {
+	padding: 0 0 0 5px;
+}
+
+#contents span.cmn-icon img {
+	vertical-align: -0.2em;
+}
+
+
+
+/**
+ * cmn-ListA
+ *
+ * @create: 2011-10-04 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#contents ul.cmn-ListA {
+	margin: 0;
+}
+
+#contents ul.cmn-ListA li {
+	display: inline;
+	margin: 0 10px 0 0;
+}
+
+
+/*
+ * Release Notes:
+ * 2011-09-26 [hosono@skillpartners.co.jp]
+ *   @create: all
+ */

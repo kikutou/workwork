@@ -1,0 +1,197 @@
+@charset "utf-8";
+
+/* ログインフォーム
+----------------------------------------*/
+#contents .login-form {
+	width: 550px;
+	margin: 0 auto 30px;
+	padding: 10px 0 25px;
+	background: #f2f2f2;
+	border: 1px solid #e8e8e8;
+	border-bottom: 2px solid #cecece;
+}
+
+#contents h2 {
+	font-size: 20px;
+	color: #fff;
+	text-align: center;
+	background: #1d1f82;
+	padding: 12px;
+	width: 552px;
+	margin: 20px auto 0;
+	box-sizing: border-box;
+}
+
+#contents .login-form div {
+	width: 398px;
+	margin: 0 auto;
+}
+
+#contents .login-form div dl {
+	margin: 0;
+}
+
+#contents .login-form div dl dt {
+	margin: 30px 0 5px 0;
+	font-size: 16px;
+	font-weight: normal;
+}
+
+#contents .login-form div dl dt span {
+	margin-left: 20px;
+	font-size: 12px;
+	color: #555555;
+}
+
+#contents .login-form div dl dd {
+	width: 390px;
+	margin: 0;
+	padding: 0;
+}
+
+#contents .login-form div dl dd .input-box {
+	width: 100%;
+	background: #e2e2e2;
+	box-sizing: border-box;
+	margin-bottom: 11px;
+	padding: 3px;
+	border: 1px solid #dddddd;
+	border-radius: 2px;
+}
+
+#contents .login-form div dl dd input.textbox,
+#contents .login-form div dl dd input.password {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 10px 0;
+	border: 1px solid #8E8E8F;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: bold;
+	font-family: Meiryo, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", Arial, Sans-serif;
+	letter-spacing: 0.5px;
+	box-shadow: rgba(204, 204, 204, 0.7) 0px 0px 2px 1px inset;
+	-webkit-box-shadow: rgba(204, 204, 204, 0.7) 0px 0px 2px 1px inset;
+	-moz-box-shadow: rgba(204, 204, 204, 0.7) 0px 0px 2px 1px inset;
+}
+
+#contents .login-form div dl dd .input-box span {
+	display: inline-block;
+	width: 7%;
+	vertical-align: -4px;
+	font-size: 20px;
+	font-weight: bold;
+	text-align: center;
+	margin-top: 3px;
+	height: 20px;
+}
+
+#contents .login-form div dl dd input.textbox {
+	width: 93%;
+}
+
+#contents .login-form div dl dd input.password {
+	width: 100%;
+}
+
+#contents .login-form div dl dd input.textbox:hover,
+#contents .login-form div dl dd input.password:hover {
+	box-shadow: rgba(52, 101, 209, 0.3) 0px 0px 2px 2px;
+	-webkit-box-shadow: rgba(52, 101, 209, 0.3) 0px 0px 2px 2px;
+	-moz-box-shadow: rgba(52, 101, 209, 0.3) 0px 0px 2px 2px;
+}
+
+#contents .login-form div dl dd input.textbox:focus,
+#contents .login-form div dl dd input.password:focus {
+	background: #fffdde;
+	box-shadow: rgba(52, 101, 209, 0.3) 0px 0px 2px 1px;
+	-webkit-box-shadow: rgba(52, 101, 209, 0.3) 0px 0px 2px 1px;
+	-moz-box-shadow: rgba(52, 101, 209, 0.3) 0px 0px 2px 1px;
+}
+
+#contents .login-form div dl dd p {
+	margin-bottom: 10px;
+}
+
+#contents .login-form div dl dd label {
+	margin-top: 15px;
+	font-size: 14px;
+}
+
+#contents .login-form div .btn-area {
+	text-align: center;
+}
+
+#contents .login-form div .btn-area input,
+#contents .login-form div .btn-area noscript a {
+	width: 250px;
+	margin: 45px auto 35px;
+	padding: 12px;
+	background: #aaa;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	font-size: 18px;
+	font-weight: bold;
+	text-align: center;
+	background: #5355a6;
+	background: -moz-linear-gradient(top, #5355a6 0%, #1d1f82 100%);
+	background: -webkit-linear-gradient(top, #5355a6 0%,#1d1f82 100%);
+	background: linear-gradient(to bottom, #5355a6 0%,#1d1f82 100%);
+	filter: none;
+	-webkit-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 1.5), 0px 1px 1px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 1.5), 0px 1px 1px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 1.5), 0px 1px 1px rgba(0, 0, 0, 0.2);
+  cursor : pointer;
+}
+
+#contents .login-form div .btn-area noscript a {
+	display: inline-block;
+	padding: 17px;
+	box-sizing: border-box;
+	text-decoration: none;
+}
+
+#contents .login-form div .btn-area .btn-wrap {
+	display: inline;
+}
+#contents .login-form div .btn-area .btn-wrap:hover {
+	opacity: 0.8;
+}
+
+#contents .login-form div dl dd p.error-message {
+	margin: 0;
+	background: #ffcfcf;
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+#contents #messages li {
+	margin: 35px 0 0;
+	background: #ffcfcf;
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+	line-height: 24px;
+}
+
+#contents #messages li span {
+	color: #333 !important;
+}
+
+#contents .login-form div .btn-area p {
+	margin-bottom: 20px;
+	padding: 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+#contents .login-form div .btn-area p a {
+	text-decoration: underline;
+}
+
+#contents .login-form div .btn-area p a:hover {
+	color: #006ff4;
+}

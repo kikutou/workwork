@@ -1,0 +1,458 @@
+@charset "utf-8";
+/*----------------------------------------------------------
+
+
+	【募集原稿 詳細ページ】	list.htmlのデザインcss
+
+
+----------------------------------------------------------*/
+body{
+	margin:0;
+	padding:0;
+	line-height:1.6em;
+	letter-spacing:0.05em;
+}
+p{
+	letter-spacing:0.0.5em;
+	line-height:1.6em;
+}
+.wrapper{
+	width:800px;
+	margin:0 auto;
+	padding-top:20px;
+}
+/*----------------------------------------------------------
+
+				絞り込みエリア
+
+----------------------------------------------------------*/
+.retrievalResult{
+	background:url(../../img/2013a/search/navi_bg.png) repeat 0 0;
+	padding:10px;
+	width:780px;
+	margin:30px 0;
+}
+
+/*絞り込みタイトル
+-----------------------------------*/
+.retrievalResult h2{
+	background: #FFF;
+	font-size:19px;
+	padding:10px 14px;
+	font-weight:bold;
+	color:#56837C;
+	letter-spacing:0.1em;
+	margin-bottom:10px;
+}
+.retrievalResult span,
+.retrievalResult span a{
+	float:right;
+	display:block;
+}
+.retrievalResult span{
+	margin:-3px;
+}
+.retrievalResult span a{
+	font-size:12px;
+	letter-spacing:0.05em;
+	text-decoration:none;
+	color:#FFF;
+	background:#F0AA3F;
+	padding:2px 15px;
+}
+.retrievalResult span a:before{
+	content:'＋';
+	padding:0px 4px 1px 0;
+}
+.retrievalResult span a:hover{
+	background:#FFBD00;
+	color:#333;
+}
+
+/*絞り込み内容
+-----------------------------------*/
+.retrievalResultArea{
+	background:#F9F8F2;
+	padding:10px;
+	box-shadow:0 0 2px #877669 inset;
+}
+
+.koyo{
+	padding:10px;
+	margin-bottom:10px;
+}
+
+
+.retrievalResultArea table{
+	margin-bottom:8px;
+}
+.koyo table{
+	margin-bottom:0px;
+}
+
+.retrievalResultArea th{
+	padding:5px 0 0  7px;
+	letter-spacing:0.1em;
+	font-weight:bold;
+	text-align: left;
+	font-size:15px;
+	width:110px;
+	border-right:1px solid #CCC;
+	text-shadow:1px 1px #FFFFFF;
+}
+
+
+.retrievalResultArea td{
+	padding:5px 0 0  10px;
+}
+
+.retrievalResultArea td ul li,
+.retrievalResultArea td ul li a{
+	float:left;
+}
+
+.retrievalResultArea td ul li a{
+	margin:0 0 6px 10px;
+	font-size:12px;
+	padding:0px 12px;
+	color:#444;
+	text-decoration:none;
+	letter-spacing:0;
+	box-shadow:1px 1px 2px #888;
+	background: #ffffff;
+}
+
+.retrievalResultArea td ul li a:hover,
+.retrievalResultArea td ul li.active{
+	margin:0 0 6px 10px;
+	font-size:12px;
+	padding:0px 12px;
+	background:#FFBD00;
+	letter-spacing:0;
+	box-shadow:1px 1px 2px #D35500 inset;
+}
+/*----------------------------------------------------------
+
+					listbox
+
+----------------------------------------------------------*/
+.listbox{
+	width:796px;
+	border:#B2B2B2 solid 1px;
+	padding:1px;
+	margin:20px 0 0px;
+}
+
+/*----------------------------------------------------------
+
+					titleArea
+
+----------------------------------------------------------*/
+.titleArea{
+	margin:0px;
+	position:relative;
+	}
+.titleArea h2{
+	font-size:15px;
+	font-weight:bold;
+	color:#FFFFFF;
+	display: inline-block;
+	width:756px;
+	letter-spacing:0.07em;
+	background:url(../../img/2013a/search/navi_bg.png) repeat 0 0;
+	padding:15px 20px;
+    border-radius: 4px 4px 0 0;        /* CSS3草案 */
+    -webkit-border-radius: 4px 4px 0 0;    /* Safari,Google Chrome用 */
+    -moz-border-radius: 4px 4px 0 0;   /* Firefox用 */
+}
+.titleArea h2 a{
+	width:450px;
+	display: inline-block;
+	color:#FFFFFF;
+	vertical-align:middle;
+	text-decoration:none;
+	outline:none;
+}
+.titleArea h2 a:hover{
+	color:#fff100;
+}
+.titleArea h2 img{
+	margin:-5px 8px -7px -40px;
+	vertical-align:middle;
+}
+
+.titleArea h2 span.company{
+	font-size:12px;
+	font-weight: normal;
+	float:right;
+	max-width: 300px;
+	letter-spacing:0;
+	*margin-top:-25px;/*ie対応*/
+}
+.EndDate{
+	margin:5px 0;
+	line-height:1;
+	font-size:11px;
+	color: #999;
+	text-align:right;
+}
+
+.listbox h2.copy{
+	background:#EEEAE7;
+	color:#69564F;
+	font-weight:bold;
+	font-size:14px;
+	padding:10px 20px;
+}
+
+/*----------------------------------------------------------
+
+					recruitArea　写真+文章
+
+----------------------------------------------------------*/
+#appealArea{
+	padding:15px 20px;
+}
+.appeal dl{
+	float:left;
+	width:100%;
+}
+.appeal dl dt{
+	width:264px;
+	float:left;
+}
+.appeal dl dt a{
+	width:256px;
+	float:left;
+	margin-bottom:5px;
+	height:192px;
+	overflow:hidden;
+	outline:none;
+	padding:1px;
+	border:#CCCCCC 1px solid;
+}
+.appeal dl dt img{
+	width:256px;
+	float:left;
+}
+.appeal dl dt a img:hover{
+filter:alpha(opacity=70);
+-moz-opacity: 0.7;
+opacity: 0.7;
+}
+
+.appeal dl dt .iconArea{
+	width:264px;
+	float:left;
+}
+.appeal dl dt .iconArea ul li{
+	float:left;
+}
+.appeal dl dt .iconArea ul li img{
+	width:80px;
+	float:left;
+	margin:1px 3px;
+	border:none;
+}
+
+/*求人情報
+----------------------*/
+.appeal dl dd{
+	width:480px;
+	margin-left:12px;
+	float:right;
+}
+.appeal dl dd table{
+	width:100%;
+	min-height:220px;
+}
+.appeal dl dd table tr{
+	border-top:1px #D2D3D3 solid;
+	padding-top:3px;
+}
+.appeal dl dd table th{
+	width:68px;
+	padding:10px;
+	font-weight:bold;
+	text-shadow:1px 1px 0 #FFF;
+	vertical-align: middle;
+	border-left:5px solid #137EB7;
+	background:url(../../img/2013a/search/list_table_bg.gif) repeat 0 0;
+}
+.appeal dl dd table td{
+	padding:5px;
+	vertical-align:middle;
+}
+
+/*フリープラン 求人情報
+----------------------*/
+.appeal dl.free dt{
+	width:100%;
+	margin-left:12px;
+	float:left;
+	margin:0 0 10px 0;
+}
+.appeal dl.free dt .iconArea{
+	width:100%;
+	floatleft;
+}
+
+.appeal dl.free dt .iconArea ul li img{
+	width:80px;
+	float:left;
+	margin:1px 1px;
+	border:none;
+}
+.appeal dl.free dd{
+	width:100%;
+	margin-left:12px;
+	float:left;
+	margin:0;
+}
+.appeal dl dd table{
+	width:100%;
+	min-height:220px;
+}
+.appeal dl dd table tr{
+	border-top:1px #D2D3D3 solid;
+	padding-top:3px;
+}
+.appeal dl dd table th{
+	width:68px;
+	padding:10px;
+	font-weight:bold;
+	text-shadow:1px 1px 0 #FFF;
+	vertical-align: middle;
+	border-left:5px solid #56837c;
+	background:url(../../img/2013a/search/list_table_bg.gif) repeat 0 0;
+}
+.appeal dl dd table td{
+	padding:5px;
+	vertical-align:middle;
+}
+
+
+/*----------------------------------------------------------
+
+					エントリーボタン
+
+----------------------------------------------------------*/
+.entryBtn{
+	position:relative;
+	width:100%;
+	height:34px;
+	padding:15px 0;
+	background:#EEEAE7;
+}
+ul.btn{
+}
+ul.btn li,
+ul.btn li a{
+}
+ul.btn li{
+	position:relative;
+}
+
+/*応募するボタン
+------------------------*/
+ul.btn li.entry{
+	position:absolute;
+	left:50%;
+}
+ul.btn li.entry a{
+	background:url(../../img/2013a/search/btn_detail.gif) no-repeat 0 0;
+	width:270px;
+	height:34px;
+	margin-left:-135px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.entry a:hover{
+	background:url(../../img/2013a/search/btn_detail.gif) no-repeat 0 -34px;
+}
+/*検討中リスト
+------------------------*/
+ul.btn li.mull{
+	position:absolute;
+	right:20px;
+}
+ul.btn li.mull a{
+	background:url(../../img/2013a/search/attachbtn_mull.png) no-repeat 0 0;
+	width:197px;
+	height:34px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.mull a:hover{
+	background:url(../../img/2013a/search/attachbtn_mull.png) no-repeat 0 -34px;
+}
+ul.btn li.mulldel{
+	position:absolute;
+	right:0;
+}
+ul.btn li.mulldel a{
+	background:url(../../img/2013a/search/attachbtn_mulldel.png) no-repeat 0 0;
+	width:197px;
+	height:34px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.mulldel a:hover{
+	background:url(../../img/2013a/search/attachbtn_mulldel.png) no-repeat 0 -34px;
+}
+
+/*------------------------------------------------------------------------
+
+					20150207　時間帯検索
+
+------------------------------------------------------------------------*/
+
+.empTime {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+}
+
+.empTime li {
+	display:inline-block;
+	height:22px;
+	line-height:22px;
+	width:70px;
+	text-align:center;
+	margin-right:5px;
+	margin-bottom:5px;
+	color:#FFF;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #78BEE5), color-stop(1, #51AADD));
+	background:-moz-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:-webkit-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:-o-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:-ms-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:linear-gradient(to bottom, #78BEE5 5%, #51AADD 100%);
+	background-color:#51AADD;
+	border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.empTime li:nth-child(6),.empTime li:nth-child(7){
+	margin-bottom:0;
+}
+
+/*------------------------------------------------------------------------
+
+					20150223　Tel応募アイコン
+
+------------------------------------------------------------------------*/
+.oboTelOnly {
+	position:absolute;
+	top:-25px;
+	right:10px;
+	text-indent:-9999px;
+	background:url(../../img/2013a/search/icon_telonly.png) no-repeat 0 center;
+	width:111px;
+	height:25px;
+}

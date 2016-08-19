@@ -1,0 +1,440 @@
+@charset "utf-8";
+
+/*!
+ * textdecorations.css
+ *
+ * textdecorations（基本文字装飾設定）と、structureの設定。
+ * structureは、ページ・テンプレートとなる大枠部分、
+ * 背景・ヘッダー・フッター・大枠のカラム分けなどの設定ファイル。
+ * CSSで使う背景画像は、共通のアイコン等以外すべて、
+ * /resources/img/base 以下に格納する。
+ */
+
+
+
+/**
+ * textdecorations
+ *
+ * 基本文字装飾設定
+ * @create: 2011-09-26 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+
+/**
+ * 見出し設定
+ *
+ */
+
+#contents h1 {
+	font-size: 180%;
+	line-height: 1.334;
+}
+
+#contents h2 {
+	font-size: 160%;
+	line-height: 1.494;
+}
+
+#contents h3 {
+	font-size: 140%;
+	line-height: 1.429;
+}
+
+#contents h4,
+#contents h5,
+#contents h6 {
+	font-size: 120%;
+	line-height: 1.464;
+}
+
+
+.headwhite{
+	color:#fff;
+	font-weight:bold;
+	letter-spacing:0.1em;
+}
+
+/**
+ * 基本文字設定
+ *
+ */
+
+#contents p, #contents address ,#contents th, #contents td {
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+#contents li, #contents dt, #contents dd {
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+#contents dt {
+	font-weight: bold;
+}
+
+/* Inner Reset  */
+#contents th p, #contents th li, #contents th dt, #contents th dd, #contents th th, #contents th td, #contents th input,
+#contents td p, #contents td li, #contents td dt, #contents td dd, #contents td th, #contents td td, #contents td input,
+#contents li p, #contents li li, #contents li dt, #contents li dd, #contents li th, #contents li td,
+#contents dt p, #contents dt li, #contents dt dt, #contents dt dd,
+#contents dd p, #contents dd li, #contents dd dt, #contents dd dd {
+	font-size: 100%;
+}
+
+
+/**
+ * 基本ウェイト・スタイル設定
+ *
+ */
+
+#contents strong, #contents dfn,
+#contents h1, #contents h2, #contents h3, #contents h4, #contents h5, #contents h6 {
+	font-weight: bold;
+}
+
+#contents em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/**
+ * 基本余白設定
+ *
+ */
+
+#contents h1,
+#contents h2 {
+	margin: 0 0 15px;
+}
+
+#contents h3,
+#contents h4,
+#contents h5,
+#contents h6 {
+	margin: 0 0 15px;
+}
+
+#contents p, #contents pre, #contents ul, #contents ol, #contents dl {
+	margin: 0 0 10px;
+}
+
+
+
+/**
+ * input設定
+ *
+ */
+
+#contents input {
+	position: relative;
+	vertical-align: middle;
+	line-height: 1.5;
+}
+
+
+/* Textbox */
+#contents input.textboxA {
+	padding: 2px 2px 3px 4px;
+	width: 614px;
+}
+/* IE6 Only */
+* html #contents input.textboxA {
+	padding: 0 2px 4px 4px;
+	width: 594px;
+}
+/* IE7 Only */
+*:first-child + html #contents input.textboxA {
+	width: 594px;
+}
+#contents input.textboxB {
+	padding: 0 2px 4px 4px;
+	width: 205px;
+}
+
+
+/* Textarea */
+#contents textarea {
+	position: relative;
+	padding: 2px 2px 3px 4px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+#contents textarea.textareaA {
+	width: 614px;
+}
+#contents textarea.textareaB {
+	width: 540px;
+}
+/* IE6 Only */
+* html #contents textarea.textareaA {
+	width: 594px;
+}
+/* IE7 Only */
+*:first-child + html #contents textarea.textareaA {
+	width: 594px;
+}
+
+
+/* Radio */
+#contents label.radio {
+}
+
+#contents label.radio input {
+	margin: 0 3px 0 0;
+	width: 1em;
+}
+
+
+/* Checkbox */
+#contents label.checkbox {
+}
+
+#contents label.checkbox input {
+	width: 1em;
+}
+
+
+/* Select */
+#contents select {
+}
+
+
+
+
+/*
+ * Release Notes:
+ *
+ * 2011-09-29 [hosono@skillpartners.co.jp]
+ *   @create: all
+ */@charset "utf-8";
+
+/*!
+ * textdecorations.css
+ *
+ * textdecorations（基本文字装飾設定）と、structureの設定。
+ * structureは、ページ・テンプレートとなる大枠部分、
+ * 背景・ヘッダー・フッター・大枠のカラム分けなどの設定ファイル。
+ * CSSで使う背景画像は、共通のアイコン等以外すべて、
+ * /resources/img/base 以下に格納する。
+ */
+
+
+
+/**
+ * textdecorations
+ *
+ * 基本文字装飾設定
+ * @create: 2011-09-26 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+
+/**
+ * 見出し設定
+ *
+ */
+
+#contents h1 {
+	font-size: 180%;
+	line-height: 1.334;
+}
+
+#contents h2 {
+	font-size: 160%;
+	line-height: 1.494;
+}
+
+#contents h3 {
+	font-size: 140%;
+	line-height: 1.429;
+}
+
+#contents h4,
+#contents h5,
+#contents h6 {
+	font-size: 120%;
+	line-height: 1.464;
+}
+
+
+
+/**
+ * 基本文字設定
+ *
+ */
+
+#contents p, #contents address ,#contents th, #contents td {
+	font-size: 120%;
+	line-height: 1.5;
+}
+
+#contents li, #contents dt, #contents dd {
+	font-size: 120%;
+	line-height: 1.4;
+}
+
+#contents dt {
+	font-weight: bold;
+}
+
+/* Inner Reset  */
+#contents th p, #contents th li, #contents th dt, #contents th dd, #contents th th, #contents th td,
+#contents td p, #contents td li, #contents td dt, #contents td dd, #contents td th, #contents td td,
+#contents li p, #contents li li, #contents li dt, #contents li dd, #contents li th, #contents li td,
+#contents dt p, #contents dt li, #contents dt dt, #contents dt dd,
+#contents dd p, #contents dd li, #contents dd dt, #contents dd dd {
+	font-size: 100%;
+}
+
+
+/**
+ * 基本ウェイト・スタイル設定
+ *
+ */
+
+#contents strong, #contents dfn,
+#contents h1, #contents h2, #contents h3, #contents h4, #contents h5, #contents h6 {
+	font-weight: bold;
+}
+
+#contents em {
+	font-weight: bold;
+	font-style: normal;
+}
+
+
+/**
+ * 基本余白設定
+ *
+ */
+
+#contents h1,
+#contents h2 {
+	margin: 0 0 15px;
+}
+
+#contents h3,
+#contents h4,
+#contents h5,
+#contents h6 {
+	margin: 10px 0 0 0;
+}
+
+#contents p, #contents pre, #contents ul, #contents ol, #contents dl {
+	margin: 0 0 10px;
+}
+
+
+
+/**
+ * input設定
+ *
+ */
+
+#contents input {
+	position: relative;
+	vertical-align: middle;
+	font-size: 100%;
+}
+
+
+/* Textbox */
+#contents input.textboxA {
+	padding: 0 2px 4px 4px;
+	width: 614px;
+	min-height: 1.335em;
+}
+/* IE6 Only */
+* html #contents input.textboxA {
+	width: 594px;
+}
+/* IE7 Only */
+*:first-child + html #contents input.textboxA {
+	width: 594px;
+}
+#contents input.textboxB {
+	padding: 0 2px 4px 4px;
+	width: 205px;
+	min-height: 1.5em;
+}
+
+
+/* Textarea */
+#contents textarea {
+	position: relative;
+	padding: 2px 2px 3px 4px;
+	width: 100%;
+	vertical-align: middle;
+}
+
+#contents textarea.textareaA {
+	width: 614px;
+}
+/* IE6 Only */
+* html #contents textarea.textareaA {
+	width: 594px;
+}
+/* IE7 Only */
+*:first-child + html #contents textarea.textareaA {
+	width: 594px;
+}
+
+
+/* Radio */
+#contents label {
+	font-size: 100%;
+}
+
+#contents label.radio input {
+	margin: 0 3px 0 0;
+	width: 1.5em;
+}
+
+
+/* Checkbox */
+#contents label.checkbox {
+}
+
+#contents label.checkbox input {
+	width: 1em;
+}
+
+
+/* Select */
+#contents select {
+}
+
+
+
+
+/*
+ * Release Notes:
+ *
+ * 2011-09-29 [hosono@skillpartners.co.jp]
+ *   @create: all
+ */
+
+
+
+#contents .attention h4 {
+	font-size: 120%;
+	line-height: 1.464;
+}
+
+
+#contents .errorMessage02 p {
+    font-size: 120%;
+	font-weight: bold;
+	color: #D71E00;
+	}
+
+
+#contents .errorMessage02 ul#allMessages li{
+    font-size: 120%;
+	font-weight: bold;
+	color: #D71E00;
+}

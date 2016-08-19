@@ -1,0 +1,1266 @@
+@charset "utf-8";
+
+/* =======================================
+
+    Table CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+
+    -Table 01
+
+    -Table 02
+
+    -Table 03
+
+    -Form Table
+
+    -login Table
+
+    -Mail Table
+
+========================================== */
+
+/* Table 01
+========================================== */
+#contents .prt-table01 {
+    margin: 0 0 20px;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-table01 table {
+        width: 100%;
+        border: solid #8E8E8F;
+        border-width: 1px 0 0 1px;
+        border-collapse: separate;
+    }
+    * html #contents .prt-table01 table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-table01 table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-table01 table tr th,
+        #contents .prt-table01 table tr td {
+/*          padding: 0 18px 9px 18px;*/
+            padding: 0 10px 10px;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-table01 table tr th {
+            padding-top: 10px;
+            background: #EEEFE9;
+            font-weight: bold;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-table01 table tr td {
+        }
+
+        #contents .prt-table01 table tr td p,
+        #contents .prt-table01 table tr td ul,
+        #contents .prt-table01 table tr td ol,
+        #contents .prt-table01 table tr td dl {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        #contents .prt-table01 table tr td ul li ul,
+        #contents .prt-table01 table tr td ul li ol,
+        #contents .prt-table01 table tr td ol li ul,
+        #contents .prt-table01 table tr td ol li ol {
+            margin-top: 4px;
+        }
+
+
+
+/* Table 02
+========================================== */
+#contents .prt-table02 {
+    margin: 0 0 20px;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-table02 table {
+        width: 100%;
+        border: solid #8E8E8F;
+        border-width: 1px 0 0 1px;
+        border-collapse: separate;
+    }
+    * html #contents .prt-table02 table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-table02 table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-table02 table tr th,
+        #contents .prt-table02 table tr td {
+            padding: 8px 10px 7px 10px;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-table02 table tr th {
+            background: #666;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-table02 table tr td {
+            background: #FFF;
+        }
+
+        #contents .prt-table02 table tr td .prt-linkList {margin: 0;}
+
+
+/* Table 03
+========================================== */
+#contents .prt-table03 {
+    margin: 0 0 10px;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-table03 table {
+        width: 100%;
+        border: solid #8E8E8F;
+        border-width: 0 1px 1px 0;
+        border-collapse: separate;
+    }
+    * html #contents .prt-table03 table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-table03 table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-table03 table tr th,
+        #contents .prt-table03 table tr td {
+            padding: 8px 10px 7px 10px;
+            border: solid #8E8E8F;
+            border-width: 1px 0 0 1px;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-table03 table tr th {
+            background: #175DF6;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-table03 table tr td {
+            vertical-align: middle;
+            background: #FFF;
+        }
+
+        /* Checkbox
+        ---------------------------------------- */
+        #contents .prt-table03 table tr td.checkbox {
+            background: #D4D5D5;
+        }
+
+        #contents .prt-table03 table tr td.checkbox label.checkbox {
+            display: block;
+            margin: 0;
+        }
+
+        #contents .prt-table03 table tr td.checkbox label.checkbox input {
+            margin: 0;
+        }
+
+
+/* Form Table
+========================================== */
+#contents .prt-formTable {
+    margin: 0 0 10px;
+    zoom: 1;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-formTable table {
+        position: relative;
+        width: 100%;
+        //border: solid #8E8E8F;
+        //border-width: 0 1px 1px 0;
+            border: solid #8E8E8F;
+            border-width: 1px 1px 0 1px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    * html #contents .prt-formTable table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-formTable table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-formTable table tr th,
+        #contents .prt-formTable table tr td {
+            padding: 5px 15px 5px 15px;
+            border-bottom: 1px solid #8E8E8F;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-formTable table tr th {
+            background: #F0F1F1;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+            font-weight: bold;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-formTable table tr td {
+            background: #FFF;
+            border: solid #8E8E8F;
+            border-width: 0 0 1px 0;
+        }
+
+    /* border none
+    ---------------------------------------- */
+    #contents .prt-formTable table tr.bd-none {
+    }
+
+    #contents .prt-formTable table tr.bd-none th {
+    }
+
+    #contents .prt-formTable table tr.bd-none td {
+        padding-top: 7px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    /* border dodted
+    ---------------------------------------- */
+    #contents .prt-formTable table tr.bd-dotted {
+    }
+
+    #contents .prt-formTable table tr.bd-dotted th {
+        padding-bottom: 0;
+    }
+
+    #contents .prt-formTable table tr.bd-dotted td {
+        padding-top: 8px;
+        border-bottom: none;
+        background: #FFF url(../../images/common/line_dotted_01.gif) repeat-x -1px 100%;
+
+    }
+
+        /* Reset
+        ---------------------------------------- */
+        #contents .prt-formTable table tr td p,
+        #contents .prt-formTable table tr td ul,
+        #contents .prt-formTable table tr td ol,
+        #contents .prt-formTable table tr td dl,
+        #contents .prt-formTable table tr td .prt-list01,
+        #contents .prt-formTable table tr td .prt-list02,
+        #contents .prt-formTable table tr td .prt-grayBox,
+        #contents .prt-formTable table tr td .prt-selectList {
+            margin-bottom: 0;
+        }
+
+            /* Notes
+            ---------------------------------------- */
+            #contents .prt-formTable table tr td p.notes {
+                margin: 5px 0 0;
+                font-size: 83.4%;
+            }
+
+            /* Address
+            ---------------------------------------- */
+            #contents .prt-formTable table span.address {
+                margin: 0 0 0 8px;
+            }
+
+
+            /* Necessary
+            ---------------------------------------- */
+            #contents .prt-formTable table tr th span.necessary,
+            #contents .prt-formTable table tr td span.necessary {
+                margin: 0 5px;
+            }
+
+            #contents .prt-formTable table tr th span.necessary img,
+            #contents .prt-formTable table tr td span.necessary img {
+                vertical-align: middle;
+            }
+
+            /* Public
+            ---------------------------------------- */
+            #contents .prt-formTable table tr th span.public,
+            #contents .prt-formTable table tr td span.public {
+                margin: 0 5px;
+            }
+
+            #contents .prt-formTable table tr th span.public img,
+            #contents .prt-formTable table tr td span.public img {
+                vertical-align: middle;
+            }
+
+            /* Attention02
+            ---------------------------------------- */
+            #contents .prt-formTable table tr th span.attention02{
+				font-size:10px;
+				color:#666;
+				display:block;
+				padding:5px 0 10px;
+			}
+            /* Attention03
+            ---------------------------------------- */
+            #contents .prt-formTable table span.attention03{
+				font-size:10px;
+				color:#666;
+				display:block;
+				padding:5px 0 10px;
+			}
+            /* Attention04
+            ---------------------------------------- */
+            #contents .prt-formTable table span.attention04{
+				font-size:10px;
+				color:#d90040;
+				display:block;
+				padding:5px 0 10px;
+			}
+
+/* login Table
+========================================== */
+#contents .prt-loginTable {
+    margin: 0 auto 20px;
+    padding: 0 0 2px;
+    width: 454px;
+    background: url(../images/parts/loginTable_bg_05.png) no-repeat 0 100%;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-loginTable table {
+        width: 100%;
+        border-collapse: separate;
+    }
+    * html #contents .prt-loginTable table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-loginTable table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Thead
+        ---------------------------------------- */
+        #contents .prt-loginTable table thead tr th {
+            font-weight: bold;
+            text-align: center;
+            border: solid #8E8E8F;
+            border-width: 1px 1px 0 1px;
+        }
+
+        #contents .prt-loginTable table thead tr th .inner {
+            display: block;
+            padding: 3px 10px;
+            border: 1px solid #FFF;
+            background: url(../images/parts/loginTable_bg_03.png) repeat;
+        }
+
+        /* Tbody
+        ---------------------------------------- */
+        #contents .prt-loginTable table tbody tr th {
+            width: 134px;
+            background: #F0F1F1 url(../images/parts/loginTable_bg_01.png) repeat-y;
+            text-align: center;
+            font-weight: bold;
+        }
+
+            /* Th
+            ---------------------------------------- */
+            #contents .prt-loginTable table tbody tr th .inner {
+                display: block;
+                padding: 10px 5px 3px;
+                background: url(../images/parts/loginTable_bg_02.png) no-repeat;
+            }
+
+            #contents .prt-loginTable table tbody tr th.first .inner {
+                background-position: 0 -1px;
+            }
+
+            /* Td
+            ---------------------------------------- */
+            #contents .prt-loginTable table tbody tr td {
+                background: #FFF url(../images/parts/loginTable_bg_04.png) no-repeat;
+                border-right: 1px solid #8E8E8F;
+                vertical-align: middle;
+            }
+
+            /* First
+            ---------------------------------------- */
+            #contents .prt-loginTable table tbody tr td.first {
+                background-position: 0 -1px;
+            }
+
+                /* Inner
+                ---------------------------------------- */
+                #contents .prt-loginTable table tbody tr td .inner {
+                    display: block;
+                    padding: 6px 5px 3px;
+                }
+
+                #contents .prt-loginTable table tbody tr td.first .inner {
+                    border-bottom: 0;
+                }
+
+                /* Input
+                ---------------------------------------- */
+                #contents .prt-loginTable table tbody tr td input.textbox,
+                #contents .prt-loginTable table tbody tr td input.password {
+                    width: 270px;
+                }
+
+
+/* Mail Table
+========================================== */
+#contents .prt-mailTable {
+    margin: 0 0 10px;
+    padding: 5px;
+    background: #E0E0E1;
+    zoom: 1;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-mailTable table {
+        border-bottom: 1px solid #8E8E8F;
+    }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr th {
+            padding: 5px 8px 4px;
+            background: #9A9A9B;
+            border-left: 1px solid #E0E0E1;
+            color: #FFF;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            zoom: 1;
+        }
+
+        #contents .prt-mailTable table tr th.first {
+            border-left: none;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr td {
+            padding: 0 0 0 1px;
+            background: #FFF url(../../images/common/line_dotted_03.gif) repeat-y;
+        }
+
+
+        #contents .prt-mailTable table tr td.separate {
+            padding: 0;
+            height: 6px;
+            background: #E0E0E1;
+            border-bottom: 1px solid #8E8E8F;
+        }
+        /* IE6 Only */
+        * html #contents .prt-mailTable table tr td.separate { height: 5px;}
+
+            /* Inner
+            ---------------------------------------- */
+            #contents .prt-mailTable table tr td .inner {
+                display: block;
+                padding: 6px 8px 4px;
+                background: url(../../images/common/line_dotted_01.gif) repeat-x;
+            }
+
+            #contents .prt-mailTable table tr td .inner span.mailicon {
+                display: block;
+                padding: 3px 0;
+            }
+
+        /* First Unit
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr.firstUnit td {
+        }
+
+        #contents .prt-mailTable table tr.firstUnit td .inner {
+            background-image: none;
+        }
+
+        /* First
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr td.first {
+            background-image: url(../../images/common/line_solid_01.gif);
+            text-align: center;
+        }
+        #contents .prt-mailTable table tr td.first .inner {
+        }
+
+        /* Last
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr td.last {
+            border-right: 1px solid #8E8E8F;
+			text-align:center;
+        }
+        #contents .prt-mailTable table tr td.last a{
+			background:url(../../images/member/ico_message_deletion.gif) no-repeat top center;
+			padding:20px 0 0 0;
+		}
+        #contents .prt-mailTable table tr td.last span.deleteicon {
+			display:block;
+			padding:26px 0 0 0;
+		}
+
+
+
+    /* acount Table
+    ---------------------------------------- */
+    #contents .acountTable {
+        position: relative;
+        width: 100%;
+        //border: solid #8E8E8F;
+        //border-width: 0 1px 1px 0;
+            border: solid #8E8E8F;
+            border-width: 1px 1px 0 1px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    * html #contents .prt-formTable table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-formTable table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .acountTable tr th,
+        #contents .acountTable tr td {
+            padding: 5px 15px 5px 15px;
+            border-bottom: 1px solid #8E8E8F;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .acountTable tr th {
+            background: #F0F1F1;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+            font-weight: bold;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .acountTable tr td {
+            background: #FFF;
+            border: solid #8E8E8F;
+            border-width: 0 0 1px 0;
+        }
+
+    /* border none
+    ---------------------------------------- */
+    #contents .acountTable tr.bd-none {
+    }
+
+    #contents .acountTable tr.bd-none th {
+    }
+
+    #contents .acountTable tr.bd-none td {
+        padding-top: 7px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    /* border dodted
+    ---------------------------------------- */
+    #contents .acountTable tr.bd-dotted {
+    }
+
+    #contents .acountTable tr.bd-dotted th {
+        padding-bottom: 0;
+    }
+
+    #contents .acountTable tr.bd-dotted td {
+        padding-top: 8px;
+        border-bottom: none;
+        background: #FFF url(../../images/common/line_dotted_01.gif) repeat-x -1px 100%;
+
+    }
+
+
+	#contents input.textbox02 {
+    width: 340px;
+}
+@charset "utf-8";
+
+/* =======================================
+
+    Table CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+
+    -Table 01
+
+    -Table 02
+
+    -Table 03
+
+    -Form Table
+
+    -login Table
+
+    -Mail Table
+
+========================================== */
+
+/* Table 01
+========================================== */
+#contents .prt-table01 {
+    margin: 0 0 20px;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-table01 table {
+        width: 100%;
+        border: solid #8E8E8F;
+        border-width: 1px 0 0 1px;
+        border-collapse: separate;
+    }
+    * html #contents .prt-table01 table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-table01 table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-table01 table tr th,
+        #contents .prt-table01 table tr td {
+/*          padding: 0 18px 9px 18px;*/
+            padding: 0 10px 10px;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-table01 table tr th {
+            padding-top: 10px;
+            background: #EEEFE9;
+            font-weight: bold;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-table01 table tr td {
+        }
+
+        #contents .prt-table01 table tr td p,
+        #contents .prt-table01 table tr td ul,
+        #contents .prt-table01 table tr td ol,
+        #contents .prt-table01 table tr td dl {
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
+
+        #contents .prt-table01 table tr td ul li ul,
+        #contents .prt-table01 table tr td ul li ol,
+        #contents .prt-table01 table tr td ol li ul,
+        #contents .prt-table01 table tr td ol li ol {
+            margin-top: 4px;
+        }
+
+
+
+/* Table 02
+========================================== */
+#contents .prt-table02 {
+    margin: 0 0 20px;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-table02 table {
+        width: 100%;
+        border: solid #8E8E8F;
+        border-width: 1px 0 0 1px;
+        border-collapse: separate;
+    }
+    * html #contents .prt-table02 table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-table02 table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-table02 table tr th,
+        #contents .prt-table02 table tr td {
+            padding: 8px 10px 7px 10px;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-table02 table tr th {
+            background: #666;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-table02 table tr td {
+            background: #FFF;
+        }
+
+        #contents .prt-table02 table tr td .prt-linkList {margin: 0;}
+
+
+/* Table 03
+========================================== */
+#contents .prt-table03 {
+    margin: 0 0 10px;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-table03 table {
+        width: 100%;
+        border: solid #8E8E8F;
+        border-width: 0 1px 1px 0;
+        border-collapse: separate;
+    }
+    * html #contents .prt-table03 table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-table03 table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-table03 table tr th,
+        #contents .prt-table03 table tr td {
+            padding: 8px 10px 7px 10px;
+            border: solid #8E8E8F;
+            border-width: 1px 0 0 1px;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-table03 table tr th {
+            background: #175DF6;
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-table03 table tr td {
+            vertical-align: middle;
+            background: #FFF;
+        }
+
+        /* Checkbox
+        ---------------------------------------- */
+        #contents .prt-table03 table tr td.checkbox {
+            background: #D4D5D5;
+        }
+
+        #contents .prt-table03 table tr td.checkbox label.checkbox {
+            display: block;
+            margin: 0;
+        }
+
+        #contents .prt-table03 table tr td.checkbox label.checkbox input {
+            margin: 0;
+        }
+
+
+/* Form Table
+========================================== */
+#contents .prt-formTable {
+    margin: 0 0 10px;
+    zoom: 1;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-formTable table {
+        position: relative;
+        width: 100%;
+        //border: solid #8E8E8F;
+        //border-width: 0 1px 1px 0;
+            border: solid #8E8E8F;
+            border-width: 1px 1px 0 1px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    * html #contents .prt-formTable table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-formTable table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .prt-formTable table tr th,
+        #contents .prt-formTable table tr td {
+            padding: 5px 15px 5px 15px;
+            border-bottom: 1px solid #8E8E8F;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-formTable table tr th {
+            background: #F0F1F1;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+            font-weight: bold;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-formTable table tr td {
+            background: #FFF;
+            border: solid #8E8E8F;
+            border-width: 0 0 1px 0;
+        }
+
+    /* border none
+    ---------------------------------------- */
+    #contents .prt-formTable table tr.bd-none {
+    }
+
+    #contents .prt-formTable table tr.bd-none th {
+    }
+
+    #contents .prt-formTable table tr.bd-none td {
+        padding-top: 7px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    /* border dodted
+    ---------------------------------------- */
+    #contents .prt-formTable table tr.bd-dotted {
+    }
+
+    #contents .prt-formTable table tr.bd-dotted th {
+        padding-bottom: 0;
+    }
+
+    #contents .prt-formTable table tr.bd-dotted td {
+        padding-top: 8px;
+        border-bottom: none;
+        background: #FFF url(../../images/common/line_dotted_01.gif) repeat-x -1px 100%;
+
+    }
+
+        /* Reset
+        ---------------------------------------- */
+        #contents .prt-formTable table tr td p,
+        #contents .prt-formTable table tr td ul,
+        #contents .prt-formTable table tr td ol,
+        #contents .prt-formTable table tr td dl,
+        #contents .prt-formTable table tr td .prt-list01,
+        #contents .prt-formTable table tr td .prt-list02,
+        #contents .prt-formTable table tr td .prt-grayBox,
+        #contents .prt-formTable table tr td .prt-selectList {
+            margin-bottom: 0;
+        }
+
+            /* Notes
+            ---------------------------------------- */
+            #contents .prt-formTable table tr td p.notes {
+                margin: 5px 0 0;
+                font-size: 83.4%;
+            }
+
+            /* Address
+            ---------------------------------------- */
+            #contents .prt-formTable table span.address {
+                margin: 0 0 0 8px;
+            }
+
+
+            /* Necessary
+            ---------------------------------------- */
+            #contents .prt-formTable table tr th span.necessary,
+            #contents .prt-formTable table tr td span.necessary {
+                margin: 0 5px;
+            }
+
+            #contents .prt-formTable table tr th span.necessary img,
+            #contents .prt-formTable table tr td span.necessary img {
+                vertical-align: middle;
+            }
+
+            /* Public
+            ---------------------------------------- */
+            #contents .prt-formTable table tr th span.public,
+            #contents .prt-formTable table tr td span.public {
+                margin: 0 5px;
+            }
+
+            #contents .prt-formTable table tr th span.public img,
+            #contents .prt-formTable table tr td span.public img {
+                vertical-align: middle;
+            }
+
+            /* Attention02
+            ---------------------------------------- */
+            #contents .prt-formTable table tr th span.attention02{
+				font-size:10px;
+				color:#666;
+				display:block;
+				padding:5px 0 10px;
+			}
+            /* Attention03
+            ---------------------------------------- */
+            #contents .prt-formTable table span.attention03{
+				font-size:10px;
+				color:#666;
+				display:block;
+				padding:5px 0 10px;
+			}
+            /* Attention04
+            ---------------------------------------- */
+            #contents .prt-formTable table span.attention04{
+				font-size:10px;
+				color:#d90040;
+				display:block;
+				padding:5px 0 10px;
+			}
+
+/* login Table
+========================================== */
+#contents .prt-loginTable {
+    margin: 0 auto 10px;
+    padding: 0 0 2px;
+    width: 454px;
+    background: url(../images/parts/loginTable_bg_05.png) no-repeat 0 100%;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-loginTable table {
+        width: 100%;
+        border-collapse: separate;
+    }
+    * html #contents .prt-loginTable table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-loginTable table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Thead
+        ---------------------------------------- */
+        #contents .prt-loginTable table thead tr th {
+            font-weight: bold;
+            text-align: center;
+            border: solid #8E8E8F;
+            border-width: 1px 1px 0 1px;
+        }
+
+        #contents .prt-loginTable table thead tr th .inner {
+            display: block;
+            padding: 3px 10px;
+            border: 1px solid #FFF;
+            background: url(../images/parts/loginTable_bg_03.png) repeat;
+        }
+
+        /* Tbody
+        ---------------------------------------- */
+        #contents .prt-loginTable table tbody tr th {
+            width: 134px;
+            background: #F0F1F1 url(../images/parts/loginTable_bg_01.png) repeat-y;
+            text-align: center;
+            font-weight: bold;
+        }
+
+            /* Th
+            ---------------------------------------- */
+            #contents .prt-loginTable table tbody tr th .inner {
+                display: block;
+                padding: 10px 5px 3px;
+                background: url(../images/parts/loginTable_bg_02.png) no-repeat;
+            }
+
+            #contents .prt-loginTable table tbody tr th.first .inner {
+                background-position: 0 -1px;
+            }
+
+            /* Td
+            ---------------------------------------- */
+            #contents .prt-loginTable table tbody tr td {
+                background: #FFF url(../images/parts/loginTable_bg_04.png) no-repeat;
+                border-right: 1px solid #8E8E8F;
+                vertical-align: middle;
+            }
+
+            /* First
+            ---------------------------------------- */
+            #contents .prt-loginTable table tbody tr td.first {
+                background-position: 0 -1px;
+            }
+
+                /* Inner
+                ---------------------------------------- */
+                #contents .prt-loginTable table tbody tr td .inner {
+                    display: block;
+                    padding: 6px 5px 3px;
+                }
+
+                #contents .prt-loginTable table tbody tr td.first .inner {
+                    border-bottom: 0;
+                }
+
+                /* Input
+                ---------------------------------------- */
+                #contents .prt-loginTable table tbody tr td input.textbox,
+                #contents .prt-loginTable table tbody tr td input.password {
+                    width: 270px;
+                }
+
+
+/* Mail Table
+========================================== */
+#contents .prt-mailTable {
+    margin: 0 0 10px;
+    padding: 5px;
+    background: #E0E0E1;
+    zoom: 1;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #contents .prt-mailTable table {
+        border-bottom: 1px solid #8E8E8F;
+    }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr th {
+            padding: 5px 8px 4px;
+            background: #9A9A9B;
+            border-left: 1px solid #E0E0E1;
+            color: #FFF;
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            zoom: 1;
+        }
+
+        #contents .prt-mailTable table tr th.first {
+            border-left: none;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr td {
+            padding: 0 0 0 1px;
+            background: #FFF url(../../images/common/line_dotted_03.gif) repeat-y;
+        }
+
+
+        #contents .prt-mailTable table tr td.separate {
+            padding: 0;
+            height: 6px;
+            background: #E0E0E1;
+            border-bottom: 1px solid #8E8E8F;
+        }
+        /* IE6 Only */
+        * html #contents .prt-mailTable table tr td.separate { height: 5px;}
+
+            /* Inner
+            ---------------------------------------- */
+            #contents .prt-mailTable table tr td .inner {
+                display: block;
+                padding: 6px 8px 4px;
+                background: url(../../images/common/line_dotted_01.gif) repeat-x;
+            }
+
+            #contents .prt-mailTable table tr td .inner span.mailicon {
+                display: block;
+                padding: 3px 0;
+            }
+
+        /* First Unit
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr.firstUnit td {
+        }
+
+        #contents .prt-mailTable table tr.firstUnit td .inner {
+            background-image: none;
+        }
+
+        /* First
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr td.first {
+            background-image: url(../../images/common/line_solid_01.gif);
+            text-align: center;
+        }
+        #contents .prt-mailTable table tr td.first .inner {
+        }
+
+        /* Last
+        ---------------------------------------- */
+        #contents .prt-mailTable table tr td.last {
+            border-right: 1px solid #8E8E8F;
+			text-align:center;
+        }
+        #contents .prt-mailTable table tr td.last a{
+			background:url(../../images/member/ico_message_deletion.gif) no-repeat top center;
+			padding:20px 0 0 0;
+		}
+        #contents .prt-mailTable table tr td.last span.deleteicon {
+			display:block;
+			padding:26px 0 0 0;
+		}
+
+
+
+    /* acount Table
+    ---------------------------------------- */
+    #contents .acountTable {
+        position: relative;
+        width: 100%;
+        //border: solid #8E8E8F;
+        //border-width: 0 1px 1px 0;
+            border: solid #8E8E8F;
+            border-width: 1px 1px 0 1px;
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    * html #contents .prt-formTable table {border-collapse: collapse;}/* IE6 Only */
+    *:first-child + html #contents .prt-formTable table {border-collapse: collapse;}/* IE7 Only */
+
+        /* Th / Td
+        ---------------------------------------- */
+        #contents .acountTable tr th,
+        #contents .acountTable tr td {
+            padding: 5px 15px 5px 15px;
+            border-bottom: 1px solid #8E8E8F;
+        }
+
+        /* Th
+        ---------------------------------------- */
+        #contents .acountTable tr th {
+            background: #F0F1F1;
+            border: solid #8E8E8F;
+            border-width: 0 1px 1px 0;
+            font-weight: bold;
+        }
+
+        /* Td
+        ---------------------------------------- */
+        #contents .acountTable tr td {
+            background: #FFF;
+            border: solid #8E8E8F;
+            border-width: 0 0 1px 0;
+        }
+
+    /* border none
+    ---------------------------------------- */
+    #contents .acountTable tr.bd-none {
+    }
+
+    #contents .acountTable tr.bd-none th {
+    }
+
+    #contents .acountTable tr.bd-none td {
+        padding-top: 7px;
+        padding-bottom: 0;
+        border-bottom: none;
+    }
+
+    /* border dodted
+    ---------------------------------------- */
+    #contents .acountTable tr.bd-dotted {
+    }
+
+    #contents .acountTable tr.bd-dotted th {
+        padding-bottom: 0;
+    }
+
+    #contents .acountTable tr.bd-dotted td {
+        padding-top: 8px;
+        border-bottom: none;
+        background: #FFF url(../../images/common/line_dotted_01.gif) repeat-x -1px 100%;
+
+    }
+
+
+	#contents input.textbox02 {
+    width: 340px;
+}
+
+	#contents input.textbox03 {
+    width: 500px;
+}
+
+/*枠数
+---------------------------------------------------*/
+#contents .site-use table th{
+	border:1px #333333 solid;
+}
+
+#contents .site-use table.waku td{
+	text-align:center;
+	background:#FFFFFF;
+}
+
+#contents .site-use table.waku tr td.white{
+	font-size:110%;
+	background:#FFFFFF;
+}
+#contents .site-use table.waku tr td.yellow{
+	font-size:110%;
+	background:#fffdbd;
+}
+
+#contents .site-use table.waku tr td.pink{
+	font-size:110%;
+	background:#fac1c1;
+}
+
+#contents .site-use table.waku tr td.silver{
+	font-size:110%;
+	background:silver;
+}
+
+/*Scout page
+---------------------------------------------------*/
+.site-use table{
+	margin-bottom:10px;
+}
+
+
+.site-use table,
+.site-use table th,
+.site-use table td{
+	border:1px #605752 solid;
+}
+
+#contents .site-use table th{
+	padding:5px;
+	background:#605752;
+	vertical-align:middle;
+	color:#FFFFFF;
+	font-weight:bold;
+    text-align: center;
+}
+
+#contents .site-use table th.jbt{
+	color:#4681e3;
+	font-weight:bold;
+	font-size:110%;
+	background:#fff;
+}
+
+#contents .site-use table th.bj{
+	color:#29993c;
+	font-weight:bold;
+	font-size:110%;
+	background:#fff;
+}
+
+#contents .site-use table td{
+	text-align:left;
+	background:#ffe3e3;
+	padding:5px;
+}

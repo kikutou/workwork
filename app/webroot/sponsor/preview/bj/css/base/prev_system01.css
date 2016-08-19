@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#document{
+	top:0;
+}
+
+#contents .section.borderSec{
+}
+.preview01 {
+	background: none repeat scroll 0 0 #3F352D;
+	height: 50px;
+	width: 100%;
+	}
+	
+.preview02 {
+	background: none repeat scroll 0 0 #3F352D;
+	height: 60px;
+	width: 100%;
+	}
+	
+.preview01 p.tit {
+	font-size: 150%;
+	color: #ffffff;
+	padding: 15px 0 15px 20px;
+	}
+	
+.preview02 p.btn {
+	padding: 15px 20px 15px 0;
+	float: right;
+	}

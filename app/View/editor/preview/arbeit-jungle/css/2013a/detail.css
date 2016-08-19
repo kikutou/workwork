@@ -1,0 +1,651 @@
+@charset "utf-8";
+/*----------------------------------------------------------
+
+
+	【募集原稿 詳細ページ】	detail.htmlのデザインcss
+
+
+----------------------------------------------------------*/
+body{
+	margin:0;
+	padding:0;
+	line-height:1.6em;
+	letter-spacing:0.05em;
+}
+p{
+	letter-spacing:0.0.5em;
+	line-height:1.6em;
+}
+.wrapper{
+	width:800px;
+	margin:0 auto;
+	padding-top:20px;
+}
+
+/*------------------------------------------------------------------------
+
+							ページャー
+
+------------------------------------------------------------------------*/
+.pager{
+	background:#FFFFFF;
+	padding:7px 0;
+	border-bottom:1px #999999 solid;
+	box-shadow:0 0 3px #d6d6d6;
+}
+.inner960{
+	width:960px;
+	margin:0 auto;
+}
+.inner960 a{
+	text-decoration:none;
+	color: #4fb29c;
+}
+.inner960 a:hover{
+	text-decoration:underline;
+}
+.inner960 .home{
+	padding:0 0 0 18px;
+	background:url(../../img/2013a/home/icon_pager_home.png) no-repeat 0 0;
+}
+/*------------------------------------------------------------------------
+
+							ユーザーナビ
+
+------------------------------------------------------------------------*/
+.headerUSN{
+	width:100%;
+	position: fixed;
+	top: 0px;
+	left:0px;
+	font-size:12px;
+	background:url(../../img/2013a/search/navi_bg.png) repeat 0 0;
+	box-shadow: 0 0 2px #333;
+	letter-spacing:0.1em;
+	z-index:13;
+}
+.headinner{
+	width:900px;
+	margin:0 auto;
+}
+ul.usn_left{
+	float:left;
+}
+ul.UserSupportNav li,
+ul.UserSupportNav li a{
+	float:left;
+}
+ul.UserSupportNav li a{
+	padding:7px 20px 9px;
+	margin-left:1px;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-shadow:0px 0px 2px #317167;
+	text-decoration:none;
+}
+ul.UserSupportNav li a:hover{
+	padding:7px 20px 9px;
+	background:#3fa12f;
+}
+
+ul.UserSupportNav li.current a{
+	padding:7px 20px 9px;
+	background:#3fa12f;
+}
+
+ul.usn_right{
+	float: right;
+}
+ul.usn_right li,
+ul.usn_right li a{
+	float:left;
+}
+ul.usn_right li a{
+	padding:2px 20px;
+	color:#FFFFFF;
+	font-weight:bold;
+	text-decoration:none;
+	margin:6px 0 0 10px;
+	background:#3fa12f;
+	box-shadow:0 0 2px #676fe0;
+}
+ul.usn_right li a:hover{
+	background:#60d2be;
+	box-shadow:none;
+}
+
+/*----------------------------------------------------------
+
+					titleArea
+
+----------------------------------------------------------*/
+.titleArea{
+	margin:20px 0 10px;
+	position:relative;
+	}
+.titleArea h2{
+	font-size:15px;
+	font-weight:bold;
+	color:#FFFFFF;
+	width:770px;
+	display: inline-block;
+	letter-spacing:0.07em;
+	background:url(../../img/2013a/search/navi_bg.png) repeat 0 0;
+	padding:15px 15px;
+}
+.titleArea h2 span.company{
+	font-size:12px;
+	font-weight: normal;
+	float:right;
+	letter-spacing:0;
+	max-width: 300px;
+	*margin-top:-25px;/*ie対応*/
+}
+.titleArea h2 img{
+	margin:0px 8px -8px -34px;
+	vertical-align:middle;
+}
+.EndDate{
+	margin:5px 0;
+	line-height:1;
+	font-size:11px;
+	color: #999;
+	text-align:right;
+}
+
+/*infoArea
+----------------------------------------*/
+.infoArea{
+	line-height:1;
+	padding:10px;
+	background:#DFDFDF;
+}
+.recruitInfo{
+	width:430px;
+	float:left;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+}
+.recruitInfo dl{
+	float:left;
+	width:100%;
+	margin:5px 0 8px;
+}
+.recruitInfo dl dt{
+	float:left;
+	font-weight:bold;
+	letter-spacing:0.2em;
+	width:80px;
+	border-right:1px #fff solid;
+}
+.recruitInfo dl dd{
+	float:left;
+	padding-left:10px;
+	border-left:1px #A6A6A6 solid;
+}
+
+
+/*アイコン
+-------------------------------------*/
+.iconArea{
+	width:342px;
+	float:right;
+	min-height:84px;
+	padding:0 0 0 8px;
+	background:#fff;
+}
+.iconArea ul li{
+	float:left;
+}
+.iconArea ul li img{
+	float:left;
+	margin:4px 5px 0 0;
+}
+
+
+/*----------------------------------------------------------
+
+					recruitArea　写真+文章
+
+----------------------------------------------------------*/
+.Cmain{
+	min-height:300px;
+	height:auto;
+	max-height:500px;
+}
+.appeal{
+	margin-top:30px;
+}
+.appeal dl{
+	float:left;
+	width:100%;
+	margin-bottom:35px;
+}
+.appeal h3{
+	border-bottom:3px solid #3fa12f;
+	background:;
+	padding:0px 0px 5px 0px;
+	color:#191919;
+	line-height:1.7em;
+	font-weight: 600;
+	font-size:17px;
+	margin-bottom:10px;
+	letter-spacing:0.1em;
+}
+.appeal dl dt{
+	width:256px;
+	height:192px;
+	overflow:hidden;
+	float:left;
+}
+.appeal dl dd{
+	width:510px;
+	float:right;
+}
+
+.appeal img{ width:256px; }
+
+/*----------------------------------------------------------
+
+					エントリーボタン
+
+----------------------------------------------------------*/
+.entryBtn{
+	position:relative;
+	width:100%;
+}
+ul.btn{
+	height:43px;
+	float:left;
+	width:100%;
+	padding:30px 0;
+}
+ul.btn li,
+ul.btn li a{
+}
+ul.btn li{
+	position:relative;
+}
+
+/*応募するボタン
+------------------------*/
+ul.btn li.entry{
+	position:absolute;
+	left:220px;
+}
+ul.btn li.entry a{
+	background:url(../../img/2013a/search/btn_01.png) no-repeat 0 0;
+	width:360px;
+	height:43px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.entry a:hover{
+	background:url(../../img/2013a/search/btn_01.png) no-repeat 0 -43px;
+}
+ul.btn li.entry span{
+	background:url(../../img/2013a/search/icon_kantan.png) no-repeat 0 0;
+	width:86px;
+	height:75px;
+	text-indent:-9999em;
+	display:block;
+	position:absolute;
+	right:-2px;
+	top:-17px;
+}
+/*検討中リスト
+------------------------*/
+ul.btn li.mull{
+	position:absolute;
+	right:0;
+	margin:4px 0;
+}
+ul.btn li.mull a{
+	background:url(../../img/2013a/search/attachbtn_mull.png) no-repeat 0 0;
+	width:197px;
+	height:34px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.mull a:hover{
+	background:url(../../img/2013a/search/attachbtn_mull.png) no-repeat 0 -34px;
+}
+ul.btn li.mulldel{
+	position:absolute;
+	right:0;
+	margin:4px 0;
+}
+ul.btn li.mulldel a{
+	background:url(../../img/2013a/search/attachbtn_mulldel.png) no-repeat 0 0;
+	width:197px;
+	height:34px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.mulldel a:hover{
+	background:url(../../img/2013a/search/attachbtn_mulldel.png) no-repeat 0 -34px;
+}
+/*企業HPリンク
+------------------------*/
+ul.btn li.companyLink{
+	position:absolute;
+	left:0;
+	margin:8px 0;
+}
+ul.btn li.companyLink a{
+	background:url(../../img/2013a/search/company_Link.png) no-repeat 0 0;
+	width:193px;
+	height:31px;
+	text-indent:-9999em;
+	outline:none;
+	display:block;
+}
+ul.btn li.companyLink a:hover{
+	background:url(../../img/2013a/search/company_Link.png) no-repeat 0 -31px;
+}
+/*------------------------------------------------------------------------
+
+							募集情報テーブル
+
+------------------------------------------------------------------------*/
+#recruitArea h5{
+	background:#3fa12f;
+	padding:10px 15px;
+	color:#FFFFFF;
+	font-size:16px;
+	letter-spacing:0.2em;
+}
+#recruitArea h5.registrat{
+	background:#ce5a62;
+}
+#recruitArea table{
+	margin-bottom:15px;
+}
+
+#recruitArea table,
+#recruitArea table td{
+	border:1px #D2D3D3 solid
+}
+#recruitArea table th{
+	border-top:1px #D2D3D3 solid;
+	border-bottom:1px #D2D3D3 solid;
+	border-left:1px #D2D3D3 solid;
+	background:#EDF5F6;
+}
+#recruitArea table th.none{
+	border: none;
+}
+#recruitArea table th,
+#recruitArea table td{
+	vertical-align:middle;
+}
+#recruitArea table th{
+	padding:10px 15px;
+}
+#recruitArea table td{
+	padding:15px;
+	background:#FFF;
+}
+#recruitArea table td.important{
+	background:#fbfbee;
+}
+
+/*詳細要素　ありなし要素
+---------------------------------------*/
+#recruitArea table td div{
+	margin:15px -15px -15px;
+}
+#recruitArea table td div table,
+#recruitArea table td div table tr,
+#recruitArea table td div table th,
+#recruitArea table td div table td{
+	border:none;
+	margin:0;
+}
+#recruitArea table td div table{
+	width:100%;
+	background:#FFFFFF;
+}
+#recruitArea table td div table tr{
+	border-top:1px #D2D3D3 solid;
+}
+
+#recruitArea table td div table tr th{
+	width:70px;
+	background:#FFFFFF;
+	border-right:1px #D2D3D3 solid;
+	padding:10px;
+}
+#recruitArea table td div.nontitle{
+	margin:-16px -15px -15px;
+}
+
+/* 勤務地
+------------------------*/
+#recruitArea table td.nonpadding{
+	padding:0;
+}
+#recruitArea table td.nonpadding div{
+	margin:0;
+}
+#recruitArea table td.nonpadding div table tr:first-child{
+	border-top: none;
+}
+#recruitArea table td.nonpadding div table th,
+#recruitArea table td.nonpadding div table td{
+	padding:10px;
+}
+#recruitArea table td.nonpadding dl{
+	padding:8px 15px;
+	border-top:1px #D2D3D3 dashed;
+}
+#recruitArea table td.nonpadding dl:first-child{
+	border-top:none;
+}
+
+/* お問合せ
+------------------------*/
+#recruitArea table td.contact{
+	background:#FBFBEE;
+	padding:10px 10px 0;
+}
+#recruitArea table td.contact div{
+	margin:0 0 10px;
+}
+#recruitArea table td.contact div table tr{
+	border:1px #D2D3D3 solid;
+}
+
+#recruitArea table td.contact div table th,
+#recruitArea table td.contact div table td{
+	padding:5px 10px;
+}
+#recruitArea table td.contact div table td .map{
+	margin-left:5px;
+}
+
+
+/*------------------------------------------------------------------------
+
+						企業情報テーブル
+
+------------------------------------------------------------------------*/
+.companyAreaLeft{
+	width:395px;
+	float:left;
+}
+.companyAreaRight{
+	width:395px;
+	float: right;
+}
+
+#companyArea h5{
+	background:#2191cb;
+	padding:10px 15px;
+	color:#FFFFFF;
+	font-size:16px;
+	letter-spacing:0.2em;
+}
+#companyArea table{
+	margin-bottom:15px;
+	width:100%;
+}
+
+#companyArea table,
+#companyArea table td{
+	border:1px #D2D3D3 solid
+}
+#companyArea table th{
+	border-top:1px #D2D3D3 solid;
+	border-bottom:1px #D2D3D3 solid;
+	border-left:1px #D2D3D3 solid;
+	background:#EDF5F6;
+}
+#companyArea table th.none{
+	border: none;
+}
+#companyArea table th,
+#companyArea table td{
+	vertical-align:middle;
+}
+#companyArea table th{
+	padding:10px;
+}
+#companyArea table td{
+	padding:15px;
+	background:#FFF;
+}
+
+
+/*------------------------------------------------------------------------
+
+					この会社の他の募集情報
+
+------------------------------------------------------------------------*/
+.companyListArea{
+	padding:20px 0 30px;
+	border-top:1px dashed #999;
+}
+.companyListArea ul{
+	width:100%;
+	float:left;
+}
+
+.companyListArea ul li a{
+	display:block;
+	text-indent:-9999em;
+}
+.companyListArea ul li.listback a{
+	width:220px;
+	height:43px;
+	background:url(../../img/2013a/search/btn_back.gif) no-repeat 0 0;
+	float:left;
+}
+.companyListArea ul li.listback a:hover{
+	background:url(../../img/2013a/search/btn_back.gif) no-repeat 0 -43px;
+}
+.companyListArea ul li.companyRecruit{
+	width:390px;
+	height:43px;
+	float:right;
+}
+.companyListArea ul li.companyRecruit a{
+	float: right;
+	width:390px;
+	height:43px;
+	background: url(../../img/2013a/search/btn_companyLink.gif) no-repeat 0 0;
+}
+.companyListArea ul li.companyRecruit a:hover{
+	background: url(../../img/2013a/search/btn_companyLink.gif) no-repeat 0 -43px;
+}
+
+/*------------------------------------------------------------------------
+
+					20150207　時間帯検索
+
+------------------------------------------------------------------------*/
+.layout1504after dl {
+	display:table;
+}
+
+.layout1504after dl dt {
+	display:table-cell;
+	float:none;
+	vertical-align:top;
+	padding-top:3px;
+}
+
+.layout1504after dd {
+	display:table-cell;
+	float:none;
+	vertical-align:middle;
+	padding-right:10px;
+}
+
+.empTime {
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-ms-box-sizing:border-box;
+}
+
+.empTime li {
+	display:inline-block;
+	height:22px;
+	line-height:22px;
+	width:70px;
+	text-align:center;
+	margin-bottom:5px;
+	margin-right:5px;
+	color:#FFF;
+	border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.empTime li.emp01 {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #78BEE5), color-stop(1, #51AADD));
+	background:-moz-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:-webkit-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:-o-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:-ms-linear-gradient(top, #78BEE5 5%, #51AADD 100%);
+	background:linear-gradient(to bottom, #78BEE5 5%, #51AADD 100%);
+	background-color:#51AADD;
+}
+
+.empTime li.emp02 {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #78AFE5), color-stop(1, #519ADD));
+	background:-moz-linear-gradient(top, #78AFE5 5%, #519ADD 100%);
+	background:-webkit-linear-gradient(top, #78AFE5 5%, #519ADD 100%);
+	background:-o-linear-gradient(top, #78AFE5 5%, #519ADD 100%);
+	background:-ms-linear-gradient(top, #78AFE5 5%, #519ADD 100%);
+	background:linear-gradient(to bottom, #78AFE5 5%, #519ADD 100%);
+	background-color:#519ADD;
+}
+
+
+
+.empTime li:nth-child(5),.empTime li:nth-child(6),.empTime li:nth-child(7){
+	margin-bottom:0;
+}
+
+
+/*------------------------------------------------------------------------
+
+					20150223　Tel応募アイコン
+
+------------------------------------------------------------------------*/
+.oboTelOnly {
+	position:absolute;
+	top:-25px;
+	right:10px;
+	text-indent:-9999px;
+	background:url(../../img/2013a/search/icon_telonly.png) no-repeat 0 center;
+	width:111px;
+	height:25px;
+}

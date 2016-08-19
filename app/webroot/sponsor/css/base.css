@@ -1,0 +1,422 @@
+@charset "utf-8";
+
+/*!
+ * base.css
+ *
+ *
+ * structureの設定。ページ・テンプレートとなる大枠部分、
+ * 背景・ヘッダー・フッター・大枠のカラム分けなどの設定ファイル。
+ * CSSで使う背景画像は、共通のアイコン等以外すべて、
+ * /images/base 以下に格納する。
+ */
+
+
+
+
+/**
+ * structure
+ *
+ * 基本的なエリア（枠組み）のカラム分けと背景を設定
+ * @create: 2011-09-26 [hosono@skillpartners.co.jp]
+ * @modify: 2011-10-07 [hosono@skillpartners.co.jp]
+ */
+
+html, body {
+	/* メイン背景・文字色 */
+	background-color: #FFF;
+	color: #000;
+}
+
+
+body {
+}
+
+#contents a.approval { 
+	color: #D71E00;
+}
+
+#contents a.approval :hover { color: #D71E00; }
+
+#contents a.manual {
+	color: #0066AB;
+	text-decoration: none;
+}
+
+#contents a.manual :link    {}
+#contents a.manual :hover   { color: #0066AB; text-decoration: underline; }
+
+a {
+	color: #0066AB;
+	text-decoration: underline;
+}
+
+a:link    {}
+a:visited { color: #0066AB; }
+a:hover   { color: #0066AB; text-decoration: none; }
+a:active  { color: #0066AB; }
+
+
+#document {
+	min-width: 840px;
+}
+.scoutManagementPopup #document{
+	min-width: 600px;
+}
+
+
+#header {
+	padding: 0 10px;
+	background: #FFF;
+}
+
+#headerInner {
+	margin: 0 auto;
+	width: 900px;
+}
+
+#login {
+	padding: 0 10px;
+	background: #1D2082;
+}
+
+#loginInner {
+	margin: 0 auto;
+	padding: 5px 30px 2px;
+	width: 840px;
+}
+
+#main {
+	padding: 0 10px;
+	background: #DDDEED url(../images/base/main_bg_01.png) repeat-y 50% 0;
+}
+
+.linkspace{
+	background:#5488dd;
+	padding:5px 0;
+	margin:10px 0 20px;
+	width:100%;
+}
+
+.scoutManagementPopup #headerInner,
+.scoutManagementPopup #loginInner,
+.scoutManagementPopup #contents{
+	width:600px;
+}
+
+#contents .linkspace p{
+	text-align:center;
+	margin:5px 0;
+}
+
+#contents .linkspace p a{
+	padding:5px 10px;
+	background:#0071C0;
+	box-shadow: 0 0 1px #330099 inset;
+	margin:0 5px;
+	text-decoration:none;
+	color:#FFF;
+	letter-spacing:0.1em;
+    border-radius: 5px;        /* CSS3草案 */  
+    -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 5px;   /* Firefox用 */ 
+}
+
+#contents .linkspace p a:hover{
+	padding:5px 10px;
+	background:#fff;
+	box-shadow: 0px 0px 3px #330099;
+	margin:0 5px;
+	text-decoration:none;
+	color:#5488dd;
+    border-radius: 5px;        /* CSS3草案 */  
+    -webkit-border-radius: 5px;    /* Safari,Google Chrome用 */  
+    -moz-border-radius: 5px;   /* Firefox用 */ 
+}
+
+
+#contents p.popuphint a{
+	background: url(../images/common/btn_hint_01.png) no-repeat 0 3px;
+	padding:5px 0 5px 30px ;
+	margin:10px 0 10px 0px;
+	display: inline-block;
+}
+
+#accessbtn{
+}
+ 
+#contents {
+	margin: 0 auto;
+	padding: 30px 29px 30px;
+	min-height: 630px;
+	width: 840px;
+	zoom: 1;
+}
+
+
+#iframe #contents {
+	margin: 0 auto;
+	padding: 0;
+}
+
+#contents:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+
+
+/* IE6 Only */
+* html #contents {
+	height: 630px;
+	padding: 30px;
+}
+
+#footer {
+	padding: 0 10px;
+	background: #DDDEED url(../images/base/footer_bg_01.png) no-repeat 50% 0;
+}
+
+#footerInner {
+	margin: 0 auto;
+	width: 900px;
+}
+
+.section {
+	margin: 0 0 20px;
+}
+
+.section .section {
+	margin: 0 0 20px;
+}
+
+.section .section .section {
+}
+
+
+
+/**
+ * header
+ *
+ * @create: 2011-09-26 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#header {
+}
+
+#headerInner {
+	position: relative;
+	padding: 15px 0 0;
+	min-height: 29px;
+}
+/* IE6 Only */
+* html #headerInner {
+	height: 29px;
+}
+
+	/**
+	 * siteTitle
+	 */
+	#header #siteTitle {
+		position: absolute;
+		top: 12px;
+		left: 0;
+		width: 129px;
+	}
+
+
+	/**
+	 * globalNav
+	 */
+	#header #globalNav {
+		margin: 0 0 0 144px;
+	}
+	
+	#header #globalNav ul {
+		zoom: 1;
+	}
+	#header #globalNav ul:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+	}
+
+	#header #globalNav li {
+		float: right;
+		display: inline;
+		margin: 0 0 0 3px;
+		width: 105px;
+		text-align: center;
+		font-weight: bold;
+		font-size: 130%;
+		line-height: 1.384;
+	}
+	
+	#header #globalNav li a {
+		display: block;
+		padding: 6px 3px 5px;
+		width: 99px;
+		min-height: 18px;
+		background: #c6c5c5 url(../images/base/globalNav_bg_01.png) no-repeat;
+		color: #FFF;
+		text-decoration: none;
+	}
+	/* IE6 Only */
+	* html #header #globalNav li a {
+		height: 18px;
+	}
+	
+	#header #globalNav li a:visited {
+		color: #FFF;
+	}
+
+	#header #globalNav li a:hover {
+		background-color: #1D2082;
+		background-position: -105px 0;
+	}
+	
+	body#home            #header #globalNav li#gnav01 a,
+	body.oboManagement   #header #globalNav li#gnav02 a,
+	body.scoutManagement #header #globalNav li#gnav03 a,
+	body.recruit          #header #globalNav li#gnav04 a,
+	body.fixedForm       #header #globalNav li#gnav05 a,
+	body.accessLog       #header #globalNav li#gnav06 a,
+	body.help			 #header #globalNav li#gnav07 a{
+		background-color: #1D2082;
+		background-position: -105px 0
+	}
+
+
+
+/**
+ * login
+ *
+ * @create: 2011-09-26 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+ 
+#login {
+}
+
+#loginInner {
+	zoom: 1;
+}
+#loginInner:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+	/**
+	 * loginName
+	 */
+	#login #loginName {
+		float: left;
+		display: inline;
+		margin: 0 0 3px;
+		color: #FFF;
+		font-weight: bold;
+		font-size: 140%;
+		line-height: 1.429;
+	}
+
+	/**
+	 * loginNav
+	 */
+	#login .loginNav {
+		float: right;
+		display: inline;
+		margin: 2px 0 3px;
+	}
+	
+	#login .loginNav ul {
+		white-space: nowrap;
+	}
+	
+	#login .loginNav ul li {
+		display: inline;
+		margin: 0 0 0 20px;
+		min-height: 11px;
+		font-weight: bold;
+		font-size: 120%;
+		line-height: 1.5;
+	zoom: 1;
+	}
+	/* IE6 Only */
+	* html #login .loginNav ul li {
+			height: 11px;
+	}
+	
+	#login .loginNav ul li a {
+		padding: 0 0 0 12px;
+		background: url(../images/base/globalNav_icon_01.png) no-repeat 0 50%;
+		color: #FFF;
+		text-decoration: none;
+	}
+	
+	#login .loginNav ul li a:hover{
+		padding: 0 0 0 12px;
+		background: url(../images/base/globalNav_icon_01.png) no-repeat 0 50%;
+		color: #FFF;
+		text-decoration: underline;
+	}
+	
+
+
+/**
+ * footer
+ *
+ * @create: 2011-09-26 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#footer {
+}
+
+#footer #footerInner {
+	position: relative;
+	min-height: 88px;
+}
+/* IE6 Only */
+* html #footer #footerInner {
+	height: 88px;
+}
+
+	/**
+	 * pageTop
+	 */
+	#pageTop {
+		position: relative;
+		margin: 0 30px 10px;
+		height: 21px;
+		text-align: right;
+		overflow: hidden;
+	}
+
+
+	/**
+	 * copyright
+	 */
+	#footer p#copyright {
+		margin: 0 0 10px 0;
+		color: #1D2082;
+		font-size: 120%;
+		line-height: 1.5;
+	}
+
+
+	/**
+	 * veriSign
+	 */
+	#footer div#veriSign {
+		position: absolute;
+		top: 21px;
+		right: 10px;
+		width: 100px;
+	}
+
+
+
+/*
+ * Release Notes:
+ * 
+ * 2011-09-26 [hosono@skillpartners.co.jp]
+ *   @create: all
+ * 2011-10-07 [hosono@skillpartners.co.jp]
+ *   @modify: structure
+ */

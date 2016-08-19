@@ -1,0 +1,654 @@
+@charset "utf-8";
+
+/* =======================================
+
+    Index Contents CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+    -Contents
+        -prt-featureContainer
+        -prt-searchTitle
+        -prt-searchOccupation
+        -indexContents-col2
+        -prt-searchMap
+        -prt-adminInfomation
+    
+    -navigation 
+        -prt-loginUnit
+        -prt-pickUpJob
+        -prt-bannerUnit
+
+========================================== */
+
+/* Index Contents
+========================================== */
+#main.indexContents #contents {
+    float: left;
+    display: inline;
+    width: 620px;
+    margin: 0 0 20px;
+    padding: 0;
+    background: none;
+    border: none;
+}
+
+#main.indexContents #navigation {
+    float: right;
+    display: inline;
+    width: 220px;
+    margin: 0 0 20px;
+}
+
+#main.indexContents  a {
+    color: #175DF6;
+    text-decoration: none;
+}
+
+#main.indexContents  a:hover {
+    text-decoration: underline;
+}
+
+
+/* Contents
+****************************************************************************************/
+
+/* prt-featureContainer
+========================================== */
+#main.indexContents #contents .prt-featureContainer {
+    margin: 0 0 15px;
+    padding: 0 10px 10px;
+    background: #175DF6;
+}
+
+#main.indexContents #contents .prt-featureContainer .title {
+    margin: 0 0 8px;
+    padding: 4px 20px 3px 48px;
+    background: url(../../images/parts/featureContainer_title_bg.gif) no-repeat 0 100%;
+    min-height: 25px;
+}
+/* IE6 Only */
+* html #main.indexContents #contents .prt-featureContainer .title {
+    height: 25px;
+}
+
+    /* h2
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-featureContainer .title h2 {
+        margin: 0;
+        color: #F4F5F5;
+        font-size: 160%;
+    }
+    
+    /* ul
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-featureContainer ul {
+        margin: 0;
+        width: 600px;
+        zoom: 1;
+    }
+    #main.indexContents #contents .prt-featureContainer ul:after {
+        content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+    }
+    
+    #main.indexContents #contents .prt-featureContainer ul li {
+        float: left;
+        display: inline;
+        margin: 0;
+    }
+
+
+/* prt-searchTitle
+========================================== */
+#main.indexContents #contents .prt-searchTitle {
+    margin: 0 0 7px;
+}
+
+#main.indexContents #contents .prt-searchTitle h2 {
+    margin: 0;
+    color: #FFFFFF;
+    padding: 4px 10px 7px 51px;
+    background: #175DF6 url(../../images/parts/searchTitle_bg.gif) repeat-x 0 100%;
+    font-size: 150%;
+    font-weight: normal;
+    line-height: 1.5;
+    min-height: 20px;
+}
+
+#main.indexContents #contents .prt-searchTitle h2 .listjump a{
+	font-weight: bold;
+	font-size: 70%;
+	color: #FFFFFF;
+	float: right;
+	margin: 0 0 0 -10px;
+	text-decoration: underline;
+	}
+
+#main.indexContents #contents .prt-searchTitle h2 .listjump a:hover{
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+
+/* IE6 Only */
+* html #main.indexContents #contents .prt-searchTitle h2 {
+    height: 20px;
+}
+
+
+/* prt-searchOccupation
+========================================== */
+#main.indexContents #contents .prt-searchOccupation {
+}
+
+    /* Ul
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-searchOccupation ul {
+        zoom: 1;
+    }
+    #main.indexContents #contents .prt-searchOccupation ul:after {
+        content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+    }
+    
+    #main.indexContents #contents .prt-searchOccupation ul li {
+        float: left;
+        display: inline;
+        margin: 0;
+        padding: 10px 15px 8px 22px;
+        min-height: 20px;
+        background: #F4F5F5 url(../../images/parts/searchOccupation_bg.png) no-repeat 0 100%;
+        width: 273px;
+        font-size: 100%;
+    }
+    /* IE6 Only */
+    * html #main.indexContents #contents .prt-searchOccupation ul li {height: 20px;}
+    
+    #main.indexContents #contents .prt-searchOccupation ul li.even {
+        background-position: 100% 100%;
+        border-right: 1px solid #BDBDBE;
+        width: 272px;
+    }
+    
+    #main.indexContents #contents .prt-searchOccupation ul li.odd {
+    }
+
+    /* h3
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-searchOccupation ul li h3 {
+        position: relative;
+        margin: 0 0 0 -10px;
+        text-indent: 10px;
+        background: url(../../images/parts/searchOccupation_title_ico.gif) no-repeat 0 7px;
+    }
+    
+    /* p
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-searchOccupation ul li p {
+        margin: 0;
+        font-size: 120%;
+        line-height: 1.5;
+    }
+
+
+/* indexContents-col2
+========================================== */
+#main.indexContents #contents .indexContents-col2 {
+    zoom: 1;
+}
+#main.indexContents #contents .indexContents-col2:after {
+    content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+    /* input 
+    ---------------------------------------- */
+    #main.indexContents #contents .indexContents-col2 p.inputItem {
+        margin: 0 0 10px;
+    }
+    
+    #main.indexContents #contents .indexContents-col2 p.inputItem select{
+        width: 250px;
+    }
+    
+    #main.indexContents #contents .indexContents-col2 p.inputItem input {
+        width: 244px;
+        color: #8E8E8F;
+    }
+    
+    /* searchBtn 
+    ---------------------------------------- */
+    #main.indexContents #contents .indexContents-col2 p.searchBtn {
+        margin: 0 0 10px;
+        text-align: right;
+    }
+    
+    /* moreDetail
+    ---------------------------------------- */
+    #main.indexContents #contents .indexContents-col2 p.moreDetail {
+        text-align: right;
+        font-size: 100%;
+        line-height: 1.5;
+    }
+
+    /* Col Left
+    ---------------------------------------- */
+    #main.indexContents #contents .indexContents-col2 .colLeft {
+        float: left;
+        display: inline;
+        width: 350px;
+    }
+    
+    /* Col Right
+    ---------------------------------------- */
+    #main.indexContents #contents .indexContents-col2 .colRight {
+        float: right;
+        display: inline;
+        width: 250px;
+    }
+    
+    #main.indexContents #contents .indexContents-col2 {
+    }
+
+
+/* prt-searchMap
+========================================== */
+#main.indexContents #contents .prt-searchMap {
+    position: relative;
+    background: url(../../images/parts/searchMap_bg.png) no-repeat;
+    height: 283px;
+}
+
+    /* Ul
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-searchMap ul {
+    }
+    
+    #main.indexContents #contents .prt-searchMap ul li {
+        position: absolute;
+        width: 60px;
+    }
+    
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn01 {top:  90px; left: 270px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn02 {top:  27px; left: 207px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn03 {top:  56px; left: 128px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn04 {top: 107px; left: 162px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn05 {top: 189px; left: 262px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn06 {top: 144px; left: 204px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn07 {top: 187px; left: 164px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn08 {top: 148px; left:  92px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn09 {top:  84px; left:  29px;}
+    #main.indexContents #contents .prt-searchMap ul li.mapBtn10 {top: 217px; left:  28px;}
+    
+    #main.indexContents #contents .prt-searchMap ul li a {
+        display: block;
+    }
+    #main.indexContents #contents .prt-searchMap ul li a:hover {
+        background-color: transparent;
+    }
+    
+    #main.indexContents #contents .prt-searchMap ul li a:hover img {
+        visibility: hidden;
+    }
+
+
+/* prt-adminInfomation
+========================================== */
+#main.indexContents #contents .prt-adminInfomation {
+    margin: 0 0 20px;
+    background: url(../../images/parts/adminInfomation_bg_02.gif) repeat-y 0 0;
+}
+
+    /* Table
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-adminInfomation table {
+        background: url(../../images/parts/adminInfomation_bg_01.gif) no-repeat;
+        width: 100%;
+    }
+    
+        /* Th / Td
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr th,
+        #main.indexContents #contents .prt-adminInfomation table tr td {
+            border-top: 1px solid #BDBDBE;
+        }
+        
+        #main.indexContents #contents .prt-adminInfomation table tr.first th,
+        #main.indexContents #contents .prt-adminInfomation table tr.first td {
+            border: none;
+        }
+        
+        /* Th
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr th {
+            padding: 6px 6px 5px 8px;
+            width: 89px;
+        }
+        #main.indexContents #contents .prt-adminInfomation table tr.first th {
+            padding-top: 7px;
+        }
+        
+        /* Td
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr td {
+            padding: 2px 6px 5px 8px;
+        }
+        #main.indexContents #contents .prt-adminInfomation table tr.first td {
+            padding-top: 3px;
+        }
+
+        /* Reset
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr td p,
+        #main.indexContents #contents .prt-adminInfomation table tr td ul,
+        #main.indexContents #contents .prt-adminInfomation table tr td ol,
+        #main.indexContents #contents .prt-adminInfomation table tr td dl {
+            margin: 0;
+        }
+        
+        /* ul
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr td ul {}
+        #main.indexContents #contents .prt-adminInfomation table tr td ul li {
+            margin: 4px 0 0;
+        }
+        #main.indexContents #contents .prt-adminInfomation table tr td ul li ul {}
+        #main.indexContents #contents .prt-adminInfomation table tr td ul li ul li {}
+        
+        /* dl
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr td dl {}
+        #main.indexContents #contents .prt-adminInfomation table tr td dl dt {
+            margin: 4px 0 0;
+        }
+        #main.indexContents #contents .prt-adminInfomation table tr td dl dd {
+            margin: 4px 0 0;
+        }
+        #main.indexContents #contents .prt-adminInfomation table tr td dl dd ul {}
+        #main.indexContents #contents .prt-adminInfomation table tr td dl dd ul li {}
+    
+    
+        /* ico-link
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr td .ico-link,
+        #main.indexContents #contents .prt-adminInfomation table tr td ul.ico-link li {
+            padding: 0 0 0 18px;
+            background: url(../../images/parts/adminInfomation_ico_arrow.gif) no-repeat 0 2px;
+            min-height: 14px;
+        }
+        
+        /* IE6 Only */
+        * html #main.indexContents #contents .prt-adminInfomation table tr td .ico-link {
+            height: 14px;
+        }
+        * html #main.indexContents #contents .prt-adminInfomation table tr td ul.ico-link li  {
+            height: 14px;
+        }
+        
+        /* ico-works
+        ---------------------------------------- */
+        #main.indexContents #contents .prt-adminInfomation table tr td .ico-works {
+            padding: 0 0 0 18px;
+            background: url(../../images/parts/adminInfomation_ico_works.gif) no-repeat 0 1px;
+            min-height: 14px;
+        }
+        /* IE6 Only */
+        * html #main.indexContents #contents .prt-adminInfomation table tr td .ico-works {
+            height: 14px;
+        }
+        
+    /* bg Bottom
+    ---------------------------------------- */
+    #main.indexContents #contents .prt-adminInfomation .bgBtm {
+        position: relative;
+        margin: -2px 0 0;
+        background: url(../../images/parts/adminInfomation_bg_03.gif) no-repeat 0 100%;
+        font-size: 0;
+        height: 2px;
+    }
+
+
+
+/* navigation 
+****************************************************************************************/
+#main.indexContents #navigation {
+}
+
+/* prt-loginUnit
+========================================== */
+#main.indexContents #navigation .prt-loginUnit {
+    margin: 0 0 20px;
+    background: url(../../images/parts/loginUnit_bg_02.gif) repeat-y;
+}
+
+    /* P
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-loginUnit p {
+        margin: 0 0 10px;
+        font-size: 120%;
+        line-height: 1.5;
+        color: #2A2827;
+    }
+    
+    /* bg Top
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-loginUnit .bgTop {
+        background: url(../../images/parts/loginUnit_bg_01.png) no-repeat;
+        height: 6px;
+    }
+
+    /* bg Bottom
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-loginUnit .bgBtm {
+        background: url(../../images/parts/loginUnit_bg_03.gif) no-repeat 0 100%;
+        font-size: 0;
+        height: 6px;
+    }
+
+    /* loginBtn
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-loginUnit .loginBtn {
+        text-align: center;
+        margin-top: 10px;
+    }
+    #main.indexContents #navigation .prt-loginUnit .loginBtn p{
+        margin-bottom: 4px;
+    }
+
+    /* Section
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-loginUnit .section {
+        margin: 0 5px;
+    }
+    
+    #main.indexContents #navigation .prt-loginUnit .section .title {
+        padding: 6px 5px 4px 6px;
+        background: #FFF;
+        border-bottom: 2px solid #BDBDBE;
+    }
+    #main.indexContents #navigation .prt-loginUnit .section .title h2 {
+        padding-left: 12px;
+        color: #535252;
+        font-size: 140%;
+        line-height: 1.384;
+        font-weight: bold;
+        background: url(../../images/parts/loginUnit_title_bg.gif) no-repeat 0 3px;
+    }
+    
+        /* loginForm
+        ---------------------------------------- */
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm {
+            padding: 10px 7px 2px;
+            background: #FFF;
+        }
+        
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table {
+            margin: 0 0 2px;
+            width: 100%;
+/*          border-bottom: solid 1px #BDBDBE;*/
+        }
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table tr {
+        }
+        
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table tr th,
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table tr td {
+            padding: 0 0 7px;
+            font-size: 120%;
+            line-height: 1.5;
+        }
+        
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table tr th {
+            padding-right: 12px;
+            vertical-align: middle;
+        }
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table tr td {
+        }
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm table tr td input {
+            position: 10px 5px;
+            border: 1px solid #9A9A9B;
+            width: 120px;
+            height: 1.5em;
+        }
+        
+        #main.indexContents #navigation .prt-loginUnit .section .loginForm p.login {
+            text-align: right;
+        }
+
+        /* loginFormOption
+        ---------------------------------------- */
+        #main.indexContents #navigation .prt-loginUnit .section .loginFormOption {
+            padding: 10px 7px 2px;
+            background: #FFF;
+        }
+        #main.indexContents #navigation .prt-loginUnit .section .loginFormOption p.login {
+            text-align: right;
+        }
+
+
+    /* Forget Pass
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-loginUnit p.forgetPass {
+        padding: 0 0 0 5px;
+    }
+    
+    #main.indexContents #navigation .prt-loginUnit p.forgetPass a {
+        padding: 0 0 0 13px;
+        background: url(../../images/parts/loginUnit_ico_arrow.png) no-repeat 0 3px;
+        zoom: 1;
+    }
+
+
+/* prt-pickUpJob
+========================================== */
+#main.indexContents #navigation .prt-pickUpJob {
+    margin: 0 0 10px;
+}
+
+    /* H3
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-pickUpJob h3 {
+        margin: 0 0 5px;
+        font-size: 120%;
+        line-height: 1.5;
+        font-weight: bold;
+    }
+    
+    /* P
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-pickUpJob p {
+        margin: 0 0 5px;
+        font-size: 100%;
+        line-height: 1.5;
+    }
+    
+    /* Title
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-pickUpJob .title {
+        background: #6A6A6A url(../../images/parts/pickUpJob_title_bg_02.gif) no-repeat 0 100%;
+    }
+    
+    #main.indexContents #navigation .prt-pickUpJob .title .inner {
+        padding: 6px 9px 5px;
+        background: url(../../images/parts/pickUpJob_title_bg_01.gif) no-repeat;
+        min-height: 16px;
+    }
+    
+    #main.indexContents #navigation .prt-pickUpJob .title .inner h2 {
+        color: #FFF;
+        font-size: 120%;
+        line-height: 1.335;
+        font-weight: bold;
+    }
+    
+    /* Section
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-pickUpJob .section {
+        padding: 9px 0 4px;
+        background: url(../../images/common/line_dotted_02.gif) repeat-x;
+    }
+    #main.indexContents #navigation .prt-pickUpJob .section.first {
+        background: none;
+    }
+    
+        /* imageUnit
+        ---------------------------------------- */
+        #main.indexContents #navigation .prt-pickUpJob .section .imageUnit {
+            zoom: 1;
+        }
+        
+        #main.indexContents #navigation .prt-pickUpJob .section .imageUnit:after {
+            content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+        }
+            
+            /* Image
+            ---------------------------------------- */
+            #main.indexContents #navigation .prt-pickUpJob .section .imageUnit .image {
+                float: left;
+                display: inline; /* for IE */
+                margin: px px px px;
+                width: 84px;
+            }
+            
+            #main.indexContents #navigation .prt-pickUpJob .section .imageUnit .image p {
+            }
+            
+            #main.indexContents #navigation .prt-pickUpJob .section .imageUnit .image p img {
+                border: 1px solid #767676;
+            }
+            
+            /* Content
+            ---------------------------------------- */
+            #main.indexContents #navigation .prt-pickUpJob .section .imageUnit .content {
+                float: right;
+                display: inline; /* for IE */
+                margin: px px px px;
+                width: 125px;
+            }
+
+
+/* prt-bannerUnit
+========================================== */
+#main.indexContents #navigation .prt-bannerUnit {
+    margin: 0 0 15px;
+}
+
+    /* P
+    ---------------------------------------- */
+    #main.indexContents #navigation .prt-bannerUnit p {
+        margin: 0 0 8px;
+        font-size: 120%;
+        line-height: 1.5;
+    }
+    
+        /* ico-link
+        ---------------------------------------- */
+        #main.indexContents #navigation .prt-bannerUnit p a.ico-link {
+            padding: 0 0 0 8px;
+            background: url(../../images/common/bannerUnit_ico_arrow.gif) no-repeat 0 4px;
+            min-height: 12px;
+        }
+        /* IE6 Only */
+        * html #main.indexContents #navigation .prt-bannerUnit p a.ico-link {
+            background-position: 0 2px;
+            height: 12px;
+        }
+

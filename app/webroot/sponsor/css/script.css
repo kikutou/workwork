@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+/*!
+ * Script Styles
+ * 
+ * Prefix rule "js-"
+ * 
+ */
+
+
+
+/**
+ * js-followScroll
+ *
+ * @create: 2011-10-06 [hosono@skillpartners.co.jp]
+ * @modify: 2011-10-06 [oosugi@skillpartners.co.jp]
+ */
+
+.js-followScroll {
+}
+
+.js-followScroll.js-followScroll-fixed {
+	margin-top: 0 !important;
+	margin-left: 0 !important;
+}
+
+
+
+
+
+/*
+ * Release Notes:
+ *
+ * 2011-10-06 [hosono@skillpartners.co.jp]
+ *   @create: all
+ * 2011-10-07 [oosugi@skillpartners.co.jp]
+ *   @modify: js-followScroll
+ */

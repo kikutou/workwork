@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+/* =======================================
+
+    Globalnavi CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+ 
+    -Globalnavi 01
+        -Header
+        -Footer
+    
+    -Globalnavi 02
+        -Header
+
+========================================== */
+
+/* Globalnavi 01
+****************************************************************************************/
+.globalnavi01 {
+    zoom: 1;
+}
+
+.globalnavi01:after {
+    content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+.globalnavi01 ul {
+    position: relative;
+    float: right;
+    margin: 0 0 0 -4px;
+    zoom: 1;
+}
+.globalnavi01 ul:after {
+    content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+.globalnavi01 ul li {
+    float: left;
+    width: 133px;
+    height: 28px;
+    margin: 0 0 0 4px;
+    overflow: hidden;
+}
+
+.globalnavi01 ul li a {
+}
+
+
+/* Header
+========================================== */
+#header .globalnavi01 {
+    position: relative;
+    margin: -5px 0 0;
+}
+
+#header .globalnavi01 ul {
+}
+
+#header .globalnavi01 ul li {
+}
+
+#header .globalnavi01 ul li a {
+}
+
+
+/* Footer
+========================================== */
+#footer .globalnavi01 {
+}
+
+#footer .globalnavi01 ul {
+}
+
+#footer .globalnavi01 ul li {
+}
+
+#footer .globalnavi01 ul li a {
+}
+
+
+/* Globalnavi 02
+****************************************************************************************/
+.globalnavi02 {
+    zoom: 1;
+}
+
+.globalnavi02:after {
+    content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+.globalnavi02 ul {
+    position: relative;
+    float: right;
+    margin: 0 0 0 -2px;
+    zoom: 1;
+}
+.globalnavi02 ul:after {
+    content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+.globalnavi02 ul li {
+    float: left;
+    width: 102px;
+    height: 28px;
+    margin: 0 0 0 2px;
+    overflow: hidden;
+}
+
+.globalnavi02 ul li a {
+}
+
+
+
+/* Header
+========================================== */
+#header .globalnavi02 {
+    position: relative;
+    margin: -10px 0 0;
+}
+
+#header .globalnavi02 ul {
+}
+
+#header .globalnavi02 ul li {
+}
+
+#header .globalnavi02 ul li a {
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+.req{
+	font-size:11px;
+	display:block;
+	height:8px;
+	line-height:1em;
+	color:#d90040;
+	padding-top:2px;
+}
+
+.req_on{
+	font-size:11px;
+	visibility:visible;
+	display:block;
+	height:8px;
+	line-height:1em;
+	color:#d90040;
+	padding-top:2px;
+}
+
+.req2{
+	color:#ffffff;
+	background:url(../../images/member/bg_error.png) no-repeat left center;
+	padding:5px 25px;
+	width:150px;
+	font-size:11px !important;
+	font-weight:bold;
+	/*visibility:hidden;*/
+}
+
+.req2_on{
+	color:#ffffff;
+	background:url(../../images/member/bg_error.png) no-repeat left center;
+	padding:5px 25px;
+	width:150px;
+	font-size:11px !important;
+	font-weight:bold;
+	visibility:visible;
+}
+
+div.prt-formTable{
+	position:relative;
+}
+#reqPosition1{
+	position:absolute;
+	top:13px;
+	right:230px;
+}
+#reqPosition2{
+	position:absolute;
+	top:250px;
+	right:75px;
+}
+#reqPosition3{
+	position:absolute;
+	top:470px;
+	right:230px;
+}
+
+
+p.errorFocus_on input{
+	border:2px solid #d90040;
+	background:#fffdd3;
+}

@@ -1,0 +1,163 @@
+@charset "utf-8";
+
+/* =======================================
+
+	Footer CSS
+
+ -----------------------------------------
+	INDEX
+ -----------------------------------------
+ 
+ 	-Footer Logo
+	
+	-Footer Navi
+	
+	-Footer Bottom
+	
+	-Description
+	
+	-Copyright
+	
+	-Management Contents
+		-Footer Logo
+
+========================================== */
+
+#footer {
+	zoom: 1;
+}
+
+/* Footer Logo
+========================================== */
+#footer p#footerLogo {
+	position: relative;
+	width: 243px;
+	margin: -13px 0 0 20px;
+}
+
+#footer p#footerLogo a {
+}
+
+
+/* Footer Navi
+========================================== */
+#footer #footerNavi {
+	position: relative;
+	margin: -12px 0 0;
+	padding: 0 0 0 280px;
+	border-bottom: 7px solid #175DF6;
+	zoom: 1;
+}
+#footer #footerNavi:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+	/* Ul
+	---------------------------------------- */
+	#footer #footerNavi ul {
+		float: right;
+		min-height: 14px;
+		padding: 7px 18px 0 87px;
+		background: #175DF6 url(../../images/base/footerNavi_bg_01.png) no-repeat;
+		zoom: 1;
+	}
+	
+	/* IE6 Only */
+	* html #footer #footerNavi ul {height: 14px;}
+	
+	#footer #footerNavi ul:after {
+		content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+	}
+	
+	#footer #footerNavi ul li {
+		float: left;
+		display: inline;
+		margin: 0 0 0 15px;
+		color: #FFF;
+		font-size: 120%;
+		line-height: 1.167;
+	}
+	#footer #footerNavi ul li.item01 { margin-left: 10px;}
+	
+	#footer #footerNavi ul li a {
+		padding: 0 0 0 22px;
+		background: url(../../images/common/ico_arrow_01.png) no-repeat 0 2px;
+		color: #FFF;
+		text-decoration: underline;
+	}
+	/* IE6 Only */
+	* html #footer #footerNavi ul li a { background-position: 0 0;}
+	
+	#footer #footerNavi ul li a:hover {
+		background-position: -900px 2px;
+		text-decoration: none;
+	}
+	
+	/* IE6 Only */
+	* html #footer #footerNavi ul li a:hover { background-position: -900px 0;}
+
+
+
+/* Footer Bottom
+========================================== */
+#footer #footerBottom {
+	padding: 7px 20px 40px;
+	zoom: 1;
+}
+
+#footer #footerBottom:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+	/* Veri Sign
+	---------------------------------------- */
+	#footer #footerBottom .veriSign {
+		float: right;
+		display: inline;
+		width: 100px;
+	}
+	
+	/* Contents
+	---------------------------------------- */
+	#footer #footerBottom .contents {
+		float: left;
+		display: inline;
+		width: 735px;
+	}
+
+
+
+/* Description
+========================================== */
+#footer #footerBottom .contents p#description {
+	margin: 0 0 5px;
+	font-size: 100%;
+	line-height: 1.401;
+}
+#footer #footerBottom .contents p#description strong {
+	color: #DA0016;
+}
+
+
+/* Copyright
+========================================== */
+#footer #footerBottom .contents p#copyright {
+	color: #175DF6;
+	font-size: 100%;
+	line-height: 1.401;
+	font-family: Verdana, Helvetica, sans-serif;
+}
+
+
+
+/* Management Contents
+****************************************************************************************/
+
+/* Footer Logo
+========================================== */
+#document.managementContents #footer p#footerLogo {
+	margin-top: 16px;
+}
+
+#document.managementContents #footer p#footerLogo a {
+}

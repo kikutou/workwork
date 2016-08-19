@@ -1,0 +1,532 @@
+@charset "utf-8";
+
+/* =======================================
+
+    Text Decorations CSS
+
+ -----------------------------------------
+    INDEX
+ -----------------------------------------
+ 
+    -Base
+ 
+    -Headings
+    
+    -Elements
+    
+    -Font Weight & Style
+    
+    -Text Align
+    
+    -Margin
+    
+    -Float
+    
+    -List
+        -prt-listDisc
+        -prt-listDecimal
+        -prt-listNotes
+    
+    -Form
+
+========================================== */
+
+/* Base [基準値を10pxとし内包要素を%で相対指定]
+========================================== */
+#document { font-size: 77%;}
+
+
+/* Headings
+========================================== */
+#contents h1 {
+    font-size: 160%;
+    line-height: 1.374;
+    color: #ff7100;
+}
+
+#contents h2,
+#contents h3 {
+    font-size: 140%;
+    line-height: 1.429;
+    color: #ff7100;
+}
+
+#contents h4,
+#contents h5 {
+    font-size: 120%;
+    line-height: 1.5;
+}
+
+
+/* Elements
+========================================== */
+#contents p, #contents address, #contents th, #contents td {
+    font-size: 120%;
+    line-height: 1.8;
+}
+
+#contents li, #contents dt, #contents dd {
+    font-size: 120%;
+    line-height: 1.335;
+}
+
+/* Inner Reset  */
+#contents th p, #contents th address, #contents th pre, #contents th li, #contents th dt, #contents th dd,
+#contents td p, #contents td address, #contents td pre, #contents td li, #contents td dt, #contents td dd, #contents td th, #contents td td,
+#contents li p, #contents li address, #contents li pre, #contents li li, #contents li dt, #contents li dd, #contents li th, #contents li td,
+#contents dt p, #contents dt address, #contents dt pre, #contents dt li, #contents dt dt, #contents dt dd,
+#contents dd p, #contents dd address, #contents dd pre, #contents dd li, #contents dd dt, #contents dd dd, #contents dd th, #contents dd td {
+    font-size: 100%;
+}
+
+#contents p.errorMessage {
+ color: #CC3333;
+}
+
+#contents span.teedaErrorMessage {
+ color: #D90040;
+}
+
+#contents dfn {
+    font-weight: bold;
+}
+
+#contents strong {
+    font-weight: bold;
+}
+
+#contents em {
+    font-style: italic;
+}
+
+#contents a {
+    color: #923701;
+    text-decoration: none;
+}
+
+#contents a:hover {
+    text-decoration: underline;
+}
+
+
+/* Font Weight & Style
+****************************************************************************/
+#contents dfn,
+#contents h1, #contents h2, #contents h3, #contents h4, #contents h5 {
+    font-weight: bold;
+}
+
+#contents strong {
+    color: #1678C3;
+    font-weight: bold;
+}
+
+#contents em {
+}
+
+.fw-bold   { font-weight: bold !important;}
+.fw-normal { font-weight: normal !important;}
+
+.fs-italic { font-style: italic !important;}
+.fs-none   { font-style: none !important;}
+
+.attention {color: #DA0016 !important;}
+
+.notes {
+    font-size: 100%;
+    line-height: 1.5;
+    color: #2A2827 !important;
+}
+
+
+
+/* Text Align
+****************************************************************************/
+.al-right  { text-align: right !important;}
+.al-center { text-align: center !important;}
+.al-left   { text-align: left !important;}
+
+.va-top    { vertical-align: top !important;}
+.va-middle { vertical-align: middle !important;}
+.va-bottom { vertical-align: bottom !important;}
+
+
+
+/* Margin
+****************************************************************************/
+#contents h1 {
+    margin: 0 0 13px;
+}
+
+#contents h2,
+#contents h3 {
+    margin: 0 0 13px;
+}
+
+#contents h4,
+#contents h5 {
+    margin: 0 0 5px;
+}
+
+#contents p, #contents pre, #contents ul, #contents ol, #contents dl {
+    margin: 0 0 15px;
+}
+
+#contents .section {
+    margin: 0 0 20px;
+}
+
+#contents .section {
+    margin: 0 0 10px;
+}
+
+#contents .section .imageBox .section,{
+    margin: 0 0 4px;
+    min-width: 0px;
+	max-width: 400px;
+}
+
+#contents .section .imageBoxsecound .section,{
+    margin: 0 0 4px;
+    min-width: 0px;
+	max-width: 400px;
+}
+
+* #contents .section .imageBox .section,#contents .section .imageBoxLast .section{width:expression(document.body.one < 40? "0px" :document.body.one > 400? "400px" : "auto");}
+
+img { -ms-interpolation-mode: bicubic; } 
+.img{
+	max-width: 400px;
+	max-height: 400px;
+}
+* html body .img {width:expression(this.width < 40? "0px" :this.width > 400? "400px" :this.width);}
+* html body .img {height:expression(this.height < 40? "0px" :this.height > 400? "400px" :this.height);}
+
+
+
+
+#contents .prt-recruitmentHeading .heading a{
+  text-decoration: none;
+  color: #2A2827;
+}
+
+#contents .prt-recruitmentHeading .heading a:hover{
+   text-decoration: underline;
+}
+/* Float
+****************************************************************************/
+
+.fl-left  { float: left  !important;}
+.fl-right { float: right !important;}
+
+.fl-imgLeft  { float: left !important; margin-right: 10px !important;}
+.fl-imgRight { float: right !important; margin-left: 10px !important;}
+
+.clear      { clear: both !important;}
+.clearfix   { zoom: 1;}
+.clearfix:after { content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;}
+
+
+
+/* List
+****************************************************************************/
+/* ul
+========================================== */
+#contents ul {
+}
+
+#contents ul li {
+    margin: 0 0 4px;
+}
+
+#contents ul li ul,
+#contents ul li ol {
+    margin: 4px 0 4px 1em;
+}
+
+#contents ul li ul li,
+#contents ul li ol li {
+}
+
+/* ol
+========================================== */
+#contents ol {
+}
+
+#contents ol li {
+    margin: 0 0 4px;
+}
+
+#contents ol li ul,
+#contents ol li ol {
+    margin: 4px 0 4px 1em;
+}
+
+#contents ol li ul li,
+#contents ol li ol li {
+}
+
+/* dl
+========================================== */
+#contents dl {
+}
+
+#contents dl dt {
+    margin: 0 0 4px;
+}
+
+#contents dl dd {
+    margin: 0 0 10px;
+    padding: 0 0 0 1em;
+}
+
+#contents .prt-categoryList dl dd {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* prt-listDisc
+****************************************************************************/
+#contents ul.prt-listDisc {
+    margin: 0 0 10px;
+    padding: 0 0 0 15px;
+}
+
+#contents ul.prt-listDisc li {
+    list-style: disc outside;
+    margin: 0 0 4px;
+    padding: 0;
+}
+
+#contents ul.prt-listDisc li ul {
+    margin-top: 4px;
+}
+
+#contents ul.prt-listDisc li ul li {
+    list-style: circle outside;
+}
+
+
+
+/* prt-listDecimal
+****************************************************************************/
+#contents ol.prt-listDecimal {
+    padding-left: 2.5em;
+}
+
+#contents ol.prt-listDecimal li {
+    margin: 0 0 10px;
+    list-style: decimal outside;
+}
+
+#contents ol.prt-listDecimal li ol {
+    margin-top: 5px;
+    padding-left: 2.5em;
+}
+
+#contents ol.prt-listDecimal li ol li {
+}
+
+
+
+/* prt-listNotes
+****************************************************************************/
+#contents ul.prt-listNotes {
+    margin: 0 0 10px;
+}
+
+#contents ul.prt-listNotes li {
+    position: relative;
+    padding-left: 1em;
+    text-indent: -1em;
+    list-style: none;
+    color: #6F6E6E;
+}
+
+
+
+/* Form
+****************************************************************************/
+/* Input
+---------------------------------------- */
+#contents input {
+    position: relative;
+    font-size: 120%;
+    line-height: 1.335;
+    vertical-align: middle;
+}
+
+#contents table input {
+}
+
+#contents p input {
+}
+
+/* textbox
+---------------------------------------- */
+#contents input.textbox {
+    width: 560px;
+}
+
+#contents input.textbox02 {
+    width: 340px;
+}
+
+#contents input.textbox03 {
+    /*width: 110px;*/
+    width: 50px;
+}
+
+#contents input.textbox04 {
+    width: 560px;
+}
+
+#contents input.textbox05 {
+    width: 560px;
+	height:292px;
+}
+
+#contents input.textbox06 {
+    width: 560px;
+	height:82px;
+}
+
+#contents input.textbox07 {
+    width: 560px;
+	height:55px;
+}
+
+#contents input.textbox08 {
+    width: 560px;
+	height:168px;
+}
+
+#contents input.textbox09 {
+    width: 50px;
+}
+
+#contents input.submitBtn {
+    position: relative;
+    height: 32px;
+    font-size: 120%;
+    line-height: 1.335;
+    vertical-align: middle;
+}
+
+/* textarea
+---------------------------------------- */
+#contents textarea {
+    position: relative;
+    width: 560px;
+    line-height: 1.335;
+    vertical-align: middle;
+}
+
+#contents textarea.textarea02 {
+    width: 340px;
+}
+
+#contents td p textarea.textbox03 {
+    width: 340px;
+}
+
+
+/* Radio
+---------------------------------------- */
+#contents label.radio {
+}
+
+#contents label.radio input {
+    margin: 0 5px 0 0;
+    width: 1em;
+    height: 1em;
+}
+
+/* Checkbox
+---------------------------------------- */
+#contents label.checkbox {
+}
+
+#contents label.checkbox input {
+    margin: 0 5px 0 0;
+    width: 1em;
+    height: 1em;
+}
+
+
+p.kinmuchi{
+	font-weight: bold;
+}
+
+
+#contents h1.mess{
+  font-size: 140%;
+  color: #000;
+  font-weight: bold;
+  margin: 8px 0; 
+}
+
+#contents h1.obo{
+  font-size: 140%;
+  color: #000;
+  font-weight: bold;
+  margin: 8px 0; 
+}
+
+#contents h1.kento{
+  color: #000;
+  font-size: 140%;
+  font-weight: bold;
+  margin: 8px 0; 
+}
+
+#contents .mypagebox .mypageboxlist p{
+	margin: 5px 0 10px;
+}
+
+#contents .mypagebox .mypageboxlist p.red{
+  font-size: 150%;
+  font-weight: bold;
+  color: red;
+  margin:0 0 2px 0;
+}
+
+#contents div.eturan{
+  font-size: 120%;
+  margin:;
+  padding: 5px 10px;
+  border: #dadada 2px solid;
+ }
+ 
+ #contents div.eturan p.prt-link02{
+ margin: 0;
+ }
+
+
+ #contents div.eturan a.right{
+ margin-left: 160px;
+ *margin-left: 140px;
+ background: none;
+ padding: 0;
+ }
+ 
+ #contents .pagination03 a, #contents .pagination03 a:visited {
+    color: #2A2827;
+    font-weight: bold;
+    padding: 2px 4px 0 5px;
+    text-decoration: none;
+}
+
+ #contents .pagination03 a:hover{
+ 	text-decoration: underline;
+ }
+
+
+
+ #contents .pagination03 a.btn, #contents .pagination03 a.btn:visited {
+    color: #2A2827;
+    font-weight: bold;
+    padding: 0;
+    text-decoration: none;
+}

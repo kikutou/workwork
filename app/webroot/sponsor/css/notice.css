@@ -1,0 +1,111 @@
+@charset "utf-8";
+
+/* 応募フォーム　メール注意喚起
+----------------------------------------*/
+.mail-receive-notice .notice-title{
+	color : #0072b4;
+	font-size : 12px;
+	line-height : 1.9;
+	text-decoration: none;
+  margin-bottom:20px;
+}
+.mail-receive-notice .notice-title:hover{
+	cursor:pointer;
+}
+
+.mail-receive-notice .notice-body{
+	font-size : 12px;
+	background-color : #FFCC99;
+	padding: 5px;
+	line-height : 16px;
+	margin-top : 5px;
+	word-break : bleak-all;
+	display : block;
+	-webkit-margin-before: 1em;
+	-webkit-margin-after: 1em;
+	-webkit-margin-start: 0px;
+	-webkit-margin-end: 0px;
+}
+
+
+/* 応募フォーム　定型文コンボボックス
+----------------------------------------*/
+
+select {
+-webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border-radius:3px;
+    line-height: 1em;
+  padding:8px;
+    font-size: 120%;
+    color: #444;
+    border:1px solid #5E5E5E;
+    cursor: pointer;
+    background-color:#efefef;
+    background-image: url(../images/common/icon-arrow.png);
+    background-repeat:no-repeat;
+    background-size:12px;
+    background-position: 98% center;
+  min-width:22%;
+  }
+
+/* 応募フォーム　自動ログアウト
+----------------------------------------*/
+
+  #contents dl.session-out-notice {
+    margin:20px 0 10px;
+  }
+
+  #contents dl.session-out-notice dt,
+  #contents dl.session-out-notice dd {
+    padding:10px;
+  }
+
+  #contents dl.session-out-notice dt {
+    color:#d71e00;
+    background-color:#ffdcd6;
+    background-image :url(../images/common/icon-notice.png);
+    background-repeat:no-repeat;
+    background-position:10px center;
+    padding-left:36px;
+    border-top-right-radius:6px;
+    border-top-left-radius:6px;
+  }
+
+  #contents dl.session-out-notice dd {
+    border-left:1px solid #f6dbda;
+    border-right:1px solid #f6dbda;
+    border-bottom:1px solid #f6dbda;
+    border-bottom-right-radius:6px;
+    border-bottom-left-radius:6px;
+  }
+
+/* ログイン　自動ログアウト
+----------------------------------------*/
+  #contents .sessionOutMessage {
+    width:505px;
+    margin:0 auto 20px;
+  }
+
+  #contents .sessionOutMessage b {
+    color:#dc4136;
+    line-height:2.4em;
+  }
+
+/* 宛名項目　注意喚起
+----------------------------------------*/
+  #contents div.prt-tableA table tr td p.info {
+    color:#0072b4;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  
+  .info-ttl {
+    background-image:url(../images/common/icon_info_01.png);
+    background-repeat:no-repeat;
+    background-position:0 center;
+    padding:5px 0 5px 30px;
+    margin-bottom:5px;
+    display:block;
+  }

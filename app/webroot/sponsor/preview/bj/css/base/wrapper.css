@@ -1,0 +1,360 @@
+@charset "utf-8";
+
+/*!
+ * wrapper.css
+ *
+ * トップページ以外のテンプレートとなる大枠部分、
+ * 背景・ヘッダー・フッター
+ * CSSで使う背景画像は、共通のアイコン等以外すべて、
+ * 
+
+*/
+
+
+
+html, body {
+	/* メイン背景・文字色 */
+	background: url(../../images/bj-base/bg.jpg) repeat 50% 150px;
+	color: #333333;
+}
+
+body {
+}
+
+a {
+	color: #5F0C04;
+	text-decoration: none;
+}
+
+a:link    {}
+a:visited { color: #5F0C04; }
+a:hover   { color: #5F0C04; text-decoration: underline; }
+a:active  { color: #5F0C04; }
+
+
+#document-head {
+	background: url(../../images/bj-base/document_bg.jpg) repeat-x 50% 0;
+	min-width: 900px;
+	zoom: 1;
+}
+
+#header {
+	height: 160px;
+	background: url(../../images/bj-base/header_bg.jpg) no-repeat 50% 0;
+}
+
+#header #headerInner {
+	margin: 0 auto;
+	width: 900px;
+}
+
+
+#wrapper {
+	min-height: 450px;
+	background: url(../../images/bj-base/container_bg.jpg) repeat-y 50% -10px;
+}
+
+#wrapper-in {
+	background: url(../../images/bj-base/contents_bg.jpg) no-repeat 50% 0;
+}
+
+* html #wrapper {/* IE6 Only */
+	height: 450px;
+}
+
+#wrapper-in #main {
+	margin: 0 auto;
+	padding: 15px 20px 20px;
+	width: 860px;
+	zoom: 1;
+}
+#wrapper #wrapper-in:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+p#topicpath{
+	padding: 6px 0 0 25px;
+	margin: 5px 0 0 15px;
+	background: url(../../images/bj-base/icon_home_btn.png) no-repeat;	
+}
+
+p#topicpath a{
+	color: #fff;
+	margin-right: 3px;
+}
+
+#contents {
+    background: url(../../images/bj-base/contentsmain_bg.jpg) repeat-y;
+    margin: 20px 0 0;
+    border-top: 1px #be632c solid;
+	border-bottom: 1px #be632c solid;
+    padding: 0 29px 10px;
+    position: relative;
+}
+#footer {
+	min-height: 283px;
+	background: url(../../images/bj-base/footer_bg.jpg) no-repeat 50% 100%;
+}
+
+* html #footer {/* IE6 Only */
+	height: 283px;
+}
+#footer #footerInner {
+	margin: 0 auto;
+	padding: 0 25px;
+	width: 850px;
+}
+
+
+.section {
+	margin: 0 0 20px;
+}
+
+.section .section {
+	margin: 0 0 15px;
+}
+
+.section .section .section {
+	margin: 0 0 10px;
+}
+
+
+/**
+ * header
+ *
+ * @create: 2011-09-06 [hosono@skillpartners.co.jp]
+ * @modify: not yet
+ */
+
+#header {
+}
+
+#headerInner {
+	position: relative;
+}
+
+	/**
+	 * Site Title
+	 */
+	#header h1#siteTitle {
+		position: absolute;
+		top: 62px;
+		left: -1px;
+	}
+	
+	/**
+	 * Description
+	 */
+	#header p#description {
+    left: 30px;
+    position: absolute;
+    top: 45px;
+    width: 350px;
+    font-size: 110%;
+    *font-size: 11px;
+	}
+	
+	/**
+	 * Site Info
+	 */
+	#header p#siteInfo {
+		position: absolute;
+		top: 30px;
+		left: 359px;
+		width: 240px;
+	}
+	
+	/**
+	 * Header Nav
+	 */
+	#header #headerNav {
+		position: relative;
+		margin: 0 0 0 644px;
+		top: 10px;
+		height: 158px;
+		overflow: hidden;
+		z-index: 100;
+	}
+	
+	#header #headerNav ul {
+	}
+	
+	#header #headerNav ul li {
+		padding: 0 0 2px 16px;
+		background: url(../../images/bj-common/ico_arrow_01.png) no-repeat 0 4px;
+		font-size: 110%;
+		line-height: 1.5;
+		*font-size: 11px;
+		zoom: 1;
+	}
+	
+	#header #headerNav ul li a {
+		color: #F2EF9E;
+	}
+	
+	/**
+	 * Header Login
+	 */
+	#header div.headerLogin {
+		position: absolute;
+		top: 76px;
+		left: 365px;
+	}
+	
+	/* ログイン関連ボタン */
+	#header div.headerLogin ul {
+	}
+	
+	#header div.headerLogin ul li {
+		position: absolute;
+		top: 0;
+		padding: 22px 0 0;
+		background: no-repeat;
+	}
+	
+	#header div.headerLogin ul li#mypageBtn { left: 0;     background-image: url(../../images/bj-base/headerLogin_bg_01.jpg); }	
+	#header div.headerLogin ul li#logoutBtn {	left: 128px; background-image: url(../../images/bj-base/headerLogin_bg_02.jpg); }
+	#header div.headerLogin ul li#entryBtn  { left: 0; 	   background-image: url(../../images/bj-base/headerLogin_bg_03.jpg); }
+	#header div.headerLogin ul li#loginBtn  { left: 128px; background-image: url(../../images/bj-base/headerLogin_bg_04.jpg);}
+	
+	#header div.headerLogin ul li a {
+		display: block;
+	}
+	
+	#header div.headerLogin ul li a:hover {
+		background-color: transparent;
+	}
+	
+	#header div.headerLogin ul li a:hover img {
+		visibility: hidden;
+	}
+	
+	/* User Name */
+	#header div.headerLogin p.MyName {
+		position: absolute;
+		top: 0;
+		left: 255px;
+		padding: 29px 0 0;
+		width: 180px;
+		height: 54px;
+		background: url(../../images/bj-base/headerLogin_bg_05.jpg) no-repeat;
+		color: #FFFFFF;
+		text-align: center;
+		font-size: 11px;
+		*font-weight: bold;
+		line-height: 1.401;
+		overflow: hidden;
+	}
+	
+/**
+ * Page Top
+ *
+ * @create: 2011-09-06 [hosono@skillpartners.co.jp]
+ * @modify: 2011-09-08 [hosono@skillpartners.co.jp]
+ */
+ 
+p#pageTop {
+	position: relative;
+	margin: 0 auto -28px;
+	padding: 0 26px 0 0;
+	text-align: right;
+	height: 28px;
+	overflow: hidden;
+	background: url(../../images/bj-base/pageTop_bg.png) no-repeat 50% 0;
+	width: 876px;
+	font-size: 90%;
+	line-height: 1.12;
+	z-index: 100;
+	zoom: 1;
+}
+
+p#pageTop a {
+	outline: none;
+}
+
+
+/**
+ * footer
+ *
+ * @create: 2011-09-06 [hosono@skillpartners.co.jp]
+ * @modify: 2011-09-08 [hosono@skillpartners.co.jp]
+ */
+
+#footer {
+}
+
+#footer #footerInner {
+	padding: 45px 0 50px;
+	position: relative;
+	line-height: 1.5;
+}
+	
+
+	/**
+	 * Footer Info
+	 */
+	#footer p.footerInfo {
+		margin: 0 162px 20px 0;
+		color: #E1A661;
+		font-size: 110%;
+		*font-size: 90%;
+		line-height: 1.637;
+	}
+
+	/**
+	 * Veri Sign
+	 */
+	#footer p#veriSign {
+		position: absolute;
+		top: 40px;
+		left: 720px;
+		padding: 5px 20px 8px 9px;
+		width: 100px;
+		height: 55px;
+		background: url(../../images/bj-base/veriSign_bg.png) no-repeat;
+	}
+
+	/**
+	 * Footer Nav
+	 */
+	#footer #footerNav {
+		margin: 0 0 80px;
+	}
+	
+	#footer #footerNav ul {
+		zoom: 1;
+	}
+	#footer #footerNav ul:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+	}
+	
+	#footer #footerNav ul li {
+		float: left;
+		display: inline;
+		margin: 0 23px 0 0;
+		white-space: nowrap;
+		font-size: 110%;
+		*font-size: 90%;
+		line-height: 1.455;
+	}
+	
+	#footer #footerNav ul li a {
+		color: #FF7E00;
+	}
+
+	/**
+	 * Footer Attention
+	 */
+	#footer p.footerAttention {
+		margin: 0 80px 0 0;
+		color: #FAFF67;
+		font-size: 110%;
+		*font-size: 90%;
+		line-height: 1.455;
+	}
+/*
+ * Release Notes:
+ * 
+ * 2011-09-06 [hosono@skillpartners.co.jp]
+ *   @create: all
+ */

@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/* =======================================
+
+	Header CSS
+
+ -----------------------------------------
+	INDEX
+ -----------------------------------------
+ 
+ 	-Site Title
+	
+	-Header Navi
+ 	
+
+========================================== */
+
+#header {
+}
+
+
+/* Site Title
+========================================== */
+#header p#siteTitle {
+	position: relative;
+	margin: 0 0 0 20px;
+	width: 243px;
+}
+
+#header p#siteTitle a {
+}
+
+
+/* Header Navi
+========================================== */
+#header #headerNavi {
+	margin: 0 0 0 280px;
+	zoom: 1;
+}
+#header #headerNavi:after {
+	content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+}
+
+	/* Ul
+	---------------------------------------- */
+	#header #headerNavi ul {
+		float: right;
+		min-height: 18px;
+		padding: 0 18px 3px 87px;
+		background: #175DF6 url(../../images/base/headerNavi_bg_01.png) no-repeat 0 100%;
+		zoom: 1;
+	}
+	
+	/* IE6 Only */
+	* html #header #headerNavi ul { height: 18px;}
+	
+	#header #headerNavi ul:after {
+		content: "."; display: block; clear: both; height: 0; visibility: hidden; font-size: 0;
+	}
+	
+	#header #headerNavi ul li {
+		float: left;
+		display: inline;
+		margin: 0 0 0 15px;
+		color: #FFF;
+		font-size: 120%;
+		line-height: 1.335;
+	}
+	#header #headerNavi ul li.item01 { margin-left: 10px;}
+	
+	#header #headerNavi ul li a {
+		padding: 0 0 0 22px;
+		background: url(../../images/common/ico_arrow_01.png) no-repeat 0 2px;
+		color: #FFF;
+		text-decoration: underline;
+	}
+	/* IE6 Only */
+	* html #header #headerNavi ul li a { background-position: 0 0;}
+	
+	#header #headerNavi ul li a:hover {
+		background-position: -900px 2px;
+		text-decoration: none;
+	}
+	/* IE6 Only */
+	* html #header #headerNavi ul li a:hover { background-position: -900px 0;}
+	
+
+/* nameset
+---------------------------------------- */
+
+.nameset{
+  margin: -25px 0 0 300px;
+  position: absolute;
+}
+
+.nameset p{
+  font-size: 140%;
+  font-weight: bold;
+  color: #08237C;
+}

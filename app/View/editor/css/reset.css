@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja" class="no-js">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
+        <title>C Side</title>
+        <!--<meta charset="utf-8">-->
+        
+        
+        <!-- Le styles -->
+        <link href="/css/default.css" media="screen" rel="stylesheet" type="text/css">
+<link href="/img/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+        <!-- Scripts -->
+        
+    </head>
+    <body>
+
+
+                        
+
+
+
+
+<!-- login_outline start -->
+<div id="login_outline">
+	<div id="login_form">
+		<h1>C-side System APP起動認証</h1>
+		<p>下記にメールアドレスとパスワードを入力してください</p>
+
+
+
+
+
+
+		
+
+	<!-- form validation erros -->
+		
+	<!-- login message -->
+	
+
+	<!-- login form -->
+	<form method="post" name="branch" action="&#x2F;application&#x2F;authentication&#x2F;login" id="branch">
+			<table class="w100">
+				<tr>
+					<th class="w40"><label for="staff_email">メールアドレス</label></th>
+					<td class="w60"><input type="text" name="staff_email" class="w80" value=""></td>
+				</tr>
+				<tr>
+					<th><label for="password">パスワード</label></th>
+					<td><input type="password" name="password" class="w80" value=""></td>
+				</tr>
+				<tr>
+					<td class="btn_area" colspan="2"><input type="submit" name="submit" id="submitbutton" value="&#x8A8D;&#x8A3C;&#x78BA;&#x8A8D;"></td>
+				</tr>
+			</table>
+		</form>	</div>
+</div>
+<!-- //login_outline end -->
+    </body>
+</html>
